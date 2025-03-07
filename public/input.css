@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "swiper/css/bundle";
+
+@theme {
+  --color-light-salmon: #ff6f61;
+  --color-dark-salmon: #ff8550;
+  --color-royal-azure: #0d55c8;
+  --color-soft-silver: #d9d9d9;
+  --color-iron-gray: #424242;
+  --font-humanist-normal: HumanistNormal, sans-serif;
+  --font-humanist-bold: HumanistBold, sans-serif;
+  --font-trebuchet: Trebuchet, sans-serif;
+}
+
+@layer components {
+  .h2-title {
+    @apply text-center font-trebuchet text-[30px] leading-[115%] font-[500] tracking-[-0.02em] text-iron-gray lg:text-[36px] xl:text-[42px];
+  }
+
+  .why-us-content-container {
+    @apply w-1/4 px-[25px] sm:mx-[10px] sm:px-0 md:mx-[15px] md:min-w-[130px];
+  }
+
+  .why-us-title {
+    @apply mt-[35px] text-center font-trebuchet text-[18px] leading-[135%] font-[400] -tracking-[0.03em] text-black md:text-[22px] xl:text-[24px];
+  }
+
+  .why-us-description {
+    @apply mt-[8px] px-[25px] text-center font-humanist-normal text-[16px] font-[400] text-iron-gray md:text-[18px] xl:text-[20px];
+  }
+
+  .production-title {
+    @apply mt-[35px] text-center font-trebuchet text-[18px] leading-[135%] font-[400] -tracking-[0.03em] text-black lg:text-[22px] xl:text-[24px];
+  }
+
+  .production-description {
+    @apply mt-[8px] text-center font-humanist-normal text-[16px] font-[400] text-iron-gray lg:text-[18px] xl:text-[20px];
+  }
+
+  .about-us-title {
+    @apply mx-[35px] mt-[30px] block text-start font-trebuchet text-[30px] leading-[135%] font-[500] -tracking-[0.03em] text-black;
+  }
+
+  .about-us-description {
+    @apply mx-[35px] mt-[8px] mb-[40px] block text-start font-humanist-normal text-[16px] leading-[120%] font-[400] tracking-[0.02em] text-[#2A2A2A];
+  }
+}
