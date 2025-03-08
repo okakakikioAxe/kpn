@@ -14,7 +14,7 @@
 
 @layer components {
   .h2-title {
-    @apply text-center font-trebuchet text-[30px] leading-[115%] font-[500] tracking-[-0.02em] text-iron-gray lg:text-[36px] xl:text-[42px];
+    @apply mx-[25px] text-center font-trebuchet text-[30px] leading-[115%] font-[500] tracking-[-0.02em] text-iron-gray lg:text-[36px] xl:text-[42px];
   }
 
   .why-us-content-container {

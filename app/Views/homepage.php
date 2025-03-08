@@ -96,7 +96,6 @@
       <!-- Mengapa memilih kami -->
       <section id="whyUsSection" class=" relative w-full mt-[30px] sm:mt-[40px] lg:mt-[60px] xl:mt-[100px]">
         <h2 class="flex align-center justify-center h2-title">Mengapa Memilih Kami</h2>
-        <!--HTML CODE-->
         <div class="w-full  flex justify-center pt-[130px] lg:pt-[210px] xl:pt-[230px]">
           <div class="relative  w-full  h-full">
             <div class="xl:hidden relative w-full px-[10%]  overflow-hidden  whyUsSwiper">
@@ -189,7 +188,7 @@
       <!-- Tentang kami -->
       <section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[300px]">
         <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Tentang Kami</h2>
-        <div class=" w-full  flex justify-center mt-[130px] lg:mt-[210px] xl:mt-[190px] xl:px-[5%]">
+        <!-- <div class=" w-full  flex justify-center mt-[130px] lg:mt-[210px] xl:mt-[190px] xl:px-[5%]">
           <div class="relative  w-full h-full flex justify-center">
             <div class="xl:hidden relative w-full px-[25px] lg:px-[10%] py-[30px]  overflow-hidden h-full aboutUsSwiper">
               <div id="normalAboutUsCard" class="swiper-wrapper">
@@ -274,16 +273,23 @@
 
             </div>
           </div>
+        </div> -->
+        <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
+          <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
+            <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
+            <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+            <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver ml-10 rounded-full"></div>
+          </div>
         </div>
       </section>
 
       <!-- Horizontal Divider - Tentang kami -->
-      <div class="flex justify-center mt-[100px] xl:mt-[250px]">
+      <div class="flex justify-center mt-[100px] sm:mt-[140px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px]">
         <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
       </div>
 
       <!-- Produk unggulan kami -->
-      <section id="topProductSection" class=" relative w-full mt-[125px] xl:mt-[240px]">
+      <section id="topProductSection" class=" relative w-full mt-[125px] xl:mt-[190px]">
         <h2 class="flex align-center justify-center h2-title">Berbagai produk unggulan kami</h2>
         <div class="flex w-full align-center justify-center sm:px-[25px] lg:px-[5%] pt-[121px] xl:pt-[190px]">
           <div class="w-full grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-[126px] sm:gap-[25px] md:gap-8 lg:gap-15 xl:gap-30 2xl:gap-15 max-w-[1600px]">
@@ -461,10 +467,10 @@
       <!-- Review Pengguna -->
       <section id="userReviewSection" class="mt-[140px]">
         <h2 class=" flex align-center justify-center h2-title">Pendapat mereka tentang produk kami..</h2>
-        <div class="xl:hidden relative w-full mt-[120px] px-[25px] pt-[60px] lg:pt-[120px] pb-[50px] max-w-[1600px] overflow-hidden h-full userReviewSwiper ">
+        <div class="xl:hidden relative w-full mt-[120px] px-[25px] pt-[60px] lg:pt-[120px] pb-[50px] max-w-[1600px] overflow-hidden h-full userReviewSwiper">
           <div class="swiper-wrapper">
             <div class="w-full swiper-slide">
-              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-hidden bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)]">
+              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
                 <div class="flex justify-center w-full">
                   <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
                     <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
@@ -498,7 +504,7 @@
               </div>
             </div>
             <div class="w-full swiper-slide">
-              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-hidden bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)]">
+              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
                 <div class="flex justify-center w-full">
                   <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
                     <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
@@ -532,7 +538,7 @@
               </div>
             </div>
             <div class="w-full swiper-slide">
-              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-hidden bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)]">
+              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
                 <div class="flex justify-center w-full">
                   <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
                     <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
@@ -566,7 +572,7 @@
               </div>
             </div>
             <div class="w-full swiper-slide">
-              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-hidden bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)]">
+              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
                 <div class="flex justify-center w-full">
                   <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
                     <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
@@ -600,7 +606,7 @@
               </div>
             </div>
             <div class="w-full swiper-slide">
-              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-hidden bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)]">
+              <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
                 <div class="flex justify-center w-full">
                   <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
                     <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
@@ -674,6 +680,7 @@
         </div>
       </section>
     </main>
+
     <footer class="flex justify-center mt-[250px] xl:mt-[450px] bg-[#07172C]">
       <div class="bg-[#07172C] p-[24px] max-w-[1600px]">
         <img loading="lazy" class="w-[110px] h-auto" src="white logo.png" alt="Logo KPN warna putih">
@@ -959,7 +966,44 @@
       userReviewSwiper.slidePrev();
     }
     // ================= End of User Review Swiper =================
+
+    document.getElementById('dropdownButton1').addEventListener('click', function() {
+      if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
+        document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
+        document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
+        // document.getElementById('dropdownIcon1').style.transform = "rotate(180deg)";
+        document.getElementById('dropdownIcon1').classList.remove("rotate-180");
+      } else {
+        document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
+        document.getElementById('dropdownMenu1').classList.replace('invisible', 'visible');
+        document.getElementById('dropdownIcon1').classList.add("rotate-180");
+      }
+    });
+
+    document.getElementById('dropdownButton2').addEventListener('click', function() {
+      if (document.getElementById('dropdownMenu2').classList.contains('opacity-100')) {
+        document.getElementById('dropdownMenu2').classList.replace('opacity-100', 'opacity-0');
+        document.getElementById('dropdownMenu2').classList.replace('visible', 'invisible');
+        document.getElementById('dropdownIcon2').classList.remove("rotate-180");
+      } else {
+        document.getElementById('dropdownMenu2').classList.replace('opacity-0', 'opacity-100');
+        document.getElementById('dropdownMenu2').classList.replace('invisible', 'visible');
+        document.getElementById('dropdownIcon2').classList.add("rotate-180");
+      }
+    });
+
+    function resetDropdown() {
+      document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
+      document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
+      document.getElementById('dropdownIcon1').classList.remove("rotate-180");
+
+      document.getElementById('dropdownMenu2').classList.replace('opacity-100', 'opacity-0');
+      document.getElementById('dropdownMenu2').classList.replace('visible', 'invisible');
+      document.getElementById('dropdownIcon2').classList.remove("rotate-180");
+    }
+    window.addEventListener("resize", resetDropdown);
   </script>
+
 </body>
 
 </html>

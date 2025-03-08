@@ -1,4 +1,4 @@
-<div id="rockingHorseCard" class="flex justify-center items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
+<div id="rockingHorseCard" class="flex justify-center sm:justify-start items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
     <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)] lg:cursor-pointer lg:ease-in-out lg:transition-transform lg:duration-300 lg:hover:scale-110">
         <div class="absolute flex justify-center h-[204px] w-full top-0 left-0 -translate-y-[67%]">
             <img src="images/rocking horse/rocking-horse.png" alt="kubus apung HDPE" class="absolute w-[90%] max-w-[352px] h-auto mx-auto">
@@ -68,7 +68,7 @@
             </svg>
         </button>
         <div class="absolute flex justify-end h-[263px] w-full top-0 right-[50px] -translate-y-[58%]">
-            <img id="rockingHorseDynamicImage" src="images/rocking horse/rocking-horse-1001.png" alt="kubus apung HDPE" class="absolute z-6 bottom-1 h-auto w-[430px] mx-auto border-white opacity-100 transition-opacity duration-200 ease-in-out">
+            <img id="rockingHorseDynamicImage" loading="lazy" src="images/rocking horse/rocking-horse-1001.png" alt="kubus apung HDPE" class="absolute z-6 bottom-1 h-auto w-[430px] mx-auto border-white opacity-100 transition-opacity duration-200 ease-in-out">
             <img src="images/rocking horse/shadow-rocking-horse-2.png" alt="shadow kubus apung HDPE" class="absolute z-5 -bottom-30 h-auto w-[430px] mx-auto">
         </div>
         <div class="absolute top-[160px] left-[660px] flex items-center space-x-7">

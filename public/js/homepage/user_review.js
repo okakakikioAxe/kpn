@@ -105,3 +105,24 @@ createElement();
 container.style.width = "5000px"; // 20 cards * 200px each
 container.style.animation = "user-review-slide 30s linear infinite";
 // ================= End of Animation =================
+
+// ================= Animation =================
+function revealAboutUsCards() {
+  const cards = document.querySelectorAll(".animate-user-review-card");
+  let delay = 0;
+
+  cards.forEach((card, index) => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if (cardTop < window.innerHeight * 0.9) {
+      setTimeout(() => {
+        card.classList.add("user-review-visible");
+      }, delay);
+      delay += 250; // Delay each card by 150ms
+    }
+  });
+}
+
+window.addEventListener("scroll", revealAboutUsCards);
+window.addEventListener("load", revealAboutUsCards);
+// ================= End of Animation =================

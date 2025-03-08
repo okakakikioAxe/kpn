@@ -1,4 +1,4 @@
-<div id="floatingCubeCard" class="flex justify-center items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
+<div id="floatingCubeCard" class="flex justify-center sm:justify-end items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
     <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)] lg:cursor-pointer lg:ease-in-out lg:transition-transform lg:duration-300 lg:hover:scale-110">
         <div class="absolute flex justify-center h-[204px] w-full top-0 left-0 -translate-y-[60%]">
             <img src="images/kubus apung/kubus-apung-biru.png" alt="kubus apung HDPE" class="absolute w-[95%] max-w-[352px] h-auto mx-auto">
