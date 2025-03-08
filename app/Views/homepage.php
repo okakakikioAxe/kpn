@@ -76,7 +76,7 @@
       <!-- Hero -->
       <section id="hero-section" class="relative h-[90vh] bg-white">
         <div class="relative h-full lg:h-full w-full object-cover">
-          <img src="/images/hero background.png" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
+          <img src="/images/hero background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
         </div>
         <div class="absolute top-3 sm:top-5 xl:top-8 left-1/2 -translate-x-1/2 max-w-[1600px]">
           <div class="flex justify-center">
@@ -186,94 +186,8 @@
       </section>
 
       <!-- Tentang kami -->
-      <section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[300px]">
+      <section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[300px] ">
         <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Tentang Kami</h2>
-        <!-- <div class=" w-full  flex justify-center mt-[130px] lg:mt-[210px] xl:mt-[190px] xl:px-[5%]">
-          <div class="relative  w-full h-full flex justify-center">
-            <div class="xl:hidden relative w-full px-[25px] lg:px-[10%] py-[30px]  overflow-hidden h-full aboutUsSwiper">
-              <div id="normalAboutUsCard" class="swiper-wrapper">
-                <div class="w-full swiper-slide">
-                  <div class="h-full rounded-[40px] overflow-hidden bg-[#4AC9E3] shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)] animate-about-us-card">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                  </div>
-                </div>
-                <div class="w-full swiper-slide">
-                  <div class="h-full rounded-[40px] overflow-hidden bg-[#D48BC8] shadow-[0px_0px_20px_5px_rgba(212,139,200,0.5)] animate-about-us-card">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas.</p>
-                  </div>
-                </div>
-                <div class="w-full swiper-slide">
-                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#FFAE62] shadow-[0px_0px_20px_5px_rgba(255,174,98,0.5)] animate-about-us-card">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                  </div>
-                </div>
-                <div class="w-full swiper-slide">
-                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#7CCC6C] shadow-[0px_0px_20px_5px_rgba(124,204,108,0.5)] animate-about-us-card">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="xl:hidden pt-[70px] ">
-                <div class="flex justify-center items-center about-us-swiper-pagination"></div>
-              </div>
-
-              <div class="xl:hidden">
-                <button onclick="prevAboutUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 left-1 top-[45%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
-                <button onclick="nextAboutUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 right-1 top-[45%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
-              </div>
-            </div>
-
-            <div class="hidden xl:flex justify-center relative w-full overflow-visible h-full px-[20px] max-w-[1600px] ">
-              <div id="xlAboutUsCard" class=" grid grid-cols-4 gap-10 py-[30px]">
-                <div class="h-full rounded-[40px] overflow-hidden bg-[#4AC9E3] shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)] animate-about-us-card">
-                  <div class="relative max-h-[210px]">
-                    <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                  </div>
-                  <h3 class="about-us-title">Produsen HDPE</h3>
-                  <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                </div>
-                <div class="h-full rounded-[40px] overflow-hidden bg-[#D48BC8] shadow-[0px_0px_20px_5px_rgba(212,139,200,0.5)] animate-about-us-card">
-                  <div class="relative max-h-[210px]">
-                    <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                  </div>
-                  <h3 class="about-us-title">Produsen HDPE</h3>
-                  <p class="about-us-description">Kami menyediakan produk unggulan berkualitas.</p>
-                </div>
-                <div class="h-full  rounded-[40px] overflow-hidden bg-[#FFAE62] shadow-[0px_0px_20px_5px_rgba(255,174,98,0.5)] animate-about-us-card">
-                  <div class="relative max-h-[210px]">
-                    <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                  </div>
-                  <h3 class="about-us-title">Produsen HDPE</h3>
-                  <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                </div>
-                <div class="h-full  rounded-[40px] overflow-hidden bg-[#7CCC6C] shadow-[0px_0px_20px_5px_rgba(124,204,108,0.5)] animate-about-us-card">
-                  <div class="relative max-h-[210px]">
-                    <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                  </div>
-                  <h3 class="about-us-title">Produsen HDPE</h3>
-                  <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div> -->
         <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
           <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
             <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
