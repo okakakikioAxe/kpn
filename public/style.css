@@ -100,6 +100,12 @@ button[aria-current="false"] {
   transform: translateY(0) scale(1);
 }
 
+.bg-container {
+  background-image: url("images/base-background.png"); /* Your image */
+  background-repeat: repeat;
+  background-size: 430px 764px;
+}
+
 #floatingCubeDynamicImage {
   filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white)
     drop-shadow(2px -2px 0 white) drop-shadow(-2px 2px 0 white);

@@ -72,7 +72,7 @@
   <div class="h-16"></div>
 
   <div class="absolute z-10 w-full bg-white">
-    <main>
+    <main class="bg-container">
       <!-- Hero -->
       <section id="hero-section" class="relative h-[90vh] bg-white">
         <div class="relative h-full lg:h-full w-full object-cover">
@@ -584,7 +584,7 @@
       </div>
 
       <!-- Bottom CTA -->
-      <section id="bottomCtaSection" class="relative w-full pt-[180px] xl:pt-[330px]">
+      <section id="bottomCtaSection" class="relative w-full pt-[180px] xl:pt-[330px] pb-[250px] xl:pb-[450px]">
         <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center">Hubungi kami dan dapatkan penawaran khusus untuk kebutuhan Anda!</p>
 
         <div class="flex align-center justify-center mt-[43px]">
@@ -595,7 +595,7 @@
       </section>
     </main>
 
-    <footer class="flex justify-center mt-[250px] xl:mt-[450px] bg-[#07172C]">
+    <footer class="flex justify-center  bg-[#07172C]">
       <div class="bg-[#07172C] p-[24px] max-w-[1600px]">
         <img loading="lazy" class="w-[110px] h-auto" src="white logo.png" alt="Logo KPN warna putih">
 
