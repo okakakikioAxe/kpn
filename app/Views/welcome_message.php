@@ -194,7 +194,7 @@
             <div class="xl:hidden relative w-full px-[25px] lg:px-[10%] py-[30px]  overflow-hidden h-full aboutUsSwiper">
               <div class="swiper-wrapper">
                 <div class="w-full swiper-slide">
-                  <div class="h-full rounded-[40px] overflow-hidden bg-[#4AC9E3] shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)]">
+                  <div class="h-full rounded-[40px] overflow-hidden bg-[#4AC9E3] shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)] animate-about-us-card">
                     <div class="relative max-h-[210px]">
                       <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
                     </div>
@@ -203,7 +203,7 @@
                   </div>
                 </div>
                 <div class="w-full swiper-slide">
-                  <div class="h-full rounded-[40px] overflow-hidden bg-[#D48BC8] shadow-[0px_0px_20px_5px_rgba(212,139,200,0.5)]">
+                  <div class="h-full rounded-[40px] overflow-hidden bg-[#D48BC8] shadow-[0px_0px_20px_5px_rgba(212,139,200,0.5)] animate-about-us-card">
                     <div class="relative max-h-[210px]">
                       <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
                     </div>
@@ -212,7 +212,7 @@
                   </div>
                 </div>
                 <div class="w-full swiper-slide">
-                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#FFAE62] shadow-[0px_0px_20px_5px_rgba(255,174,98,0.5)]">
+                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#FFAE62] shadow-[0px_0px_20px_5px_rgba(255,174,98,0.5)] animate-about-us-card">
                     <div class="relative max-h-[210px]">
                       <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
                     </div>
@@ -221,7 +221,7 @@
                   </div>
                 </div>
                 <div class="w-full swiper-slide">
-                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#7CCC6C] shadow-[0px_0px_20px_5px_rgba(124,204,108,0.5)]">
+                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#7CCC6C] shadow-[0px_0px_20px_5px_rgba(124,204,108,0.5)] animate-about-us-card">
                     <div class="relative max-h-[210px]">
                       <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
                     </div>
