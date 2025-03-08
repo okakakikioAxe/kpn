@@ -323,55 +323,63 @@
         <div class="xl:hidden relative w-full px-[25px] pt-[120px] max-w-[1600px] overflow-hidden h-full productionGalerySwiper">
           <div class="swiper-wrapper">
             <div class="w-full swiper-slide">
-              <div class="flex justify-center w-full ">
-                <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
-                  <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+              <div class="w-full animate-production-galery-card">
+                <div class="flex justify-center w-full ">
+                  <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
+                    <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+                  </div>
                 </div>
-              </div>
-              <div class="h-auto mt-[41px]">
-                <h3 class="production-title">Terpercaya</h3>
-                <p class="production-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium rerum obcaecati quis autem vitae impedit minima odit sapiente fugit vel sunt amet esse inventore, ipsam magnam, sequi quidem eius.
-                </p>
+                <div class="h-auto mt-[41px]">
+                  <h3 class="production-title">Terpercaya</h3>
+                  <p class="production-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium rerum obcaecati quis autem vitae impedit minima odit sapiente fugit vel sunt amet esse inventore, ipsam magnam, sequi quidem eius.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="w-full swiper-slide">
-              <div class="flex justify-center w-full ">
-                <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
-                  <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+              <div class="w-full animate-production-galery-card">
+                <div class="flex justify-center w-full ">
+                  <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
+                    <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+                  </div>
                 </div>
-              </div>
-              <div class="h-auto mt-[41px]">
-                <h3 class="production-title">Terpercaya</h3>
-                <p class="production-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
+                <div class="h-auto mt-[41px]">
+                  <h3 class="production-title">Terpercaya</h3>
+                  <p class="production-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium rerum obcaecati quis autem vitae impedit minima odit sapiente fugit vel sunt amet esse inventore, ipsam magnam, sequi quidem eius.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="w-full swiper-slide">
-              <div class="flex justify-center w-full ">
-                <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
-                  <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+              <div class="w-full animate-production-galery-card">
+                <div class="flex justify-center w-full ">
+                  <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
+                    <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+                  </div>
                 </div>
-              </div>
-              <div class="h-auto mt-[41px]">
-                <h3 class="production-title">Terpercaya</h3>
-                <p class="production-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium rerum obcaecati quis autem vitae impedit minima odit sapiente fugit vel sunt amet esse inventore, ipsam magnam, sequi quidem eius.
-                </p>
+                <div class="h-auto mt-[41px]">
+                  <h3 class="production-title">Terpercaya</h3>
+                  <p class="production-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium rerum obcaecati quis autem vitae impedit minima odit sapiente fugit vel sunt amet esse inventore, ipsam magnam, sequi quidem eius.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="w-full swiper-slide">
-              <div class="flex justify-center w-full ">
-                <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
-                  <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+              <div class="w-full animate-production-galery-card">
+                <div class="flex justify-center w-full ">
+                  <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">
+                    <img loading="lazy" class="object-cover w-full h-full" src="worker working in work.jpg" alt="contoh gambar">
+                  </div>
                 </div>
-              </div>
-              <div class="h-auto mt-[41px]">
-                <h3 class="production-title">Terpercaya</h3>
-                <p class="production-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium rerum obcaecati quis autem vitae impedit minima odit sapiente fugit vel sunt amet esse inventore, ipsam magnam, sequi quidem eius.
-                </p>
+                <div class="h-auto mt-[41px]">
+                  <h3 class="production-title">Terpercaya</h3>
+                  <p class="production-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium rerum obcaecati quis autem vitae impedit minima odit sapiente fugit vel sunt amet esse inventore, ipsam magnam, sequi quidem eius.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
