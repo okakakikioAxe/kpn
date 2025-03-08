@@ -74,19 +74,17 @@ button[aria-current="false"] {
   transform: translateY(0) scale(1);
 }
 
-@media only screen and (min-width: 1280px) {
-  .animate-top-product-card {
-    opacity: 0;
-    transform: translateY(100px) scale(0.9);
-    transition:
-      opacity 0.9s ease-in,
-      transform 0.7s ease-in;
-  }
+.animate-top-product-card {
+  opacity: 0;
+  transform: translateY(100px) scale(0.9);
+  transition:
+    opacity 0.9s ease-in,
+    transform 0.7s ease-in;
+}
 
-  .top-product-visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.top-product-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 #kubusApungDynamicImage {

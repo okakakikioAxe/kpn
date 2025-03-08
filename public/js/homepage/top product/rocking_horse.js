@@ -15,8 +15,7 @@ const rockingHorseModalContent = document.getElementById(
 // Open rockingHorseModal
 rockingHorseCard.addEventListener("click", () => {
   if (window.innerWidth > 1024) {
-    rockingHorseModal.classList.remove("hidden");
-    rockingHorseModal.classList.add("flex");
+    rockingHorseModal.classList.replace("hidden", "flex");
     document.body.style.overflow = "hidden";
     setTimeout(() => {
       rockingHorseModal.classList.replace("opacity-0", "opacity-100");
@@ -40,8 +39,7 @@ function closeRockingHorseModal() {
         "backdrop-blur-sm",
         "backdrop-blur-0",
       );
-      rockingHorseModal.classList.remove("flex");
-      rockingHorseModal.classList.add("hidden");
+      rockingHorseModal.classList.replace("flex", "hidden");
     }, 300); // Match duration-300
   }
 }
@@ -75,7 +73,7 @@ const rockingHorseBottomOffsets = [
 
 document.querySelectorAll(".rocking-horse-variant-list").forEach((color) => {
   color.addEventListener("click", function () {
-    var variantNamePrefix = "M100";
+    var variantNamePrefix = "001-M100";
     var currentIndex = parseInt(this.getAttribute("data-index")) + 1;
     var variantName = variantNamePrefix + currentIndex;
 

@@ -100,7 +100,7 @@
         <div class="w-full  flex justify-center pt-[130px] lg:pt-[210px] xl:pt-[230px]">
           <div class="relative  w-full  h-full">
             <div class="xl:hidden relative w-full px-[10%]  overflow-hidden  whyUsSwiper">
-              <div id="aboutUsCarousel" class="swiper-wrapper">
+              <div id="normalWhyUsCard" class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="h-auto w-full content-center animate-why-us-card">
                     <div class="flex justify-center">
@@ -149,7 +149,7 @@
             </div>
 
             <div class="hidden xl:flex justify-center relative w-full px-[5%] overflow-visible h-full">
-              <div class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
+              <div id="xlWhyUsCard" class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
                 <div class="h-auto w-full content-start animate-why-us-card">
                   <div class="flex justify-center">
                     <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="good-review.gif" alt="animasi review bagus">
@@ -189,10 +189,10 @@
       <!-- Tentang kami -->
       <section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[300px]">
         <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Tentang Kami</h2>
-        <div class="w-full  flex justify-center mt-[130px] lg:mt-[210px] xl:mt-[190px] xl:px-[5%]">
+        <div class=" w-full  flex justify-center mt-[130px] lg:mt-[210px] xl:mt-[190px] xl:px-[5%]">
           <div class="relative  w-full h-full flex justify-center">
             <div class="xl:hidden relative w-full px-[25px] lg:px-[10%] py-[30px]  overflow-hidden h-full aboutUsSwiper">
-              <div class="swiper-wrapper">
+              <div id="normalAboutUsCard" class="swiper-wrapper">
                 <div class="w-full swiper-slide">
                   <div class="h-full rounded-[40px] overflow-hidden bg-[#4AC9E3] shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)] animate-about-us-card">
                     <div class="relative max-h-[210px]">
@@ -240,8 +240,8 @@
               </div>
             </div>
 
-            <div class="hidden xl:flex justify-center relative w-full overflow-visible h-full px-[20px] max-w-[1600px]">
-              <div class=" grid grid-cols-4 gap-10 py-[30px]">
+            <div class="hidden xl:flex justify-center relative w-full overflow-visible h-full px-[20px] max-w-[1600px] ">
+              <div id="xlAboutUsCard" class=" grid grid-cols-4 gap-10 py-[30px]">
                 <div class="h-full rounded-[40px] overflow-hidden bg-[#4AC9E3] shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)] animate-about-us-card">
                   <div class="relative max-h-[210px]">
                     <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
@@ -321,7 +321,7 @@
       <section id="productionGalerySection" class=" relative w-full mt-[130px] xl:mt-[200px]">
         <h2 class="flex align-center justify-center h2-title">Intip Proses Produksinya</h2>
         <div class="xl:hidden relative w-full px-[25px] pt-[120px] max-w-[1600px] overflow-hidden h-full productionGalerySwiper">
-          <div class="swiper-wrapper">
+          <div id="normalProductionCard" class="swiper-wrapper">
             <div class="w-full swiper-slide">
               <div class="w-full animate-production-galery-card">
                 <div class="flex justify-center w-full ">
@@ -396,7 +396,7 @@
         </div>
         <div class="hidden xl:flex justify-center relative w-full px-[10%]">
           <div class="pt-[200px] w-full  max-w-[1600px] overflow-visible h-full">
-            <div class="grid grid-cols-4 gap-10">
+            <div id="xlProductionCard" class="grid grid-cols-4 gap-10">
               <div class="w-full animate-production-galery-card">
                 <div class="flex justify-center w-full ">
                   <div class="max-h-[366px] aspect-auto rounded-[40px] overflow-hidden">

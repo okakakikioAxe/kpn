@@ -4,10 +4,10 @@
             <img src="images/rocking horse/rocking-horse.png" alt="kubus apung HDPE" class="absolute w-[90%] max-w-[352px] h-auto mx-auto">
             <img src="images/rocking horse/shadow-rocking-horse.png" alt="shadow kubus apung HDPE" class="absolute  w-[90%] max-w-[352px] h-auto mx-auto">
         </div>
-        <div class="mt-[70px] flex">
+        <div class="mt-[65px] flex">
             <p class="font-trebuchet text-orange-300 text-[22px] sm:text-[18px] text-start font-[400]">5+ Variant</p>
         </div>
-        <h3 class="mt-[18px] font-trebuchet text-white text-[36px] sm:text-[32px] text-start font-[400]">Rocking Horse</h3>
+        <h3 class="mt-[10px] font-trebuchet text-white text-[36px] sm:text-[32px] text-start font-[400]">Rocking Horse</h3>
         <p class="mt-[24px] font-humanist-normal text-white text-[16px] text-start font-[400]">
             Dermaga apung dari plastik HDPE adalah solusi inovatif untuk akses perairan yang fleksibel dan tahan lama. Material HDPE membuatnya ringan, tahan terhadap korosi, serta mampu bertahan di berbagai kondisi cuaca dan lingkungan air.
         </p>
@@ -61,21 +61,22 @@
 </div>
 
 <div id="rockingHorseModal" class="fixed z-10 inset-0 items-center hidden justify-center bg-black/70 opacity-100 backdrop-blur-0  transition-opacity duration-300">
-    <div id="rockingHorseModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] rounded-[40px] transform scale-95 opacity-100 transition-transform duration-300">
+    <div id="rockingHorseModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] rounded-[40px] transform scale-100 opacity-100 transition-transform duration-300">
         <button id="closeRockingHorseModalBtn" class="absolute top-[20px] right-[18px] w-[38px] h-[38px] bg-white rounded-full hover:bg-white/80 cursor-pointer transition-transform duration-200 ease-in-out transform-gpu hover:scale-105 flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="28" height="28">
                 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z" />
             </svg>
         </button>
-        <div class="absolute flex justify-end h-[263px] w-full top-0 right-[64px] -translate-y-[70%]">
+        <div class="absolute flex justify-end h-[263px] w-full top-0 right-[50px] -translate-y-[58%]">
             <img id="rockingHorseDynamicImage" src="images/rocking horse/rocking-horse-1001.png" alt="kubus apung HDPE" class="absolute z-6 bottom-1 h-auto w-[430px] mx-auto border-white opacity-100 transition-opacity duration-200 ease-in-out">
             <img src="images/rocking horse/shadow-rocking-horse-2.png" alt="shadow kubus apung HDPE" class="absolute z-5 -bottom-30 h-auto w-[430px] mx-auto">
         </div>
-        <div class="absolute top-[80px] left-[690px]">
-            <p id="rockingHorseVariantTitle" class="flex-none font-trebuchet text-white text-[22px] text-start font-[400]">M1001</p>
+        <div class="absolute top-[160px] left-[660px] flex items-center space-x-7">
+            <p id="rockingHorseVariantTitle" class="flex-none font-trebuchet text-orange-300 text-[22px] text-start font-[400]">001-M1001</p>
+
         </div>
-        <div class="absolute top-[100px] right-[88px]">
-            <div class="flex space-x-[12px]">
+        <div class="absolute top-[160px] right-[70px]">
+            <div class=" flex space-x-[12px]">
                 <!-- 1001 -->
                 <div class="w-[30px] h-[30px] rounded-full border-[2px] border-white bg-transparent scale-150 transition-all cursor-pointer rocking-horse-variant-list flex items-center justify-center" data-index="0">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-[23px] h-auto" viewBox="0 0 85 59" fill="none">
@@ -173,36 +174,10 @@
                 </div>
             </div>
             <div>
-                <div class="h-full w-full flex flex-col pt-[75px]">
-                    <h3 class="flex-none font-trebuchet text-white text-[28px] text-start font-[400]">Aksesoris</h3>
-                    <div class="flex-none mt-[25px]">
-                        <div class="grid grid-cols-3 gap-[23px]">
-
-                            <div class="h-[180px] w-full bg-white rounded-[30px] flex flex-col">
-                                <div class="grow flex w-full  justify-center items-center py-2">
-                                    <img src="/images/kubus apung/handrail.png" alt="aksesoris handrail kubus apung" class=" h-full w-auto relative">
-                                </div>
-                                <div class="flex-none justify-center h-[42px] ">
-                                    <p class="font-trebuchet text-stone-600 text-[22px] text-center font-[400]">Handgrill</p>
-                                </div>
-                            </div>
-                            <div class="h-[180px] w-full bg-white rounded-[30px] flex flex-col">
-                                <div class="grow flex w-full  justify-center items-center py-2">
-                                    <img src="/images/kubus apung/baut.png" alt="aksesoris baut kubus apung" class=" h-full w-auto relative">
-                                </div>
-                                <div class="flex-none justify-center h-[42px]">
-                                    <p class="font-trebuchet text-stone-600 text-[22px] text-center font-[400]">Baut</p>
-                                </div>
-                            </div>
-                            <div class="h-[180px] w-full bg-white rounded-[30px] flex flex-col">
-                                <div class="grow flex w-full justify-center items-center py-2">
-                                    <img src="/images/kubus apung/paku.png" alt="aksesoris paku kubus apung" class="drop-shadow-[2px_4px_4.4px_0px_rgba(0,0,0,0.25)] h-full w-auto relative">
-                                </div>
-                                <div class="flex-none justify-center h-[42px] ">
-                                    <p class="font-trebuchet text-stone-600 text-[22px] text-center font-[400]">Paku</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="h-full w-full flex flex-col pt-[160px]">
+                    <h3 class="flex-none font-trebuchet text-white text-[28px] text-start font-[400]">Kelengkapan</h3>
+                    <div class="flex-none mt-[10px] h-[80px]">
+                        <p class="text-white">Lorem Ipsum</p>
                     </div>
                     <div class="flex-grow mt-[36px]">
                         <div class=" relative w-full rounded-[30px] overflow-hidden h-[207px] rockingHorseDetailSwiper">
