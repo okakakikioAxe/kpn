@@ -193,42 +193,38 @@
           <div class="relative  w-full h-full flex justify-center">
             <div class="xl:hidden relative w-full px-[25px] lg:px-[10%] py-[30px]  overflow-hidden h-full aboutUsSwiper">
               <div class="swiper-wrapper">
-                <div class="w-full swiper-slide">
-                  <div class="h-full rounded-[40px] overflow-hidden bg-[#4AC9E3] shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)]">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                  </div>
-                </div>
-                <div class="w-full swiper-slide">
-                  <div class="h-full rounded-[40px] overflow-hidden bg-[#D48BC8] shadow-[0px_0px_20px_5px_rgba(212,139,200,0.5)]">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas.</p>
-                  </div>
-                </div>
-                <div class="w-full swiper-slide">
-                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#FFAE62] shadow-[0px_0px_20px_5px_rgba(255,174,98,0.5)]">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                  </div>
-                </div>
-                <div class="w-full swiper-slide">
-                  <div class="h-full  rounded-[40px] overflow-hidden bg-[#7CCC6C] shadow-[0px_0px_20px_5px_rgba(124,204,108,0.5)]">
-                    <div class="relative max-h-[210px]">
-                      <img loading="lazy" class="object-cover w-full max-h-[210px]" src="worker working in work.jpg" alt="contoh gambar">
-                    </div>
-                    <h3 class="about-us-title">Produsen HDPE</h3>
-                    <p class="about-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                  </div>
-                </div>
+                <?= view('components/cards/about_us_card', [
+                  'bg_color' => 'bg-[#4AC9E3]',
+                  'shadow' => 'shadow-[0px_0px_20px_5px_rgba(74,201,227,0.5)]',
+                  'image' => 'worker working in work.jpg',
+                  'image_alt' => 'contoh gambar',
+                  'title' => 'Produsen HDPE',
+                  'description' => 'Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.',
+                ]) ?>
+                <?= view('components/cards/about_us_card', [
+                  'bg_color' => 'bg-[#D48BC8]',
+                  'shadow' => 'shadow-[0px_0px_20px_5px_rgba(212,139,200,0.5)]',
+                  'image' => 'worker working in work.jpg',
+                  'image_alt' => 'contoh gambar',
+                  'title' => 'Produsen HDPE',
+                  'description' => 'Kami menyediakan produk unggulan berkualitas.',
+                ]) ?>
+                <?= view('components/cards/about_us_card', [
+                  'bg_color' => 'bg-[#FFAE62]',
+                  'shadow' => 'shadow-[0px_0px_20px_5px_rgba(255,174,98,0.5)]',
+                  'image' => 'worker working in work.jpg',
+                  'image_alt' => 'contoh gambar',
+                  'title' => 'Produsen HDPE',
+                  'description' => 'Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.',
+                ]) ?>
+                <?= view('components/cards/about_us_card', [
+                  'bg_color' => 'bg-[#7CCC6C]',
+                  'shadow' => 'shadow-[0px_0px_20px_5px_rgba(124,204,108,0.5)]',
+                  'image' => 'worker working in work.jpg',
+                  'image_alt' => 'contoh gambar',
+                  'title' => 'Produsen HDPE',
+                  'description' => 'Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.',
+                ]) ?>
               </div>
               <div class="xl:hidden pt-[70px] ">
                 <div class="flex justify-center items-center about-us-swiper-pagination"></div>
