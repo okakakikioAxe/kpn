@@ -75,6 +75,12 @@ const rockingHorseBottomOffsets = [
 
 document.querySelectorAll(".rocking-horse-variant-list").forEach((color) => {
   color.addEventListener("click", function () {
+    var variantNamePrefix = "M100";
+    var currentIndex = parseInt(this.getAttribute("data-index")) + 1;
+    var variantName = variantNamePrefix + currentIndex;
+
+    document.getElementById("rockingHorseVariantTitle").innerHTML = variantName;
+
     rockingHorseDynamicImage.classList.replace("opacity-100", "opacity-0");
 
     setTimeout(() => {
