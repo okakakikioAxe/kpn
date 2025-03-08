@@ -83,7 +83,7 @@
             <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="colored logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
           </div>
         </div>
-        <div class="absolute bottom-[165px] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
+        <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
           <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
           <p class="max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px]">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
           <a href="#" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center">
@@ -102,40 +102,36 @@
             <div class="xl:hidden relative w-full px-[10%]  overflow-hidden  whyUsSwiper">
               <div id="aboutUsCarousel" class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="h-auto w-full content-center">
-                    <div class="flex justify-center">
-                      <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="good-review.gif" alt="animasi review bagus">
-                    </div>
-                    <h3 class="why-us-title">Terpercaya</h3>
-                    <p class=" why-us-description">Telah dipercaya selama lebih dari 5 tahun untuk memberikan produk berkualitas tinggi.</p>
-                  </div>
+                  <?= view('components/cards/why_us_card', [
+                    'image' => 'good-review.gif',
+                    'image_alt' => 'contoh animasi',
+                    'title' => 'Terpercaya',
+                    'description' => 'Telah dipercaya selama lebih dari 5 tahun untuk memberikan produk berkualitas tinggi.',
+                  ]) ?>
                 </div>
                 <div class="swiper-slide">
-                  <div class="h-auto w-full content-center">
-                    <div class="flex justify-center ">
-                      <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
-                    </div>
-                    <h3 class="why-us-title">Best Service</h3>
-                    <p class="relative h-auto why-us-description">Secara profesional, kami selalu memberikan kualitas layanan terbaik karena kepuasan pelanggan adalah salah satu prioritas utama kami.</p>
-                  </div>
+                  <?= view('components/cards/why_us_card', [
+                    'image' => 'star.gif',
+                    'image_alt' => 'contoh animasi',
+                    'title' => 'Best Service',
+                    'description' => 'Secara profesional, kami selalu memberikan kualitas layanan terbaik karena kepuasan pelanggan adalah salah satu prioritas utama kami.',
+                  ]) ?>
                 </div>
                 <div class="swiper-slide">
-                  <div class="h-auto w-full content-center">
-                    <div class="flex justify-center ">
-                      <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
-                    </div>
-                    <h3 class="why-us-title">Harga Kompetitif</h3>
-                    <p class="why-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                  </div>
+                  <?= view('components/cards/why_us_card', [
+                    'image' => 'best-price.gif',
+                    'image_alt' => 'contoh animasi',
+                    'title' => 'Harga Kompetitif',
+                    'description' => 'Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.',
+                  ]) ?>
                 </div>
                 <div class="swiper-slide">
-                  <div class="h-auto w-full content-center ">
-                    <div class="flex justify-center ">
-                      <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
-                    </div>
-                    <h3 class="why-us-title">Jangkauan Luas</h3>
-                    <p class="why-us-description">Penjualan produk telah menjangkau pelosok tanah air dan kota-kota besar di Indonesia.</p>
-                  </div>
+                  <?= view('components/cards/why_us_card', [
+                    'image' => 'emerging-industries.gif',
+                    'image_alt' => 'contoh animasi',
+                    'title' => 'Jangkauan Luas',
+                    'description' => 'Penjualan produk telah menjangkau pelosok tanah air dan kota-kota besar di Indonesia.',
+                  ]) ?>
                 </div>
               </div>
               <div class="xl:hidden pt-[70px] md:pt-[150px]">
@@ -148,36 +144,33 @@
               </div>
             </div>
 
-            <div class="hidden xl:flex justify-center relative w-full px-[5%] overflow-visible h-full">
+            <div class="hidden xl:flex justify-center  relative w-full px-[5%] overflow-visible h-full">
               <div class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
-                <div class="h-auto w-full content-start animate-why-us-card">
-                  <div class="flex justify-center">
-                    <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="good-review.gif" alt="animasi review bagus">
-                  </div>
-                  <h3 class="why-us-title">Terpercaya</h3>
-                  <p class=" why-us-description">Telah dipercaya selama lebih dari 5 tahun untuk memberikan produk berkualitas tinggi.</p>
-                </div>
-                <div class="h-auto w-full content-start animate-why-us-card">
-                  <div class="flex justify-center ">
-                    <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
-                  </div>
-                  <h3 class="why-us-title">Best Service</h3>
-                  <p class="relative h-auto why-us-description">Secara profesional, kami selalu memberikan kualitas layanan terbaik karena kepuasan pelanggan adalah salah satu prioritas utama kami.</p>
-                </div>
-                <div class="h-auto w-full content-start animate-why-us-card">
-                  <div class="flex justify-center ">
-                    <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
-                  </div>
-                  <h3 class="why-us-title">Harga Kompetitif</h3>
-                  <p class="why-us-description">Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.</p>
-                </div>
-                <div class="h-auto w-full content-start animate-why-us-card">
-                  <div class="flex justify-center ">
-                    <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
-                  </div>
-                  <h3 class="why-us-title">Jangkauan Luas</h3>
-                  <p class="why-us-description">Penjualan produk telah menjangkau pelosok tanah air dan kota-kota besar di Indonesia.</p>
-                </div>
+                <?= view('components/cards/why_us_card', [
+                  'image' => 'good-review.gif',
+                  'image_alt' => 'contoh animasi',
+                  'title' => 'Terpercaya',
+                  'description' => 'Telah dipercaya selama lebih dari 5 tahun untuk memberikan produk berkualitas tinggi.',
+                ]) ?>
+                <?= view('components/cards/why_us_card', [
+                  'image' => 'star.gif',
+                  'image_alt' => 'contoh animasi',
+                  'title' => 'Best Service',
+                  'description' => 'Secara profesional, kami selalu memberikan kualitas layanan terbaik karena kepuasan pelanggan adalah salah satu prioritas utama kami.',
+                ]) ?>
+                <?= view('components/cards/why_us_card', [
+                  'image' => 'best-price.gif',
+                  'image_alt' => 'contoh animasi',
+                  'title' => 'Harga Kompetitif',
+                  'description' => 'Kami menyediakan produk unggulan berkualitas tinggi dengan harga yang kompetitif dan pengiriman tepat waktu.',
+                ]) ?>
+                <?= view('components/cards/why_us_card', [
+                  'image' => 'emerging-industries.gif',
+                  'image_alt' => 'contoh animasi',
+                  'title' => 'Jangkauan Luas',
+                  'description' => 'Penjualan produk telah menjangkau pelosok tanah air dan kota-kota besar di Indonesia.',
+                ]) ?>
+
               </div>
 
             </div>
