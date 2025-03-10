@@ -48,7 +48,7 @@ button[aria-current="false"] {
   transform: translateY(0) scale(1);
 }
 
-.animate-about-us-card {
+.animate-about-us {
   opacity: 0;
   transform: translateY(100px) scale(0.9);
   transition:

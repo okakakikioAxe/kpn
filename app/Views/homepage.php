@@ -191,7 +191,7 @@
         <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
           <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
             <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
-            <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+            <p id="about-us" class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
             <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver ml-10 rounded-full"></div>
           </div>
         </div>
