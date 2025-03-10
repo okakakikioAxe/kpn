@@ -26,7 +26,7 @@
   }
 
   .why-us-description {
-    @apply mt-[8px] px-[25px] text-center font-humanist-normal text-[16px] font-[400] text-iron-gray md:text-[18px] xl:text-[20px];
+    @apply mt-[20px] px-[25px] text-center font-humanist-normal text-[16px] font-[400] text-iron-gray md:text-[18px] xl:text-[20px];
   }
 
   .production-title {
