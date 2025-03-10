@@ -13,6 +13,6 @@ class Home extends BaseController
     public function aboutUs(): string
     {
         // $this->cachePage(86400);
-        return view('welcome_message');
+        return view('about_us');
     }
 }
