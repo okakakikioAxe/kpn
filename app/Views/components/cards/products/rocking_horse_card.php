@@ -61,7 +61,7 @@
 </div>
 
 <div id="rockingHorseModal" class="fixed z-10 inset-0 items-center hidden justify-center bg-black/70 opacity-100 backdrop-blur-0  transition-opacity duration-300">
-    <div id="rockingHorseModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] rounded-[40px] transform scale-100 opacity-100 transition-transform duration-300">
+    <div id="rockingHorseModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] rounded-[40px] transform scale-95 opacity-100 transition-transform duration-300">
         <button id="closeRockingHorseModalBtn" class="absolute top-[20px] right-[18px] w-[38px] h-[38px] bg-white rounded-full hover:bg-white/80 cursor-pointer transition-transform duration-200 ease-in-out transform-gpu hover:scale-105 flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="28" height="28">
                 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z" />
