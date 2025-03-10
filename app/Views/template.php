@@ -9,8 +9,8 @@
     <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="output.css">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/homepage_style.css">
     <link rel="stylesheet" href="css/font_style.css">
+    <?= $this->renderSection('style') ?>
 </head>
 
 <body class="bg-white">

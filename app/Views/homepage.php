@@ -1,5 +1,9 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('style') ?>
+<link rel="stylesheet" href="css/homepage_style.css">
+<?= $this->endSection() ?>
+
 <?= $this->section('content') ?>
 <!-- Hero -->
 <section id="hero-section" class="relative h-[90vh] bg-white">
