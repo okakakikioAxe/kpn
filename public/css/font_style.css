@@ -1,15 +1,15 @@
 @font-face {
   font-family: "HumanistNormal";
-  src: url("./Font/HumanistNormal.woff") format("woff");
+  src: url("../Font/HumanistNormal.woff") format("woff");
 }
 
 @font-face {
   font-family: "HumanistBold";
-  src: url("./Font/HumanistBold.woff") format("woff");
+  src: url("../Font/HumanistBold.woff") format("woff");
   /* "line-height-normal" : leading-[%] */
 }
 @font-face {
   font-family: "Trebuchet";
-  src: url("./Font/Trebuchet.woff") format("woff");
+  src: url("../Font/Trebuchet.woff") format("woff");
   /* "line-height-normal" : leading-4 */
 }
