@@ -10,6 +10,12 @@ class Home extends BaseController
         return view('homepage');
     }
 
+    public function contactUs(): string
+    {
+        // $this->cachePage(86400);
+        return view('contact_us');
+    }
+
     public function aboutUs(): string
     {
         // $this->cachePage(86400);
