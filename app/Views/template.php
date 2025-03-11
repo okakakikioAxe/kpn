@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="output.css">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/global_style.css">
+    <style>
+        .nav-link.active {
+            border-color: white;
+            /* Add border to selected link */
+        }
+    </style>
     <?= $this->renderSection('style') ?>
 </head>
 
@@ -27,10 +33,11 @@
                         <div class="hidden sm:ml-6 sm:block ">
                             <div class="flex space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                                <a href="/" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Beranda</a> </a>
+                                <a href="#" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
+                                <a href="#" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hubungi Kami</a>
+                                <a href="/about-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
+                                <a href="#" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Galery</a>
                             </div>
                         </div>
                     </div>
@@ -59,10 +66,11 @@
             id="mobile-menu"
             class="fixed top-16 right-0 w-screen h-screen bg-gray-800 shadow-lg sm:hidden translate-x-full transition-transform duration-300 overflow-y-auto z-20">
             <div class="space-y-1 px-4 pt-4">
-                <a href="#" class="block rounded-md bg-gray-900 px-4 py-3 text-lg font-medium text-white" aria-current="page">Dashboard</a>
-                <a href="#" class="block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-                <a href="#" class="block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-                <a href="#" class="block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                <a href="/" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Beranda</a>
+                <a href="#" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
+                <a href="#" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hubungi Kami</a>
+                <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
+                <a href="#" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Galery</a>
             </div>
         </div>
 
@@ -159,6 +167,7 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <?= $this->renderSection('script') ?>
     <script defer type="text/javascript">
         // ================= navbar section =================
@@ -218,6 +227,39 @@
             document.getElementById('dropdownIcon2').classList.remove("rotate-180");
         }
         window.addEventListener("resize", resetDropdown);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".nav-link");
+            const currentURL = window.location.href;
+
+            links.forEach((link) => {
+                if (currentURL === link.href) {
+                    link.classList.add("bg-gray-900", "text-white"); // Apply active styles
+                    link.classList.remove("text-gray-300", "hover:bg-gray-700", "hover:text-white"); // Remove hover styles
+                }
+            });
+        });
+
+        function beforeNavigate(callback) {
+            () => toggleMenu();
+
+            // Simulate an async task (e.g., saving data, API request)
+            setTimeout(() => {
+                console.log("Function complete. Navigating now...");
+                callback();
+            }, 1000); // Delay navigation for 1 second
+        }
+
+        document.querySelectorAll(".nav-link-mobile").forEach((link) => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Stop instant navigation
+
+                beforeNavigate(() => {
+                    window.location.href = this.href; // Navigate after function completes
+                });
+            });
+        });
     </script>
 
 </body>
