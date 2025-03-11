@@ -188,7 +188,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="js/homepage/why_us.js"></script>
-<script type="text/javascript" src="js/about_us/about_us.js"></script>
+<script type="text/javascript" src="js/about us/about_us.js"></script>
 <script type="text/javascript" src="js/homepage/vision_mission.js"></script>
 <script defer type="text/javascript">
   // ================= Why Us Swiper ================
