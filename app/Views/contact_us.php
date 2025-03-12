@@ -22,7 +22,7 @@
       Hubungi Kami
     </button>
   </div>
-  <div class="hidden xl:block absolute bottom-0 h-[210px] w-full bg-gradient-to-t from-white to-transparent z-10"></div>
+  <div class="hidden lg:block absolute bottom-0 h-[210px] w-full bg-gradient-to-t from-white to-transparent z-10"></div>
 </section>
 
 <!-- Kontak -->
