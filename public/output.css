@@ -594,6 +594,9 @@
   .top-16 {
     top: calc(var(--spacing) * 16);
   }
+  .top-50 {
+    top: calc(var(--spacing) * 50);
+  }
   .top-\[20px\] {
     top: 20px;
   }
@@ -665,6 +668,12 @@
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .left-50 {
+    left: calc(var(--spacing) * 50);
+  }
+  .left-\[50\%\] {
+    left: 50%;
   }
   .left-\[660px\] {
     left: 660px;
@@ -988,6 +997,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -1111,6 +1123,9 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
@@ -1122,6 +1137,9 @@
   }
   .w-97 {
     width: calc(var(--spacing) * 97);
+  }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
   }
   .w-\[14px\] {
     width: 14px;
@@ -1161,6 +1179,9 @@
   }
   .w-\[100px\] {
     width: 100px;
+  }
+  .w-\[100vw\] {
+    width: 100vw;
   }
   .w-\[104px\] {
     width: 104px;
@@ -1332,8 +1353,24 @@
     --tw-translate-x: calc(var(--spacing) * 0);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * 1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-1\/2 {
+    --tw-translate-x: calc(1/2 * 100%);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .translate-x-full {
     --tw-translate-x: 100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * 1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-1\/2 {
+    --tw-translate-y: calc(1/2 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-full {
@@ -1625,6 +1662,9 @@
   .bg-\[\#0D55C8\] {
     background-color: #0D55C8;
   }
+  .bg-\[\#00AD5E\] {
+    background-color: #00AD5E;
+  }
   .bg-\[\#13BA6E\] {
     background-color: #13BA6E;
   }
@@ -1655,6 +1695,9 @@
   .bg-amber-100 {
     background-color: var(--color-amber-100);
   }
+  .bg-amber-200 {
+    background-color: var(--color-amber-200);
+  }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
   }
@@ -1672,6 +1715,9 @@
   }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
+  }
+  .bg-blue-600 {
+    background-color: var(--color-blue-600);
   }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
@@ -1791,6 +1837,9 @@
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
   }
   .px-\[5\%\] {
     padding-inline: 5%;
@@ -2004,6 +2053,10 @@
   .leading-4 {
     --tw-leading: calc(var(--spacing) * 4);
     line-height: calc(var(--spacing) * 4);
+  }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
   }
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
@@ -2341,6 +2394,13 @@
       }
     }
   }
+  .hover\:bg-blue-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-700);
+      }
+    }
+  }
   .hover\:bg-dark-salmon {
     &:hover {
       @media (hover: hover) {
@@ -2633,6 +2693,11 @@
       margin-inline: 10%;
     }
   }
+  .md\:mt-\[34px\] {
+    @media (width >= 48rem) {
+      margin-top: 34px;
+    }
+  }
   .md\:mt-\[200px\] {
     @media (width >= 48rem) {
       margin-top: 200px;
@@ -2706,6 +2771,11 @@
   .md\:text-\[18px\] {
     @media (width >= 48rem) {
       font-size: 18px;
+    }
+  }
+  .md\:text-\[20px\] {
+    @media (width >= 48rem) {
+      font-size: 20px;
     }
   }
   .md\:text-\[36px\] {
@@ -2903,6 +2973,11 @@
       font-size: 18px;
     }
   }
+  .lg\:text-\[20px\] {
+    @media (width >= 64rem) {
+      font-size: 20px;
+    }
+  }
   .lg\:text-\[40px\] {
     @media (width >= 64rem) {
       font-size: 40px;
@@ -2953,6 +3028,11 @@
   .xl\:bottom-\[23vh\] {
     @media (width >= 80rem) {
       bottom: 23vh;
+    }
+  }
+  .xl\:mt-\[40px\] {
+    @media (width >= 80rem) {
+      margin-top: 40px;
     }
   }
   .xl\:mt-\[50px\] {

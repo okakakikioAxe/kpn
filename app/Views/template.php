@@ -34,7 +34,7 @@
                             <div class="flex space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="/" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Beranda</a> </a>
-                                <a href="#" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
+                                <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
                                 <a href="/contact-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hubungi Kami</a>
                                 <a href="/about-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
                                 <a href="#" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Galery</a>
@@ -67,7 +67,7 @@
             class="fixed top-16 right-0 w-screen h-screen bg-gray-800 shadow-lg sm:hidden translate-x-full transition-transform duration-300 overflow-y-auto z-20">
             <div class="space-y-1 px-4 pt-4">
                 <a href="/" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Beranda</a>
-                <a href="#" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
+                <a href="/product" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
                 <a href="/contact-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hubungi Kami</a>
                 <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
                 <a href="#" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Galery</a>
