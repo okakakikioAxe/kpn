@@ -22,7 +22,7 @@
   <div class="absolute inset-0 flex flex-col items-center justify-center px-[40px] md:px-[10%]">
     <h1 class=" text-white text-center text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]">PRODUK KAMI</h1>
 
-    <p class="mt-[100px] text-white text-center font-humanist-normal leading- text-[18px] md:text-[20px] xl:text-[22px]">Jelajahi produk kami dengan pengalaman interaktif dan menyenangkan</p>
+    <p class="mt-[100px] text-white text-center font-humanist-normal leading-4 text-[18px] md:text-[20px] xl:text-[22px]">Jelajahi produk kami dengan pengalaman interaktif dan menyenangkan</p>
     <a href="#" class="flex mt-[30px] md:mt-[34px] xl:mt-[40px] bg-[#00AD5E] font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center">
       Jelajahi Produk
     </a>
