@@ -10,6 +10,7 @@ $routes->post('login', 'AuthController::login');
 service('auth')->routes($routes);
 
 $routes->get('/', 'Home::index');
+$routes->get('/product', 'Home::product');
 $routes->get('/contact-us', 'Home::contactUs');
 $routes->get('/about-us', 'Home::aboutUs');
 $routes->get('/admin', 'AdminController::index', ['filter' => 'authRedirect']);

@@ -10,6 +10,12 @@ class Home extends BaseController
         return view('homepage');
     }
 
+    public function product(): string
+    {
+        // $this->cachePage(86400);
+        return view('product');
+    }
+
     public function contactUs(): string
     {
         // $this->cachePage(86400);
