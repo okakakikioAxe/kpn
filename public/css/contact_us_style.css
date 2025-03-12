@@ -1,0 +1,32 @@
+.faq-content {
+  height: 0;
+  overflow: hidden;
+  padding-right: 48px;
+  opacity: 0;
+  transition:
+    height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+
+@keyframes moveTriangle {
+  0% {
+    transform: translate(0, 0);
+  } /* Top-left */
+  33% {
+    transform: translate(-20px, 20px);
+  } /* Top-right */
+  66% {
+    transform: translate(20px, 20px);
+  } /* Center */
+  100% {
+    transform: translate(0, 0);
+  } /* Loop back to start */
+}
+
+.animate-triangle {
+  animation: moveTriangle 5s ease-in-out 1 forwards;
+}
+
+.hover-loop:hover {
+  animation: moveTriangle 5s ease-in-out infinite;
+}
