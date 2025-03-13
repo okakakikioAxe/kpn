@@ -174,9 +174,10 @@
   <div class="bg-white w-[600px] lg:w-full max-w-[1200px] ">
     <h2 class="flex align-center justify-center text-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">FAQ</h2>
     <div class="mt-[46px]">
-      <div class="mb-0 border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] lg:text-[18px] font-trebuchet font-bold" onclick="toggleFAQ(0)">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+
+      <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(0)">
+          Apakah produk bebas BPA?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
@@ -184,12 +185,12 @@
           </span>
         </button>
         <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] lg:text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus elit, euismod id neque in, luctus ornare nunc.</p>
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Ya, produk kami, terutama yang berkaitan dengan anak-anak seperti playmat, perosotan, dan mainan anak, dibuat dari bahan bebas BPA sehingga aman digunakan.</p>
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] lg:text-[18px] font-trebuchet font-bold" onclick="toggleFAQ(1)">
-          Lorem ipsum dolor sit amet, conse ctetur?
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(1)">
+          Apakah produk berstandar SNI?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
@@ -197,7 +198,46 @@
           </span>
         </button>
         <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] lg:text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus elit, euismod id neque in, luctus ornare nunc.</p>
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px] max-h-[70px]">Beberapa produk seperti playmat, perosotan, dan mainan anak telah memenuhi standar SNI untuk menjamin kualitas dan keamanannya.</p>
+        </div>
+      </div>
+      <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(2)">
+          Apakah bisa custom merk sendiri?
+          <span class="icon-container pl-[34px]">
+            <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content text-gray-600">
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Tentu! Kami menyediakan layanan custom branding sesuai kebutuhan bisnis Anda. Hubungi kami untuk detail lebih lanjut.</p>
+        </div>
+      </div>
+      <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(3)">
+          Apakah pengiriman bisa ke seluruh Indonesia?
+          <span class="icon-container pl-[34px]">
+            <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content text-gray-600">
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Ya, kami melayani pengiriman ke seluruh Indonesia dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya.</p>
+        </div>
+      </div>
+      <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(4)">
+          Apakah ada harga khusus untuk pembelian dalam jumlah besar?
+          <span class="icon-container pl-[34px]">
+            <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content text-gray-600">
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Untuk pembelian grosir atau dalam jumlah besar, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di [nomor] atau email [email].</p>
         </div>
       </div>
     </div>
