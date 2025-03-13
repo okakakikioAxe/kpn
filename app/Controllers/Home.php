@@ -27,4 +27,10 @@ class Home extends BaseController
         // $this->cachePage(86400);
         return view('about_us');
     }
+
+    public function galery(): string
+    {
+        // $this->cachePage(86400);
+        return view('galery');
+    }
 }
