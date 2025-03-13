@@ -28,7 +28,7 @@
                     <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
                         <!-- Logo di kiri -->
                         <div class="flex shrink-0 items-center ml-[25px] sm:ml-0">
-                            <img loading="lazy" class="h-8 w-auto" src="white logo.png" alt="Your Company">
+                            <img class="h-8 w-auto" src="white logo.png" alt="Your Company">
                         </div>
                         <div class="hidden sm:ml-6 sm:block ">
                             <div class="flex space-x-4">
