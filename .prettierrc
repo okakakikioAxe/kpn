@@ -1,5 +1,0 @@
-{
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindStylesheet": "./public/input.css",
-  "tailwindConfig": "./public/input.css"
-}

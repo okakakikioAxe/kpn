@@ -10,17 +10,17 @@
             <div class="w-[14px] h-[14px] rounded-full border-[1px] border-white bg-[#FCCB50] mr-[5px]"></div>
             <div class="w-[14px] h-[14px] rounded-full border-[1px] border-white bg-[#D95302] mr-[5px]"></div>
         </div>
-        <h3 class="mt-[18px] font-trebuchet text-white text-[36px] sm:text-[32px] text-start font-[400]">Kubus Apung HDPE</h3>
-        <p class="mt-[24px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+        <h3 class="mt-[18px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[27px] md:text-[36px] text-start font-[400]">Kubus Apung HDPE</h3>
+        <p class="mt-[24px] sm:h-[170px] md:h-[125px] font-humanist-normal text-white text-[16px] text-start font-[400]">
             Dermaga apung dari plastik HDPE adalah solusi inovatif untuk akses perairan yang fleksibel dan tahan lama. Material HDPE membuatnya ringan, tahan terhadap korosi, serta mampu bertahan di berbagai kondisi cuaca dan lingkungan air.
         </p>
         <div class="mt-[38px] grid grid-cols-2 gap-[8px]">
             <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
                 <div class="flex items-center">
                     <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">50</h4>
-                    <div class="h-full w-auto ml-[2px]">
+                    <div class="h-full w-auto ml-[6px]">
                         <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">cm</p>
-                        <p class="font-humanist-bold text-white text-[16px] text-start">Tiap Sisi</p>
+                        <p class="font-humanist-bold text-white text-[16px] sm:text-[14px] md:text-[16px] text-start">Tiap Sisi</p>
                     </div>
                 </div>
                 <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
@@ -30,7 +30,7 @@
             <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
                 <div class="flex items-center">
                     <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">10</h4>
-                    <div class="h-full w-auto ml-[2px]">
+                    <div class="h-full w-auto ml-[6px]">
                         <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">kg</p>
                         <p class="font-humanist-bold text-white text-[16px] text-start">Berat</p>
                     </div>
@@ -42,7 +42,7 @@
             <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
                 <div class="flex items-center">
                     <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">50</h4>
-                    <div class="h-full w-auto ml-[2px]">
+                    <div class="h-full w-auto ml-[6px]">
                         <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">cm</p>
                         <p class="font-humanist-bold text-white text-[16px] text-start">Lebar</p>
                     </div>

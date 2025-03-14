@@ -146,7 +146,7 @@
       <?php include APPPATH . 'Views/components/cards/products/rocking_horse_card.php'; ?>
 
       <!-- Top product 3   -->
-      <?php include APPPATH . 'Views/components/cards/products/floating_cube_card1.php'; ?>
+      <?php include APPPATH . 'Views/components/cards/products/eva_mat.php'; ?>
 
       <!-- Top product 4   -->
       <?php include APPPATH . 'Views/components/cards/products/floating_cube_card2.php'; ?>
@@ -534,6 +534,7 @@
 <script type="text/javascript" src="js/homepage/top product/top_product.js"></script>
 <script type="text/javascript" src="js/homepage/top product/floating_cube.js"></script>
 <script type="text/javascript" src="js/homepage/top product/rocking_horse.js"></script>
+<script type="text/javascript" src="js/homepage/top product/eva_mat.js"></script>
 <script type="text/javascript" src="js/homepage/production_galery.js"></script>
 <script type="text/javascript" src="js/homepage/user_review.js"></script>
 <script defer type="text/javascript">

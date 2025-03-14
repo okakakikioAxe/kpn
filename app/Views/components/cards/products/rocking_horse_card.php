@@ -1,60 +1,71 @@
 <div id="rockingHorseCard" class="flex justify-center sm:justify-start items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
-    <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)] lg:cursor-pointer lg:ease-in-out lg:transition-transform lg:duration-300 lg:hover:scale-110">
+    <div class="relative max-w-[420px] p-[20px] h-full w-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)] lg:cursor-pointer lg:ease-in-out lg:transition-transform lg:duration-300 lg:hover:scale-110">
         <div class="absolute flex justify-center h-[204px] w-full top-0 left-0 -translate-y-[67%]">
             <img src="images/rocking horse/rocking-horse.png" alt="kubus apung HDPE" class="absolute w-[90%] max-w-[352px] h-auto mx-auto">
             <img src="images/rocking horse/shadow-rocking-horse.png" alt="shadow kubus apung HDPE" class="absolute  w-[90%] max-w-[352px] h-auto mx-auto">
         </div>
-        <div class="mt-[65px] flex">
-            <p class="font-trebuchet text-orange-300 text-[22px] sm:text-[18px] text-start font-[400]">5+ Variant</p>
-        </div>
-        <h3 class="mt-[10px] font-trebuchet text-white text-[36px] sm:text-[32px] text-start font-[400]">Rocking Horse</h3>
-        <p class="mt-[24px] font-humanist-normal text-white text-[16px] text-start font-[400]">
-            Dermaga apung dari plastik HDPE adalah solusi inovatif untuk akses perairan yang fleksibel dan tahan lama. Material HDPE membuatnya ringan, tahan terhadap korosi, serta mampu bertahan di berbagai kondisi cuaca dan lingkungan air.
-        </p>
-        <div class="mt-[38px] grid grid-cols-2 gap-[8px]">
-            <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
-                <div class="flex items-center">
-                    <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">50</h4>
-                    <div class="h-full w-auto ml-[2px]">
-                        <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">cm</p>
-                        <p class="font-humanist-bold text-white text-[16px] text-start">Tiap Sisi</p>
-                    </div>
+        <div class="flex flex-col h-full">
+            <div class="flex-none mt-[65px] w-full">
+                <div class=" flex">
+                    <p class="font-trebuchet text-orange-300 text-[22px] sm:text-[18px] text-start font-[400]">5+ Variant</p>
                 </div>
-                <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
-                    Ukuran 50 Centimeter ditiap sisi menjadikannya lebih efisien saat digunakan
+            </div>
+            <div class="flex-none mt-[10px] w-full">
+                <h3 class=" min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Rocking Horse</h3>
+                <p class="mt-[24px] sm:h-[170px] md:h-[125px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                    Rocking horse ini adalah mainan kuda-kudaan yang aman, ramah lingkungan, dan berbahan HDPE yang kuat serta tahan lama. Dilengkapi fitur 3in1 dan 4in1, mendukung perkembangan motorik anak melalui aktivitas edukatif dan menyenangkan.
                 </p>
             </div>
-            <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
-                <div class="flex items-center">
-                    <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">10</h4>
-                    <div class="h-full w-auto ml-[2px]">
-                        <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">kg</p>
-                        <p class="font-humanist-bold text-white text-[16px] text-start">Berat</p>
+            <div class="mt-[38px] flex-none ">
+                <div class=" grid grid-cols-2 gap-[8px] ">
+                    <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
+                        <div class="flex items-center">
+                            <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">HDPE</h4>
+                        </div>
+                        <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            HDPE adalah bahan ringan mudah dibersihkan dan higenis untuk bermain anak
+                        </p>
                     </div>
-                </div>
-                <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
-                    Berat tiap satuan yang terbilang ringan sehingga lebih praktis saat disimpan
-                </p>
-            </div>
-            <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
-                <div class="flex items-center">
-                    <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">50</h4>
-                    <div class="h-full w-auto ml-[2px]">
-                        <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">cm</p>
-                        <p class="font-humanist-bold text-white text-[16px] text-start">Lebar</p>
+                    <div class="col w-full h-full px-[6px] pb-[16px] pt-[5px] rounded-[14px] border-[1.5px] border-white">
+                        <div class="flex items-center">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="50px" height="50px" viewBox="0 0 73.000000 66.000000" preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0.000000,66.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+                                        <path d="M626 612 c-2 -4 -35 -23 -71 -41 -53 -27 -74 -44 -102 -87 l-35 -53 -88 0 c-49 0 -99 -3 -112 -6 -18 -5 -27 0 -41 24 -22 38 -76 71 -116 71 -29 0 -31 -2 -25 -27 16 -67 50 -113 109 -148 15 -9 16 -19 11 -61 -10 -70 -19 -83 -44 -61 -38 35 -90 11 -78 -37 7 -29 82 -86 162 -123 54 -25 69 -28 179 -28 115 0 123 1 188 32 122 58 179 119 147 158 -17 21 -54 19 -75 -5 -39 -43 -51 -24 -62 98 -7 80 0 87 44 52 43 -33 93 -24 93 18 0 14 -9 55 -20 91 -11 36 -22 83 -25 104 -5 34 -26 50 -39 29z m-147 -448 c14 -31 3 -37 -88 -42 -51 -3 -87 0 -109 9 -30 13 -32 15 -18 35 13 18 25 20 110 20 89 0 95 -1 105 -22z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="h-full w-auto ml-[6px]">
+                                <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">Berbagai</p>
+                                <p class="font-humanist-bold text-white text-[16px] text-start">Model</p>
+                            </div>
+                        </div>
+                        <p class="mt-[18px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            Tersedia dalam berbagai pilihan model yang disukai anak
+                        </p>
                     </div>
+
                 </div>
-                <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
-                    Sangat tebal dengan daya topang yang maksimal
-                </p>
             </div>
-            <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
-                <div class="flex items-center">
-                    <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">HDPE</h4>
+            <div class="grow mt-[8px]">
+                <div class=" w-full h-full px-[6px] pb-[16px] pt-[5px] rounded-[14px] border-[1.5px] border-white">
+                    <div class="flex items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="54px" height="54px" viewBox="0 0 88.000000 76.000000" preserveAspectRatio="xMidYMid meet">
+                                <g transform="translate(0.000000,76.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+                                    <path d="M655 678 c-26 -15 -126 -38 -137 -32 -5 3 -6 9 -3 14 9 15 -26 20 -64 10 -20 -5 -47 -19 -59 -30 -25 -24 -32 -25 -32 -5 0 14 -3 14 -29 1 -46 -24 -78 -70 -86 -123 -4 -31 -16 -58 -33 -76 l-27 -29 37 18 c33 16 43 16 93 4 49 -12 62 -11 109 3 55 18 93 48 81 66 -4 7 10 11 39 11 73 0 112 43 130 148 3 17 4 32 3 32 -1 0 -11 -6 -22 -12z" />
+                                    <path d="M225 381 c-42 -10 -66 -25 -97 -58 -39 -41 -96 -152 -91 -174 7 -24 50 -32 153 -28 68 4 82 7 95 26 13 19 26 22 122 25 106 3 111 4 266 67 96 39 162 71 168 82 11 21 -1 53 -24 62 -12 4 -166 -27 -171 -35 -1 -2 -7 -15 -13 -30 -9 -20 -30 -33 -90 -56 -43 -17 -82 -28 -86 -25 -14 8 4 19 63 38 76 24 100 41 100 70 0 37 -25 44 -118 34 -54 -6 -105 -6 -145 1 -69 11 -89 11 -132 1z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="h-full w-auto ml-[6px]">
+                            <p class="font-humanist-bold text-white text-[16px] text-start">Ringan & Kuat</p>
+                        </div>
+                    </div>
+                    <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                        Ringan mudah dipasang dan dibingkar, kuat menahan beban hingga 50 Kg
+                    </p>
                 </div>
-                <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
-                    Berbahan plastik HDPE sehingga lebih ringan awet dan tahan terhadap korosi
-                </p>
             </div>
         </div>
     </div>
