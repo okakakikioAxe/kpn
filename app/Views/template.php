@@ -93,14 +93,13 @@
                     <div class="grid grid-cols-2">
                         <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
                             <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]">Perusahaan</h3>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" src="#">Tentang</a>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" src="#">Produk</a>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" src="#">Galery</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/about-us">Tentang</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/product">Produk</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galery">Galery</a>
                         </div>
                         <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
                             <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]">Hubungi Kami</h3>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" src="#">Kontak</a>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" src="#">Lokasi Kami</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/contact-us">Kontak</a>
                         </div>
                     </div>
                     <div class="hidden xl:block w-full h-[30px] ">
@@ -166,6 +165,13 @@
             </div>
         </footer>
     </div>
+
+    <div class="scale-75 md:scale-80 lg:scale-90 xl:scale-100 bottom-3 md:bottom-5 lg:bottom-8 xl:bottom-10 right-3 md:right-5 lg:right-8 xl:right-10 fixed z-50 rounded-full h-20 w-20 bg-green-500 hover:scale-110 transform duration-300 cursor-pointer place-content-center">
+        <a href="http://wa.me/6282160050005" target="_blank">
+            <img loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.png" alt="whatsapp icon">
+        </a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <?= $this->renderSection('script') ?>
