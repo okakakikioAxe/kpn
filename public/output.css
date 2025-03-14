@@ -2574,6 +2574,13 @@
       }
     }
   }
+  .hover\:bg-\[\#13ba45\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #13ba45;
+      }
+    }
+  }
   .hover\:bg-dark-salmon {
     &:hover {
       @media (hover: hover) {
