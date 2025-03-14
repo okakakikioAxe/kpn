@@ -141,34 +141,30 @@
 
                     const img = new Image();
                     img.src = e.target.result;
-                    img.onload = function () {
+                    img.onload = function() {
                         const canvas = document.getElementById('thumbnailCanvas');
                         const ctx = canvas.getContext('2d');
 
-                        const maxWidth = 150;
-                        const maxHeight = 150;
+                        const maxSize = 150; // Final thumbnail size
                         let width = img.width;
                         let height = img.height;
 
-                        if (width > height) {
-                            if (width > maxWidth) {
-                                height *= maxWidth / width;
-                                width = maxWidth;
-                            }
-                        } else {
-                            if (height > maxHeight) {
-                                width *= maxHeight / height;
-                                height = maxHeight;
-                            }
-                        }
+                        // Determine the size of the square crop
+                        let cropSize = Math.min(width, height);
+                        let cropX = (width - cropSize) / 2;
+                        let cropY = (height - cropSize) / 2;
 
-                        canvas.width = width;
-                        canvas.height = height;
-                        ctx.drawImage(img, 0, 0, width, height);
+                        // Set canvas size
+                        canvas.width = maxSize;
+                        canvas.height = maxSize;
 
-                        // Store thumbnail as Base64 to send with form
+                        // Draw cropped and resized image onto canvas
+                        ctx.drawImage(img, cropX, cropY, cropSize, cropSize, 0, 0, maxSize, maxSize);
+
+                        // Store the cropped thumbnail as Base64
                         document.getElementById('thumbnailData').value = canvas.toDataURL('image/jpeg');
                     };
+
                 };
                 reader.readAsDataURL(file);
             }
