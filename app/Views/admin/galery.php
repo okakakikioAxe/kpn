@@ -153,12 +153,10 @@
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
                 <div class="grid grid-cols-12 gap-4">
-                    <img data-id="1" src="https://picsum.photos/300/300?random=1" alt="Item 1"
-                        class="thumbnail cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition" width="200">
-                    <img data-id="2" src="https://picsum.photos/300/300?random=2" alt="Item 2"
-                        class="thumbnail cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition" width="200">
-                    <img data-id="3" src="https://picsum.photos/300/300?random=3" alt="Item 3"
-                        class="thumbnail cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition" width="200">
+                    <?php foreach ($images as $image): ?>
+                        <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" src="/images/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
+                            class="thumbnail cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition" width="200">
+                    <?php endforeach; ?>
                 </div>
 
                 <div id="imageModal" class="fixed z-10 inset-0 hidden items-center justify-center bg-black/70 opacity-0 backdrop-blur-0 transition-opacity duration-300 ease-in-out">
@@ -172,7 +170,7 @@
                         <div class="flex gap-4">
                             <!-- Image Section -->
                             <div class="w-1/2">
-                                <img id="modalImage" src="" alt="Full Image" class="rounded-lg w-full">
+                                <img loading="lazy" id="modalImage" src="" alt="Full Image" class="rounded-lg w-full">
                             </div>
 
                             <!-- Details Section -->
@@ -227,31 +225,6 @@
 
     <script>
         // Data for the images
-        const imageData = [{
-                id: "1",
-                src: "https://picsum.photos/300/300?random=1",
-                title: "Blue Tote Bag A stylish blue tote bag for everyday use.",
-                description: "A stylish blue tote bag for everyday use.",
-                status: 0,
-                date: "2025-02-19 06:44:43"
-            },
-            {
-                id: "2",
-                src: "https://picsum.photos/300/300?random=2",
-                title: "Red Handbag",
-                description: "Elegant red handbag with leather straps.",
-                status: 0,
-                date: "2025-02-19 06:44:43"
-            },
-            {
-                id: "3",
-                src: "https://picsum.photos/300/300?random=3",
-                title: "Green Backpack",
-                description: "Spacious green backpack for travel.",
-                status: 1,
-                date: "2025-02-19 06:44:43"
-            }
-        ];
 
 
         const modal = document.getElementById("imageModal");
@@ -269,6 +242,25 @@
 
         let toastOpenTimer;
         let toastCloseTimer;
+
+        function formatDateTime(datetime) {
+            // Convert string to Date object
+            const date = new Date(datetime.replace(" ", "T")); // Ensure proper parsing
+
+            // Format date to "15 Maret 2025"
+            const formattedDate = new Intl.DateTimeFormat('id-ID', {
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric'
+            }).format(date);
+
+            // Format time to "00:46"
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+
+            return `${formattedDate} - ${hours}:${minutes}`;
+        }
+
 
         // Function to create and show toast with progress bar
         function showToast(message) {
@@ -293,32 +285,33 @@
 
         // Event listener for image click
         document.querySelectorAll(".thumbnail").forEach(img => {
-            img.addEventListener("click", () => {
-                currentItem = imageData.find(i => i.id === img.dataset.id);
-                if (currentItem) {
-                    modalImage.src = currentItem.src;
-                    modalTitle.textContent = currentItem.title;
-                    modalDesc.textContent = currentItem.description;
-                    modalDate.textContent = currentItem.date;
-                    statusToggle.checked = currentItem.status === 1;
-                    modal.classList.replace("hidden", "flex");
-                    setTimeout(() => {
-                        modal.classList.replace("opacity-0", "opacity-100");
-                        modalContent.classList.replace("scale-95", "scale-100");
-                        modal.classList.replace(
-                            "backdrop-blur-0",
-                            "backdrop-blur-sm",
-                        );
-                    }, 100);
-                    // modalContent.classList.replace("scale-80", "scale-100");
-                }
+            img.addEventListener("click", (e) => {
+
+                modalImage.src = '/images/galery/' + img.dataset.image;
+                modalTitle.textContent = img.dataset.title;
+                modalDesc.textContent = img.dataset.description;
+                modalDate.textContent = formatDateTime(img.dataset.created);
+                statusToggle.checked = img.dataset.status == 1;
+                currentItem = img;
+                modal.classList.replace("hidden", "flex");
+                setTimeout(() => {
+                    modal.classList.replace("opacity-0", "opacity-100");
+                    modalContent.classList.replace("scale-95", "scale-100");
+                    modal.classList.replace(
+                        "backdrop-blur-0",
+                        "backdrop-blur-sm",
+                    );
+                }, 100);
+                // modalContent.classList.replace("scale-80", "scale-100");
+
             });
         });
 
         // Status toggle event listener
         statusToggle.addEventListener("change", () => {
             if (currentItem) {
-                currentItem.status = statusToggle.checked ? 1 : 0;
+                currentItem.dataset.status = currentItem.dataset.status == 1 ? 0 : 1;
+                console.log(currentItem.dataset.status);
                 showToast(`Status changed to ${statusToggle.checked ? "Active" : "Inactive"}`);
             }
         });

@@ -10,8 +10,10 @@ class GaleryController extends BaseController
 {
     public function index(): string
     {
+        $galeryModel = new Galery();
+        $images = $galeryModel->findAll();
         // $this->cachePage(86400);
-        return view('admin/galery');
+        return view('admin/galery', ['images' => $images]);
     }
 
     public function create(): string
