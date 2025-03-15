@@ -15,9 +15,9 @@
                 </div>
             </div>
             <div class="flex-none mt-[10px] w-full">
-                <h3 class=" min-h-[50px] xl:h-[110px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Eva Mat</h3>
+                <h3 class=" min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Eva Mat</h3>
 
-                <p class="mt-[24px] sm:h-[170px] md:h-[125px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                <p class="mt-[24px] sm:h-[170px] md:h-[125px] xl:h-[160px] font-humanist-normal text-white text-[16px] text-start font-[400]">
                     Eva Mat adalah alas berbahan EVA (Ethylene Vinyl Acetate) yang ringan, fleksibel, dan tahan air. Cocok untuk camping, olahraga, atau alas lantai, memberikan kenyamanan dan perlindungan dari permukaan keras serta suhu dingin.
                 </p>
             </div>
@@ -34,7 +34,7 @@
                             </div>
                             <div class="h-full w-auto ml-[6px] ">
                                 <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start">Varian</p>
-                                <p class="font-humanist-bold text-white text-[16px] sm:text-[12px] md:text-[16px] text-start">Ketebalan</p>
+                                <p class="font-humanist-bold text-white text-[16px] sm:text-[12px] md:text-[14px] text-start">Ketebalan</p>
                             </div>
                         </div>
                         <p class="mt-[25px] sm:mt-[30px] md:mt-[25px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
@@ -75,7 +75,7 @@
                     <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
                         <div class="flex items-center">
                             <h4 class="h-full font-trebuchet text-white text-[40px] sm:text-[32px] md:text-[40px] font-[500]">EVA</h4>
-                            <h4 class="h-full font-trebuchet text-white text-[16px] sm:text-[14px] md:text-[16px] font-[500] ml-[4px] mt-[16px]">Material</h4>
+                            <h4 class="h-full font-trebuchet text-white text-[16px] sm:text-[14px] md:text-[14px] font-[500] ml-[4px] mt-[16px]">Material</h4>
                         </div>
                         <p class="mt-[12px] sm:mt-[24px] md:mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
                             Meterial berkualitas dengan EVA Foam (Ethylene Vinyl Acetate)

@@ -13,7 +13,7 @@
             <div class="flex-none mt-[10px] w-full">
                 <h3 class=" min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Rocking Horse</h3>
 
-                <p class="mt-[24px] sm:h-[170px] md:h-[125px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                <p class="mt-[24px] sm:h-[170px] md:h-[125px] xl:h-[160px] font-humanist-normal text-white text-[16px] text-start font-[400]">
                     Rocking horse ini adalah mainan kuda-kudaan yang aman, ramah lingkungan, dan berbahan HDPE yang kuat serta tahan lama. Dilengkapi fitur 3in1 dan 4in1, mendukung perkembangan motorik anak melalui aktivitas edukatif dan menyenangkan.
                 </p>
             </div>

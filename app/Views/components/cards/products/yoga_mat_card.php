@@ -16,9 +16,9 @@
                 </div>
             </div>
             <div class="flex-none mt-[10px] w-full">
-                <h3 class=" min-h-[50px] xl:h-[110px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Yoga Mat</h3>
+                <h3 class=" min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Yoga Mat</h3>
 
-                <p class="mt-[24px] sm:h-[170px] md:h-[125px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                <p class="mt-[24px] sm:h-[170px] md:h-[125px] xl:h-[160px] font-humanist-normal text-white text-[16px] text-start font-[400]">
                     Yoga mat berkualitas tinggi, ramah lingkungan, dan anti-slip. Nyaman, tahan lama, dan mudah dibersihkan. Cocok untuk gym dan berbagai aktivitas olahraga, mendukung performa latihan yang lebih stabil dan optimal setiap saat.
                 </p>
             </div>

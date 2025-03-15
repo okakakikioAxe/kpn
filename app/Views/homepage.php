@@ -138,7 +138,7 @@
 <section id="topProductSection" class=" relative w-full mt-[125px] xl:mt-[190px]">
   <h2 class="flex align-center justify-center h2-title">Berbagai produk unggulan kami</h2>
   <div class="flex w-full align-center justify-center sm:px-[25px] lg:px-[5%] pt-[121px] xl:pt-[190px]">
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-[126px] sm:gap-[25px] md:gap-8 lg:gap-15 xl:gap-30 2xl:gap-15 max-w-[1600px]">
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-[126px] sm:gap-[25px] md:gap-8 lg:gap-15 xl:gap-30 2xl:gap-8 max-w-[1600px]">
       <!-- Top product 1   -->
       <?php include APPPATH . 'Views/components/cards/products/floating_cube_card.php'; ?>
 
