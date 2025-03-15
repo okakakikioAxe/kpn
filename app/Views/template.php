@@ -89,7 +89,7 @@
                 <img loading="lazy" class="w-[110px] h-auto" src="white logo.png" alt="Logo KPN warna putih">
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[44px] mt-[46px]">
-                    <p class="text-start text-white text-[18px] font-humanist-normal tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus elit, euismod id neque in, luctus ornare nunc. Nullam eu libero sed ipsum blandit mattis id sed nisi. In varius mauris at ante scelerisque commodo. Suspendisse porta velit purus, non mattis tortor elementum ac. Integer ut mi iaculis, dictum lorem vel, rutrum urna. Quisque sit amet</p>
+                    <p class="text-start text-white text-[18px] font-humanist-normal tracking-wide">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
                     <div class="grid grid-cols-2">
                         <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
                             <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]">Perusahaan</h3>

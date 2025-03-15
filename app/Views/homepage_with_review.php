@@ -18,7 +18,7 @@
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
     <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
     <p class="max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px]">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
-    <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out ">
+    <a href="/contact-us" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out ">
       Hubungi Kami
     </a>
   </div>
@@ -110,6 +110,7 @@
             <p class="why-us-description">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -309,6 +310,211 @@
   <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
 </div>
 
+<!-- Review Pengguna -->
+<section id="userReviewSection" class="mt-[140px]">
+  <h2 class=" flex align-center justify-center h2-title">Pendapat mereka tentang produk kami..</h2>
+  <div class="xl:hidden relative w-full mt-[120px] px-[25px] pt-[60px] lg:pt-[120px] pb-[50px] max-w-[1600px] overflow-hidden h-full userReviewSwiper">
+    <div class="swiper-wrapper">
+      <div class="w-full swiper-slide">
+        <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
+          <div class="flex justify-center w-full">
+            <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
+              <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
+            </div>
+          </div>
+          <div class="h-full flex flex-col">
+            <div class="size-auto w-full flex-none ">
+              <div class="mt-[25px]">
+                <h3 class="text-center text-black text-[16px] font-trebuchet font-[500]">Mr. Abigail</h3>
+                <h4 class="text-center text-black text-[14px] font-(family-name:HusmanistNormal) font-[400]">Kepala Desa Muneng</h4>
+              </div>
+            </div>
+            <div class="size-[120px] w-full mt-[23px]">
+              <div class="h-full flex flex-col items-center justify-center">
+                <div class="w-full  fill-[#5E5E5E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] rotate-180 fill-[#5E5E5E]" viewBox="0 0 24 24" width="512" height="512">
+                    <path d="M8,4H4A4,4,0,0,0,0,8v4a2,2,0,0,0,2,2H7.91A6.006,6.006,0,0,1,2,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,8,4Z" />
+                    <path d="M22,4H18a4,4,0,0,0-4,4v4a2,2,0,0,0,2,2h5.91A6.006,6.006,0,0,1,16,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,22,4Z" />
+                  </svg>
+                </div>
+                <p class="block mt-[11px] text-start text-[#5E5E5E] text-[14px] font-humanist-normal italic font-[400]">Kami menyediakan produk unggulan dan pengiriman tepat waktu Kami .</p>
+              </div>
+            </div>
+            <div class="size-auto flex-none mt-[30px]">
+              <div class="grid grid-cols-2 gap-[20px]">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full swiper-slide">
+        <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
+          <div class="flex justify-center w-full">
+            <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
+              <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
+            </div>
+          </div>
+          <div class="h-full flex flex-col">
+            <div class="size-auto w-full flex-none ">
+              <div class="mt-[25px]">
+                <h3 class="text-center text-black text-[16px] font-trebuchet font-[500]">Mr. Abigail</h3>
+                <h4 class="text-center text-black text-[14px] font-(family-name:HusmanistNormal) font-[400]">Kepala Desa Muneng</h4>
+              </div>
+            </div>
+            <div class="size-[120px] w-full mt-[23px]">
+              <div class="h-full flex flex-col items-center justify-center">
+                <div class="w-full  fill-[#5E5E5E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] rotate-180 fill-[#5E5E5E]" viewBox="0 0 24 24" width="512" height="512">
+                    <path d="M8,4H4A4,4,0,0,0,0,8v4a2,2,0,0,0,2,2H7.91A6.006,6.006,0,0,1,2,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,8,4Z" />
+                    <path d="M22,4H18a4,4,0,0,0-4,4v4a2,2,0,0,0,2,2h5.91A6.006,6.006,0,0,1,16,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,22,4Z" />
+                  </svg>
+                </div>
+                <p class="block mt-[11px] text-start text-[#5E5E5E] text-[14px] font-humanist-normal italic font-[400]">Kami menyediakan produk unggulan dan pengiriman tepat waktu Kami Kami menyediakan produk unggulan dan pengiriman tepat </p>
+              </div>
+            </div>
+            <div class="size-auto flex-none mt-[30px]">
+              <div class="grid grid-cols-2 gap-[20px]">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full swiper-slide">
+        <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
+          <div class="flex justify-center w-full">
+            <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
+              <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
+            </div>
+          </div>
+          <div class="h-full flex flex-col">
+            <div class="size-auto w-full flex-none ">
+              <div class="mt-[25px]">
+                <h3 class="text-center text-black text-[16px] font-trebuchet font-[500]">Mr. Abigail</h3>
+                <h4 class="text-center text-black text-[14px] font-(family-name:HusmanistNormal) font-[400]">Kepala Desa Muneng</h4>
+              </div>
+            </div>
+            <div class="size-[120px] w-full mt-[23px]">
+              <div class="h-full flex flex-col items-center justify-center">
+                <div class="w-full  fill-[#5E5E5E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] rotate-180 fill-[#5E5E5E]" viewBox="0 0 24 24" width="512" height="512">
+                    <path d="M8,4H4A4,4,0,0,0,0,8v4a2,2,0,0,0,2,2H7.91A6.006,6.006,0,0,1,2,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,8,4Z" />
+                    <path d="M22,4H18a4,4,0,0,0-4,4v4a2,2,0,0,0,2,2h5.91A6.006,6.006,0,0,1,16,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,22,4Z" />
+                  </svg>
+                </div>
+                <p class="block mt-[11px] text-start text-[#5E5E5E] text-[14px] font-humanist-normal italic font-[400]">Kami menyediakan produk unggulan dan pengiriman tepat waktu Kami .</p>
+              </div>
+            </div>
+            <div class="size-auto flex-none mt-[30px]">
+              <div class="grid grid-cols-2 gap-[20px]">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full swiper-slide">
+        <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
+          <div class="flex justify-center w-full">
+            <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
+              <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
+            </div>
+          </div>
+          <div class="h-full flex flex-col">
+            <div class="size-auto w-full flex-none ">
+              <div class="mt-[25px]">
+                <h3 class="text-center text-black text-[16px] font-trebuchet font-[500]">Mr. Abigail</h3>
+                <h4 class="text-center text-black text-[14px] font-(family-name:HusmanistNormal) font-[400]">Kepala Desa Muneng</h4>
+              </div>
+            </div>
+            <div class="size-[120px] w-full mt-[23px]">
+              <div class="h-full flex flex-col items-center justify-center">
+                <div class="w-full  fill-[#5E5E5E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] rotate-180 fill-[#5E5E5E]" viewBox="0 0 24 24" width="512" height="512">
+                    <path d="M8,4H4A4,4,0,0,0,0,8v4a2,2,0,0,0,2,2H7.91A6.006,6.006,0,0,1,2,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,8,4Z" />
+                    <path d="M22,4H18a4,4,0,0,0-4,4v4a2,2,0,0,0,2,2h5.91A6.006,6.006,0,0,1,16,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,22,4Z" />
+                  </svg>
+                </div>
+                <p class="block mt-[11px] text-start text-[#5E5E5E] text-[14px] font-humanist-normal italic font-[400]">Kami menyediakan produk unggulan dan pengiriman tepat waktu Kami .</p>
+              </div>
+            </div>
+            <div class="size-auto flex-none mt-[30px]">
+              <div class="grid grid-cols-2 gap-[20px]">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full swiper-slide">
+        <div class="h-full px-[35px] py-[35px] rounded-[40px] overflow-visible bg-white shadow-[1px_3px_5px_3px_rgba(149,143,143,0.15)] animate-user-review-card">
+          <div class="flex justify-center w-full">
+            <div class="w-[104px] h-[104px] rounded-full bg-gray-400 absolute top-0 translate-x-0 -translate-y-1/2">
+              <img loading="lazy" class=" w-full h-full object-cover rounded-full" src="worker working in work.jpg" alt="contoh gambar">
+            </div>
+          </div>
+          <div class="h-full flex flex-col">
+            <div class="size-auto w-full flex-none ">
+              <div class="mt-[25px]">
+                <h3 class="text-center text-black text-[16px] font-trebuchet font-[500]">Mr. Abigail</h3>
+                <h4 class="text-center text-black text-[14px] font-(family-name:HusmanistNormal) font-[400]">Kepala Desa Muneng</h4>
+              </div>
+            </div>
+            <div class="size-[120px] w-full mt-[23px]">
+              <div class="h-full flex flex-col items-center justify-center">
+                <div class="w-full  fill-[#5E5E5E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] rotate-180 fill-[#5E5E5E]" viewBox="0 0 24 24" width="512" height="512">
+                    <path d="M8,4H4A4,4,0,0,0,0,8v4a2,2,0,0,0,2,2H7.91A6.006,6.006,0,0,1,2,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,8,4Z" />
+                    <path d="M22,4H18a4,4,0,0,0-4,4v4a2,2,0,0,0,2,2h5.91A6.006,6.006,0,0,1,16,19a1,1,0,0,0,0,2,8.009,8.009,0,0,0,8-8V6A2,2,0,0,0,22,4Z" />
+                  </svg>
+                </div>
+                <p class="block mt-[11px] text-start text-[#5E5E5E] text-[14px] font-humanist-normal italic font-[400]">Kami menyediakan produk unggulan dan pengiriman tepat waktu Kami .</p>
+              </div>
+            </div>
+            <div class="size-auto flex-none mt-[30px]">
+              <div class="grid grid-cols-2 gap-[20px]">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+                <img loading="lazy" class=" w-full h-full rounded-[10px]" src="worker working in work.jpg" alt="contoh gambar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="xl:hidden pt-[70px] lg:pt-[110px]">
+      <div class="flex justify-center items-center user-review-swiper-pagination">
+      </div>
+    </div>
+
+    <div class="xl:hidden">
+      <button onclick="prevUserReviewSlides()" type="button" class="circle-button xl:hidden absolute z-5 left-1 top-[45%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
+      <button onclick="nextUserReviewSlides()" type="button" class="circle-button xl:hidden absolute z-5 right-1 top-[45%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
+    </div>
+  </div>
+
+  <div class="hidden xl:flex items-center justify-center h-auto mx-[5px] xl:pt-[220px]">
+    <div class="relative w-full h-auto overflow-hidden pt-[90px] pb-[5px]">
+      <!-- Left blur effect -->
+      <div class="absolute left-0 top-0 h-full w-[200px] bg-gradient-to-r from-white to-transparent z-10"></div>
+
+      <!-- Right blur effect -->
+      <div class="absolute right-0 top-0 h-full w-[200px] bg-gradient-to-l from-white to-transparent z-10"></div>
+      <div id="cardContainer" class="flex">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flex justify-center mt-[120px] xl:mt-[300px]">
+  <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px]  mx-[76px] sm:mx-[20%]"></div>
+</div>
+
 <!-- Bottom CTA -->
 <section id="bottomCtaSection" class="relative w-full pt-[180px] xl:pt-[330px] pb-[250px] xl:pb-[450px]">
   <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center">Hubungi kami dan dapatkan penawaran khusus untuk kebutuhan Anda!</p>
@@ -331,6 +537,7 @@
 <script type="text/javascript" src="js/homepage/top product/eva_mat.js"></script>
 <script type="text/javascript" src="js/homepage/top product/yoga_mat.js"></script>
 <script type="text/javascript" src="js/homepage/production_galery.js"></script>
+<script type="text/javascript" src="js/homepage/user_review.js"></script>
 <script defer type="text/javascript">
   // ================= Why Us Swiper ================
   var whyUsSwiper = new Swiper(".whyUsSwiper", {
@@ -469,5 +676,39 @@
     productionGalerySwiper.slidePrev();
   }
   // ================= End of Production Galery Swiper =================
+
+  // ================= User Review Swiper =================
+  var userReviewSwiper = new Swiper(".userReviewSwiper", {
+    speed: 850,
+    slidesPerView: 1,
+    spaceBetween: 40,
+    autoplay: {
+      delay: 4000,
+    },
+    loop: true,
+    pagination: {
+      el: ".user-review-swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1280: {
+        slidesPerView: 6,
+        enabled: false,
+      },
+    },
+  });
+
+  function nextUserReviewSlides() {
+    userReviewSwiper.slideNext();
+  }
+
+  function prevUserReviewSlides() {
+    userReviewSwiper.slidePrev();
+  }
+  // ================= End of User Review Swiper =================
 </script>
 <?= $this->endSection() ?>
