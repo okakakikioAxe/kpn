@@ -535,6 +535,7 @@
 <script type="text/javascript" src="js/homepage/top product/floating_cube.js"></script>
 <script type="text/javascript" src="js/homepage/top product/rocking_horse.js"></script>
 <script type="text/javascript" src="js/homepage/top product/eva_mat.js"></script>
+<script type="text/javascript" src="js/homepage/top product/yoga_mat.js"></script>
 <script type="text/javascript" src="js/homepage/production_galery.js"></script>
 <script type="text/javascript" src="js/homepage/user_review.js"></script>
 <script defer type="text/javascript">

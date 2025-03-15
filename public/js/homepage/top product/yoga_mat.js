@@ -45,16 +45,11 @@ yogaMatModal.addEventListener("click", (e) => {
 });
 
 const yogaMatImageList = [
-  "/images/yoga/basic/belge.webp",
-  "/images/yoga/basic/black.webp",
-  "/images/yoga/basic/blue.webp",
-  "/images/yoga/basic/gray.webp",
-  "/images/yoga/basic/purple.webp",
-  "/images/yoga/motif/motif-1.webp",
-  "/images/yoga/motif/motif-2.webp",
-  "/images/yoga/motif/motif-3.webp",
-  "/images/yoga/motif/motif-4.webp",
-  "/images/yoga/motif/motif-5.webp",
+  "/images/yoga/varian-1.webp",
+  "/images/yoga/varian-2.webp",
+  "/images/yoga/varian-3.webp",
+  "/images/yoga/varian-4.webp",
+  "/images/yoga/varian-5.webp",
 ];
 
 document.querySelectorAll(".yoga-color-list").forEach((color) => {

@@ -4,11 +4,10 @@
             <img src="images/kubus apung/kubus-apung-biru.png" alt="kubus apung HDPE" class="absolute w-[95%] max-w-[352px] h-auto mx-auto">
             <img src="images/kubus apung/shadow-kubus-apung.png" alt="shadow kubus apung HDPE" class="absolute  w-[95%] max-w-[352px] h-auto mx-auto">
         </div>
-        <div class="mt-[70px] flex">
-            <div class="w-[14px] h-[14px] rounded-full border-[1px] border-white bg-[#0469E7] mr-[5px]"></div>
-            <div class="w-[14px] h-[14px] rounded-full border-[1px] border-white bg-[#D1D1D1] mr-[5px]"></div>
-            <div class="w-[14px] h-[14px] rounded-full border-[1px] border-white bg-[#FCCB50] mr-[5px]"></div>
-            <div class="w-[14px] h-[14px] rounded-full border-[1px] border-white bg-[#D95302] mr-[5px]"></div>
+        <div class="flex-none mt-[65px] w-full">
+            <div class=" flex">
+                <p class="font-trebuchet text-orange-300 text-[22px] sm:text-[18px] text-start font-[400]">4 Pilihan Warna</p>
+            </div>
         </div>
         <h3 class="mt-[18px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[27px] md:text-[36px] text-start font-[400]">Kubus Apung</h3>
         <p class="mt-[24px] sm:h-[170px] md:h-[125px] xl:h-[160px] font-humanist-normal text-white text-[16px] text-start font-[400]">
@@ -64,24 +63,13 @@
 </div>
 
 <div id="floatingCubeModal" class="fixed z-10 inset-0 items-center hidden justify-center bg-black/70 opacity-100 backdrop-blur-0  transition-opacity duration-300">
-    <div id="floatingCubeModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] rounded-[40px] transform scale-95 opacity-100 transition-transform duration-300">
+    <div id="floatingCubeModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] xl:scale-80 2xl:scale-100 rounded-[40px] transform scale-95 opacity-100 transition-transform duration-300">
         <button id="closeFloatingCubeModalBtn" class="absolute top-[20px] right-[18px] w-[38px] h-[38px] bg-white rounded-full hover:bg-white/80 cursor-pointer transition-transform duration-200 ease-in-out transform-gpu hover:scale-105 flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="28" height="28">
                 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z" />
             </svg>
         </button>
-        <div class="absolute flex justify-end h-[263px] w-full top-0 right-[64px] -translate-y-[70%]">
-            <img id="floatingCubeDynamicImage" src="images/kubus apung/kubus-apung-biru.png" alt="kubus apung HDPE" class="absolute w-auto h-[263px] mx-auto border-white">
-            <img src="images/kubus apung/shadow-kubus-apung.png" alt="shadow kubus apung HDPE" class="absolute w-auto h-[263px] mx-auto">
-        </div>
-        <div class="absolute top-[100px] right-[88px]">
-            <div class="flex space-x-[12px]" id="colorContainer">
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#0469E7] scale-150 transition-all cursor-pointer product-color-list" data-index="0"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#D1D1D1] transition-all cursor-pointer product-color-list" data-index="1"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#FCCB50] transition-all cursor-pointer product-color-list" data-index="2"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#D95302] transition-all cursor-pointer product-color-list" data-index="3"></div>
-            </div>
-        </div>
+
         <div class="h-full grid grid-cols-2 gap-[120px]">
             <div class="h-full w-full flex flex-col">
                 <h3 class="flex-none font-trebuchet text-white text-[42px] text-start font-[400]">Kubus Apung HDPE</h3>
@@ -136,11 +124,24 @@
                 </div>
             </div>
             <div>
-                <div class="h-full w-full flex flex-col pt-[75px]">
-                    <h3 class="flex-none font-trebuchet text-white text-[28px] text-start font-[400]">Aksesoris</h3>
+                <div class="h-full w-full flex flex-col">
+                    <div class="relative flex-grow bg-white rounded-4xl p-4">
+                        <div class="relative flex justify-end items-center h-[220px] w-full ">
+                            <img id="floatingCubeDynamicImage" src="images/kubus apung/kubus-apung-biru.png" alt="kubus apung HDPE" class="absolute w-auto h-[220px] mx-auto border-white">
+                            <img src="images/kubus apung/shadow-kubus-apung.png" alt="shadow kubus apung HDPE" class="absolute w-auto h-[220px] mx-auto">
+                        </div>
+                        <div class="absolute bottom-8 left-6 mt-3 ml-3">
+                            <div class="flex flex-col space-y-[12px]" id="colorContainer">
+                                <div class="w-[27px] h-[27px] rounded-full border-[1.5px] border-white bg-[#0469E7] scale-150 transition-all cursor-pointer product-color-list" data-index="0"></div>
+                                <div class="w-[27px] h-[27px] rounded-full border-[1.5px] border-white bg-[#D1D1D1] transition-all cursor-pointer product-color-list" data-index="1"></div>
+                                <div class="w-[27px] h-[27px] rounded-full border-[1.5px] border-white bg-[#FCCB50] transition-all cursor-pointer product-color-list" data-index="2"></div>
+                                <div class="w-[27px] h-[27px] rounded-full border-[1.5px] border-white bg-[#D95302] transition-all cursor-pointer product-color-list" data-index="3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="flex-none mt-[30px] font-trebuchet text-white text-[28px] text-start font-[400]">Aksesoris</h3>
                     <div class="flex-none mt-[25px]">
                         <div class="grid grid-cols-3 gap-[23px]">
-
                             <div class="h-[180px] w-full bg-white rounded-[30px] flex flex-col">
                                 <div class="grow flex w-full  justify-center items-center py-2">
                                     <img src="/images/kubus apung/handrail.png" alt="aksesoris handrail kubus apung" class=" h-full w-auto relative">
@@ -164,26 +165,6 @@
                                 <div class="flex-none justify-center h-[42px] ">
                                     <p class="font-trebuchet text-stone-600 text-[22px] text-center font-[400]">Paku</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-grow mt-[36px]">
-                        <div class=" relative w-full rounded-[30px] overflow-hidden h-[207px] floatingCubeDetailSwiper">
-                            <div class="swiper-wrapper">
-                                <div class="w-full swiper-slide">
-                                    <img loading="lazy" class="object-fill" src="worker working in work.jpg" alt="contoh gambar">
-                                </div>
-                                <div class="w-full swiper-slide">
-                                    <img loading="lazy" class="object-fill" src="worker working in work.jpg" alt="contoh gambar">
-                                </div>
-                                <div class="w-full swiper-slide">
-                                    <img loading="lazy" class="object-fill" src="worker working in work.jpg" alt="contoh gambar">
-                                </div>
-                            </div>
-
-                            <div>
-                                <button onclick="prevFloatingCubeSlides()" type="button" class="cursor-pointer circle-button absolute z-20 left-1 top-[50%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
-                                <button onclick="nextFloatingCubeSlides()" type="button" class="cursor-pointer circle-button absolute z-20 right-1 top-[50%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
                             </div>
                         </div>
                     </div>

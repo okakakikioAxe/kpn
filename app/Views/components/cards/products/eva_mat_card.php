@@ -116,37 +116,20 @@
 </div>
 
 <div id="evaMatModal" class="fixed z-10 inset-0 items-center hidden justify-center bg-black/70 opacity-100 backdrop-blur-0  transition-opacity duration-300">
-    <div id="evaMatModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] rounded-[40px] transform scale-95 opacity-100 transition-transform duration-300">
+    <div id="evaMatModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] xl:scale-80 2xl:scale-100 rounded-[40px] transform scale-95 opacity-100 transition-transform duration-300">
         <button id="closeEvaMatModalBtn" class="absolute top-[20px] right-[18px] w-[38px] h-[38px] bg-white rounded-full hover:bg-white/80 cursor-pointer transition-transform duration-200 ease-in-out transform-gpu hover:scale-105 flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="28" height="28">
                 <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z" />
             </svg>
         </button>
-        <div id="evaMatDynamicImageContainer" class="absolute flex justify-end h-[320px] w-full top-0 right-[120px] -translate-y-[80%] ">
-            <img id="evaMatDynamicImage" src="images/eva/basic/belge.webp" alt="eva mat warna belge" class="absolute w-auto h-[320px]  mx-auto border-white">
-            <img src="images/eva/shadow-eva.png" alt="shadow eva mat" class="absolute w-auto h-[340px] mx-auto">
-        </div>
-        <div class="absolute top-[100px] right-[88px]">
-            <div class="flex space-x-[12px]">
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#D8D8A2] scale-150 transition-all cursor-pointer eva-color-list" data-index="0"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#353638] transition-all cursor-pointer eva-color-list" data-index="1"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#0B4E98] transition-all cursor-pointer eva-color-list" data-index="2"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#A3A4A8] transition-all cursor-pointer eva-color-list" data-index="3"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#A626C1] transition-all cursor-pointer eva-color-list" data-index="4"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#654742] transition-all cursor-pointer eva-color-list" data-index="5"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#998B85] transition-all cursor-pointer eva-color-list" data-index="6"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#517720] transition-all cursor-pointer eva-color-list" data-index="7"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#CDC9C6] transition-all cursor-pointer eva-color-list" data-index="8"></div>
-                <div class="w-[23px] h-[23px] rounded-full border-[1.5px] border-white bg-[#A4673A] transition-all cursor-pointer eva-color-list" data-index="9"></div>
-            </div>
-        </div>
+
         <div class="h-full grid grid-cols-2 gap-[120px]">
             <div class="h-full w-full flex flex-col">
-                <h3 class="flex-none font-trebuchet text-white text-[42px] text-start font-[400]">Kubus Apung HDPE</h3>
+                <h3 class="flex-none font-trebuchet text-white text-[42px] text-start font-[400]">Eva Mat</h3>
                 <p class="grow mt-[24px] font-humanist-normal text-white text-[18px] tracking-[0.015em] text-start font-[400] content-center">
-                    Eva Mat adalah alas berbahan EVA (Ethylene Vinyl Acetate) yang ringan, fleksibel, dan tahan air. Cocok untuk camping, olahraga, atau alas lantai, memberikan kenyamanan dan perlindungan dari permukaan keras serta suhu dingin. Selain ringan dan tahan air, Eva Mat juga memiliki daya tahan tinggi, mudah dibersihkan, serta memberikan kenyamanan optimal di berbagai kondisi.
+                    Eva Mat adalah alas berbahan EVA (Ethylene Vinyl Acetate) yang ringan, fleksibel, dan tahan air. Cocok untuk camping, olahraga, atau alas lantai, memberikan kenyamanan dan perlindungan dari permukaan keras serta suhu dingin.
                 </p>
-                <div class="flex-none">
+                <div class="flex-none mt-[38px]">
                     <div class="grid grid-cols-2 gap-[8px] h-full">
                         <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
                             <div class="flex items-center mt-[8px]">
@@ -238,58 +221,43 @@
                 </div>
             </div>
             <div>
-                <div class="h-full w-full flex flex-col pt-[75px]">
-                    <h3 class="flex-none font-trebuchet text-white text-[28px] text-start font-[400]">Aksesoris</h3>
-                    <div class="flex-none mt-[25px]">
-                        <div class="grid grid-cols-3 gap-[23px]">
-
-                            <div class="h-[180px] w-full bg-white rounded-[30px] flex flex-col">
-                                <div class="grow flex w-full  justify-center items-center py-2">
-                                    <img src="/images/kubus apung/handrail.png" alt="aksesoris handrail kubus apung" class=" h-full w-auto relative">
+                <div class="h-full w-full flex flex-col">
+                    <div class="relative flex-grow bg-white rounded-4xl p-4">
+                        <div id="evaMatDynamicImageContainer" class="relative flex items-center justify-end h-[320px] w-full top-0 right-0">
+                            <img id="evaMatDynamicImage" src="images/eva/basic/belge.webp" alt="eva mat warna belge" class="absolute w-auto h-[320px]  mx-auto border-white">
+                            <img src="images/eva/shadow-eva.png" alt="shadow eva mat" class="absolute w-auto h-[340px] mx-auto">
+                        </div>
+                        <div class="absolute w-[80] bottom-8 left-6 z-10">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex flex-col space-y-[12px]">
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#D8D8A2] scale-150 transition-all cursor-pointer eva-color-list" data-index="0"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#353638] transition-all cursor-pointer eva-color-list" data-index="1"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#0B4E98] transition-all cursor-pointer eva-color-list" data-index="2"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#A3A4A8] transition-all cursor-pointer eva-color-list" data-index="3"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#A626C1] transition-all cursor-pointer eva-color-list" data-index="4"></div>
                                 </div>
-                                <div class="flex-none justify-center h-[42px] ">
-                                    <p class="font-trebuchet text-stone-600 text-[22px] text-center font-[400]">Handgrill</p>
-                                </div>
-                            </div>
-                            <div class="h-[180px] w-full bg-white rounded-[30px] flex flex-col">
-                                <div class="grow flex w-full  justify-center items-center py-2">
-                                    <img src="/images/kubus apung/baut.png" alt="aksesoris baut kubus apung" class=" h-full w-auto relative">
-                                </div>
-                                <div class="flex-none justify-center h-[42px]">
-                                    <p class="font-trebuchet text-stone-600 text-[22px] text-center font-[400]">Baut</p>
-                                </div>
-                            </div>
-                            <div class="h-[180px] w-full bg-white rounded-[30px] flex flex-col">
-                                <div class="grow flex w-full justify-center items-center py-2">
-                                    <img src="/images/kubus apung/paku.png" alt="aksesoris paku kubus apung" class="drop-shadow-[2px_4px_4.4px_0px_rgba(0,0,0,0.25)] h-full w-auto relative">
-                                </div>
-                                <div class="flex-none justify-center h-[42px] ">
-                                    <p class="font-trebuchet text-stone-600 text-[22px] text-center font-[400]">Paku</p>
+                                <div class="flex flex-col space-y-[12px]">
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#654742] transition-all cursor-pointer eva-color-list" data-index="5"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#998B85] transition-all cursor-pointer eva-color-list" data-index="6"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#517720] transition-all cursor-pointer eva-color-list" data-index="7"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#CDC9C6] transition-all cursor-pointer eva-color-list" data-index="8"></div>
+                                    <div class="w-[27px] h-[27px] rounded-full border-[2px] border-gray-200 bg-[#A4673A] transition-all cursor-pointer eva-color-list" data-index="9"></div>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="absolute top-4 left-4 flex items-center space-x-7 bg-royal-azure rounded-3xl p-3">
+                            <p id="rockingHorseVariantTitle" class="flex-none font-trebuchet text-orange-300 text-[22px] text-start font-[400]">001-M1001</p>
+                        </div> -->
+
                     </div>
-                    <div class="flex-grow mt-[36px]">
-                        <div class=" relative w-full rounded-[30px] overflow-hidden h-[207px] productDetailSwiper">
-                            <div class="swiper-wrapper">
-                                <div class="w-full swiper-slide">
-                                    <img loading="lazy" class="object-fill" src="worker working in work.jpg" alt="contoh gambar">
-                                </div>
-                                <div class="w-full swiper-slide">
-                                    <img loading="lazy" class="object-fill" src="worker working in work.jpg" alt="contoh gambar">
-                                </div>
-                                <div class="w-full swiper-slide">
-                                    <img loading="lazy" class="object-fill" src="worker working in work.jpg" alt="contoh gambar">
-                                </div>
-                            </div>
-
-                            <div>
-                                <button onclick="prevProductDetailSlides()" type="button" class="cursor-pointer circle-button absolute z-20 left-1 top-[50%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
-                                <button onclick="nextProductDetailSlides()" type="button" class="cursor-pointer circle-button absolute z-20 right-1 top-[50%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
-                            </div>
-                        </div>
+                    <h3 class="flex-none mt-[40px] font-trebuchet text-white text-[28px] text-start font-[400]">Mengenal material EVA</h3>
+                    <div class="flex-none mt-[25px]">
+                        <p class=" font-humanist-normal text-white text-[18px] tracking-[0.015em] text-start font-[400] content-center">
+                            EVA (Ethylene Vinyl Acetate) adalah kopolimer yang terdiri dari etilena (ethylene) dan vinil asetat (vinyl acetate). Semakin tinggi kandungan vinil asetat, semakin lembut dan elastis EVA.
+                        </p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
