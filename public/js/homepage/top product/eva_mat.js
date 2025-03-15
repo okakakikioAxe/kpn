@@ -57,23 +57,8 @@ const evaMatImageList = [
   "/images/eva/motif/motif-5.webp",
 ];
 
-// const evaMatBottomOffsets = [
-//   "bottom-1",
-//   "-bottom-3",
-//   "bottom-1",
-//   "-bottom-3",
-//   "bottom-1",
-//   "bottom-1",
-// ];
-
 document.querySelectorAll(".eva-color-list").forEach((color) => {
   color.addEventListener("click", function () {
-    // var variantNamePrefix = "001-M100";
-    // var currentIndex = parseInt(this.getAttribute("data-index")) + 1;
-    // var variantName = variantNamePrefix + currentIndex;
-
-    // document.getElementById("evaMatVariantTitle").innerHTML = variantName;
-
     evaMatDynamicImage.classList.replace("opacity-100", "opacity-0");
 
     setTimeout(() => {

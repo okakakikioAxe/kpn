@@ -146,10 +146,10 @@
       <?php include APPPATH . 'Views/components/cards/products/rocking_horse_card.php'; ?>
 
       <!-- Top product 3   -->
-      <?php include APPPATH . 'Views/components/cards/products/eva_mat.php'; ?>
+      <?php include APPPATH . 'Views/components/cards/products/eva_mat_card.php'; ?>
 
       <!-- Top product 4   -->
-      <?php include APPPATH . 'Views/components/cards/products/floating_cube_card2.php'; ?>
+      <?php include APPPATH . 'Views/components/cards/products/yoga_mat_card.php'; ?>
 
     </div>
   </div>

@@ -1,12 +1,12 @@
 <div id="evaMatCard" class="flex justify-center sm:justify-end items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
     <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)] lg:cursor-pointer lg:ease-in-out lg:transition-transform lg:duration-300 lg:hover:scale-110">
-        <div class="absolute flex justify-center h-[200px] w-full top-0 left-0 -translate-y-[70%] translate-x-[15%]">
-            <img src="images/eva/eva.png" alt="eva mat" class="absolute w-[80%] max-w-[220px] h-auto mx-auto">
-            <img src="images/eva/shadow-eva.png" alt="shadow eva mat" class="absolute  w-[80%] max-w-[220px] h-auto mx-auto">
+        <div class="absolute flex justify-center h-[200px] w-full top-0 left-0 -translate-y-[70%] ">
+            <img src="images/eva/eva.png" alt="eva mat" class="absolute w-[80%] max-w-[220px] h-auto right-5    ">
+            <img src="images/eva/shadow-eva.png" alt="shadow eva mat" class="absolute  w-[80%] max-w-[220px] h-auto right-5">
         </div>
-        <div class="absolute flex justify-center h-[200px] w-full top-0 left-0 -translate-y-[70%] -translate-x-[15%] rotate-y-180">
-            <img src="images/eva/eva-motif.webp" alt="eva mat motif" class="absolute w-[80%] max-w-[250px] h-auto mx-auto">
-            <img src="images/eva/shadow-eva.png" alt="shadow eva mat" class="absolute  w-[80%] max-w-[225px] h-auto mx-auto">
+        <div class="absolute flex justify-center h-[200px] w-full top-0 right-0 -translate-y-[70%] rotate-y-180">
+            <img src="images/eva/eva-motif.webp" alt="eva mat motif" class="absolute scale-110 w-[80%] max-w-[250px] h-auto right-5 ">
+            <img src="images/eva/shadow-eva.png" alt="shadow eva mat" class="absolute  scale-110 w-[80%] max-w-[225px] h-auto right-5">
         </div>
         <div class="flex flex-col h-full">
             <div class="flex-none mt-[65px] w-full">
@@ -15,7 +15,8 @@
                 </div>
             </div>
             <div class="flex-none mt-[10px] w-full">
-                <h3 class=" min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Eva Mat</h3>
+                <h3 class=" min-h-[50px] xl:h-[110px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">Eva Mat</h3>
+
                 <p class="mt-[24px] sm:h-[170px] md:h-[125px] font-humanist-normal text-white text-[16px] text-start font-[400]">
                     Eva Mat adalah alas berbahan EVA (Ethylene Vinyl Acetate) yang ringan, fleksibel, dan tahan air. Cocok untuk camping, olahraga, atau alas lantai, memberikan kenyamanan dan perlindungan dari permukaan keras serta suhu dingin.
                 </p>
@@ -114,7 +115,7 @@
     </div>
 </div>
 
-<div id="evaMatModal" class="fixed z-10 inset-0 items-center flex justify-center bg-black/70 opacity-100 backdrop-blur-0  transition-opacity duration-300">
+<div id="evaMatModal" class="fixed z-10 inset-0 items-center hidden justify-center bg-black/70 opacity-100 backdrop-blur-0  transition-opacity duration-300">
     <div id="evaMatModalContent" class=" bg-royal-azure p-[60px] w-[1200px] h-[670px] rounded-[40px] transform scale-95 opacity-100 transition-transform duration-300">
         <button id="closeEvaMatModalBtn" class="absolute top-[20px] right-[18px] w-[38px] h-[38px] bg-white rounded-full hover:bg-white/80 cursor-pointer transition-transform duration-200 ease-in-out transform-gpu hover:scale-105 flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="28" height="28">
