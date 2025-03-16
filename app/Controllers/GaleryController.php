@@ -12,8 +12,9 @@ class GaleryController extends BaseController
     {
         $galeryModel = new Galery();
         $images = $galeryModel->findAll();
+        $successMessage = session()->getFlashdata('successMessage');
         // $this->cachePage(86400);
-        return view('admin/galery', ['images' => $images]);
+        return view('admin/galery', ['images' => $images, 'successMessage' => $successMessage]);
     }
 
     public function create(): string
@@ -29,15 +30,16 @@ class GaleryController extends BaseController
         $validation->setRules([
             'file-upload' => [
                 'label' => 'File Upload',
-                'rules' => 'uploaded[file-upload]|mime_in[file-upload,image/jpg,image/jpeg,image/png,video/mp4,video/mpeg]|max_size[file-upload,10240]',
+                'rules' => 'uploaded[file-upload]|mime_in[file-upload,image/jpg,image/jpeg,image/png,video/mp4,video/mpeg]|max_size[file-upload,500000]',
                 'errors' => [
                     'uploaded' => 'No file was uploaded',
                     'mime_in' => 'The file must be an image or video',
-                    'max_size' => 'The file size must not exceed 10MB'
+                    'max_size' => 'The file size must not exceed 500MB'
                 ]
             ],
             'title' => 'required|min_length[3]|max_length[255]',
-            'description' => 'required|min_length[3]'
+            'description' => 'required|min_length[3]',
+            'type' => 'required|in_list[0,1]'
         ]);
 
 
@@ -50,18 +52,12 @@ class GaleryController extends BaseController
         $file = $this->request->getFile('file-upload');
         $thumbnailFile = $this->request->getPost('thumbnail');
         if ($file->isValid() && !$file->hasMoved()) {
-            $newName = uniqid() . '-' . str_replace(' ', '-', $this->request->getPost('title')) . '.' . $file->getExtension();
-            $file->move('images/galery', $newName);
+            $newName = date('Y-m-d-H-i-s') . '-' . str_replace(' ', '-', $this->request->getPost('title')) . '.' . $file->getExtension();
+            $file->move('galery/content', $newName);
 
             // Convert base64 thumbnail to file and store it
             $this->saveThumbnail($thumbnailFile, $newName);
         }
-        // return $this->response->setJSON([
-        //     'status' => $this->request->getPost('title'),
-        //     'message' => $this->request->getPost('description'),
-        //     'file_name' => $newName,
-        //     'thumbnail' => $newName,
-        // ]);
 
         $galeryModel = new Galery();
         $galeryModel->save([
@@ -70,10 +66,11 @@ class GaleryController extends BaseController
             'thumbnail' => $newName,
             'title' => $this->request->getPost('title'),
             'description' => $this->request->getPost('description'),
+            'type' => $this->request->getPost('type'),
             'status' => 1,
         ]);
-
-        return redirect()->to('/admin/galery')->with('success', 'Galery has been added');
+        session()->setFlashdata('successMessage', 'Konten berhasil ditambahkan!');
+        return redirect()->to('/admin/galery');
     }
 
     public function saveThumbnail($base64Image, $fileName)
@@ -83,9 +80,19 @@ class GaleryController extends BaseController
         list(, $imageData) = explode(',', $imageData);
         $imageData = base64_decode($imageData);
 
-        $filePath = FCPATH . 'images/thumbnail/' . $fileName;
+        $filePath = FCPATH . 'galery/thumbnail/' . $fileName;
 
         // Save the image
         file_put_contents($filePath, $imageData);
+    }
+
+    public function tesToast()
+    {
+        // $galeryModel = new Galery();
+        // $images = $galeryModel->findAll();
+        // // $this->cachePage(86400);
+        // return view('admin/galery', ['images' => $images, "success" => 'Konten telah ditambahkan']);
+        session()->setFlashdata('successMessage', 'Konten berhasil ditambahkan!');
+        return redirect()->to('/admin/galery');
     }
 }

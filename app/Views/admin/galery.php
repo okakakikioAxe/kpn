@@ -7,6 +7,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="/output.css">
     <link rel="stylesheet" href="/css/global_style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="/css/admin_galery_style.css">
     <style>
         body {
@@ -39,89 +40,6 @@
             padding: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        /* .card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 1 / 1;
-            border-radius: 10px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .card img {
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .modal-content {
-            position: relative;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 600px;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-        }
-
-        .modal img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .close {
-            display: flex;
-            width: 100%;
-            height: 30px;
-            justify-content: end;
-            align-items: end;
-            font-size: 40px;
-            margin-top: 10px;
-        }
-
-        .modal.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal.show .modal-content {
-            transform: scale(1);
-        }
-
-        .date {
-            width: 250px;
-            display: flex;
-            font-weight: bold;
-            align-items: start;
-            justify-content: start;
-        }
-
-        .status {
-            color: green;
-            margin-left: 15px;
-            font-weight: bold;
-        } */
     </style>
 </head>
 
@@ -152,10 +70,20 @@
 
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
-                <div class="grid grid-cols-12 gap-4">
+                <div class="grid grid-cols-8 gap-4">
                     <?php foreach ($images as $image): ?>
-                        <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" src="/images/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
-                            class="thumbnail cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition" width="200">
+                        <div class="w-full relative">
+                            <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
+                                class="thumbnail cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition relative" width="200">
+
+                            <?php if ($image['type'] == 1): ?>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="60%">
+                                        <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
+                                    </svg>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     <?php endforeach; ?>
                 </div>
 
@@ -170,7 +98,8 @@
                         <div class="flex gap-4">
                             <!-- Image Section -->
                             <div class="w-1/2">
-                                <img loading="lazy" id="modalImage" src="" alt="Full Image" class="rounded-lg w-full">
+                                <img loading="lazy" id="modalImage" src="" class="hidden rounded-lg w-full">
+                                <video loading="lazy" id="modalVideo" src="" class="hidden rounded-lg w-full" controls></video>
                             </div>
 
                             <!-- Details Section -->
@@ -217,20 +146,23 @@
                         <div id="toastProgress" class='h-full bg-white w-full absolute left-0'></div>
                     </div>
                 </div>
-
-
             </main>
         </div>
     </div>
 
     <script>
+        let successMessage = "";
         // Data for the images
-
+        <?php if (isset($successMessage)): ?>
+            successMessage = "<?= $successMessage ?>";
+            console.log(successMessage);
+        <?php endif; ?>
 
         const modal = document.getElementById("imageModal");
         const modalContent = document.getElementById("imageContent");
         const closeModal = document.getElementById("closeModal");
         const modalImage = document.getElementById("modalImage");
+        const modalVideo = document.getElementById("modalVideo");
         const modalTitle = document.getElementById("modalTitle");
         const modalDesc = document.getElementById("modalDesc");
         const modalDate = document.getElementById("modalDate");
@@ -261,7 +193,6 @@
             return `${formattedDate} - ${hours}:${minutes}`;
         }
 
-
         // Function to create and show toast with progress bar
         function showToast(message) {
             window.clearTimeout(toastOpenTimer);
@@ -276,23 +207,34 @@
                 toastProgress.classList.add("animate-progress");
             }, 100);
 
-
             toastCloseTimer = setTimeout(() => {
                 toastModal.classList.add("opacity-0");
                 toastProgress.classList.remove("animate-progress");
             }, 3000)
         }
 
-        // Event listener for image click
-        document.querySelectorAll(".thumbnail").forEach(img => {
-            img.addEventListener("click", (e) => {
+        // Show toast if success message exists
+        if (successMessage) {
+            showToast(successMessage);
+        }
 
-                modalImage.src = '/images/galery/' + img.dataset.image;
-                modalTitle.textContent = img.dataset.title;
-                modalDesc.textContent = img.dataset.description;
-                modalDate.textContent = formatDateTime(img.dataset.created);
-                statusToggle.checked = img.dataset.status == 1;
-                currentItem = img;
+        // Event listener for image click
+        document.querySelectorAll(".thumbnail").forEach(contentDetail => {
+            contentDetail.addEventListener("click", (e) => {
+                if (contentDetail.dataset.type == 0) {
+                    // image
+                    modalImage.src = '/galery/content/' + contentDetail.dataset.image;
+                    modalImage.classList.remove("hidden");
+                } else {
+                    // video
+                    modalVideo.src = '/galery/content/' + contentDetail.dataset.image;
+                    modalVideo.classList.remove("hidden");
+                }
+                modalTitle.textContent = contentDetail.dataset.title;
+                modalDesc.textContent = contentDetail.dataset.description;
+                modalDate.textContent = formatDateTime(contentDetail.dataset.created);
+                statusToggle.checked = contentDetail.dataset.status == 1;
+                currentItem = contentDetail;
                 modal.classList.replace("hidden", "flex");
                 setTimeout(() => {
                     modal.classList.replace("opacity-0", "opacity-100");
@@ -318,9 +260,10 @@
 
         // Close Modal
         closeModal.addEventListener("click", () => {
-
             modal.classList.replace("opacity-100", "opacity-0");
             modalContent.classList.replace("scale-100", "scale-95");
+            modalImage.classList.add("hidden");
+            modalVideo.classList.add("hidden");
             modal.classList.replace(
                 "backdrop-blur-sm",
                 "backdrop-blur-0",
@@ -341,6 +284,8 @@
                 );
                 setTimeout(() => {
                     modal.classList.replace("flex", "hidden");
+                    modalImage.classList.add("hidden");
+                    modalVideo.classList.add("hidden");
                 }, 300);
             }
         });

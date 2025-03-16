@@ -9,6 +9,5 @@ class Galery extends Model
     protected $table            = 'galery';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['image','image_alt','thumbnail','title','description','status'];
-
+    protected $allowedFields    = ['image', 'image_alt', 'thumbnail', 'title', 'description', 'type', 'status'];
 }
