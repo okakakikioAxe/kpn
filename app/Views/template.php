@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello World</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="output.css">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/global_style.css">
@@ -33,11 +33,12 @@
                         <div class="hidden sm:ml-6 sm:block ">
                             <div class="flex space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="/" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Beranda</a> </a>
-                                <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
-                                <a href="/contact-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hubungi Kami</a>
-                                <a href="/about-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
-                                <a href="/galery" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Galery</a>
+                                <a href="/" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="homepage">Beranda</a> </a>
+                                <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
+                                <a href="/contact-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
+                                <a href="/about-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
+                                <a href="/galery" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
+
                             </div>
                         </div>
                     </div>
@@ -66,11 +67,11 @@
             id="mobile-menu"
             class="fixed top-16 right-0 w-screen h-screen bg-gray-800 shadow-lg sm:hidden translate-x-full transition-transform duration-300 overflow-y-auto z-20">
             <div class="space-y-1 px-4 pt-4">
-                <a href="/" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Beranda</a>
-                <a href="/product" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Produk</a>
-                <a href="/contact-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Hubungi Kami</a>
-                <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
-                <a href="/galery" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Galery</a>
+                <a href="/" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="homepage">Beranda</a>
+                <a href="/product" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
+                <a href="/contact-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
+                <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
+                <a href="/galery" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
             </div>
         </div>
 
@@ -89,17 +90,17 @@
                 <img loading="lazy" class="w-[110px] h-auto" src="white logo.png" alt="Logo KPN warna putih">
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[44px] mt-[46px]">
-                    <p class="text-start text-white text-[18px] font-humanist-normal tracking-wide">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+                    <p class="text-start text-white text-[18px] font-humanist-normal tracking-wide" data-lang-group="footer" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
                     <div class="grid grid-cols-2">
                         <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
-                            <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]">Perusahaan</h3>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/about-us">Tentang</a>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/product">Produk</a>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galery">Galery</a>
+                            <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="company">Perusahaan</h3>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/about-us" data-lang-group="footer" data-lang-key="about">Tentang</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/product" data-lang-group="footer" data-lang-key="product">Produk</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galery" data-lang-group="footer" data-lang-key="galery">Galery</a>
                         </div>
                         <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
-                            <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]">Hubungi Kami</h3>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/contact-us">Kontak</a>
+                            <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="contact_us">Hubungi Kami</h3>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/contact-us" data-lang-group="footer" data-lang-key="contact">Kontak</a>
                         </div>
                     </div>
                     <div class="hidden xl:block w-full h-[30px] ">
@@ -107,9 +108,9 @@
                             <img loading="lazy" class="w-[37px] h-[37px] mr-[30px]" src="translate_icon.png" alt="translate icon">
                             <div class="relative w-full">
 
-                                <button id="dropdownButton1" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full">
+                                <button id="dropdownButton1" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
                                     <div class="flex">
-                                        <p class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
+                                        <p id="selected-language-1" class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
                                         <p class="w-[30px]">
                                             <svg id="dropdownIcon1" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -121,8 +122,8 @@
 
                                 <div id="dropdownMenu1"
                                     class="absolute mt-5 w-full bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-top invisible">
-                                    <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400]">Bahasa Indonesia</a>
-                                    <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400]">English</a>
+                                    <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">Bahasa Indonesia</button>
+                                    <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">English</button>
                                     <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400]">中文</a>
                                 </div>
                             </div>
@@ -136,9 +137,9 @@
                             <img loading="lazy" class="w-[37px] h-[37px] mr-[30px]" src="translate_icon.png" alt="translate icon">
                             <div class="relative w-full">
 
-                                <button id="dropdownButton2" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full">
+                                <button id="dropdownButton2" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
                                     <div class="flex">
-                                        <p class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
+                                        <p id="selected-language-2" class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
                                         <p class="w-[30px]">
                                             <svg id="dropdownIcon2" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -150,8 +151,8 @@
 
                                 <div id="dropdownMenu2"
                                     class="absolute w-full bottom-full mb-5 bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-bottom invisible">
-                                    <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200">Bahasa Indonesia</a>
-                                    <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200">English</a>
+                                    <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
+                                    <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
                                     <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200">中文</a>
                                 </div>
                             </div>
@@ -168,11 +169,12 @@
 
     <div class="scale-75 md:scale-80 lg:scale-90 xl:scale-100 bottom-3 md:bottom-5 lg:bottom-8 xl:bottom-10 right-3 md:right-5 lg:right-8 xl:right-10 fixed z-50 rounded-full h-20 w-20 bg-green-500 hover:scale-110 transform duration-300 cursor-pointer place-content-center">
         <a href="http://wa.me/6282160050005" target="_blank">
-            <img loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.png" alt="whatsapp icon">
+            <img loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.webp" alt="whatsapp icon">
         </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <?= $this->renderSection('script') ?>
     <script defer type="text/javascript">
@@ -267,6 +269,7 @@
             });
         });
     </script>
+    <script defer type="text/javascript" src="/js/translation.js"></script>
 
 </body>
 
