@@ -10,4 +10,9 @@ class Galery extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $allowedFields    = ['image', 'image_alt', 'thumbnail', 'title', 'description', 'type', 'status'];
+
+    // Automatically handle timestamps
+    protected $useTimestamps = true;
+    protected $createdField  = 'created_at'; // Field for created time
+    protected $updatedField  = 'updated_at'; // Field for updated time
 }

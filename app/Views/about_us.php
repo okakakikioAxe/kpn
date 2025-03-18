@@ -16,9 +16,9 @@
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
-    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]">Tentang Kami</h1>
-    <p class="max-w-[800px] mb-[20px] text-white font-trebuchet tracking-[0.025em] leading-4 lg:leading-5 text-[16px] md:text-[18px]">Produsen Tangan Pertama Produk HDPE, TPE, dan XPE untuk Mainan Anak, Olahraga, serta Infrastruktur dengan Kualitas Premium dan Harga Terjangkau</p>
-    <button id="aboutUsHeroButton" class="flex cursor-pointer bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out">
+    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="about_us_hero" data-lang-key="title">Tentang Kami</h1>
+    <p class="max-w-[800px] mb-[20px] text-white font-trebuchet tracking-[0.025em] leading-4 lg:leading-5 text-[16px] md:text-[18px]" data-lang-group="about_us_hero" data-lang-key="sub_title">Produsen Tangan Pertama Produk HDPE, TPE, dan XPE untuk Mainan Anak, Olahraga, serta Infrastruktur dengan Kualitas Premium dan Harga Terjangkau</p>
+    <button id="aboutUsHeroButton" class="flex cursor-pointer bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="about_us_hero" data-lang-key="button">
       Selengkapnya
     </button>
   </div>
@@ -27,14 +27,14 @@
 
 <!-- Tentang kami -->
 <section id="aboutUsSection" class=" relative w-full mt-[120px] lg:mt-[180px] xl:mt-[300px] ">
-  <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Tentang Kami</h2>
+  <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="about_us_detail" data-lang-key="title">Tentang Kami</h2>
   <div class="mt-[40px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
     <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
       <div class="hidden lg:flex h-1 w-[100px] bg-soft-silver mr-10 rounded-full"></div>
       <div class="flex flex-col w-full">
-        <p class="font-humanist-normal mt-10 text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us">PT Karya Pilar Nusantara adalah produsen tangan pertama yang menghadirkan produk berbahan HDPE, EVA, TPE, dan XPE. Kami bergerak di bidang mainan anak, olahraga, dan infrastruktur, menawarkan produk berkualitas tinggi dengan harga terjangkau. Sebagai produsen langsung, kami memastikan setiap produk tahan lama, aman, dan inovatif. Dengan teknologi modern dan standar premium, kami berkomitmen menghadirkan solusi terbaik bagi pelanggan. PT Karya Pilar Nusantara siap menjadi mitra terpercaya dalam menyediakan produk unggulan.</p>
+        <p class="font-humanist-normal mt-10 text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="about_us_detail" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama yang menghadirkan produk berbahan HDPE, EVA, TPE, dan XPE. Kami bergerak di bidang mainan anak, olahraga, dan infrastruktur, menawarkan produk berkualitas tinggi dengan harga terjangkau. Sebagai produsen langsung, kami memastikan setiap produk tahan lama, aman, dan inovatif. Dengan teknologi modern dan standar premium, kami berkomitmen menghadirkan solusi terbaik bagi pelanggan. PT Karya Pilar Nusantara siap menjadi mitra terpercaya dalam menyediakan produk unggulan.</p>
 
-        <p class="font-humanist-normal mt-10 text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center font-bold  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us">Pilihan terbaik untuk produk berkualitas, harga bersaing, dan layanan profesional.</p>
+        <p class="font-humanist-normal mt-10 text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center font-bold  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="about_us_detail" data-lang-key="slogan">Pilihan terbaik untuk produk berkualitas, harga bersaing, dan layanan profesional.</p>
       </div>
       <div class="hidden lg:flex h-1 w-[100px] bg-soft-silver ml-10 rounded-full"></div>
     </div>
@@ -50,18 +50,18 @@
 <section id="aboutUsSection" class=" relative w-full mt-[100px] lg:mt-[180px] xl:mt-[280px] flex justify-center md:px-[10%]">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-25 lg:gap-8 xl:gap-30 w-full  max-w-[1600px]">
     <div>
-      <h2 class="flex align-center justify-center text-iron-gray text-[22px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Visi</h2>
+      <h2 class="flex align-center justify-center text-iron-gray text-[22px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="about_us_detail" data-lang-key="vision_title">Visi</h2>
       <div class="mt-[40px] lg:mt-[60px] xl:mt-[80px] w-full flex justify-center h-full">
         <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] bg-gray-100 rounded-2xl animate-vision-mission-card">
-          <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7">Menjadi produsen dan distributor terdepan di Indonesia dalam menyediakan produk berkualitas tinggi untuk mainan anak, olahraga, dan infrastruktur, dengan inovasi berkelanjutan serta komitmen terhadap keamanan, daya tahan, dan kepuasan pelanggan.</p>
+          <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7" data-lang-group="about_us_detail" data-lang-key="vision_description">Menjadi produsen dan distributor terdepan di Indonesia dalam menyediakan produk berkualitas tinggi untuk mainan anak, olahraga, dan infrastruktur, dengan inovasi berkelanjutan serta komitmen terhadap keamanan, daya tahan, dan kepuasan pelanggan.</p>
         </div>
       </div>
     </div>
     <div>
-      <h2 class="flex align-center justify-center text-iron-gray text-[22px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Misi</h2>
+      <h2 class="flex align-center justify-center text-iron-gray text-[22px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="about_us_detail" data-lang-key="mission_title">Misi</h2>
       <div class="mt-[40px] lg:mt-[60px] xl:mt-[80px] w-full flex justify-center h-full">
         <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] bg-gray-100 rounded-2xl animate-vision-mission-card">
-          <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7">Kami berkomitmen menghadirkan produk berkualitas tinggi yang aman dan ramah lingkungan, menyediakan layanan kustomisasi merek, menawarkan harga kompetitif, memberikan pelayanan profesional, memastikan distribusi luas, serta mengadopsi teknologi modern untuk inovasi dan keberlanjutan.</p>
+          <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7" data-lang-group="about_us_detail" data-lang-key="mission_description">Kami berkomitmen menghadirkan produk berkualitas tinggi yang aman dan ramah lingkungan, menyediakan layanan kustomisasi merek, menawarkan harga kompetitif, memberikan pelayanan profesional, memastikan distribusi luas, serta mengadopsi teknologi modern untuk inovasi dan keberlanjutan.</p>
         </div>
       </div>
     </div>
@@ -171,10 +171,10 @@
 
 <!-- Bottom CTA -->
 <section id="bottomCtaSection" class="relative w-full pt-[180px] lg:pt-[250px]  xl:pt-[330px] pb-[250px] lg:pb-[300px] xl:pb-[450px]">
-  <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center">Hubungi kami dan dapatkan penawaran khusus untuk kebutuhan Anda!</p>
+  <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center" data-lang-group="homepage_bottom_cta" data-lang-key="cta">Hubungi kami dan dapatkan penawaran khusus untuk kebutuhan Anda!</p>
 
   <div class="flex align-center justify-center mt-[43px]">
-    <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out">
+    <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_bottom_cta" data-lang-key="button">
       Hubungi Kami
     </a>
   </div>

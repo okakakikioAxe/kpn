@@ -7,7 +7,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="/output.css">
     <link rel="stylesheet" href="/css/global_style.css">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="/css/admin_galery_style.css">
     <style>
         body {
@@ -72,13 +72,13 @@
             <main class="p-6 flex-1 overflow-y-auto">
                 <div class="grid grid-cols-8 gap-4">
                     <?php foreach ($images as $image): ?>
-                        <div class="w-full relative">
+                        <div class="w-full thumbnail relative cursor-pointer hover:scale-105 transform duration-200 ease-in-out">
                             <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
-                                class="thumbnail cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition relative" width="200">
+                                class="  rounded-lg shadow-lg hover:shadow-xl transition relative">
 
                             <?php if ($image['type'] == 1): ?>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="60%">
+                                <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="50%">
                                         <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
                                     </svg>
                                 </div>

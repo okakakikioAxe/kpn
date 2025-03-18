@@ -1234,6 +1234,9 @@
   .w-\[130px\] {
     width: 130px;
   }
+  .w-\[200\] {
+    width: 200;
+  }
   .w-\[200px\] {
     width: 200px;
   }
@@ -1863,6 +1866,9 @@
   .bg-\[\#FCCB50\] {
     background-color: #FCCB50;
   }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -1898,6 +1904,9 @@
   }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
+  }
+  .bg-green-200 {
+    background-color: var(--color-green-200);
   }
   .bg-green-500 {
     background-color: var(--color-green-500);

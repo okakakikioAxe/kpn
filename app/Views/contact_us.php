@@ -16,9 +16,9 @@
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
-    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]">Hubungi Kami</h1>
-    <p class="max-w-[800px] mb-[20px] text-white font-trebuchet tracking-[0.025em] leading-4 lg:leading-5 text-[16px] md:text-[18px]">Hubungi kami untuk konsultasi, informasi produk, atau pemesanan. Tim kami siap membantu dengan layanan terbaik dan respons cepat.</p>
-    <button id="contactUsHeroButton" class="flex cursor-pointer bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out ">
+    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="contact_us_hero" data-lang-key="title">Hubungi Kami</h1>
+    <p class="max-w-[800px] mb-[20px] text-white font-trebuchet tracking-[0.025em] leading-4 lg:leading-5 text-[16px] md:text-[18px]" data-lang-group="contact_us_hero" data-lang-key="sub_title">Hubungi kami untuk konsultasi, informasi produk, atau pemesanan. Tim kami siap membantu dengan layanan terbaik dan respons cepat.</p>
+    <button id="contactUsHeroButton" class="flex cursor-pointer bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out " data-lang-group="contact_us_hero" data-lang-key="button">
       Informasi Kontak
     </button>
   </div>
@@ -27,9 +27,9 @@
 
 <!-- Kontak -->
 <section id="contactSection" class=" relative block w-full px-[40px] md:px-[10%] mt-[120px] lg:mt-[180px] xl:mt-[150px] ">
-  <h2 class="flex align-center justify-center text-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Informasi Kontak</h2>
+  <h2 class="flex align-center justify-center text-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="contact_us_information" data-lang-key="title">Informasi Kontak</h2>
   <div class="w-full  flex justify-center mt-[20px] sm:mt-[20px] lg:mt-[40px] xl:mt-[50px] ">
-    <p class="text-center  text-iron-gray text-[16px] md:text-[18px] xl:text-[20px] font-humanist-normal leading-[135%] tracking-[0.01em] font-[400] w-[600px] lg:w-full ">Temukan informasi lengkap untuk menghubungi kami, menjalin kerja sama, atau cari tau lebih lanjut tentang layanan dan produk kami.</p>
+    <p class="text-center  text-iron-gray text-[16px] md:text-[18px] xl:text-[20px] font-humanist-normal leading-[135%] tracking-[0.01em] font-[400] w-[600px] lg:w-full " data-lang-group="contact_us_information" data-lang-key="sub_title">Temukan informasi lengkap untuk menghubungi kami, menjalin kerja sama, atau cari tau lebih lanjut tentang layanan dan produk kami.</p>
   </div>
   <div class="mt-[70px] sm:mt-[100px] lg:mt-[90px] xl:mt-[130px] 2xl:mt-[180px] ">
     <div class="w-full flex justify-center ">
@@ -44,7 +44,7 @@
                 </svg>
               </div>
               <div class=" pt-[8px] ml-[13px]">
-                <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]">Alamat</h3>
+                <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]" data-lang-group="contact_us_information" data-lang-key="address_title">Alamat</h3>
                 <p class="text-[18px] xl:text-[20px] mt-1 font-humanist-normal font-normal text-[#2F2D2D] leading-6">Pergudangan Safe N Lock (Sidoarjo)</p>
               </div>
             </div>
@@ -62,7 +62,7 @@
                 </svg>
               </div>
               <div class=" pt-[8px] ml-[13px]">
-                <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]">Telepon</h3>
+                <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]" data-lang-group="contact_us_information" data-lang-key="phone_title">Telepon</h3>
                 <p class="text-[18px] xl:text-[20px] mt-1 font-humanist-normal font-normal text-[#2F2D2D] leading-6">+62 821-6005-0005</p>
               </div>
             </div>
@@ -101,8 +101,8 @@
                 </svg>
               </div>
               <div class=" pt-[8px] ml-[13px]">
-                <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]">Waktu Operasional</h3>
-                <p class="text-[18px] xl:text-[20px] mt-1 font-humanist-normal font-normal text-[#2F2D2D] leading-6">Senin - Sabtu / 08.00 - 17.00 WIB</p>
+                <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]" data-lang-group="contact_us_information" data-lang-key="operational_title">Waktu Operasional</h3>
+                <p class="text-[18px] xl:text-[20px] mt-1 font-humanist-normal font-normal text-[#2F2D2D] leading-6" data-lang-group="contact_us_information" data-lang-key="operational_day">Senin - Sabtu / 08.00 - 17.00 WIB</p>
               </div>
             </div>
           </div>
@@ -118,16 +118,16 @@
   <div class=" bg-royal-azure w-full px-[40px] md:px-[10%] h-[100vh] min-h-[1000px] max-h-[1200px] flex flex-col justify-center items-center">
     <div class=" grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[100px] items-center justify-center w-full max-w-[1200px] ">
       <div class="w-full items-center lg:mb-[100px]">
-        <h2 class="flex align-center justify-center text-center text-white text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Hubungi Kami</h2>
+        <h2 class="flex align-center justify-center text-center text-white text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="contact_us_form" data-lang-key="title">Hubungi Kami</h2>
         <div class=" w-full  flex justify-center mt-[20px] sm:mt-[20px] lg:mt-[40px] xl:mt-[50px] ">
-          <p class="text-center md:max-w-[600px] text-white text-[16px] md:text-[18px] xl:text-[20px] font-humanist-normal leading-[135%] tracking-[0.01em] font-[400] lg:w-[300px]">Tanyakan apapun tentang kami dan produk kami. Admin akan selalu siap memberikan informasi yang Anda butuhkan.</p>
+          <p class="text-center md:max-w-[600px] text-white text-[16px] md:text-[18px] xl:text-[20px] font-humanist-normal leading-[135%] tracking-[0.01em] font-[400] lg:w-[300px]" data-lang-group="contact_us_form" data-lang-key="sub_title">Tanyakan apapun tentang kami dan produk kami. Admin akan selalu siap memberikan informasi yang Anda butuhkan.</p>
         </div>
       </div>
       <div class="flex justify-center xl:justify-end">
         <div class="w-full md:max-w-[600px]">
           <form id="contactForm">
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">NAMA ANDA *</h4>
+              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="name">NAMA ANDA *</h4>
               <input type="text" name="name" id="name" autocomplete="name" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="Mr Budi">
             </div>
             <div class="mt-[32px]">
@@ -135,19 +135,19 @@
               <input type="text" name="email" id="email" autocomplete="email" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="mail@example.com">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">NOMOR TELEPON ANDA *</h4>
+              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="phone">NOMOR TELEPON ANDA *</h4>
               <input type="tel" name="phone" id="phone" autocomplete="tel" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="+62 8123 4567 891">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">NAMA INSTANSI / PERUSAHAAN ANDA *</h4>
+              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="company">NAMA INSTANSI / PERUSAHAAN ANDA *</h4>
               <input type="text" name="instantion" id="instantion" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="PT Bintang Makmur">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">PESAN *</h4>
+              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="message">PESAN *</h4>
               <textarea rows="3" cols="1" id="message" name="message" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 bg-[#F0F0F0] rounded-[5px] mt-[10px] p-[15px] resize-y placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider text-wrap text-clip" placeholder="Apakah ada harga khusus untuk pesanan banyak?"></textarea>
             </div>
             <div class="flex justify-center mt-[50px] mb-[30px]">
-              <button id="sendMessageButton" type="submit" class="flex cursor-pointer bg-[#13BA6E] font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-[#13ba45] hover:scale-105 transform duration-300 ease-in-out">
+              <button id="sendMessageButton" type="submit" class="flex cursor-pointer bg-[#13BA6E] font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-[#13ba45] hover:scale-105 transform duration-300 ease-in-out" data-lang-group="contact_us_form" data-lang-key="button">
                 Kirim Pesan
               </button>
             </div>
@@ -165,7 +165,7 @@
     <div class="mt-[46px]">
 
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(0)">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(0)" data-lang-group="contact_us_faq" data-lang-key="question_1">
           Apakah produk bebas BPA?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -174,11 +174,11 @@
           </span>
         </button>
         <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Ya, produk kami, terutama yang berkaitan dengan anak-anak seperti playmat, perosotan, dan mainan anak, dibuat dari bahan bebas BPA sehingga aman digunakan.</p>
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]" data-lang-group="contact_us_faq" data-lang-key="answer_1">Ya, produk kami yang berkaitan dengan anak-anak seperti playmat, perosotan, dan mainan anak, dibuat dari bahan bebas BPA sehingga aman digunakan.</p>
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(1)">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(1)" data-lang-group="contact_us_faq" data-lang-key="question_2">
           Apakah bisa custom merk sendiri?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -187,11 +187,11 @@
           </span>
         </button>
         <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Tentu! Kami menyediakan layanan custom branding sesuai kebutuhan bisnis Anda. Hubungi kami untuk detail lebih lanjut.</p>
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]" data-lang-group="contact_us_faq" data-lang-key="answer_2">Tentu! Kami menyediakan layanan custom branding sesuai kebutuhan bisnis Anda. Hubungi kami untuk detail lebih lanjut.</p>
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(2)">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(2)" data-lang-group="contact_us_faq" data-lang-key="question_3">
           Apakah pengiriman bisa ke seluruh Indonesia?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -200,11 +200,11 @@
           </span>
         </button>
         <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Ya, kami melayani pengiriman ke seluruh Indonesia dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya.</p>
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]" data-lang-group="contact_us_faq" data-lang-key="answer_3">Ya, kami melayani pengiriman ke seluruh Indonesia dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya.</p>
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(3)">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(3)" data-lang-group="contact_us_faq" data-lang-key="question_4">
           Apakah ada harga khusus untuk pembelian dalam jumlah besar?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +213,7 @@
           </span>
         </button>
         <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Untuk pembelian grosir atau dalam jumlah besar, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email admin@karyapilarnusantara.com.</p>
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]" data-lang-group="contact_us_faq" data-lang-key="answer_4">Tentu, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email admin@karyapilarnusantara.com.</p>
         </div>
       </div>
     </div>
