@@ -82,7 +82,7 @@
               </div>
               <div class="w-full pt-[8px] ml-[13px]">
                 <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]">Email</h3>
-                <p class=" 2xl:w-[12vw] text-[18px] xl:text-[20px] font-humanist-normal font-normal text-[#2F2D2D] leading-6 overflow-hidden break-words">karyapilarnusantara@gmail.com </p>
+                <p class=" 2xl:w-[12vw] text-[18px] xl:text-[20px] font-humanist-normal font-normal text-[#2F2D2D] leading-6 overflow-hidden break-words">admin@karyapilarnusantara.com </p>
                 <div class="relative w-full flex bg-red-100 over">
                 </div>
               </div>
@@ -160,7 +160,7 @@
 
 <!-- FAQ -->
 <section id="faqSection" class="relative flex justify-center w-full pt-[150px] lg:pt-[180px] xl:pt-[150px] pb-[200px] lg:pb-[250px] xl:pb-[290px] px-[40px] lg:px-[10%]">
-  <div class="bg-white w-[600px] lg:w-full max-w-[1200px] ">
+  <div class=" w-[600px] lg:w-full max-w-[1200px] ">
     <h2 class="flex align-center justify-center text-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">FAQ</h2>
     <div class="mt-[46px]">
 
@@ -179,19 +179,6 @@
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
         <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(1)">
-          Apakah produk berstandar SNI?
-          <span class="icon-container pl-[34px]">
-            <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
-            </svg>
-          </span>
-        </button>
-        <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px] max-h-[70px]">Beberapa produk seperti playmat, perosotan, dan mainan anak telah memenuhi standar SNI untuk menjamin kualitas dan keamanannya.</p>
-        </div>
-      </div>
-      <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(2)">
           Apakah bisa custom merk sendiri?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +191,7 @@
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(3)">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(2)">
           Apakah pengiriman bisa ke seluruh Indonesia?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -217,7 +204,7 @@
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(4)">
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(3)">
           Apakah ada harga khusus untuk pembelian dalam jumlah besar?
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -226,7 +213,7 @@
           </span>
         </button>
         <div class="faq-content text-gray-600">
-          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Untuk pembelian grosir atau dalam jumlah besar, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di [nomor] atau email [email].</p>
+          <p class="pb-[40px] font-humanist-normal text-[16px] md:text-[18px] lg:text-[20px]">Untuk pembelian grosir atau dalam jumlah besar, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email admin@karyapilarnusantara.com.</p>
         </div>
       </div>
     </div>

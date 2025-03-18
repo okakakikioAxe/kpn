@@ -13,7 +13,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/product', 'Home::product');
 $routes->get('/contact-us', 'Home::contactUs');
 $routes->get('/about-us', 'Home::aboutUs');
-$routes->get('/galery', 'Home::galery');
+$routes->get('/galeri', 'Home::galery');
 $routes->get('/admin', 'AdminController::index', ['filter' => 'authRedirect']);
 $routes->get('/admin/galery', 'GaleryController::index', ['filter' => 'authRedirect']);
 $routes->get('/admin/galery/toast', 'GaleryController::tesToast', ['filter' => 'authRedirect']);

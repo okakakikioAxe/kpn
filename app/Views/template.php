@@ -37,7 +37,7 @@
                                 <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
                                 <a href="/contact-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
                                 <a href="/about-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
-                                <a href="/galery" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
+                                <a href="/galeri" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
 
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                 <a href="/product" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
                 <a href="/contact-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
                 <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
-                <a href="/galery" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
+                <a href="/galeri" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
             </div>
         </div>
 
@@ -96,7 +96,7 @@
                             <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="company">Perusahaan</h3>
                             <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/about-us" data-lang-group="footer" data-lang-key="about">Tentang</a>
                             <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/product" data-lang-group="footer" data-lang-key="product">Produk</a>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galery" data-lang-group="footer" data-lang-key="galery">Galery</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galeri" data-lang-group="footer" data-lang-key="galery">Galery</a>
                         </div>
                         <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
                             <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="contact_us">Hubungi Kami</h3>
