@@ -1390,6 +1390,14 @@
     --tw-translate-y: calc(82% * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .-translate-y-\[84\%\] {
+    --tw-translate-y: calc(84% * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-\[85\%\] {
+    --tw-translate-y: calc(85% * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-y-\[90\%\] {
     --tw-translate-y: calc(90% * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -3031,14 +3039,88 @@
       height: 250px;
     }
   }
+  .sm\:h-auto {
+    @media (width >= 40rem) {
+      height: auto;
+    }
+  }
   .sm\:max-h-\[150px\] {
     @media (width >= 40rem) {
       max-height: 150px;
     }
   }
+  .sm\:w-\[80\%\] {
+    @media (width >= 40rem) {
+      width: 80%;
+    }
+  }
+  .sm\:w-\[95\%\] {
+    @media (width >= 40rem) {
+      width: 95%;
+    }
+  }
+  .sm\:w-\[100\%\] {
+    @media (width >= 40rem) {
+      width: 100%;
+    }
+  }
   .sm\:w-\[100px\] {
     @media (width >= 40rem) {
       width: 100px;
+    }
+  }
+  .sm\:-translate-y-\[10\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(10% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[60\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(60% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[70\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(70% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[75\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(75% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[78\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(78% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[80\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(80% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[82\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(82% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[85\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(85% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .sm\:-translate-y-\[90\%\] {
+    @media (width >= 40rem) {
+      --tw-translate-y: calc(90% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .sm\:grid-cols-2 {
@@ -3222,6 +3304,11 @@
       max-height: 150px;
     }
   }
+  .md\:w-\[80\%\] {
+    @media (width >= 48rem) {
+      width: 80%;
+    }
+  }
   .md\:max-w-\[600px\] {
     @media (width >= 48rem) {
       max-width: 600px;
@@ -3230,6 +3317,12 @@
   .md\:max-w-\[800px\] {
     @media (width >= 48rem) {
       max-width: 800px;
+    }
+  }
+  .md\:-translate-y-\[90\%\] {
+    @media (width >= 48rem) {
+      --tw-translate-y: calc(90% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .md\:scale-80 {
@@ -3400,6 +3493,16 @@
       height: 100%;
     }
   }
+  .lg\:w-\[80\%\] {
+    @media (width >= 64rem) {
+      width: 80%;
+    }
+  }
+  .lg\:w-\[90\%\] {
+    @media (width >= 64rem) {
+      width: 90%;
+    }
+  }
   .lg\:w-\[300px\] {
     @media (width >= 64rem) {
       width: 300px;
@@ -3408,6 +3511,36 @@
   .lg\:w-full {
     @media (width >= 64rem) {
       width: 100%;
+    }
+  }
+  .lg\:-translate-y-\[80\%\] {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(80% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .lg\:-translate-y-\[82\%\] {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(82% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .lg\:-translate-y-\[84\%\] {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(84% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .lg\:-translate-y-\[85\%\] {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(85% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .lg\:-translate-y-\[90\%\] {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(90% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .lg\:scale-90 {

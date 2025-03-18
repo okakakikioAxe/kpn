@@ -1,8 +1,8 @@
-<a href="http://www.google.com" class="flex justify-center sm:justify-start items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
-    <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)] lg:cursor-pointer lg:ease-in-out lg:transition-transform lg:duration-300 lg:hover:scale-110">
-        <div class="absolute flex justify-center h-[200px] w-full top-0 left-0 -translate-y-[82%] ">
-            <img src="images/top product/xpe-product.webp" alt="produk xpe" class="absolute w-[80%] max-w-[320px] h-auto mx-auto">
-            <img src="images/top product/xpe-shadow.webp" alt="shadow produk xpe" class="absolute  w-[80%] max-w-[320px] h-auto mx-auto">
+<div class="flex justify-center sm:justify-start items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
+    <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)]">
+        <div class="absolute flex justify-center h-[200px] w-full top-0 left-0 -translate-y-[82%] sm:-translate-y-[82%] lg:-translate-y-[82%] ">
+            <img src="images/top product/xpe-product.webp" alt="produk xpe" class="absolute w-[80%] sm:w-[100%] lg:w-[80%] max-w-[320px] h-auto mx-auto">
+            <img src="images/top product/xpe-shadow.webp" alt="shadow produk xpe" class="absolute  w-[80%] sm:w-[100%] lg:w-[80%] max-w-[320px] h-auto mx-auto">
         </div>
         <div class="flex flex-col h-full">
             <div class="flex-none mt-[10px] w-full">
@@ -96,4 +96,4 @@
             </div>
         </div>
     </div>
-</a>
+</div>

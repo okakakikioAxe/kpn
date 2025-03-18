@@ -1,8 +1,8 @@
-<a href="http://www.google.com" class="flex justify-center sm:justify-end items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
-    <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)] lg:cursor-pointer lg:ease-in-out lg:transition-transform lg:duration-300 lg:hover:scale-105">
-        <div class="absolute flex justify-center h-[204px] w-full top-0 left-0 -translate-y-[80%]">
-            <img src="images/top product/hdpe-product.webp" alt="produk HDPE" class="absolute w-[80%] max-w-[352px] h-auto mx-auto">
-            <img src="images/top product/hdpe-shadow.webp" alt="shadow produk HDPE" class="absolute  w-[80%] max-w-[352px] h-auto mx-auto">
+<div class="flex justify-center sm:justify-end items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
+    <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)]">
+        <div class="absolute flex justify-center h-[204px] w-full top-0 left-0 -translate-y-[85%] sm:-translate-y-[85%] lg:-translate-y-[85%]">
+            <img src="images/top product/hdpe-product.webp" alt="produk HDPE" class="absolute w-[80%] sm:w-[95%] lg:w-[80%] max-w-[352px] h-auto mx-auto">
+            <img src="images/top product/hdpe-shadow.webp" alt="shadow produk HDPE" class="absolute  w-[80%] sm:w-[95%] lg:w-[80%] max-w-[352px] h-auto mx-auto">
         </div>
         <div class="flex flex-col h-full">
 
@@ -85,4 +85,4 @@
             </div>
         </div>
     </div>
-</a>
+</div>
