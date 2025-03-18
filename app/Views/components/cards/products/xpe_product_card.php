@@ -5,65 +5,93 @@
             <img src="images/top product/xpe-shadow.webp" alt="shadow produk xpe" class="absolute  w-[80%] max-w-[320px] h-auto mx-auto">
         </div>
         <div class="flex flex-col h-full">
-            <div class="flex-none mt-[85px] w-full">
-                <h3 class=" min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">PRODUK XPE</h3>
-            </div>
-            <div class="grow w-full">
-                <p class="mt-[24px] font-humanist-normal text-white text-[16px] text-start font-[400]">
-                    Produk berbahan XPE menawarkan kenyamanan dan keamanan dalam berbagai kebutuhan, mulai dari playmat, wallpaper, hingga matras. Playmat XPE yang ringan dan empuk dirancang dengan permukaan anti-slip, memberikan ruang bermain yang aman dan nyaman bagi anak-anak. Wallpaper XPE menghadirkan perlindungan ekstra untuk dinding dengan teksturnya yang lembut, tahan air, serta mudah dipasang, menjadikannya pilihan ideal untuk kamar anak maupun ruang keluarga. Sementara itu, matras XPE yang fleksibel dan ringan cocok digunakan untuk berbagai aktivitas seperti yoga, piknik, atau alas tidur tambahan, dengan daya tahan tinggi dan kemudahan perawatan.
+            <div class="flex-none mt-[10px] w-full">
+                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">PRODUK XPE</h3>
+                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] 2xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                    Produk berbahan XPE (Cross-Linked Polyethylene) menawarkan kenyamanan dan keamanan untuk playmat, wallpaper, dan matras. Playmat XPE ringan, empuk, dan anti-slip, aman bagi anak. Wallpaper XPE melindungi dinding dengan tekstur lembut, tahan air, dan mudah dipasang. Matras XPE fleksibel, ringan, tahan lama, serta mudah dirawat, cocok untuk berbagai aktivitas.
                 </p>
             </div>
-            <div class="mt-[38px] flex-none h-[250px] ">
+            <div class="mt-[38px] grow ">
                 <div class="grid grid-rows-2 gap-[8px] h-full">
-                    <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
-                        <div class="flex items-center mt-[8px]">
-                            <div class="w-[40px] min-w-[40px] h-auto">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40px" height="40px">
-                                    <g>
-                                        <path style="opacity:0.821" fill="#ffffff" d="M 67.5,4.5 C 67.5,4.83333 67.5,5.16667 67.5,5.5C 46.1667,5.5 24.8333,5.5 3.5,5.5C 3.5,6.5 3.5,7.5 3.5,8.5C 2.56552,7.43236 2.23219,6.09903 2.5,4.5C 24.1874,3.81177 45.8541,3.81177 67.5,4.5 Z" />
-                                    </g>
-                                    <g>
-                                        <path style="opacity:0.984" fill="#ffffff" d="M 67.5,5.5 C 67.5,13.1667 67.5,20.8333 67.5,28.5C 55.5,28.5 43.5,28.5 31.5,28.5C 31.5,42.1667 31.5,55.8333 31.5,69.5C 21.9362,70.5418 12.4362,70.5418 3,69.5C 2.62965,49.1643 2.79632,28.831 3.5,8.5C 3.5,7.5 3.5,6.5 3.5,5.5C 24.8333,5.5 46.1667,5.5 67.5,5.5 Z" />
-                                    </g>
-                                    <g>
-                                        <path style="opacity:0.102" fill="#f5f5f5" d="M 67.5,4.5 C 68.492,11.9818 68.8254,19.6484 68.5,27.5C 70.099,27.2322 71.4324,27.5655 72.5,28.5C 70.8333,28.5 69.1667,28.5 67.5,28.5C 67.5,20.8333 67.5,13.1667 67.5,5.5C 67.5,5.16667 67.5,4.83333 67.5,4.5 Z" />
-                                    </g>
-                                    <g>
-                                        <path style="opacity:0.998" fill="#f5f5f5" d="M 67.5,28.5 C 69.1667,28.5 70.8333,28.5 72.5,28.5C 73.8255,42.0058 73.8255,55.6724 72.5,69.5C 58.8816,69.9762 45.2149,69.9762 31.5,69.5C 31.5,55.8333 31.5,42.1667 31.5,28.5C 43.5,28.5 55.5,28.5 67.5,28.5 Z" />
-                                    </g>
-                                </svg>
+                    <div class="grid grid-cols-2 gap-[8px]">
+                        <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
+                            <div class="flex items-center mt-[8px]">
+                                <div class="w-[50px] min-w-[50px] h-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" width="auto" height="38px" data-name="Layer 2" viewBox="0 0 858.37 536.18">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    stroke-width: 0px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Layer_1-2" data-name="Layer 1" fill="#ffffff" stroke="none">
+                                            <g>
+                                                <path class="cls-1" d="m858.37,267.12c-4.13,1.24-8.27,3.56-12.4,3.57-129.17.19-258.34.09-387.51.29-9.25.01-13.09-2.71-12.79-12.42.58-18.26.62-36.57-.01-54.82-.35-10.13,4.04-15.74,12.57-20.22,81.82-42.97,163.53-86.16,245.27-129.28,30.81-16.25,61.65-32.43,92.44-48.72,2.98-1.58,5.68-3.67,8.52-5.52,2.07,0,4.15,0,6.22,0,10.14,18.36,20.41,36.65,30.38,55.1,7.17,13.26,6.79,14.04-6.74,21.17-67.45,35.56-134.91,71.1-202.35,106.67-3.2,1.69-6.27,3.62-9.39,5.43.17.64.33,1.28.5,1.92h10.83c69.8,0,139.6-.05,209.4.1,5.02.01,10.05,1.42,15.07,2.18v74.54Z" />
+                                                <path class="cls-1" d="m858.37,534.24c-4.7.65-9.4,1.86-14.1,1.86-128.15.1-256.3.09-384.45.08-13.64,0-13.96-.34-13.98-13.93-.02-18.63.24-37.26-.11-55.87-.15-8.08,2.98-10.87,11-10.86,130.22.15,260.44.09,390.66.19,3.66,0,7.32,1.25,10.98,1.92v76.62Z" />
+                                                <path class="cls-1" d="m858.37,445.2c-4.33.76-8.65,2.18-12.98,2.18-128.78.12-257.56.1-386.35.09-13.01,0-13.18-.21-13.2-13.5-.03-18.27.31-36.55-.14-54.81-.22-8.78,2.64-12.36,11.82-12.35,129.82.18,259.64.09,389.45.28,3.8,0,7.6,2.33,11.39,3.57v74.54Z" />
+                                                <path class="cls-1" d="m858.37,356.16c-4.27.99-8.54,2.83-12.81,2.84-128.88.15-257.75.05-386.63.27-9.62.02-13.73-2.57-13.3-12.93.74-17.91.19-35.87.21-53.81.02-13.25.57-13.85,14.11-13.86,92.25-.03,184.5-.01,276.76-.01,35.59,0,71.18-.11,106.76.13,4.97.03,9.93,1.85,14.9,2.83v74.54Z" />
+                                                <path class="cls-1" d="m0,226.73c0-63.46,0-126.92,0-190.38,0-13.09.35-13.43,13.42-13.44,76.68-.02,153.35-.02,230.03,0,13.03,0,13.42.39,13.42,13.46.01,126.92.01,253.84,0,380.76,0,13.05-.39,13.43-13.44,13.44-76.68.02-153.35.02-230.03,0-13.05,0-13.39-.35-13.4-13.45C0,353.65,0,290.19,0,226.73Z" />
+                                                <path class="cls-1" d="m267.51,225.63c0-63.11-.01-126.21,0-189.32,0-13.04.36-13.38,13.46-13.39,42.13-.02,84.26-.02,126.4,0,12.93,0,13.32.41,13.32,13.55.01,126.9.01,253.81,0,380.71,0,12.99-.41,13.38-13.48,13.39-42.13.02-84.26.02-126.4,0-12.92,0-13.3-.4-13.3-13.55-.02-63.8,0-127.59,0-191.39Z" />
+                                                <path class="cls-1" d="m435.47,166.87c0-16.97,0-32.7,0-48.43,0-27.93.27-55.86-.15-83.78-.14-9.13,3.27-11.92,12.15-11.9,77.68.24,155.37.07,233.06.34,3.81.01,7.61,2.93,11.42,4.49-2.5,2.73-4.48,6.42-7.56,8.06-81.02,42.95-162.15,85.69-243.27,128.46-1.43.76-2.91,1.43-5.65,2.76Z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="h-full w-auto ml-[6px]">
+                                    <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start">Berbagai</p>
+                                    <p class="font-humanist-bold text-white text-[16px] text-start">Model</p>
+                                </div>
                             </div>
-                            <div class="h-full w-auto ml-[6px] ">
-                                <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start">Berbagai</p>
-                                <p class="font-humanist-bold text-white text-[16px] text-start">Ukuran</p>
-                            </div>
+                            <p class="mt-[25px] sm:mt-[30px] md:mt-[25px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                                Tersedia dalam berbagai macam model produk untuk memenuhi semua kebutuhan anda
+                            </p>
                         </div>
-                        <p class="mt-[24px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
-                            Dalam berbagai pilihan ukuran cocok untuk segala jenis ruangan anda
-                        </p>
-                    </div>
-                    <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
-                        <div class="flex items-center mt-[8px]">
-                            <div class="w-[50px] min-w-[50px] h-auto">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 209 220" fill="none">
-                                    <rect width="209" height="220" fill="url(#pattern0_551_2)" />
-                                    <defs>
-                                        <pattern id="pattern0_551_2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                            <use xlink:href="#image0_551_2" transform="scale(0.00478469 0.00454545)" />
-                                        </pattern>
-                                        <image id="image0_551_2" width="209" height="220" preserveAspectRatio="none" xlink:href="data:image/png;base64,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" />
-                                    </defs>
-                                </svg>
+                        <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
+                            <div class="flex items-center mt-[8px]">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="38px" id="Layer_2" data-name="Layer 2" viewBox="0 0 890.27 613.53" class="mt-[4px]">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    stroke-width: 0px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Layer_2-2" data-name="Layer 2" fill="#ffffff" stroke="none">
+                                            <path xmlns="http://www.w3.org/2000/svg" class="cls-1" d="m873.73,410.15H0V38.58C9.15,13.93,25.49-.02,53.26,0c256.54.21,513.07.11,769.61.15,33.61,0,53.1,19.64,53.12,53.4.04,113.39.05,226.79-.08,340.18,0,5.47-1.42,10.95-2.17,16.42ZM424.75,103.88c34.28,0,68.55.04,102.83-.02,20.18-.03,31.77-10.43,31.65-28.15-.12-17.19-11.59-27.57-31.01-27.59-68.15-.08-136.3-.07-204.45,0-19.38.02-30.96,10.43-31.04,27.56-.08,17.8,11.44,28.15,31.61,28.19,33.47.06,66.94.02,100.41.02Z" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="h-full w-auto ml-[6px] ">
+                                    <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start">Dilengkapi</p>
+                                    <p class="font-humanist-bold text-white text-[16px] text-start">Tas</p>
+                                </div>
                             </div>
-                            <div class="h-full w-auto ml-[6px] ">
-                                <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start">Berbagai</p>
-                                <p class="font-humanist-bold text-white text-[16px] sm:text-[12px] md:text-[16px] text-start">Model</p>
-                            </div>
+                            <p class="mt-[24px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                                Tersedia dengan tas khusus untuk mempermudah mobilitas anda
+                            </p>
                         </div>
-                        <p class="mt-[20px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
-                            Dengan banyak varian model yang dapat disesuaikan untuk kebutuhan anda
-                        </p>
                     </div>
+                    <div class="grid grid-cols-2 gap-[8px]">
+                        <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
+                            <div class="flex items-center">
+                                <h4 class="h-full font-trebuchet text-white text-[40px] sm:text-[32px] md:text-[40px] font-[500]">3D</h4>
+                            </div>
+                            <p class="mt-[12px] sm:mt-[24px] md:mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                                Tekstur 3d yang tebal membuat setiap produk terasa lebih premium
+                            </p>
+                        </div>
+                        <div class="col w-full h-full px-[6px] pb-[16px] rounded-[14px] border-[1.5px] border-white">
+                            <div class="flex items-center">
+                                <h4 class="h-full font-trebuchet text-white text-[40px] sm:text-[32px] md:text-[40px] font-[500]">XPE</h4>
+                            </div>
+                            <p class="mt-[12px] sm:mt-[24px] md:mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                                Material XPE foam adalah bahan ringan, mudah dibersihkan dan higienis
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
