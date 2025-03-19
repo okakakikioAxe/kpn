@@ -7,8 +7,8 @@
         <div class="flex flex-col h-full">
 
             <div class="flex-none mt-[10px] w-full">
-                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[27px] md:text-[36px] text-start font-[400]">PRODUK HDPE</h3>
-                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[27px] md:text-[36px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_title_1">PRODUK HDPE</h3>
+                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] 2xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_description_1">
                     Karya Pilar Nusantara menghadirkan produk berbahan HDPE (High-Density Polyethylene) yang kuat, tahan lama, dan ramah lingkungan. Dengan resistensi tinggi terhadap cuaca ekstrem, korosi, dan bahan kimia, produk ini ideal untuk rumah, bangunan, serta area luar. Kami berkomitmen menyediakan solusi berkualitas guna mendukung infrastruktur yang efisien, kokoh, dan berkelanjutan.
                 </p>
             </div>
@@ -36,11 +36,11 @@
                                     </svg>
                                 </div>
                                 <div class="h-full w-auto ml-[6px]">
-                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">Berbagai</p>
-                                    <p class="font-humanist-bold text-white text-[16px] text-start">Model</p>
+                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_1_title_1">Berbagai</p>
+                                    <p class="font-humanist-bold text-white text-[16px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_1_sub_title_1">Model</p>
                                 </div>
                             </div>
-                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_1_description_1">
                                 Tersedia dalam berbagai macam model produk untuk memenuhi segala kebutuhan
                             </p>
                         </div>
@@ -61,14 +61,13 @@
                                     </svg>
                                 </div>
                                 <div class="h-full w-auto ml-[6px]">
-                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">Kuat</p>
+                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_1_title_2">Material</p>
                                     <div class="flex">
-                                        <p class="font-humanist-bold text-white text-[12px] text-start mr-[5px]">Tahan</p>
-                                        <p class="font-humanist-bold text-white text-[12px] text-start">Lama</p>
+                                        <p class="font-humanist-bold text-white text-[16px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_1_sub_title_2">Kuat</p>
                                     </div>
                                 </div>
                             </div>
-                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_1_description_2">
                                 Kuat tahan lama, dan mengurangi resiko merusak lingkungan
                             </p>
                         </div>
@@ -77,7 +76,7 @@
                         <div class="flex items-center">
                             <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">HDPE</h4>
                         </div>
-                        <p class="mt-[12px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                        <p class="mt-[12px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_1_description_3">
                             Material HDPE dengan ketahanan tinggi terhadap cuaca ekstrem, korosi, dan bahan kimia
                         </p>
                     </div>

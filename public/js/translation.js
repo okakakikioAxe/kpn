@@ -35,20 +35,68 @@ const translations = {
     },
     homepage_top_product: {
       title: "Berbagai produk unggulan kami",
+      product_title_1: "PRODUK HDPE",
+      product_description_1:
+        "Karya Pilar Nusantara menghadirkan produk berbahan HDPE (High-Density Polyethylene) yang kuat, tahan lama, dan ramah lingkungan. Dengan resistensi tinggi terhadap cuaca ekstrem, korosi, dan bahan kimia, produk ini ideal untuk rumah, bangunan, serta area luar. Kami berkomitmen menyediakan solusi berkualitas guna mendukung infrastruktur yang efisien, kokoh, dan berkelanjutan.",
+      product_spec_1_title_1: "Berbagai",
+      product_spec_1_sub_title_1: "Model",
+      product_spec_1_description_1:
+        "Tersedia dalam berbagai macam model produk untuk memenuhi segala kebutuhan",
+      product_spec_1_title_2: "Material",
+      product_spec_1_sub_title_2: "Kuat",
+      product_spec_1_description_2:
+        "Kuat tahan lama, dan mengurangi resiko merusak lingkungan",
+      product_spec_1_description_3:
+        "Material HDPE dengan ketahanan tinggi terhadap cuaca ekstrem, korosi, dan bahan kimia",
+
+      product_title_2: "PRODUK MAINAN",
+      product_description_2:
+        "Karya Pilar Nusantara menghadirkan mainan anak berbahan HDPE (High-Density Polyethylene) yang kokoh, aman, dan ramah lingkungan. Bebas BPA dan dirancang ergonomis, mainan ini mendukung kreativitas serta perkembangan anak. Cocok untuk rumah, sekolah, atau area bermain, memberikan pengalaman menyenangkan sekaligus edukatif dengan standar keselamatan tinggi.",
+      product_spec_2_title_1: "Berbagai",
+      product_spec_2_sub_title_1: "Model",
+      product_spec_2_description_1:
+        "Tersedia dalam berbagai macam model permainan yang disukai si kecil",
+      product_spec_2_title_2: "Desain",
+      product_spec_2_sub_title_2: "Ergonomis",
+      product_spec_2_description_2:
+        "Dengan desain ergonomis yang kuat ringan dan tahan lama",
+      product_spec_2_description_3:
+        "Bebas BPA sehingga mengurangi anak terpapar racun saat bermain",
+      product_spec_2_description_4:
+        "Material HDPE yang dirancang khusus untuk keamanan anak saat bermain",
+
+      product_title_3: "PRODUK EVA",
+      product_description_3:
+        "Matras & Alas Olahraga Karya Pilar Nusantara terbuat dari EVA berkualitas tinggi, ringan, fleksibel, dan tahan lama. Cocok untuk yoga, pilates, senam, hingga latihan kebugaran di rumah atau pusat kebugaran. Dengan desain ergonomis dan permukaan anti-slip, matras ini memberikan stabilitas serta kenyamanan ekstra, mendukung gaya hidup sehat dan aktif Anda.",
+      product_spec_3_title_1: "Bahan",
+      product_spec_3_sub_title_1: "Tebal",
+      product_spec_3_description_1:
+        "Volume foam yang tebal dan tidak mudah kempis saat meski digunakan lama",
+      product_spec_3_title_2: "Berbagai",
+      product_spec_3_sub_title_2: "Model",
+      product_spec_3_description_2:
+        "Tersedia dalam berbagai model untuk setiap kebutuhan olahraga anda",
+      product_spec_3_description_3:
+        "Material EVA berkualitas tinggi yang dikenal ringan, fleksibel dan tahan lama",
+
+      product_title_4: "PRODUK XPE",
+      product_description_4:
+        "Produk berbahan XPE (Cross-Linked Polyethylene) menawarkan kenyamanan dan keamanan untuk playmat, wallpaper, dan matras. Playmat XPE ringan, empuk, dan anti-slip, aman bagi anak. Wallpaper XPE melindungi dinding dengan tekstur lembut, tahan air, dan mudah dipasang. Matras XPE fleksibel, ringan, tahan lama, serta mudah dirawat, cocok untuk berbagai aktivitas.",
+      product_spec_4_title_1: "Berbagai",
+      product_spec_4_sub_title_1: "Model",
+      product_spec_4_description_1:
+        "Tersedia dalam berbagai macam model produk untuk memenuhi semua kebutuhan anda",
+      product_spec_4_title_2: "Dilengkapi",
+      product_spec_4_sub_title_2: "Tas",
+      product_spec_4_description_2:
+        "Tersedia dengan tas khusus untuk mempermudah mobilitas anda",
+      product_spec_4_description_3:
+        "Tekstur 3d yang tebal membuat setiap produk terasa lebih premium",
+      product_spec_4_description_4:
+        "Material XPE foam adalah bahan ringan, mudah dibersihkan dan higienis",
+
       cta: "Belum menemukan produk yang anda cari? Telusuri semua produk yang ditawarkan",
       button: "Lihat Semua Produk",
-      product_1: "PRODUK HDPE",
-      description_1:
-        "Karya Pilar Nusantara menghadirkan berbagai produk kebutuhan penunjang rumah atau bangunan dan luar ruangan berbahan HDPE (High-Density Polyethylene) yang kuat, tahan lama, serta ramah lingkungan. Dengan ketahanan tinggi terhadap cuaca ekstrem, korosi, dan bahan kimia, produk kami cocok untuk berbagai aplikasi, mulai dari pipa saluran air, tangki, hingga lembaran pelindung dan material konstruksi lainnya. Karya Pilar Nusantara berkomitmen menghadirkan solusi berkualitas tinggi untuk mendukung proyek konstruksi dan infrastruktur yang lebih efisien dan berkelanjutan.",
-      product_2: "PRODUK MAINAN ANAK",
-      description_2:
-        "Karya Pilar Nusantara menghadirkan berbagai macam mainan anak berbahan HDPE (High-Density Polyethylene) yang kuat, aman, dan ramah lingkungan. Dirancang dengan standar keselamatan tinggi, mainan ini tahan lama, bebas BPA, serta memiliki desain ergonomis yang mendukung kreativitas dan tumbuh kembang anak. Cocok untuk penggunaan di rumah, sekolah, maupun area bermain.",
-      product_3: "PRODUK EVA",
-      description_3:
-        "Matras & Alas Olahraga Karya Pilar Nusantara, nikmati kenyamanan dan perlindungan maksimal dengan matras dan alas olahraga Karya Pilar Nusantara Terbuat dari bahan EVA berkualitas tinggi, produk ini ringan, fleksibel, dan tahan lama. Cocok untuk berbagai aktivitas, mulai dari yoga, pilates, senam, hingga latihan kebugaran lainnya. Dengan desain ergonomis dan permukaan anti-slip, matras ini memberikan stabilitas serta kenyamanan ekstra saat digunakan. Pilihan tepat untuk mendukung gaya hidup sehat Anda.",
-      product_4: "PRODUK XPE",
-      description_4:
-        "Produk berbahan XPE menawarkan kenyamanan dan keamanan dalam berbagai kebutuhan, mulai dari playmat, wallpaper, hingga matras. Playmat XPE yang ringan dan empuk dirancang dengan permukaan anti-slip, memberikan ruang bermain yang aman dan nyaman bagi anak-anak. Wallpaper XPE menghadirkan perlindungan ekstra untuk dinding dengan teksturnya yang lembut, tahan air, serta mudah dipasang, menjadikannya pilihan ideal untuk kamar anak maupun ruang keluarga. Sementara itu, matras XPE yang fleksibel dan ringan cocok digunakan untuk berbagai aktivitas seperti yoga, piknik, atau alas tidur tambahan, dengan daya tahan tinggi dan kemudahan perawatan.",
     },
     homepage_production_process: {
       title: "Intip Proses Produksinya",
@@ -180,6 +228,66 @@ const translations = {
     },
     homepage_top_product: {
       title: "Our Featured Products",
+      product_title_1: "HDPE PRODUCT",
+      product_description_1:
+        "Karya Pilar Nusantara presents products made from HDPE (High-Density Polyethylene) that are strong, durable and environmentally friendly. With high resistance to extreme weather, corrosion, and chemicals, these products are ideal for homes, buildings, and outdoor areas. We are committed to providing quality solutions to support efficient, robust and sustainable infrastructure.",
+      product_spec_1_title_1: "Various",
+      product_spec_1_sub_title_1: "Models",
+      product_spec_1_description_1:
+        "Available in a variety of product models to meet all needs",
+      product_spec_1_title_2: "Strong",
+      product_spec_1_sub_title_2: "Material",
+      product_spec_1_description_2:
+        "Strong and durable, and less risk of damaging the environment",
+      product_spec_1_description_3:
+        "Material HDPE dengan ketahanan tinggi terhadap cuaca ekstrem, korosi, dan bahan kimia",
+
+      product_title_2: "TOY PRODUCT",
+      product_description_2:
+        "Karya Pilar Nusantara presents children's toys made of sturdy, safe, and eco-friendly HDPE (High-Density Polyethylene). BPA-free and ergonomically designed, these toys support creativity and child development. Suitable for homes, schools, or playgrounds, they provide a fun and educational experience with high safety standards.",
+      product_spec_2_title_1: "Various",
+      product_spec_2_sub_title_1: "Models",
+      product_spec_2_description_1:
+        "Available in a variety of play models that kids love",
+      product_spec_2_title_2: "Ergonomic",
+      product_spec_2_sub_title_2: "Design",
+      product_spec_2_description_2:
+        "Featuring a strong, lightweight, and durable ergonomic design",
+      product_spec_2_description_3:
+        "BPA-free, reducing children's exposure to toxins while playing",
+      product_spec_2_description_4:
+        "Specially designed HDPE material ensures children's safety while playing",
+
+      product_title_3: "EVA PRODUCT",
+      product_description_3:
+        "Karya Pilar Nusantara's exercise mats and flooring are made from high-quality EVA, offering lightweight, flexible, and durable performance. Perfect for yoga, pilates, aerobics, and fitness training at home or in gyms. Designed with an ergonomic structure and anti-slip surface, these mats provide extra stability and comfort, supporting your active and healthy lifestyle.",
+      product_spec_3_title_1: "Material",
+      product_spec_3_sub_title_1: "Thick",
+      product_spec_3_description_1:
+        "Dense foam volume that remains firm even after prolonged use",
+      product_spec_3_title_2: "Various",
+      product_spec_3_sub_title_2: "Models",
+      product_spec_3_description_2:
+        "Available in various models to suit all your workout needs",
+      product_spec_3_description_3:
+        "Made from high-quality EVA material, known for being lightweight, flexible, and durable",
+
+      product_title_4: "XPE PRODUCT",
+      product_description_4:
+        "XPE (Cross-Linked Polyethylene) products provide comfort and safety for playmats, wallpapers, and mats. XPE playmats are lightweight, soft, and anti-slip, ensuring child safety. XPE wallpaper protects walls with a soft texture, water resistance, and easy installation. XPE mats are flexible, lightweight, durable, and easy to maintain, making them ideal for various activities.",
+      product_spec_4_title_1: "Various",
+      product_spec_4_sub_title_1: "Models",
+      product_spec_4_description_1:
+        "Available in various product models to meet all your needs",
+      product_spec_4_title_2: "Including",
+      product_spec_4_sub_title_2: "Bag",
+      product_spec_4_description_2:
+        "Comes with a special carrying bag for easy mobility",
+      product_spec_4_description_3:
+        "Thick 3D texture gives each product a more premium feel",
+      product_spec_4_description_4:
+        "XPE foam material is lightweight, easy to clean, and hygienic",
+
       cta: "Can't find what you're looking for? Browse all the products we offer",
       button: "See All Products",
     },

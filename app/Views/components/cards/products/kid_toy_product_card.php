@@ -6,8 +6,8 @@
         </div>
         <div class="flex flex-col h-full">
             <div class="flex-none mt-[10px] w-full">
-                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[27px] md:text-[36px] text-start font-[400]">PRODUK MAINAN</h3>
-                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[27px] md:text-[36px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_title_2">PRODUK MAINAN</h3>
+                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] 2xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_description_2">
                     Karya Pilar Nusantara menghadirkan mainan anak berbahan HDPE (High-Density Polyethylene) yang kokoh, aman, dan ramah lingkungan. Bebas BPA dan dirancang ergonomis, mainan ini mendukung kreativitas serta perkembangan anak. Cocok untuk rumah, sekolah, atau area bermain, memberikan pengalaman menyenangkan sekaligus edukatif dengan standar keselamatan tinggi.
                 </p>
             </div>
@@ -35,11 +35,11 @@
                                     </svg>
                                 </div>
                                 <div class="h-full w-auto ml-[6px]">
-                                    <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start">Berbagai</p>
-                                    <p class="font-humanist-bold text-white text-[16px] text-start">Model</p>
+                                    <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_title_1">Berbagai</p>
+                                    <p class="font-humanist-bold text-white text-[16px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_sub_title_1">Model</p>
                                 </div>
                             </div>
-                            <p class="mt-[24px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[24px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_description_1">
                                 Tersedia dalam berbagai macam model permainan yang disukai si kecil
                             </p>
                         </div>
@@ -63,11 +63,11 @@
                                     </svg>
                                 </div>
                                 <div class="h-full w-auto ml-[6px] ">
-                                    <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start">Desain</p>
-                                    <p class="font-humanist-bold text-white text-[14px] md:text-[16px] text-start">Ergonomis</p>
+                                    <p class="font-humanist-normal pt-[3px] text-white leading-3 text-[14px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_title_2">Desain</p>
+                                    <p class="font-humanist-bold text-white text-[14px] md:text-[16px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_sub_title_2">Ergonomis</p>
                                 </div>
                             </div>
-                            <p class="mt-[24px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[24px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_description_2">
                                 Dengan desain ergonomis yang kuat ringan dan tahan lama
                             </p>
                         </div>
@@ -78,7 +78,7 @@
                                 <h4 class="h-full font-trebuchet text-white text-[40px] sm:text-[32px] md:text-[40px] font-[500]">BPA</h4>
                                 <h4 class="h-full font-trebuchet text-white text-[16px] sm:text-[14px] md:text-[14px] font-[500] ml-[4px] mt-[16px]">free</h4>
                             </div>
-                            <p class="mt-[12px] sm:mt-[24px] md:mt-[12px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[12px] sm:mt-[24px] md:mt-[12px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_description_3">
                                 Bebas BPA sehingga mengurangi anak terpapar racun saat bermain
                             </p>
                         </div>
@@ -86,7 +86,7 @@
                             <div class="flex items-center">
                                 <h4 class="h-full font-trebuchet text-white text-[40px] sm:text-[32px] md:text-[40px] font-[500]">HDPE</h4>
                             </div>
-                            <p class="mt-[12px] sm:mt-[24px] md:mt-[12px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[12px] sm:mt-[24px] md:mt-[12px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_2_description_4">
                                 Material HDPE yang dirancang khusus untuk keamanan anak saat bermain
                             </p>
                         </div>

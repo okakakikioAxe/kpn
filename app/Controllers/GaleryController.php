@@ -52,11 +52,11 @@ class GaleryController extends BaseController
         $file = $this->request->getFile('file-upload');
         $thumbnailFile = $this->request->getPost('thumbnail');
         if ($file->isValid() && !$file->hasMoved()) {
-            $newName = date('Y-m-d-H-i-s') . '-' . str_replace(' ', '-', $this->request->getPost('title')) . '.' . $file->getExtension();
-            $file->move('galery/content', $newName);
+            $newName = date('Y-m-d-H-i-s') . '-' . str_replace(' ', '-', $this->request->getPost('title')) . '.';
+            $file->move('galery/content', $newName . $file->getExtension());
 
             // Convert base64 thumbnail to file and store it
-            $this->saveThumbnail($thumbnailFile, $newName);
+            $this->saveThumbnail($thumbnailFile, $newName . 'jpeg');
         }
 
         $galeryModel = new Galery();

@@ -6,8 +6,8 @@
         </div>
         <div class="flex flex-col h-full">
             <div class="flex-none mt-[10px] w-full">
-                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]">PRODUK EVA</h3>
-                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]">
+                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_title_3">PRODUK EVA</h3>
+                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] 2xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_description_3">
                     Matras & Alas Olahraga Karya Pilar Nusantara terbuat dari EVA berkualitas tinggi, ringan, fleksibel, dan tahan lama. Cocok untuk yoga, pilates, senam, hingga latihan kebugaran di rumah atau pusat kebugaran. Dengan desain ergonomis dan permukaan anti-slip, matras ini memberikan stabilitas serta kenyamanan ekstra, mendukung gaya hidup sehat dan aktif Anda.
                 </p>
             </div>
@@ -35,11 +35,11 @@
                                     </svg>
                                 </div>
                                 <div class="h-full w-auto ml-[6px]">
-                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">Bahan</p>
-                                    <p class="font-humanist-bold text-white text-[16px] text-start">Tebal</p>
+                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_3_title_1">Bahan</p>
+                                    <p class="font-humanist-bold text-white text-[16px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_3_sub_title_1">Tebal</p>
                                 </div>
                             </div>
-                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_3_description_1">
                                 Volume foam yang tebal dan tidak mudah kempis saat meski digunakan lama
                             </p>
                         </div>
@@ -64,11 +64,11 @@
                                     </svg>
                                 </div>
                                 <div class="h-full w-auto ml-[6px]">
-                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start">Berbagai</p>
-                                    <p class="font-humanist-bold text-white text-[16px] text-start">Model</p>
+                                    <p class="font-humanist-normal text-white leading-3 text-[14px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_3_title_2">Berbagai</p>
+                                    <p class="font-humanist-bold text-white text-[16px] text-start" data-lang-group="homepage_top_product" data-lang-key="product_spec_3_sub_title_2">Model</p>
                                 </div>
                             </div>
-                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                            <p class="mt-[18px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_3_description_2">
                                 Tersedia dalam berbagai model untuk setiap kebutuhan olahraga anda
                             </p>
                         </div>
@@ -77,7 +77,7 @@
                         <div class="flex items-center">
                             <h4 class="flex h-full items-center justify-center font-trebuchet text-white text-[40px] font-[500]">EVA</h4>
                         </div>
-                        <p class="mt-[12px] font-humanist-normal text-white text-[14px] sm:text-[12px] lg:text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]">
+                        <p class="mt-[12px] font-humanist-normal text-white text-[14px] leading-[110%] tracking-[0.005em] text-center font-[200]" data-lang-group="homepage_top_product" data-lang-key="product_spec_3_description_3">
                             Material EVA berkualitas tinggi yang dikenal ringan, fleksibel dan tahan lama
                         </p>
                     </div>

@@ -72,9 +72,9 @@
             <main class="p-6 flex-1 overflow-y-auto">
                 <div class="grid grid-cols-8 gap-4">
                     <?php foreach ($images as $image): ?>
-                        <div class="w-full thumbnail relative cursor-pointer hover:scale-105 transform duration-200 ease-in-out">
+                        <div class="w-full relative cursor-pointer hover:scale-105 transform duration-200 ease-in-out">
                             <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
-                                class="  rounded-lg shadow-lg hover:shadow-xl transition relative">
+                                class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative">
 
                             <?php if ($image['type'] == 1): ?>
                                 <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
