@@ -48,12 +48,13 @@
     <div class="flex h-screen">
         <!-- Sidebar -->
         <aside class="sidebar sticky z-5 top-0 h-screen bg-gray-800 text-white p-6 w-64 flex-shrink-0">
-            <h1 class="text-xl font-bold">COREUI</h1>
+            <h1 class="text-xl font-bold">KPN</h1>
             <nav class="mt-5">
                 <ul>
-                    <li class="py-2"><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded">Dashboard</a></li>
                     <li class="py-2"><a href="#" class="block px-4 py-2 bg-gray-700 rounded">Galery</a></li>
-                    <li class="py-2"><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded">Settings</a></li>
+                    <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 rounded ">
+                            <p class="text-red-400">Logout</p>
+                        </a></li>
                 </ul>
             </nav>
         </aside>
@@ -72,7 +73,7 @@
             <main class="p-6 flex-1 overflow-y-auto">
                 <div class="grid grid-cols-8 gap-4">
                     <?php foreach ($images as $image): ?>
-                        <div class="w-full relative cursor-pointer hover:scale-105 transform duration-200 ease-in-out">
+                        <div class="thumbnail-container w-full relative cursor-pointer hover:scale-105 transform duration-200 ease-in-out">
                             <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
                                 class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative">
 
@@ -99,7 +100,7 @@
                             <!-- Image Section -->
                             <div class="w-1/2">
                                 <img loading="lazy" id="modalImage" src="" class="hidden rounded-lg w-full">
-                                <video loading="lazy" id="modalVideo" src="" class="hidden rounded-lg w-full" controls></video>
+                                <video id="modalVideo" src="" controls preload="auto" class="hidden rounded-lg w-full" type="video/mp4"></video>
                             </div>
 
                             <!-- Details Section -->
@@ -172,6 +173,7 @@
         const toastMessage = document.getElementById("toastMessage");
         const toastProgress = document.getElementById("toastProgress");
 
+
         let toastOpenTimer;
         let toastCloseTimer;
 
@@ -219,16 +221,36 @@
         }
 
         // Event listener for image click
-        document.querySelectorAll(".thumbnail").forEach(contentDetail => {
-            contentDetail.addEventListener("click", (e) => {
+        document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+            thumbnailContainer.addEventListener("click", async (e) => {
+                let contentDetail = thumbnailContainer.firstElementChild;
+                // console.log('open modal');
                 if (contentDetail.dataset.type == 0) {
                     // image
                     modalImage.src = '/galery/content/' + contentDetail.dataset.image;
                     modalImage.classList.remove("hidden");
                 } else {
                     // video
-                    modalVideo.src = '/galery/content/' + contentDetail.dataset.image;
-                    modalVideo.classList.remove("hidden");
+                    let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
+
+                    try {
+                        let response = await fetch(videoUrl, {
+                            method: 'GET',
+                            headers: {
+                                'Range': 'bytes=0-' // Enable seeking support
+                            }
+                        });
+
+                        if (!response.ok) throw new Error('Failed to load video');
+
+                        let blob = await response.blob();
+                        let objectUrl = URL.createObjectURL(blob);
+
+                        modalVideo.src = objectUrl;
+                        modalVideo.classList.remove("hidden");
+                    } catch (error) {
+                        console.error('Error loading video:', error);
+                    }
                 }
                 modalTitle.textContent = contentDetail.dataset.title;
                 modalDesc.textContent = contentDetail.dataset.description;
@@ -250,11 +272,30 @@
         });
 
         // Status toggle event listener
-        statusToggle.addEventListener("change", () => {
+        statusToggle.addEventListener("change", async function() {
             if (currentItem) {
-                currentItem.dataset.status = currentItem.dataset.status == 1 ? 0 : 1;
-                console.log(currentItem.dataset.status);
-                showToast(`Status changed to ${statusToggle.checked ? "Active" : "Inactive"}`);
+                try {
+                    let response = await fetch(`/gallery/toggle-status/${currentItem.dataset.id}`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-Requested-With': 'XMLHttpRequest' // Required for CI4 AJAX requests
+                        },
+                        credentials: 'include' // Ensures authentication cookies/tokens are sent
+                    });
+
+                    let data = await response.json();
+
+                    if (response.ok) {
+                        // ✅ Proceed with updating UI
+                        currentItem.dataset.status = currentItem.dataset.status == 1 ? 0 : 1;
+                        showToast(`Status changed to ${statusToggle.checked ? "Active" : "Inactive"}`);
+                    } else {
+                        throw new Error(data.message || 'Failed to update status');
+                    }
+                } catch (error) {
+                    console.error('Error updating status:', error);
+                }
             }
         });
 
@@ -262,13 +303,13 @@
         closeModal.addEventListener("click", () => {
             modal.classList.replace("opacity-100", "opacity-0");
             modalContent.classList.replace("scale-100", "scale-95");
-            modalImage.classList.add("hidden");
-            modalVideo.classList.add("hidden");
             modal.classList.replace(
                 "backdrop-blur-sm",
                 "backdrop-blur-0",
             );
             setTimeout(() => {
+                modalImage.classList.add("hidden");
+                modalVideo.classList.add("hidden");
                 modal.classList.replace("flex", "hidden");
             }, 300);
         });
