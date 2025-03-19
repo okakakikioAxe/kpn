@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Galery;
+
 class Home extends BaseController
 {
     public function index(): string
@@ -31,6 +33,8 @@ class Home extends BaseController
     public function galery(): string
     {
         // $this->cachePage(86400);
-        return view('galery');
+        $galeryModel = new Galery();
+        $images = $galeryModel->findAll();
+        return view('galery', ['images' => $images]);
     }
 }

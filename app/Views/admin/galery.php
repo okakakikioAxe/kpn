@@ -84,6 +84,8 @@
                                     </svg>
                                 </div>
                             <?php endif; ?>
+                            <div id="status-<?= $image['id'] ?>" class="absolute top-3 right-3 h-[15%] aspect-square rounded-full <?= ($image['status'] == 1) ? 'bg-green-400' : 'bg-red-400'; ?>  "></div>
+
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -325,6 +327,13 @@
                     if (response.ok) {
                         // ✅ Proceed with updating UI
                         currentItem.dataset.status = currentItem.dataset.status == 1 ? 0 : 1;
+                        document.getElementById('status-' + currentItem.dataset.id).classList.remove('bg-red-400', 'bg-green-400');
+                        if (currentItem.dataset.status == 1) {
+                            document.getElementById('status-' + currentItem.dataset.id).classList.add('bg-green-400');
+                        } else {
+                            document.getElementById('status-' + currentItem.dataset.id).classList.add('bg-red-400');
+                        }
+
                         showToast(`Status changed to ${statusToggle.checked ? "Active" : "Inactive"}`);
                     } else {
                         throw new Error(data.message || 'Failed to update status');
