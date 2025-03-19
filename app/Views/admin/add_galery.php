@@ -204,7 +204,7 @@
     <script>
         const canvas = document.getElementById('thumbnailCanvas');
         const ctx = canvas.getContext('2d');
-        const maxSize = 150;
+        const maxSize = 350;
 
         const previewContainer = document.getElementById("preview-container");
         const imagePreview = document.getElementById("image-preview");
