@@ -71,11 +71,11 @@
 
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
-                <div class="grid grid-cols-8 gap-4">
+                <div class="grid grid-cols-12 gap-4">
                     <?php foreach ($images as $image): ?>
-                        <div class="thumbnail-container w-full relative cursor-pointer hover:scale-105 transform duration-200 ease-in-out">
+                        <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
                             <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
-                                class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative">
+                                class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
 
                             <?php if ($image['type'] == 1): ?>
                                 <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
@@ -100,7 +100,7 @@
                             <!-- Image Section -->
                             <div class="w-1/2">
                                 <img loading="lazy" id="modalImage" src="" class="hidden rounded-lg w-full">
-                                <video id="modalVideo" src="" controls preload="auto" class="hidden rounded-lg w-full" type="video/mp4"></video>
+                                <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="hidden rounded-lg w-full" type="video/mp4"></video>
                             </div>
 
                             <!-- Details Section -->
@@ -130,14 +130,25 @@
 
                                 <!-- Buttons -->
                                 <div class="mt-[20px] flex gap-3 justify-end">
-                                    <button id="editBtn" class="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-orange-600 cursor-pointer">
+                                    <a href="" id="editBtn" class="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-orange-600 cursor-pointer">
                                         Edit
-                                    </button>
+                                    </a>
                                     <button id="deleteBtn" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 cursor-pointer">
                                         Delete
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="deleteModal" class="fixed inset-0 z-80 items-center justify-center bg-black bg-opacity-50 hidden">
+                    <div class="bg-white rounded-lg shadow-lg p-6 w-96">
+                        <h2 class="text-lg font-semibold text-gray-800">Hapus konten ini?</h2>
+                        <p id="contentTitle" class="text-gray-600 mt-2"></p>
+
+                        <div class="flex justify-end mt-4">
+                            <button onclick="closeDeleteModal()" class="px-4 py-2 cursor-pointer text-gray-600 border border-gray-300 rounded hover:bg-gray-100">Cancel</button>
+                            <button onclick="confirmDelete()" class="px-4 py-2 cursor-pointer ml-2 text-white bg-red-600 rounded hover:bg-red-700">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -168,6 +179,7 @@
         const modalDesc = document.getElementById("modalDesc");
         const modalDate = document.getElementById("modalDate");
         const statusToggle = document.getElementById("statusToggle");
+        const editButton = document.getElementById("editBtn");
         let currentItem = null;
         const toastModal = document.getElementById("toastModal");
         const toastMessage = document.getElementById("toastMessage");
@@ -176,6 +188,9 @@
 
         let toastOpenTimer;
         let toastCloseTimer;
+
+        let itemTitleToDelete = null;
+        let itemIdToDelete = null;
 
         function formatDateTime(datetime) {
             // Convert string to Date object
@@ -220,6 +235,22 @@
             showToast(successMessage);
         }
 
+        function openDeleteModal(idToDelete, titleToDelete) {
+            itemIdToDelete = idToDelete;
+            itemTitleToDelete = titleToDelete;
+            document.getElementById('contentTitle').innerHTML = itemTitleToDelete;
+            document.getElementById("deleteModal").classList.replace("hidden", "flex");
+        }
+
+        function closeDeleteModal() {
+            document.getElementById("deleteModal").classList.replace("flex", "hidden");
+            itemTitleToDelete = null;
+        }
+
+        function confirmDelete() {
+            window.location.href = '/gallery/delete/' + itemIdToDelete;
+        }
+
         // Event listener for image click
         document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
             thumbnailContainer.addEventListener("click", async (e) => {
@@ -257,6 +288,11 @@
                 modalDate.textContent = formatDateTime(contentDetail.dataset.created);
                 statusToggle.checked = contentDetail.dataset.status == 1;
                 currentItem = contentDetail;
+                editButton.setAttribute('href', "/admin/galery/show/" + contentDetail.dataset.id);
+                document.getElementById('deleteBtn').addEventListener("click", function() {
+                    openDeleteModal(contentDetail.dataset.id, contentDetail.dataset.title);
+                });
+
                 modal.classList.replace("hidden", "flex");
                 setTimeout(() => {
                     modal.classList.replace("opacity-0", "opacity-100");

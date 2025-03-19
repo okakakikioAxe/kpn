@@ -17,6 +17,14 @@ class GaleryController extends BaseController
         return view('admin/galery', ['images' => $images, 'successMessage' => $successMessage]);
     }
 
+    public function show($id): string
+    {
+        // $this->cachePage(86400);
+        $galeryModel = new Galery();
+        $content = $galeryModel->find($id);
+        return view('admin/edit_galery', ['content' => $content]);
+    }
+
     public function create(): string
     {
         // $this->cachePage(86400);
@@ -25,6 +33,7 @@ class GaleryController extends BaseController
 
     public function store(): ResponseInterface
     {
+        date_default_timezone_set('Asia/Jakarta');
         $validation = \Config\Services::validation();
 
         $validation->setRules([
@@ -72,6 +81,35 @@ class GaleryController extends BaseController
             'status' => 1,
         ]);
         session()->setFlashdata('successMessage', 'Konten berhasil ditambahkan!');
+        return redirect()->to('/admin/galery');
+    }
+
+
+    public function update($id): ResponseInterface
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $validation = \Config\Services::validation();
+
+        $validation->setRules([
+            'title' => 'required|min_length[3]|max_length[255]',
+            'description' => 'required|min_length[3]',
+        ]);
+
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
+        $galleryModel = new Galery();
+        $gallery = $galleryModel->find($id);
+
+        if (!$gallery) {
+            return redirect()->back()->withInput()->with('errors', 'data tidak ditemukan');
+        }
+
+        $galleryModel->update($id, ['title' => $this->request->getPost('title'), 'description' => $this->request->getPost('description')]);
+
+        session()->setFlashdata('successMessage', 'Konten berhasil diupdate!');
         return redirect()->to('/admin/galery');
     }
 
@@ -136,7 +174,7 @@ class GaleryController extends BaseController
 
     public function toggleStatus($id)
     {
-
+        date_default_timezone_set('Asia/Jakarta');
         $galleryModel = new Galery();
         $gallery = $galleryModel->find($id);
 
@@ -154,5 +192,20 @@ class GaleryController extends BaseController
             'message' => 'Status updated successfully.',
             'new_status' => $newStatus
         ])->setStatusCode(ResponseInterface::HTTP_OK);
+    }
+
+    public function delete($id)
+    {
+        $galleryModel = new Galery();
+        $gallery = $galleryModel->find($id);
+
+        $filePath = FCPATH . 'galery/content/' . $gallery['image'];
+        $thumbnailPath = FCPATH . 'galery/thumbnail/' . $gallery['thumbnail'];
+        unlink($filePath);
+        unlink($thumbnailPath);
+
+        $galleryModel->delete($id);
+        session()->setFlashdata('successMessage', 'Konten berhasil dihapus!');
+        return redirect()->to('/admin/galery');
     }
 }
