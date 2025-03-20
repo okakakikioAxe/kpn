@@ -6,7 +6,7 @@
 
 <?= $this->section('content') ?>
 <!-- Hero -->
-<section id="galerySection" class="relative h-screen w-full bg-white">
+<section id="galerySection" class="relative pb-[200px] w-full bg-white">
   <!-- Background Image -->
   <div class="h-[140px] w-full px-[40px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
     <div class="w-full max-w-[1600px] pt-[30px] ">
@@ -14,9 +14,9 @@
       <p class="mt-[12px] text-[#001F47] text-start font-humanist-normal leading-4 text-[14px] md:text-[16px] xl:text-[18px]">Temukan inspirasi lewat berbagai dokumentasi yang sudah kami rangkum.</p>
     </div>
   </div>
-  <div class=" pt-[40px] px-[40px] md:px-[10%] flex justify-center w-full ">
-    <div class="w-full max-w-[1600px]">
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-[10px]">
+  <div class=" pt-[40px] px-[40px] md:px-[10%]">
+    <div class="w-full max-w-[1600px] h-full">
+      <div class="relative h-full bg-red-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-[10px]">
         <?php foreach ($images as $image): ?>
           <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
             <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
@@ -34,36 +34,38 @@
       </div>
     </div>
   </div>
-  <div id="imageModal" class="fixed z-10 inset-0 flex items-center justify-center bg-black/70 opacity-100 backdrop-blur-0 transition-opacity duration-300 ease-in-out overflow-scroll">
-    <div id="imageContent" class="bg-white rounded-lg shadow-lg p-6 w-full max-w-[1000px] transform scale-95 transition-transform duration-300 ease-in-out relative ">
-      <!-- Close Button -->
-      <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+
+  <div id="imageModal" class="fixed z-10 top-0 left-0 w-full pt-16 h-[100vh] hidden items-center justify-center bg-black/70 opacity-100 backdrop-blur-0 transition-opacity duration-300 ease-in-out">
+    <div id="imageContent" class="block sm:flex bg-white rounded-lg shadow-lg h-full w-full sm:max-h-[800px] sm:max-w-[1000px]  transform scale-100 transition-transform duration-300 ease-in-out relative ">
+      <button id="closeModal" class=" absolute z-15 top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
         ✖
       </button>
 
-      <!-- Modal Content -->
-      <div class="flex flex-row gap-4">
-        <!-- Image Section -->
-        <div class="h-[700px] w-1/2 bg-black flex relative items-center rounded-lg">
-          <!-- <div class="rounded-lg w-full h-full bg-red-100"> -->
-          <img loading="lazy" id="modalImage" src="https://picsum.photos/200/100" class="relative w-full h-auto">
-          <!-- <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="hidden rounded-lg w-full" type="video/mp4"></video> -->
-        </div>
-
-        <!-- Details Section -->
-        <div class="w-1/2 flex flex-col justify-between">
-          <div>
-            <h2 id="modalTitle" class=" text-stone-800 text-[20px] xl:text-[28px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update</h2>
-            <p id="modalDate" class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
-            <p id="modalDesc" class=" text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
-
+      <div id="topSection" class="sm:hidden h-[75%] w-full bg-green-200 flex items-center justify-center ">
+        <img id="modalImage" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
+        <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
+      </div>
+      <div id="bottomSection" class="sm:hidden h-[25%] w-full bg-amber-200">
+        <div class="relative h-[100%] pb-[20px] px-6 w-full bg-blue-200">
+          <div id="dragArea" class="relative h-[30px] w-full flex justify-center items-center cursor-pointer touch-none">
+            <div class="h-[5px] w-[100px] rounded-full bg-gray-300 mt-2"></div>
           </div>
-
+          <h2 id="modalTitle" class="overflow-hidden line-clamp-1 text-stone-800 text-[20px] xl:text-[28px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
+          <p id="modalDate" class="text-stone-600 mb-[20px] font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
+          <p id="modalDesc" class="h-auto max-h-[65%] relative overflow-clip line-clamp-3 text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
         </div>
+      </div>
+      <div id="leftSection" class="hidden sm:flex relative w-[50%] bg-red-100">
+        <img id="modalImage2" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
+        <video loading="lazy" id="modalVideo2" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
+      </div>
+      <div class="hidden sm:block relative w-[50%] p-6 bg-green-100">
+        <h2 id="modalTitle2" class="overflow-hidden text-stone-800 mb-[5px] text-[20px] xl:text-[28px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
+        <p id="modalDate2" class="text-stone-600 mb-[20px] font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
+        <p id="modalDesc2" class="h-auto max-h-[80%] relative overflow-auto text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
       </div>
     </div>
   </div>
-
 </section>
 <?= $this->endSection() ?>
 
@@ -74,9 +76,14 @@
   const modalContent = document.getElementById("imageContent");
   const modalImage = document.getElementById("modalImage");
   const modalVideo = document.getElementById("modalVideo");
+  const modalImage2 = document.getElementById("modalImage2");
+  const modalVideo2 = document.getElementById("modalVideo2");
   const modalTitle = document.getElementById("modalTitle");
   const modalDesc = document.getElementById("modalDesc");
   const modalDate = document.getElementById("modalDate");
+  const modalTitle2 = document.getElementById("modalTitle2");
+  const modalDesc2 = document.getElementById("modalDesc2");
+  const modalDate2 = document.getElementById("modalDate2");
 
   function formatDateTime(datetime) {
     // Convert string to Date object
@@ -103,7 +110,7 @@
       if (contentDetail.dataset.type == 0) {
         // image
         modalImage.src = '/galery/content/' + contentDetail.dataset.image;
-        modalImage.classList.remove("hidden");
+        modalImage2.src = '/galery/content/' + contentDetail.dataset.image;
       } else {
         // video
         let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
@@ -122,7 +129,7 @@
           let objectUrl = URL.createObjectURL(blob);
 
           modalVideo.src = objectUrl;
-          modalVideo.classList.remove("hidden");
+          modalVideo2.src = objectUrl;
         } catch (error) {
           console.error('Error loading video:', error);
         }
@@ -130,6 +137,9 @@
       modalTitle.textContent = contentDetail.dataset.title;
       modalDesc.textContent = contentDetail.dataset.description;
       modalDate.textContent = formatDateTime(contentDetail.dataset.created);
+      modalTitle2.textContent = contentDetail.dataset.title;
+      modalDesc2.textContent = contentDetail.dataset.description;
+      modalDate2.textContent = formatDateTime(contentDetail.dataset.created);
 
       modal.classList.replace("hidden", "flex");
       setTimeout(() => {
@@ -175,6 +185,111 @@
         modalVideo.classList.add("hidden");
       }, 300);
     }
+  });
+</script>
+<script>
+  const dragArea = document.getElementById("dragArea");
+  const topSection = document.getElementById("topSection");
+  const bottomSection = document.getElementById("bottomSection");
+
+  let startY = 0;
+  let isDragging = false;
+  let currentHeight = 25; // Awalnya 25%
+
+  function disableScroll(e) {
+    e.preventDefault();
+  }
+
+  // Prevent scrolling on title and date
+  modalTitle.addEventListener("touchmove", disableScroll, {
+    passive: false
+  });
+  modalDate.addEventListener("touchmove", disableScroll, {
+    passive: false
+  });
+
+  // Fungsi untuk memperbarui ukuran modal
+  function updateSize(height, animate = true) {
+    if (animate) {
+      topSection.style.transition = "height 0.3s ease-in-out";
+      bottomSection.style.transition = "height 0.3s ease-in-out";
+    } else {
+      topSection.style.transition = "none";
+      bottomSection.style.transition = "none";
+    }
+
+    topSection.style.height = `${100 - height}%`;
+    bottomSection.style.height = `${height}%`;
+
+    // Ubah gaya modalDesc & modalTitle jika diubah ke 50%
+    if (height === 50) {
+      modalDesc.style.overflow = "auto";
+      modalDesc.classList.remove("line-clamp-3");
+      modalTitle.classList.remove("line-clamp-1");
+    } else {
+      modalDesc.style.overflow = "clip";
+      modalDesc.classList.add("line-clamp-3");
+      modalTitle.classList.add("line-clamp-1");
+    }
+  }
+
+  // Klik untuk toggle antara 25% dan 50%
+  dragArea.addEventListener("click", () => {
+    currentHeight = currentHeight === 25 ? 50 : 25;
+    updateSize(currentHeight);
+  });
+
+  // Saat mulai drag
+  dragArea.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+    isDragging = true;
+
+    document.body.addEventListener("touchmove", disableScroll, {
+      passive: false
+    });
+  });
+
+
+  bottomSection.addEventListener("touchmove", (e) => {
+
+    let atTop = modalDesc.scrollTop === 0;
+    let atBottom = modalDesc.scrollTop + modalDesc.clientHeight >= modalDesc.scrollHeight;
+    let scrollingDown = e.touches[0].clientY < startY;
+    let scrollingUp = e.touches[0].clientY > startY;
+
+    if ((atTop && scrollingUp) || (atBottom && scrollingDown)) {
+      e.preventDefault(); // Prevent page scrolling
+    }
+  });
+
+  // Saat drag berlangsung
+  dragArea.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+
+    let diff = startY - e.touches[0].clientY; // Perbedaan posisi awal dan sekarang
+    let newHeight = currentHeight + (diff / window.innerHeight) * 100;
+
+    // Batasi ukuran antara 25% - 50%
+    if (newHeight >= 25 && newHeight <= 50) {
+      updateSize(newHeight, false);
+    }
+  });
+
+  // Saat drag dilepas
+  dragArea.addEventListener("touchend", () => {
+    isDragging = false;
+
+    // Dapatkan posisi terakhir dan tentukan snap ke 25% atau 50%
+    let bottomHeight = parseFloat(bottomSection.style.height);
+    currentHeight = bottomHeight >= 37.5 ? 50 : 25;
+
+    updateSize(currentHeight);
+
+    document.body.removeEventListener("touchmove", disableScroll);
+  });
+
+  bottomSection.addEventListener("touchend", () => {
+    document.body.removeEventListener("touchmove", disableScroll);
   });
 </script>
 <?= $this->endSection() ?>
