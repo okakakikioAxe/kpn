@@ -160,7 +160,7 @@ const translations = {
         "Ya, kami melayani pengiriman ke seluruh Indonesia dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya.",
       question_4: "Apakah ada harga khusus untuk pembelian dalam jumlah besar?",
       answer_4:
-        "Tentu, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email admin@karyapilarnusantara.com.",
+        "Tentu, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email pt.karyapilarnusantara@gmail.com.",
     },
     about_us_hero: {
       title: "Tentang Kami",
@@ -357,7 +357,7 @@ const translations = {
         "Yes, we deliver nationwide and support all major couriers, including JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, and more.",
       question_4: "Are there special prices for bulk purchases?",
       answer_4:
-        "Absolutely! Please contact our marketing team to get the best offer. Reach us via WhatsApp at +62 821-6005-0005 or email admin@karyapilarnusantara.com.",
+        "Absolutely! Please contact our marketing team to get the best offer. Reach us via WhatsApp at +62 821-6005-0005 or email pt.karyapilarnusantara@gmail.com.",
     },
     about_us_hero: {
       title: "About Us",
@@ -540,7 +540,7 @@ const translations = {
         "是的，我们在全国范围内发货，并支持所有主要快递公司，包括 JNE、J&T、SiCepat、POS Indonesia、Indah Cargo 等。",
       question_4: "批量购买有特别优惠吗？",
       answer_4:
-        "当然有！请联系我们的营销团队以获取最佳报价。通过 WhatsApp +62 821-6005-0005 或电子邮件 admin@karyapilarnusantara.com 联系我们。",
+        "当然有！请联系我们的营销团队以获取最佳报价。通过 WhatsApp +62 821-6005-0005 或电子邮件 pt.karyapilarnusantara@gmail.com 联系我们。",
     },
     about_us_hero: {
       title: "关于我们",
