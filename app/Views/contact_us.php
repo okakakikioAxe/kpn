@@ -88,7 +88,7 @@
               </div>
               <div class="w-full pt-[8px] ml-[13px]">
                 <h3 class="text-[16px] md:text-[18px] font-trebuchet font-bold text-[#0D55C8]">Email</h3>
-                <p class=" 2xl:w-[12vw] text-[18px] xl:text-[20px] font-humanist-normal font-normal text-[#2F2D2D] leading-6 overflow-hidden break-words">admin@karyapilarnusantara.com </p>
+                <p class=" 2xl:w-[12vw] text-[18px] xl:text-[20px] font-humanist-normal font-normal text-[#2F2D2D] leading-6 overflow-hidden break-words">pt.karyapilarnusantara@gmail.com </p>
                 <div class="relative w-full flex bg-red-100 over">
                 </div>
               </div>

@@ -1,0 +1,628 @@
+a:3:{s:4:"time";i:1742542805;s:3:"ttl";i:86400;s:4:"data";s:41729:"a:2:{s:7:"headers";a:1:{s:12:"Content-Type";s:24:"text/html; charset=UTF-8";}s:6:"output";s:41627:"<!-- DEBUG-VIEW START 2 APPPATH\Views\galery.php -->
+<!-- DEBUG-VIEW START 1 APPPATH\Views\template.php -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/colored logo.png">
+    <meta name="author" content="PT Karya Pilar Nusantara" />
+    <meta name="robots" content="index, follow" />
+    <html lang="id">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PT Karya Pilar Nusantara" />
+    <meta property="og:description" content="Produsen tangan pertama produk HDPE, XPE, TPE, dan mainan anak." />
+    <meta property="og:image" content="https://www.karyapilarnusantara.com/kpn-banner.webp" />
+    <meta property="og:url" content="https://www.karyapilarnusantara.com" />
+    <meta property="og:site_name" content="PT Karya Pilar Nusantara" />
+    <title>PT KPN - Produsen produk HDPE, EVA, XPE, dan TPE</title>
+<meta name="description" content="Jelajahi galeri PT Karya Pilar Nusantara (PT KPN) dan temukan foto produk HDPE, EVA, TPE, dan XPE. Lihat koleksi terbaru dan portofolio produk berkualitas kami." />
+<meta name="keywords" content="galeri KPN, foto produk KPN, gambar produk HDPE, gambar produk EVA, gambar produk TPE, gambar produk XPE, portofolio PT KPN, koleksi produk KPN" />
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/global_style.css">
+    <style>
+        .nav-link.active {
+            border-color: white;
+            /* Add border to selected link */
+        }
+    </style>
+    <link rel="stylesheet" href="css/homepage_style.css">
+</head>
+
+<body class="bg-white">
+    <header>
+        <!-- ---------------------------- Nav Bar ------------------------------------- -->
+        <nav class="bg-gray-800 fixed top-0 left-0 w-full h-16 z-50 flex justify-center">
+            <div class="w-full max-w-[1600px] sm:mx-[25px]">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
+                        <!-- Logo di kiri -->
+                        <div class="flex shrink-0 items-center ml-[25px] sm:ml-0">
+                            <img class="h-8 w-auto" src="white logo.png" alt="Your Company">
+                        </div>
+                        <div class="hidden sm:ml-6 sm:block ">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="/" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="homepage">Beranda</a> </a>
+                                <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
+                                <a href="/contact-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
+                                <a href="/about-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
+                                <a href="/galeri" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="gallery">Galery</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile menu button (dipindah ke kanan) -->
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-[25px] sm:hidden">
+                        <button onclick="toggleMenu()" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Open Menu Icon -->
+                            <svg id="open-menu-icon" class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <!-- Close Menu Icon -->
+                            <svg id="close-menu-icon" class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobile-menu"
+            class="fixed top-16 right-0 w-screen h-screen bg-gray-800 shadow-lg sm:hidden translate-x-full transition-transform duration-300 overflow-y-auto z-20">
+            <div class="space-y-1 px-4 pt-4">
+                <a href="/" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="homepage">Beranda</a>
+                <a href="/product" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
+                <a href="/contact-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
+                <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
+                <a href="/galeri" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="gallery">Galery</a>
+            </div>
+        </div>
+
+        <!-- ---------------------------- End of Nav Bar ---------------------------- -->
+    </header>
+
+    <div class="h-16"></div>
+
+    <div class="absolute z-10 w-full bg-white">
+        <main class="bg-container">
+            <!-- Hero -->
+<section id="galerySection" class="relative pb-[200px] min-h-[100vh] w-full bg-white">
+  <!-- Background Image -->
+  <div class="h-[140px] w-full px-[40px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
+    <div class="w-full max-w-[1600px] pt-[30px] ">
+      <h1 class=" text-[#001F47] text-start text-[32px] md:text-[34px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="gallery" data-lang-key="title">GALERI</h1>
+      <p class="mt-[12px] text-[#001F47] text-start font-humanist-normal leading-4 text-[14px] md:text-[16px] xl:text-[18px]" data-lang-group="gallery" data-lang-key="sub_title">Temukan inspirasi lewat kegiatan yang kami bagikan.</p>
+    </div>
+  </div>
+  <div class=" pt-[40px] px-[40px] md:px-[10%] flex justify-center">
+    <div class="w-full max-w-[1600px] h-full ">
+      <div class="relative h-full  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-[10px]">
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="3" data-image="2025-03-19-02-44-32-Proses-pembuatan-playmat.mp4" data-title="Proses pembuatan playmat ptd" data-description="Proses pembuatan playmat menggunakan alat otomatis" data-status="1" data-created="2025-03-19 02:44:32" data-type="1" src="/galery/thumbnail/2025-03-19-02-44-32-Proses-pembuatan-playmat.jpeg" alt="Proses pembuatan playmat"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                          <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="50%">
+                  <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
+                </svg>
+              </div>
+                      </div>
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="5" data-image="2025-03-21-08-05-08-Proses-pencetakan-mainan-anak.jpg" data-title="Proses pencetakan mainan anak" data-description="Pencetakan mainan anak menggunakan mesin otomatis" data-status="1" data-created="2025-03-21 08:05:08" data-type="0" src="/galery/thumbnail/2025-03-21-08-05-08-Proses-pencetakan-mainan-anak.jpeg" alt="Proses pencetakan mainan anak"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                      </div>
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="6" data-image="2025-03-21-08-07-47-Eva.png" data-title="Eva" data-description="eva" data-status="1" data-created="2025-03-21 08:07:47" data-type="0" src="/galery/thumbnail/2025-03-21-08-07-47-Eva.jpeg" alt="Eva"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                      </div>
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="7" data-image="2025-03-21-08-15-45-tes.png" data-title="tes" data-description="tes" data-status="1" data-created="2025-03-21 08:15:45" data-type="0" src="/galery/thumbnail/2025-03-21-08-15-45-tes.jpeg" alt="tes"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                      </div>
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="8" data-image="2025-03-21-08-16-15-dadwaa.mp4" data-title="dadwaa" data-description="wdawdaw" data-status="1" data-created="2025-03-21 08:16:15" data-type="1" src="/galery/thumbnail/2025-03-21-08-16-15-dadwaa.jpeg" alt="dadwaa"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                          <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="50%">
+                  <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
+                </svg>
+              </div>
+                      </div>
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="9" data-image="2025-03-21-08-23-57-dawdawd.mp4" data-title="dawdawd" data-description="awdawda" data-status="1" data-created="2025-03-21 08:23:57" data-type="1" src="/galery/thumbnail/2025-03-21-08-23-57-dawdawd.jpeg" alt="dawdawd"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                          <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="50%">
+                  <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
+                </svg>
+              </div>
+                      </div>
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="12" data-image="2025-03-21-08-30-44-tesss.mp4" data-title="tesss" data-description="tesss" data-status="1" data-created="2025-03-21 08:30:44" data-type="1" src="/galery/thumbnail/2025-03-21-08-30-44-tesss.jpeg" alt="tesss"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                          <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="50%">
+                  <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
+                </svg>
+              </div>
+                      </div>
+                  <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+            <img loading="lazy" data-id="15" data-image="2025-03-21-09-28-22-tess.mp4" data-title="tess" data-description="tess" data-status="1" data-created="2025-03-21 09:28:22" data-type="1" src="/galery/thumbnail/2025-03-21-09-28-22-tess.jpeg" alt="tess"
+              class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+
+                          <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="50%">
+                  <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
+                </svg>
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+
+  <div id="imageModal" class="fixed z-10 top-0 left-0 w-full pt-16 h-[100vh] hidden items-center justify-center bg-black/70 opacity-100 backdrop-blur-0 transition-opacity duration-300 ease-in-out">
+
+    <div id="imageContent" class="block sm:flex bg-black rounded-lg shadow-lg h-full w-full sm:max-h-[800px] sm:max-w-[1200px]  transform scale-95 transition-transform duration-300 ease-in-out relative ">
+
+      <button id="closeModal" class=" absolute z-15 top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+        ✖
+      </button>
+
+      <div id="topSection" class="h-[75%] sm:h-full w-full sm:w-[50%] sm:py-6 bg-black flex items-center justify-center sm:rounded-l-lg">
+        <img id="modalImage" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
+        <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
+      </div>
+      <div id="bottomSection" class="relative h-[25%] sm:h-full w-full sm:w-[50%] bg-white sm:py-6 rounded-t-4xl sm:rounded-t-none sm:rounded-r-lg">
+        <div class="relative h-[100%] pb-[20px] px-6 w-full ">
+          <div id="dragArea" class="sm:hidden relative h-[30px] w-full flex justify-center items-center cursor-pointer touch-none">
+            <div class="h-[5px] w-[100px] rounded-full bg-gray-300 mt-2"></div>
+          </div>
+          <h2 id="modalTitle" class="overflow-hidden sm:overflow-visible line-clamp-1 sm:line-clamp-none text-stone-800 text-[20px] xl:text-[22px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
+          <p id="modalDate" class="text-stone-600 mb-[20px] font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
+          <p id="modalDesc" class="h-auto max-h-[65%] sm:max-h-[80%] relative overflow-clip sm:overflow-auto line-clamp-3 sm:line-clamp-none text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+        </main>
+
+        <footer class="flex justify-center  bg-[#07172C]">
+            <div class="bg-[#07172C] p-[24px] max-w-[1600px]">
+                <img loading="lazy" class="w-[110px] h-auto" src="white logo.png" alt="Logo KPN warna putih">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[44px] mt-[46px]">
+                    <p class="text-start text-white text-[18px] font-humanist-normal tracking-wide" data-lang-group="footer" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+                    <div class="grid grid-cols-2">
+                        <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
+                            <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="company">Perusahaan</h3>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/about-us" data-lang-group="footer" data-lang-key="about">Tentang</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/product" data-lang-group="footer" data-lang-key="product">Produk</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galeri" data-lang-group="footer" data-lang-key="gallery">Galeri</a>
+                        </div>
+                        <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
+                            <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="contact_us">Hubungi Kami</h3>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/contact-us" data-lang-group="footer" data-lang-key="contact">Kontak</a>
+                        </div>
+                    </div>
+                    <div class="hidden xl:block w-full h-[30px] ">
+                        <div class="w-full h-auto flex  items-center">
+                            <img loading="lazy" class="w-[37px] h-[37px] mr-[30px]" src="translate_icon.png" alt="translate icon">
+                            <div class="relative w-full">
+
+                                <button id="dropdownButton1" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
+                                    <div class="flex">
+                                        <p id="selected-language-1" class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
+                                        <p class="w-[30px]">
+                                            <svg id="dropdownIcon1" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </p>
+                                    </div>
+                                </button>
+
+
+                                <div id="dropdownMenu1"
+                                    class="absolute mt-5 w-full bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-top invisible">
+                                    <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">Bahasa Indonesia</button>
+                                    <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">English</button>
+                                    <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">中文</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-[1.5px] border-white mt-[48px]"></div>
+                <div class="xl:hidden mt-[29px]">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-[44px]">
+                        <div class="w-full h-auto flex  items-center">
+                            <img loading="lazy" class="w-[37px] h-[37px] mr-[30px]" src="translate_icon.png" alt="translate icon">
+                            <div class="relative w-full">
+
+                                <button id="dropdownButton2" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
+                                    <div class="flex">
+                                        <p id="selected-language-2" class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
+                                        <p class="w-[30px]">
+                                            <svg id="dropdownIcon2" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </p>
+                                    </div>
+                                </button>
+
+
+                                <div id="dropdownMenu2"
+                                    class="absolute w-full bottom-full mb-5 bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-bottom invisible">
+                                    <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
+                                    <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
+                                    <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">中文</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <h5 class="mt-[48px] text-white">
+                    @ 2025 PT. Karya Pilar Nusantara
+                </h5>
+            </div>
+        </footer>
+    </div>
+
+    <div id="waButton" class="scale-75 md:scale-80 lg:scale-90 xl:scale-100 bottom-3 md:bottom-5 lg:bottom-8 xl:bottom-10 right-3 md:right-5 lg:right-8 xl:right-10 fixed z-50 rounded-full h-20 w-20 bg-green-500 hover:scale-110 transform duration-300 cursor-pointer place-content-center">
+        <a href="http://wa.me/6282160050005" target="_blank">
+            <img loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.webp" alt="whatsapp icon">
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+  const closeModal = document.getElementById("closeModal");
+  const waButton = document.getElementById("waButton");
+  const modal = document.getElementById("imageModal");
+  const modalContent = document.getElementById("imageContent");
+  const modalImage = document.getElementById("modalImage");
+  const modalVideo = document.getElementById("modalVideo");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalDate = document.getElementById("modalDate");
+
+  function formatDateTime(datetime) {
+    // Convert string to Date object
+    const date = new Date(datetime.replace(" ", "T")); // Ensure proper parsing
+
+    // Format date to "15 Maret 2025"
+    const formattedDate = new Intl.DateTimeFormat('id-ID', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+    }).format(date);
+
+    // Format time to "00:46"
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+
+    return `${formattedDate} - ${hours}:${minutes}`;
+  }
+
+  document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+    thumbnailContainer.addEventListener("click", async (e) => {
+      waButton.classList.add("hidden");
+      let contentDetail = thumbnailContainer.firstElementChild;
+      // console.log('open modal');
+      if (contentDetail.dataset.type == 0) {
+        // image
+        modalImage.src = '/galery/content/' + contentDetail.dataset.image;
+        modalImage.classList.remove("hidden");
+
+      } else {
+        // video
+        let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
+
+        try {
+          if (modalVideo.src != '') {
+            URL.revokeObjectURL(modalVideo.src);
+          }
+          let response = await fetch(videoUrl, {
+            method: 'GET',
+            headers: {
+              'Range': 'bytes=0-' // Enable seeking support
+            }
+          });
+
+          if (!response.ok) throw new Error('Failed to load video');
+
+          let blob = await response.blob();
+          let objectUrl = URL.createObjectURL(blob);
+
+          modalVideo.src = objectUrl;
+          modalVideo.classList.remove("hidden");
+        } catch (error) {
+          console.error('Error loading video:', error);
+        }
+      }
+      modalTitle.textContent = contentDetail.dataset.title;
+      modalDesc.textContent = contentDetail.dataset.description;
+      modalDate.textContent = formatDateTime(contentDetail.dataset.created);
+
+      modal.classList.replace("hidden", "flex");
+      setTimeout(() => {
+        modal.classList.replace("opacity-0", "opacity-100");
+        modalContent.classList.replace("scale-95", "scale-100");
+        modal.classList.replace(
+          "backdrop-blur-0",
+          "backdrop-blur-sm",
+        );
+      }, 100);
+      // modalContent.classList.replace("scale-80", "scale-100");
+
+    });
+  });
+
+  // Close Modal
+  closeModal.addEventListener("click", () => {
+    modal.classList.replace("opacity-100", "opacity-0");
+    modalContent.classList.replace("scale-100", "scale-95");
+    modal.classList.replace(
+      "backdrop-blur-sm",
+      "backdrop-blur-0",
+    );
+    if (modalVideo.src != '') {
+      URL.revokeObjectURL(modalVideo.src);
+    }
+    setTimeout(() => {
+      modalImage.classList.add("hidden");
+      modalVideo.classList.add("hidden");
+      modal.classList.replace("flex", "hidden");
+      waButton.classList.remove("hidden");
+
+    }, 300);
+  });
+
+  // Close when clicking outside modal
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.replace("opacity-100", "opacity-0");
+      modalContent.classList.replace("scale-100", "scale-95");
+      modal.classList.replace(
+        "backdrop-blur-sm",
+        "backdrop-blur-0",
+      );
+      if (modalVideo.src != '') {
+        URL.revokeObjectURL(modalVideo.src);
+      }
+      setTimeout(() => {
+        modal.classList.replace("flex", "hidden");
+        modalImage.classList.add("hidden");
+        modalVideo.classList.add("hidden");
+        waButton.classList.remove("hidden");
+
+      }, 300);
+    }
+  });
+</script>
+<script>
+  const dragArea = document.getElementById("dragArea");
+  const topSection = document.getElementById("topSection");
+  const bottomSection = document.getElementById("bottomSection");
+
+  let startY = 0;
+  let isDragging = false;
+  let currentHeight = 25; // Awalnya 25%
+
+  function disableScroll(e) {
+    e.preventDefault();
+  }
+
+  // Prevent scrolling on title and date
+  modalTitle.addEventListener("touchmove", disableScroll, {
+    passive: false
+  });
+  modalDate.addEventListener("touchmove", disableScroll, {
+    passive: false
+  });
+
+  // Fungsi untuk memperbarui ukuran modal
+  function updateSize(height, animate = true) {
+    if (animate) {
+      topSection.style.transition = "height 0.3s ease-in-out";
+      bottomSection.style.transition = "height 0.3s ease-in-out";
+    } else {
+      topSection.style.transition = "none";
+      bottomSection.style.transition = "none";
+    }
+
+    topSection.style.height = `${100 - height}%`;
+    bottomSection.style.height = `${height}%`;
+
+    // Ubah gaya modalDesc & modalTitle jika diubah ke 50%
+    if (height === 50) {
+      modalDesc.style.overflow = "auto";
+      modalDesc.classList.remove("line-clamp-3");
+      modalTitle.classList.remove("line-clamp-1");
+    } else {
+      modalDesc.style.overflow = "clip";
+      modalDesc.classList.add("line-clamp-3");
+      modalTitle.classList.add("line-clamp-1");
+    }
+  }
+
+  // Klik untuk toggle antara 25% dan 50%
+  dragArea.addEventListener("click", () => {
+    currentHeight = currentHeight === 25 ? 50 : 25;
+    updateSize(currentHeight);
+  });
+
+  // Saat mulai drag
+  dragArea.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+    isDragging = true;
+
+    document.body.addEventListener("touchmove", disableScroll, {
+      passive: false
+    });
+  });
+
+
+  bottomSection.addEventListener("touchmove", (e) => {
+
+    let atTop = modalDesc.scrollTop === 0;
+    let atBottom = modalDesc.scrollTop + modalDesc.clientHeight >= modalDesc.scrollHeight;
+    let scrollingDown = e.touches[0].clientY < startY;
+    let scrollingUp = e.touches[0].clientY > startY;
+
+    if ((atTop && scrollingUp) || (atBottom && scrollingDown)) {
+      e.preventDefault(); // Prevent page scrolling
+    }
+  });
+
+  // Saat drag berlangsung
+  dragArea.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+
+    let diff = startY - e.touches[0].clientY; // Perbedaan posisi awal dan sekarang
+    let newHeight = currentHeight + (diff / window.innerHeight) * 100;
+
+    // Batasi ukuran antara 25% - 50%
+    if (newHeight >= 25 && newHeight <= 50) {
+      updateSize(newHeight, false);
+    }
+  });
+
+  // Saat drag dilepas
+  dragArea.addEventListener("touchend", () => {
+    isDragging = false;
+
+    // Dapatkan posisi terakhir dan tentukan snap ke 25% atau 50%
+    let bottomHeight = parseFloat(bottomSection.style.height);
+    currentHeight = bottomHeight >= 37.5 ? 50 : 25;
+
+    updateSize(currentHeight);
+
+    document.body.removeEventListener("touchmove", disableScroll);
+  });
+
+  bottomSection.addEventListener("touchend", () => {
+    document.body.removeEventListener("touchmove", disableScroll);
+  });
+</script>
+    <script defer type="text/javascript">
+        // ================= navbar section =================
+        const mobileMenu = document.getElementById("mobile-menu");
+        const openIcon = document.getElementById("open-menu-icon");
+        const closeIcon = document.getElementById("close-menu-icon");
+
+        function toggleMenu() {
+            if (mobileMenu.classList.contains("translate-x-full")) {
+                // Slide in dari kanan ke kiri
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenu.classList.add("translate-x-0");
+                openIcon.classList.add("hidden");
+                closeIcon.classList.remove("hidden");
+            } else {
+                // Slide out ke kanan
+                mobileMenu.classList.remove("translate-x-0");
+                mobileMenu.classList.add("translate-x-full");
+                openIcon.classList.remove("hidden");
+                closeIcon.classList.add("hidden");
+            }
+        }
+        // ================= end of navbar section =================
+
+        document.getElementById('dropdownButton1').addEventListener('click', function() {
+            if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
+                document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
+                document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
+                // document.getElementById('dropdownIcon1').style.transform = "rotate(180deg)";
+                document.getElementById('dropdownIcon1').classList.remove("rotate-180");
+            } else {
+                document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
+                document.getElementById('dropdownMenu1').classList.replace('invisible', 'visible');
+                document.getElementById('dropdownIcon1').classList.add("rotate-180");
+            }
+        });
+
+        document.getElementById('dropdownButton2').addEventListener('click', function() {
+            if (document.getElementById('dropdownMenu2').classList.contains('opacity-100')) {
+                document.getElementById('dropdownMenu2').classList.replace('opacity-100', 'opacity-0');
+                document.getElementById('dropdownMenu2').classList.replace('visible', 'invisible');
+                document.getElementById('dropdownIcon2').classList.remove("rotate-180");
+            } else {
+                document.getElementById('dropdownMenu2').classList.replace('opacity-0', 'opacity-100');
+                document.getElementById('dropdownMenu2').classList.replace('invisible', 'visible');
+                document.getElementById('dropdownIcon2').classList.add("rotate-180");
+            }
+        });
+
+        function resetDropdown() {
+            document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
+            document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
+            document.getElementById('dropdownIcon1').classList.remove("rotate-180");
+
+            document.getElementById('dropdownMenu2').classList.replace('opacity-100', 'opacity-0');
+            document.getElementById('dropdownMenu2').classList.replace('visible', 'invisible');
+            document.getElementById('dropdownIcon2').classList.remove("rotate-180");
+        }
+        window.addEventListener("resize", resetDropdown);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".nav-link");
+            const currentURL = window.location.href;
+
+            links.forEach((link) => {
+                if (currentURL === link.href) {
+                    link.classList.add("bg-gray-900", "text-white"); // Apply active styles
+                    link.classList.remove("text-gray-300", "hover:bg-gray-700", "hover:text-white"); // Remove hover styles
+                }
+            });
+        });
+
+        function beforeNavigate(callback) {
+            () => toggleMenu();
+
+            // Simulate an async task (e.g., saving data, API request)
+            setTimeout(() => {
+                console.log("Function complete. Navigating now...");
+                callback();
+            }, 1000); // Delay navigation for 1 second
+        }
+
+        document.querySelectorAll(".nav-link-mobile").forEach((link) => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Stop instant navigation
+
+                beforeNavigate(() => {
+                    window.location.href = this.href; // Navigate after function completes
+                });
+            });
+        });
+    </script>
+    <script defer type="text/javascript" src="/js/translation.js"></script>
+
+</body>
+
+</html>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\Views\template.php -->
+
+<!-- DEBUG-VIEW ENDED 2 APPPATH\Views\galery.php -->
+";}";}
