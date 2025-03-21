@@ -6,11 +6,7 @@
 
 <?= $this->section('content') ?>
 <!-- Hero -->
-<<<<<<< HEAD
 <section id="galerySection" class="relative pb-[200px] min-h-[100vh] w-full bg-white">
-=======
-<section id="galerySection" class="relative pb-[200px] w-full bg-white">
->>>>>>> 2ead79e43ea827a027a438955d68f7a3116d50fe
   <!-- Background Image -->
   <div class="h-[140px] w-full px-[40px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
     <div class="w-full max-w-[1600px] pt-[30px] ">
@@ -18,15 +14,9 @@
       <p class="mt-[12px] text-[#001F47] text-start font-humanist-normal leading-4 text-[14px] md:text-[16px] xl:text-[18px]">Temukan inspirasi lewat kegiatan yang kami bagikan.</p>
     </div>
   </div>
-<<<<<<< HEAD
   <div class=" pt-[40px] px-[40px] md:px-[10%] flex justify-center">
     <div class="w-full max-w-[1600px] h-full ">
       <div class="relative h-full  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-[10px]">
-=======
-  <div class=" pt-[40px] px-[40px] md:px-[10%]">
-    <div class="w-full max-w-[1600px] h-full">
-      <div class="relative h-full bg-red-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-[10px]">
->>>>>>> 2ead79e43ea827a027a438955d68f7a3116d50fe
         <?php foreach ($images as $image): ?>
           <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
             <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
@@ -46,16 +36,13 @@
   </div>
 
   <div id="imageModal" class="fixed z-10 top-0 left-0 w-full pt-16 h-[100vh] hidden items-center justify-center bg-black/70 opacity-100 backdrop-blur-0 transition-opacity duration-300 ease-in-out">
-<<<<<<< HEAD
+
     <div id="imageContent" class="block sm:flex bg-black rounded-lg shadow-lg h-full w-full sm:max-h-[800px] sm:max-w-[1200px]  transform scale-95 transition-transform duration-300 ease-in-out relative ">
-=======
-    <div id="imageContent" class="block sm:flex bg-white rounded-lg shadow-lg h-full w-full sm:max-h-[800px] sm:max-w-[1000px]  transform scale-100 transition-transform duration-300 ease-in-out relative ">
->>>>>>> 2ead79e43ea827a027a438955d68f7a3116d50fe
+
       <button id="closeModal" class=" absolute z-15 top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
         ✖
       </button>
 
-<<<<<<< HEAD
       <div id="topSection" class="h-[75%] sm:h-full w-full sm:w-[50%] sm:py-6 bg-black flex items-center justify-center sm:rounded-l-lg">
         <img id="modalImage" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
         <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
@@ -68,20 +55,7 @@
           <h2 id="modalTitle" class="overflow-hidden sm:overflow-visible line-clamp-1 sm:line-clamp-none text-stone-800 text-[20px] xl:text-[22px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
           <p id="modalDate" class="text-stone-600 mb-[20px] font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
           <p id="modalDesc" class="h-auto max-h-[65%] sm:max-h-[80%] relative overflow-clip sm:overflow-auto line-clamp-3 sm:line-clamp-none text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
-=======
-      <div id="topSection" class="sm:hidden h-[75%] w-full bg-green-200 flex items-center justify-center ">
-        <img id="modalImage" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
-        <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
-      </div>
-      <div id="bottomSection" class="sm:hidden h-[25%] w-full bg-amber-200">
-        <div class="relative h-[100%] pb-[20px] px-6 w-full bg-blue-200">
-          <div id="dragArea" class="relative h-[30px] w-full flex justify-center items-center cursor-pointer touch-none">
-            <div class="h-[5px] w-[100px] rounded-full bg-gray-300 mt-2"></div>
-          </div>
-          <h2 id="modalTitle" class="overflow-hidden line-clamp-1 text-stone-800 text-[20px] xl:text-[28px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
-          <p id="modalDate" class="text-stone-600 mb-[20px] font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
-          <p id="modalDesc" class="h-auto max-h-[65%] relative overflow-clip line-clamp-3 text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
->>>>>>> 2ead79e43ea827a027a438955d68f7a3116d50fe
+
         </div>
       </div>
       <div id="leftSection" class="hidden sm:flex relative w-[50%] bg-red-100">
@@ -141,12 +115,8 @@
       if (contentDetail.dataset.type == 0) {
         // image
         modalImage.src = '/galery/content/' + contentDetail.dataset.image;
-<<<<<<< HEAD
         modalImage.classList.remove("hidden");
 
-=======
-        modalImage2.src = '/galery/content/' + contentDetail.dataset.image;
->>>>>>> 2ead79e43ea827a027a438955d68f7a3116d50fe
       } else {
         // video
         let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
