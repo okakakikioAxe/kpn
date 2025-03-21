@@ -8,6 +8,12 @@
     <meta name="author" content="PT Karya Pilar Nusantara" />
     <meta name="robots" content="index, follow" />
     <html lang="id">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PT Karya Pilar Nusantara" />
+    <meta property="og:description" content="Produsen tangan pertama produk HDPE, XPE, TPE, dan mainan anak." />
+    <meta property="og:image" content="https://www.karyapilarnusantara.com/kpn-banner.webp" />
+    <meta property="og:url" content="https://www.karyapilarnusantara.com" />
+    <meta property="og:site_name" content="PT Karya Pilar Nusantara" />
     <?= $this->renderSection('head') ?>
     <link rel="stylesheet" href="output.css">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
