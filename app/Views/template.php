@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+    <link rel="icon" type="image/png" href="/colored logo.png">
+    <meta name="author" content="PT Karya Pilar Nusantara" />
+    <meta name="robots" content="index, follow" />
+    <html lang="id">
+    <?= $this->renderSection('head') ?>
     <link rel="stylesheet" href="output.css">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/global_style.css">

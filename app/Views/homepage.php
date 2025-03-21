@@ -1,5 +1,11 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('head') ?>
+<title>PT KPN - Produsen produk HDPE, EVA, XPE, dan TPE</title>
+<meta name="description" content="PT Karya Pilar Nusantara adalah produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur. Menawarkan produk berkualitas tinggi, aman, inovatif, dan terjangkau dengan teknologi modern serta standar premium." />
+<meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn " />
+<?= $this->endSection() ?>
+
 <?= $this->section('style') ?>
 <link rel="stylesheet" href="css/homepage_style.css">
 <?= $this->endSection() ?>
@@ -12,7 +18,7 @@
   </div>
   <div class="absolute top-3 sm:top-5 xl:top-8 left-1/2 -translate-x-1/2 max-w-[1600px]">
     <div class="flex justify-center">
-      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="colored logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
@@ -322,6 +328,25 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Corporation",
+    "name": "PT Karya Pilar Nusantara",
+    "alternateName": "KPN",
+    "description": "Produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur.",
+    "url": "https://www.karyapilarnusantara.com",
+    "logo": "https://www.karyapilarnusantara.com/kpn-logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+62 821-6005-0005",
+      "contactType": "customer service",
+      "contactOption": "TollFree",
+      "areaServed": "ID",
+      "availableLanguage": "Indonesian"
+    }
+  }
+</script>
 <script type="text/javascript" src="js/homepage/why_us.js"></script>
 <script type="text/javascript" src="js/homepage/about_us.js"></script>
 <script type="text/javascript" src="js/homepage/top product/top_product.js"></script>

@@ -1,5 +1,11 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('head') ?>
+<title>PT KPN - Tentang Kami</title>
+<meta name="description" content="Tentang KPN - PT Karya Pilar Nusantara (PT KPN), produsen HDPE, XPE, dan TPE terpercaya di Sidoarjo. Spesialis produsen mainan anak dan produk berkualitas dengan layanan kustom merk sesuai kebutuhan." />
+<meta name="keywords" content="tentang kpn, pt karya pilar nusantara, pt kpn, kpn sidoarjo, produsen hdpe, produsen xpe, produsen tpe, produsen mainan anak, kustom merk" />
+<?= $this->endSection() ?>
+
 <?= $this->section('style') ?>
 <link rel="stylesheet" href="css/about_us_style.css">
 <?= $this->endSection() ?>
@@ -12,7 +18,7 @@
   </div>
   <div class="absolute top-3 sm:top-5 xl:top-8 left-1/2 -translate-x-1/2 max-w-[1600px]">
     <div class="flex justify-center">
-      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="colored logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">

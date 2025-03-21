@@ -1,5 +1,11 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('head') ?>
+<title>PT KPN - Produsen produk HDPE, EVA, XPE, dan TPE</title>
+<meta name="description" content="Jelajahi galeri PT Karya Pilar Nusantara (PT KPN) dan temukan foto produk HDPE, EVA, TPE, dan XPE. Lihat koleksi terbaru dan portofolio produk berkualitas kami." />
+<meta name="keywords" content="galeri KPN, foto produk KPN, gambar produk HDPE, gambar produk EVA, gambar produk TPE, gambar produk XPE, portofolio PT KPN, koleksi produk KPN" />
+<?= $this->endSection() ?>
+
 <?= $this->section('style') ?>
 <link rel="stylesheet" href="css/homepage_style.css">
 <?= $this->endSection() ?>

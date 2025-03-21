@@ -1,5 +1,11 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('head') ?>
+<title>PT KPN - Hubungi Kami</title>
+<meta name="description" content="Hubungi PT Karya Pilar Nusantara (PT KPN) untuk informasi produk dan layanan. Temukan kontak, alamat, telepon, dan email kami di KPN Sidoarjo. Kami siap membantu Anda!" />
+<meta name="keywords" content="hubungi KPN, kontak PT Karya Pilar Nusantara, kontak PT KPN, alamat KPN Sidoarjo, telepon KPN, email KPN, layanan pelanggan KPN" />
+<?= $this->endSection() ?>
+
 <?= $this->section('style') ?>
 <link rel="stylesheet" href="css/contact_us_style.css">
 <?= $this->endSection() ?>
@@ -12,7 +18,7 @@
   </div>
   <div class="absolute top-3 sm:top-5 xl:top-8 left-1/2 -translate-x-1/2 max-w-[1600px]">
     <div class="flex justify-center">
-      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="colored logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
@@ -234,7 +240,60 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
-
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Corporation",
+    "name": "PT Karya Pilar Nusantara",
+    "alternateName": "KPN",
+    "description": "Produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur.",
+    "url": "https://www.karyapilarnusantara.com",
+    "logo": "https://www.karyapilarnusantara.com/kpn-logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+62 821-6005-0005",
+      "contactType": "customer service",
+      "contactOption": "TollFree",
+      "areaServed": "ID",
+      "availableLanguage": "Indonesian"
+    }
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Apakah produk bebas BPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, produk kami yang berkaitan dengan anak-anak seperti playmat, perosotan, dan mainan anak, dibuat dari bahan bebas BPA sehingga aman digunakan."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Apakah bisa custom merk sendiri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tentu! Kami menyediakan layanan custom branding sesuai kebutuhan bisnis Anda. Hubungi kami untuk detail lebih lanjut."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Apakah pengiriman bisa ke seluruh Indonesia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, kami melayani pengiriman ke seluruh Indonesia dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Apakah ada harga khusus untuk pembelian dalam jumlah besar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tentu, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email admin@karyapilarnusantara.com."
+      }
+    }]
+  }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="js/contact us/contact_us.js"></script>
 <script>

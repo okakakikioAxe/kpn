@@ -1,5 +1,11 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('head') ?>
+<title>PT KPN - Produk Kami</title>
+<meta name="description" content="Temukan berbagai produk KPN berkualitas, termasuk produk HDPE, EVA, TPE, dan XPE. Lihat katalog KPN untuk produk Karya Pilar Nusantara yang inovatif, aman, dan terjangkau. Jelajahi katalog Karya Pilar Nusantara untuk solusi terbaik." />
+<meta name="keywords" content="produk kpn, produk HDPE, produk EVA, produk TPE, produk XPE, katalog kpn, produk karya pilar nusantara, katalog karya pilar nusantara " />
+<?= $this->endSection() ?>
+
 <?= $this->section('style') ?>
 <link rel="stylesheet" href="css/homepage_style.css">
 <?= $this->endSection() ?>
@@ -15,7 +21,7 @@
   </div>
   <div class="absolute top-3 sm:top-5 xl:top-8 left-1/2 -translate-x-1/2 max-w-[1600px]">
     <div class="flex justify-center">
-      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="colored logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
   <!-- Centered Button -->
