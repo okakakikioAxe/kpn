@@ -140,7 +140,7 @@
             </div>
             <div class="mt-[32px]">
               <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="company">NAMA INSTANSI / PERUSAHAAN ANDA *</h4>
-              <input type="text" name="instantion" id="instantion" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="PT Bintang Makmur">
+              <input type="text" name="instantion" id="instantion" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="PT ABC">
             </div>
             <div class="mt-[32px]">
               <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="message">PESAN *</h4>
@@ -165,8 +165,11 @@
     <div class="mt-[46px]">
 
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(0)" data-lang-group="contact_us_faq" data-lang-key="question_1">
-          Apakah produk bebas BPA?
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left" onclick="toggleFAQ(0)">
+
+          <p class="text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" data-lang-group="contact_us_faq" data-lang-key="question_1">
+            Apakah produk bebas BPA?
+          </p>
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
@@ -178,8 +181,11 @@
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(1)" data-lang-group="contact_us_faq" data-lang-key="question_2">
-          Apakah bisa custom merk sendiri?
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left " onclick="toggleFAQ(1)">
+
+          <p class="text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" data-lang-group="contact_us_faq" data-lang-key="question_2">
+            Apakah bisa custom merk sendiri?
+          </p>
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
@@ -191,8 +197,11 @@
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(2)" data-lang-group="contact_us_faq" data-lang-key="question_3">
-          Apakah pengiriman bisa ke seluruh Indonesia?
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left" onclick="toggleFAQ(2)">
+          <p class="text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" data-lang-group="contact_us_faq" data-lang-key="question_3">
+            Apakah pengiriman bisa ke seluruh Indonesia?
+          </p>
+
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
@@ -204,8 +213,10 @@
         </div>
       </div>
       <div class="mb-0  border-b-[#DEDEDE] border-b-[1.5px]">
-        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" onclick="toggleFAQ(3)" data-lang-group="contact_us_faq" data-lang-key="question_4">
-          Apakah ada harga khusus untuk pembelian dalam jumlah besar?
+        <button class="faq-button w-full flex justify-between items-center pt-[20px] pb-[24px] text-left " onclick="toggleFAQ(3)">
+          <p class="text-[16px] md:text-[18px] lg:text-[20px] font-trebuchet font-bold" data-lang-group="contact_us_faq" data-lang-key="question_4">
+            Apakah ada harga khusus untuk pembelian dalam jumlah besar?
+          </p>
           <span class="icon-container pl-[34px]">
             <svg class="w-6 h-6 plus-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>

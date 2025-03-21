@@ -37,7 +37,7 @@
                                 <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
                                 <a href="/contact-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
                                 <a href="/about-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
-                                <a href="/galeri" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
+                                <a href="/galeri" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="gallery">Galery</a>
 
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                 <a href="/product" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
                 <a href="/contact-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
                 <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
-                <a href="/galeri" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="galery">Galery</a>
+                <a href="/galeri" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="gallery">Galery</a>
             </div>
         </div>
 
@@ -96,7 +96,7 @@
                             <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="company">Perusahaan</h3>
                             <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/about-us" data-lang-group="footer" data-lang-key="about">Tentang</a>
                             <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/product" data-lang-group="footer" data-lang-key="product">Produk</a>
-                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galeri" data-lang-group="footer" data-lang-key="galery">Galery</a>
+                            <a class="text-white text-[18px] font-trebuchet -tracking-[0.02em] font-extralight" href="/galeri" data-lang-group="footer" data-lang-key="gallery">Galeri</a>
                         </div>
                         <div class="grid grid-flow-col grid-rows-4 gap-[22px] sm:justify-center">
                             <h3 class="text-white text-[22px] font-trebuchet -tracking-[0.02em] font-[500]" data-lang-group="footer" data-lang-key="contact_us">Hubungi Kami</h3>
@@ -124,7 +124,7 @@
                                     class="absolute mt-5 w-full bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-top invisible">
                                     <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">Bahasa Indonesia</button>
                                     <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">English</button>
-                                    <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400]">中文</a>
+                                    <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">中文</button>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                     class="absolute w-full bottom-full mb-5 bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-bottom invisible">
                                     <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
                                     <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
-                                    <a href="#" class="block px-4 py-3 text-white hover:bg-gray-200">中文</a>
+                                    <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">中文</button>
                                 </div>
                             </div>
                         </div>
@@ -167,11 +167,7 @@
         </footer>
     </div>
 
-<<<<<<< HEAD
     <div id="waButton" class="scale-75 md:scale-80 lg:scale-90 xl:scale-100 bottom-3 md:bottom-5 lg:bottom-8 xl:bottom-10 right-3 md:right-5 lg:right-8 xl:right-10 fixed z-50 rounded-full h-20 w-20 bg-green-500 hover:scale-110 transform duration-300 cursor-pointer place-content-center">
-=======
-    <div class="hidden scale-75 md:scale-80 lg:scale-90 xl:scale-100 bottom-3 md:bottom-5 lg:bottom-8 xl:bottom-10 right-3 md:right-5 lg:right-8 xl:right-10 fixed z-50 rounded-full h-20 w-20 bg-green-500 hover:scale-110 transform duration-300 cursor-pointer place-content-center">
->>>>>>> 2ead79e43ea827a027a438955d68f7a3116d50fe
         <a href="http://wa.me/6282160050005" target="_blank">
             <img loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.webp" alt="whatsapp icon">
         </a>
