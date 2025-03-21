@@ -86,27 +86,50 @@ class RegisterController extends BaseController
         }
 
         // Check if registration is allowed
-        if (! setting('Auth.allowRegistration')) {
+        if (!setting('Auth.allowRegistration')) {
             return redirect()->back()->withInput()
                 ->with('error', lang('Auth.registerDisabled'));
         }
 
+        $db = db_connect();
+        $ipAddress = $this->request->getIPAddress();
         $users = $this->getUserProvider();
 
-        // Validate here first, since some things,
-        // like the password, can only be validated properly here.
-        $rules = $this->getValidationRules();
+        // Check if IP is already blocked
+        $attempt = $db->table('failed_attempts')->where('ip_address', $ipAddress)->get()->getRow();
+        if ($attempt && $attempt->attempts >= 3) {
+            return redirect()->back()->with('error', 'Too many failed attempts. Try again later.');
+        }
 
-        if (! $this->validateData($this->request->getPost(), $rules, [], config('Auth')->DBGroup)) {
+        // Validate input
+        $rules = $this->getValidationRules();
+        if (!$this->validateData($this->request->getPost(), $rules, [], config('Auth')->DBGroup)) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
+        // Check Secret Code
+        $validCodes = ['KPN2025SecretCode']; // Example valid codes
+        if (!in_array($this->request->getPost('secret_code'), $validCodes)) {
+            // Update failed attempts
+            if ($attempt) {
+                $db->table('failed_attempts')->where('ip_address', $ipAddress)
+                    ->update(['attempts' => $attempt->attempts + 1]);
+            } else {
+                $db->table('failed_attempts')->insert(['ip_address' => $ipAddress, 'attempts' => 1]);
+            }
+
+            return redirect()->back()->withInput()->with('error', 'Invalid Secret Code. Attempt ' . (($attempt ? $attempt->attempts + 1 : 1)) . '/3');
+        }
+
+        // Reset failed attempts on success
+        $db->table('failed_attempts')->where('ip_address', $ipAddress)->delete();
+
         // Save the user
         $allowedPostFields = array_keys($rules);
-        $user              = $this->getUserEntity();
+        $user = $this->getUserEntity();
         $user->fill($this->request->getPost($allowedPostFields));
 
-        // Workaround for email only registration/login
+        // Workaround for email-only registration/login
         if ($user->username === null) {
             $user->username = null;
         }
@@ -117,7 +140,7 @@ class RegisterController extends BaseController
             return redirect()->back()->withInput()->with('errors', $users->errors());
         }
 
-        // To get the complete user object with ID, we need to get from the database
+        // Get the complete user object with ID
         $user = $users->findById($users->getInsertID());
 
         // Add to default group
@@ -142,8 +165,7 @@ class RegisterController extends BaseController
         $authenticator->completeLogin($user);
 
         // Success!
-        return redirect()->to(config('Auth')->registerRedirect())
-            ->with('message', lang('Auth.registerSuccess'));
+        return redirect()->to('/admin/galery');
     }
 
     /**

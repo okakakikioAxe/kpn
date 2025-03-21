@@ -112,7 +112,11 @@
             <h1 class="text-xl font-bold">KPN</h1>
             <nav class="mt-5">
                 <ul>
-                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 bg-gray-700 rounded">Galery</a></li>
+                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700">Galery</a></li>
+                    <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah Password</a></li>
+                    <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 ">
+                            <p class="text-red-400">Logout</p>
+                        </a></li>
                 </ul>
             </nav>
         </aside>
@@ -175,17 +179,17 @@
 
                 <!-- Progress Bar -->
                 <div class="progress-bar">
-                    <div id="progress-bar-inner" class="progress-bar-inner">0%</< /div>
-                    </div>
+                    <div id="progress-bar-inner" class="progress-bar-inner">0%</div>
+                </div>
 
-                    <!-- Modal -->
-                    <div id="success-modal" class="modal">
-                        <div class="modal-content">
-                            <div class="icon">✔️</div>
-                            <div class="message">Konten telah ditambahkan</div>
-                            <button class="ok-button" onclick="redirectToGallery()">OK</button>
-                        </div>
+                <!-- Modal -->
+                <div id="success-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="icon">✔️</div>
+                        <div class="message">Konten telah diperbarui</div>
+                        <button class="ok-button" onclick="redirectToGallery()">OK</button>
                     </div>
+                </div>
 
             </main>
         </div>
@@ -261,7 +265,7 @@
         });
 
         function redirectToGallery() {
-            window.location.href = '/admin/galery/toast';
+            window.location.href = '/admin/galery/toast?text=Konten%20Berhasil%20Diperbarui!';
         }
     </script>
 </body>

@@ -51,7 +51,8 @@
             <h1 class="text-xl font-bold">KPN</h1>
             <nav class="mt-5">
                 <ul>
-                    <li class="py-2"><a href="#" class="block px-4 py-2 bg-gray-700 rounded">Galery</a></li>
+                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700 bg-gray-700 rounded">Galery</a></li>
+                    <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah Password</a></li>
                     <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 rounded ">
                             <p class="text-red-400">Logout</p>
                         </a></li>
@@ -71,7 +72,7 @@
 
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
-                <div class="grid grid-cols-12 gap-4">
+                <div class="grid grid-cols-6 2xl:grid-cols-12 gap-4">
                     <?php foreach ($images as $image): ?>
                         <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
                             <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
@@ -84,51 +85,49 @@
                                     </svg>
                                 </div>
                             <?php endif; ?>
-                            <div id="status-<?= $image['id'] ?>" class="absolute top-3 right-3 h-[15%] aspect-square rounded-full <?= ($image['status'] == 1) ? 'bg-green-400' : 'bg-red-400'; ?>  "></div>
+                            <div id="status-<?= $image['id'] ?>" class="absolute top-3 right-3 h-[15%] max-h-[18px] aspect-square rounded-full <?= ($image['status'] == 1) ? 'bg-green-400' : 'bg-red-400'; ?>  "></div>
 
                         </div>
                     <?php endforeach; ?>
                 </div>
+                <div id="imageModal" class="fixed z-10 top-0 left-0 w-full pt-16 h-[100vh] hidden items-center justify-center bg-black/70 opacity-100 backdrop-blur-0 transition-opacity duration-300 ease-in-out">
 
-                <div id="imageModal" class="fixed z-10 inset-0 hidden items-center justify-center bg-black/70 opacity-0 backdrop-blur-0 transition-opacity duration-300 ease-in-out">
-                    <div id="imageContent" class="bg-white rounded-lg shadow-lg p-6 w-full max-w-[1000px] transform scale-95 transition-transform duration-300 ease-in-out relative">
-                        <!-- Close Button -->
-                        <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                    <div id="imageContent" class="block sm:flex bg-black rounded-lg shadow-lg h-full w-full sm:max-h-[800px] sm:max-w-[1200px]  transform scale-95 transition-transform duration-300 ease-in-out relative ">
+
+                        <button id="closeModal" class=" absolute z-15 top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
                             ✖
                         </button>
 
-                        <!-- Modal Content -->
-                        <div class="flex gap-4">
-                            <!-- Image Section -->
-                            <div class="w-1/2">
-                                <img loading="lazy" id="modalImage" src="" class="hidden rounded-lg w-full">
-                                <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="hidden rounded-lg w-full" type="video/mp4"></video>
-                            </div>
-
-                            <!-- Details Section -->
-                            <div class="w-1/2 flex flex-col justify-between">
-                                <div>
-                                    <h2 id="modalTitle" class=" text-stone-800 text-[20px] xl:text-[28px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]"></h2>
-                                    <h4 class="text-stone-600 pt-[35px] font-humanist-normal text-[16px] xl:text-[18px]">Deskripsi</h4>
-                                    <p id="modalDesc" class=" text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]"></p>
-
-                                    <!-- Status Toggle -->
-                                    <div class="flex items-end justify-start mt-[30px] h-6">
-                                        <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Status</span>
-                                        <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
-                                        <label class="relative inline-flex items-center cursor-pointer h-6">
-                                            <input id="statusToggle" type="checkbox" value="" class="sr-only peer">
-                                            <div class="w-11 h-6 bg-gray-300 peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
-                                        </label>
-                                    </div>
-
-                                    <!-- Date -->
-                                    <div class="flex items-end justify-start mt-[10px] h-6">
-                                        <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Dibuat</span>
-                                        <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
-                                        <span id="modalDate" class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px]"></span>
-                                    </div>
+                        <div id="topSection" class="h-[75%] sm:h-full w-full sm:w-[50%] sm:py-6 bg-black flex items-center justify-center sm:rounded-l-lg">
+                            <img id="modalImage" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
+                            <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
+                        </div>
+                        <div id="bottomSection" class="relative h-[25%] sm:h-full w-full sm:w-[50%] bg-white sm:py-6 rounded-t-4xl sm:rounded-t-none sm:rounded-r-lg">
+                            <div class="relative h-[100%] pb-[20px] px-6 w-full ">
+                                <div id="dragArea" class="sm:hidden relative h-[30px] w-full flex justify-center items-center cursor-pointer touch-none">
+                                    <div class="h-[5px] w-[100px] rounded-full bg-gray-300 mt-2"></div>
                                 </div>
+                                <h2 id="modalTitle" class="overflow-hidden sm:overflow-visible line-clamp-1 sm:line-clamp-none text-stone-800 text-[20px] xl:text-[22px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
+                                <div class="flex items-end justify-start mt-[10px] h-6">
+                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Dibuat</span>
+                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
+                                    <span id="modalDate" class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px]"></span>
+                                </div>
+                                <div class="flex items-end justify-start mt-[8px] h-6">
+                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Status</span>
+                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
+                                    <label class="relative inline-flex items-center cursor-pointer h-6">
+                                        <input id="statusToggle" type="checkbox" value="" class="sr-only peer">
+                                        <div class="w-11 h-6 bg-gray-300 peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-end justify-start mt-[20px] h-6">
+                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Deskripsi</span>
+                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
+
+                                </div>
+
+                                <p id="modalDesc" class="h-auto max-h-[65%] sm:max-h-[70%] relative overflow-clip sm:overflow-auto line-clamp-3 sm:line-clamp-none text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]"></p>
 
                                 <!-- Buttons -->
                                 <div class="mt-[20px] flex gap-3 justify-end">
@@ -141,8 +140,10 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
                 <div id="deleteModal" class="fixed inset-0 z-80 items-center justify-center bg-black bg-opacity-50 hidden">
                     <div class="bg-white rounded-lg shadow-lg p-6 w-96">
                         <h2 class="text-lg font-semibold text-gray-800">Hapus konten ini?</h2>

@@ -58,15 +58,7 @@
 
         </div>
       </div>
-      <div id="leftSection" class="hidden sm:flex relative w-[50%] bg-red-100">
-        <img id="modalImage2" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
-        <video loading="lazy" id="modalVideo2" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
-      </div>
-      <div class="hidden sm:block relative w-[50%] p-6 bg-green-100">
-        <h2 id="modalTitle2" class="overflow-hidden text-stone-800 mb-[5px] text-[20px] xl:text-[28px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
-        <p id="modalDate2" class="text-stone-600 mb-[20px] font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
-        <p id="modalDesc2" class="h-auto max-h-[80%] relative overflow-auto text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
-      </div>
+
     </div>
   </div>
 </section>
@@ -80,14 +72,9 @@
   const modalContent = document.getElementById("imageContent");
   const modalImage = document.getElementById("modalImage");
   const modalVideo = document.getElementById("modalVideo");
-  const modalImage2 = document.getElementById("modalImage2");
-  const modalVideo2 = document.getElementById("modalVideo2");
   const modalTitle = document.getElementById("modalTitle");
   const modalDesc = document.getElementById("modalDesc");
   const modalDate = document.getElementById("modalDate");
-  const modalTitle2 = document.getElementById("modalTitle2");
-  const modalDesc2 = document.getElementById("modalDesc2");
-  const modalDate2 = document.getElementById("modalDate2");
 
   function formatDateTime(datetime) {
     // Convert string to Date object
@@ -138,7 +125,7 @@
           let objectUrl = URL.createObjectURL(blob);
 
           modalVideo.src = objectUrl;
-          modalVideo2.src = objectUrl;
+          modalVideo.classList.remove("hidden");
         } catch (error) {
           console.error('Error loading video:', error);
         }
@@ -146,9 +133,6 @@
       modalTitle.textContent = contentDetail.dataset.title;
       modalDesc.textContent = contentDetail.dataset.description;
       modalDate.textContent = formatDateTime(contentDetail.dataset.created);
-      modalTitle2.textContent = contentDetail.dataset.title;
-      modalDesc2.textContent = contentDetail.dataset.description;
-      modalDate2.textContent = formatDateTime(contentDetail.dataset.created);
 
       modal.classList.replace("hidden", "flex");
       setTimeout(() => {

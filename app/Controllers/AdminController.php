@@ -7,13 +7,8 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class AdminController extends BaseController
 {
-    public function index(): string
+    public function changePassword(): string
     {
-        return view('admin/dashboard');
-    }
-
-    public function galery(): string
-    {
-        return view('admin/galery');
+        return view('admin/change_password');
     }
 }

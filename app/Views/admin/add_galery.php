@@ -112,7 +112,11 @@
             <h1 class="text-xl font-bold">KPN</h1>
             <nav class="mt-5">
                 <ul>
-                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 bg-gray-700 rounded">Galery</a></li>
+                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700">Galery</a></li>
+                    <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah Password</a></li>
+                    <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 ">
+                            <p class="text-red-400">Logout</p>
+                        </a></li>
                 </ul>
             </nav>
         </aside>
@@ -127,14 +131,15 @@
 
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
-                <form id="upload-form" action="/admin/galery/store" method="POST" enctype="multipart/form-data">
+                <form id="upload-form" action="/admin/galery/store" method="POST">
                     <?= csrf_field() ?>
-                    <div class="space-y-12">
+                    <div class=" space-y-12">
                         <div class="border-b border-gray-900/10 pb-12">
-                            <div class="col-span-full">
+                            <div>
                                 <h2 class="text-base/7 font-semibold text-gray-900">File</h2>
-                                <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-                                    <div class="text-center">
+                                <div class="mt-2 grid grid-cols-4 gap-5   px-6 py-6">
+                                    <div class="relative text-center  col-span-3 rounded-lg border border-dashed border-gray-900/25">
+                                        <h2 class="absolute top-2 left-2 text-base/7 font-semibold text-gray-900">Gambar/Video</h2>
                                         <svg id="image-icon" class="mx-auto size-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
                                             <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clip-rule="evenodd" />
                                         </svg>
@@ -149,12 +154,17 @@
                                         </div>
                                         <p class="text-xs/5 text-gray-600">Video / Gambar up to 500MB</p>
                                         <input required id="file-upload" name="file-upload" type="file" class="sr-only">
-                                        <canvas id="thumbnailCanvas" class="hidden"></canvas>
+
                                         <input type="hidden" name="thumbnail" id="thumbnail-data">
                                         <input type="hidden" name="type" id="content-type">
 
                                     </div>
+                                    <div class="relative flex justify-center items-center h-auto aspect-square w-full  col-span-1 rounded-lg border border-dashed border-gray-900/25">
+                                        <h2 class="absolute top-2 left-2 text-base/7 font-semibold text-gray-900">Thumbnail</h2>
+                                        <canvas id="thumbnailCanvas" class="flex  w-[200px]"></canvas>
+                                    </div>
                                 </div>
+
                             </div>
 
                             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -179,23 +189,23 @@
 
                     <div id="action-button" class="mt-6 flex items-center justify-end gap-x-6">
                         <a href="javascript:history.back()" id="cancel-button" type="button" class="text-sm/6 font-semibold text-gray-900 cursor-pointer ">Cancel</a>
-                        <button type="submit" id="save-button" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                        <button type="submit" id="save-button" class="cursor-pointer rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
                     </div>
                 </form>
 
                 <!-- Progress Bar -->
                 <div class="progress-bar">
-                    <div id="progress-bar-inner" class="progress-bar-inner">0%</< /div>
-                    </div>
+                    <div id="progress-bar-inner" class="progress-bar-inner">0%</div>
+                </div>
 
-                    <!-- Modal -->
-                    <div id="success-modal" class="modal">
-                        <div class="modal-content">
-                            <div class="icon">✔️</div>
-                            <div class="message">Konten telah ditambahkan</div>
-                            <button class="ok-button" onclick="redirectToGallery()">OK</button>
-                        </div>
+                <!-- Modal -->
+                <div id="success-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="icon">✔️</div>
+                        <div class="message">Konten telah ditambahkan</div>
+                        <button class="ok-button" onclick="redirectToGallery()">OK</button>
                     </div>
+                </div>
 
             </main>
         </div>
@@ -271,26 +281,28 @@
 
                     videoPreview.src = url;
                     videoPreview.addEventListener('loadeddata', function() {
-                        videoPreview.currentTime = 1; // Capture the frame at 1 second
+                        videoPreview.currentTime = 1;
                     });
 
                     videoPreview.addEventListener('seeked', function() {
-                        let width = videoPreview.videoWidth;
-                        let height = videoPreview.videoHeight;
+                        if (videoPreview.videoWidth > 0 && videoPreview.videoHeight > 0) {
+                            let width = videoPreview.videoWidth;
+                            let height = videoPreview.videoHeight;
 
-                        // Determine the size of the square crop
-                        let cropSize = Math.min(width, height);
-                        let cropX = (width - cropSize) / 2;
-                        let cropY = (height - cropSize) / 2;
+                            let cropSize = Math.min(width, height);
+                            let cropX = (width - cropSize) / 2;
+                            let cropY = (height - cropSize) / 2;
 
-                        // imagePreview.src = e.target.result;
-                        previewContainer.classList.remove("hidden");
-                        videoPreview.classList.remove("hidden");
-                        imageIcon.classList.add("hidden");
+                            previewContainer.classList.remove("hidden");
+                            videoPreview.classList.remove("hidden");
+                            imageIcon.classList.add("hidden");
 
-                        ctx.drawImage(videoPreview, cropX, cropY, cropSize, cropSize, 0, 0, maxSize, maxSize);
-                        document.getElementById('thumbnail-data').value = canvas.toDataURL('image/jpeg');
-                        contentType.value = 1;
+                            ctx.drawImage(videoPreview, cropX, cropY, cropSize, cropSize, 0, 0, maxSize, maxSize);
+                            document.getElementById('thumbnail-data').value = canvas.toDataURL('image/jpeg');
+                            contentType.value = 1;
+                        } else {
+                            console.error("Failed to capture thumbnail: Invalid video dimensions.");
+                        }
                     });
 
                 } else {
@@ -338,7 +350,7 @@
         });
 
         function redirectToGallery() {
-            window.location.href = '/admin/galery/toast';
+            window.location.href = '/admin/galery/toast?text=Konten%20Berhasil%20Ditambahkan!';
         }
     </script>
 </body>

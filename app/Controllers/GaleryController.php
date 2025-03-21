@@ -39,7 +39,7 @@ class GaleryController extends BaseController
         $validation->setRules([
             'file-upload' => [
                 'label' => 'File Upload',
-                'rules' => 'uploaded[file-upload]|mime_in[file-upload,image/jpg,image/jpeg,image/png,video/mp4,video/mpeg]|max_size[file-upload,500000]',
+                'rules' => 'uploaded[file-upload]|mime_in[file-upload,image/jpg,image/jpeg,image/png,video,video/mp4,video/mpeg,video/mov]|max_size[file-upload,500000]',
                 'errors' => [
                     'uploaded' => 'No file was uploaded',
                     'mime_in' => 'The file must be an image or video',
@@ -53,7 +53,8 @@ class GaleryController extends BaseController
 
 
         if (!$validation->withRequest($this->request)->run()) {
-            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+            session()->setFlashdata('successMessage', 'Error!');
+            return redirect()->to('/');
         }
 
 
@@ -69,7 +70,6 @@ class GaleryController extends BaseController
             // Convert base64 thumbnail to file and store it
             $this->saveThumbnail($thumbnailFile, $newThumbnailName);
         }
-
         $galeryModel = new Galery();
         $galeryModel->save([
             'image' => $newFileName,
@@ -126,13 +126,11 @@ class GaleryController extends BaseController
         file_put_contents($filePath, $imageData);
     }
 
-    public function tesToast()
+    public function showToast()
     {
-        // $galeryModel = new Galery();
-        // $images = $galeryModel->findAll();
-        // // $this->cachePage(86400);
-        // return view('admin/galery', ['images' => $images, "success" => 'Konten telah ditambahkan']);
-        session()->setFlashdata('successMessage', 'Konten berhasil ditambahkan!');
+        $message = $this->request->getGet('text') ?? "No message provided.";
+
+        session()->setFlashdata('successMessage', esc(urldecode($message)));
         return redirect()->to('/admin/galery');
     }
 
