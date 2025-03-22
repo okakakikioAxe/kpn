@@ -32,9 +32,8 @@ class Home extends BaseController
 
     public function galery(): string
     {
-        $this->cachePage(86400);
         $galeryModel = new Galery();
-        $images = $galeryModel->findAll();
+        $images = $galeryModel->where('status', 1)->findAll();
         return view('galery', ['images' => $images]);
     }
 }

@@ -142,9 +142,9 @@
                                     <div class="text-center">
                                         <div id="preview-container" class="mt-4 flex justify-center">
                                             <?php if ($content['type'] == 1): ?>
-                                                <video id="video-preview" class="hidden max-h-[800px] w-auto" controls></video>
+                                                <video id="video-preview" src="/galery/content/<?= $content['image'] ?>" class="max-h-[800px] relative w-full h-full object-contain" controls></video>
                                             <?php else: ?>
-                                                <img id="image-preview" class="mt-2 max-h-[800px] w-auto rounded-lg shadow-lg" />
+                                                <img id="image-preview" src="/galery/content/<?= $content['image'] ?>" class="mt-2 max-h-[800px] relative w-full h-full object-contain rounded-lg shadow-lg" />
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -237,31 +237,6 @@
             });
 
             xhr.send(formData);
-        });
-
-        document.addEventListener("DOMContentLoaded", async function() {
-            // video
-            console.log('<?php $content['image'] ?>');
-            let videoUrl = '/video/stream/' + '<?= $content['image'] ?>'; // API URL
-
-            try {
-                let response = await fetch(videoUrl, {
-                    method: 'GET',
-                    headers: {
-                        'Range': 'bytes=0-' // Enable seeking support
-                    }
-                });
-
-                if (!response.ok) throw new Error('Failed to load video');
-
-                let blob = await response.blob();
-                let objectUrl = URL.createObjectURL(blob);
-
-                videoPreview.src = objectUrl;
-                videoPreview.classList.remove("hidden");
-            } catch (error) {
-                console.error('Error loading video:', error);
-            }
         });
 
         function redirectToGallery() {
