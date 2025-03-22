@@ -607,9 +607,9 @@ function updateLanguage(selectedLang) {
     const key = el.getAttribute("data-lang-key");
     el.innerHTML = translations[selectedLang][group][key]; // Update text
   });
-
-  document.getElementById("selected-language-1").innerHTML = buttonTitle;
-  document.getElementById("selected-language-2").innerHTML = buttonTitle;
+  document.querySelectorAll(".selected-language").forEach((el) => {
+    el.innerHTML = buttonTitle;
+  });
 
   resetDropdown();
 }

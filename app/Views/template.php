@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/colored logo.png">
+    <link rel="icon" type="image/png" href="/kpn-logo.png">
     <meta name="author" content="PT Karya Pilar Nusantara" />
     <meta name="robots" content="index, follow" />
     <html lang="id">
@@ -38,8 +38,8 @@
                         <div class="flex shrink-0 items-center ml-[25px] sm:ml-0">
                             <img class="h-8 w-auto" src="white logo.png" alt="Your Company">
                         </div>
-                        <div class="hidden sm:ml-6 sm:block ">
-                            <div class="flex space-x-4">
+                        <div class="hidden md:ml-6 md:grid grid-cols-4 w-full ">
+                            <div class="flex space-x-4 col-span-3">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="/" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="homepage">Beranda</a> </a>
                                 <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
@@ -48,11 +48,33 @@
                                 <a href="/galeri" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="gallery">Galery</a>
 
                             </div>
+                            <div class="flex w-full justify-end col-span-1 relative">
+                                <button id="dropdownButton1" class="px-[23px] w-auto text-white rounded-full border-[1px] border-white  cursor-pointer">
+                                    <div class="flex items-center">
+                                        <p class="grow text-sm font-medium text-gray-300 selected-language">Bahasa Indonesia</p>
+                                        <p class="w-[30px]">
+                                            <svg id="dropdownIcon1" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </p>
+                                    </div>
+                                </button>
+
+                                <div id="dropdownMenu1"
+                                    class="absolute w-[200px] h-[150px] bottom-full top-12 bg-[#182430] shadow-lg rounded-xl opacity-100 scale-95 transition-all duration-300 transform origin-bottom invisible">
+                                    <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
+                                    <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
+                                    <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">中文</button>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
+
+
                     <!-- Mobile menu button (dipindah ke kanan) -->
-                    <div class="absolute inset-y-0 right-0 flex items-center pr-[25px] sm:hidden">
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-[25px] md:hidden">
                         <button onclick="toggleMenu()" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset">
                             <span class="absolute -inset-0.5"></span>
                             <span class="sr-only">Open main menu</span>
@@ -73,13 +95,32 @@
         <!-- Mobile Menu -->
         <div
             id="mobile-menu"
-            class="fixed top-16 right-0 w-screen h-screen bg-gray-800 shadow-lg sm:hidden translate-x-full transition-transform duration-300 overflow-y-auto z-20">
+            class="fixed top-16 right-0 w-screen h-screen bg-gray-800 shadow-lg md:hidden translate-x-full transition-transform duration-300 overflow-y-auto z-20">
             <div class="space-y-1 px-4 pt-4">
                 <a href="/" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="homepage">Beranda</a>
                 <a href="/product" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
                 <a href="/contact-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
                 <a href="/about-us" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="about_us">Tentang Kami</a>
                 <a href="/galeri" class="nav-link nav-link-mobile block rounded-md px-4 py-3 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="gallery">Galery</a>
+                <div class="relative mt-[40px] w-full h-auto">
+                    <button id="dropdownButton2" class="ml-4 py-1 px-[23px] w-auto text-white rounded-full border-[1px] border-white  cursor-pointer">
+                        <div class="flex items-center">
+                            <p class="grow text-sm font-medium text-gray-300 selected-language">Bahasa Indonesia</p>
+                            <p class="w-[30px]">
+                                <svg id="dropdownIcon2" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </p>
+                        </div>
+                    </button>
+
+                    <div id="dropdownMenu2"
+                        class=" w-[200px] h-[150px] ml-4 mt-[10px] bg-[#182430] shadow-lg rounded-xl opacity-100 scale-95 transition-all duration-300 transform origin-bottom invisible">
+                        <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
+                        <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
+                        <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">中文</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -116,19 +157,18 @@
                             <img loading="lazy" class="w-[37px] h-[37px] mr-[30px]" src="translate_icon.png" alt="translate icon">
                             <div class="relative w-full">
 
-                                <button id="dropdownButton1" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
+                                <button id="dropdownButton3" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
                                     <div class="flex">
-                                        <p id="selected-language-1" class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
+                                        <p class="grow text-[18px] font-trebuchet -tracking-[0.02em] selected-language">Bahasa Indonesia</p>
                                         <p class="w-[30px]">
-                                            <svg id="dropdownIcon1" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
+                                            <svg id="dropdownIcon3" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                             </svg>
                                         </p>
                                     </div>
                                 </button>
 
-
-                                <div id="dropdownMenu1"
+                                <div id="dropdownMenu3"
                                     class="absolute mt-5 w-full bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-top invisible">
                                     <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">Bahasa Indonesia</button>
                                     <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-[18px] font-trebuchet -tracking-[0.02em] font-[400] text-start w-full cursor-pointer">English</button>
@@ -145,11 +185,11 @@
                             <img loading="lazy" class="w-[37px] h-[37px] mr-[30px]" src="translate_icon.png" alt="translate icon">
                             <div class="relative w-full">
 
-                                <button id="dropdownButton2" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
+                                <button id="dropdownButton4" class="px-[23px] py-[8px] text-white rounded-full border-[1px] border-white w-full  cursor-pointer">
                                     <div class="flex">
-                                        <p id="selected-language-2" class="grow text-[18px] font-trebuchet -tracking-[0.02em]">Bahasa Indonesia</p>
+                                        <p class="grow text-[18px] font-trebuchet -tracking-[0.02em] selected-language">Bahasa Indonesia</p>
                                         <p class="w-[30px]">
-                                            <svg id="dropdownIcon2" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
+                                            <svg id="dropdownIcon4" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                             </svg>
                                         </p>
@@ -157,7 +197,7 @@
                                 </button>
 
 
-                                <div id="dropdownMenu2"
+                                <div id="dropdownMenu4"
                                     class="absolute w-full bottom-full mb-5 bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform origin-bottom invisible">
                                     <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
                                     <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
@@ -212,7 +252,6 @@
             if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
                 document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
                 document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
-                // document.getElementById('dropdownIcon1').style.transform = "rotate(180deg)";
                 document.getElementById('dropdownIcon1').classList.remove("rotate-180");
             } else {
                 document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
@@ -233,6 +272,31 @@
             }
         });
 
+        document.getElementById('dropdownButton3').addEventListener('click', function() {
+            if (document.getElementById('dropdownMenu3').classList.contains('opacity-100')) {
+                document.getElementById('dropdownMenu3').classList.replace('opacity-100', 'opacity-0');
+                document.getElementById('dropdownMenu3').classList.replace('visible', 'invisible');
+                // document.getElementById('dropdownIcon3').style.transform = "rotate(180deg)";
+                document.getElementById('dropdownIcon3').classList.remove("rotate-180");
+            } else {
+                document.getElementById('dropdownMenu3').classList.replace('opacity-0', 'opacity-100');
+                document.getElementById('dropdownMenu3').classList.replace('invisible', 'visible');
+                document.getElementById('dropdownIcon3').classList.add("rotate-180");
+            }
+        });
+
+        document.getElementById('dropdownButton4').addEventListener('click', function() {
+            if (document.getElementById('dropdownMenu4').classList.contains('opacity-100')) {
+                document.getElementById('dropdownMenu4').classList.replace('opacity-100', 'opacity-0');
+                document.getElementById('dropdownMenu4').classList.replace('visible', 'invisible');
+                document.getElementById('dropdownIcon4').classList.remove("rotate-180");
+            } else {
+                document.getElementById('dropdownMenu4').classList.replace('opacity-0', 'opacity-100');
+                document.getElementById('dropdownMenu4').classList.replace('invisible', 'visible');
+                document.getElementById('dropdownIcon4').classList.add("rotate-180");
+            }
+        });
+
         function resetDropdown() {
             document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
             document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
@@ -241,6 +305,14 @@
             document.getElementById('dropdownMenu2').classList.replace('opacity-100', 'opacity-0');
             document.getElementById('dropdownMenu2').classList.replace('visible', 'invisible');
             document.getElementById('dropdownIcon2').classList.remove("rotate-180");
+
+            document.getElementById('dropdownMenu3').classList.replace('opacity-100', 'opacity-0');
+            document.getElementById('dropdownMenu3').classList.replace('visible', 'invisible');
+            document.getElementById('dropdownIcon3').classList.remove("rotate-180");
+
+            document.getElementById('dropdownMenu4').classList.replace('opacity-100', 'opacity-0');
+            document.getElementById('dropdownMenu4').classList.replace('visible', 'invisible');
+            document.getElementById('dropdownIcon4').classList.remove("rotate-180");
         }
         window.addEventListener("resize", resetDropdown);
     </script>

@@ -14,21 +14,23 @@
 <!-- Hero -->
 <section id="hero-section" class="relative h-[90vh] bg-white">
   <div class="relative h-full lg:h-full w-full object-cover">
-    <img src="/images/hero background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
+    <img src="/images/hero-background-3.webp" alt="baner pt karya pilar nusantara" class="h-full w-full object-cover ">
+    <div class="h-full w-full top-0 left-0 absolute z-5 bg-blue-800/60 bg-blue "></div>
   </div>
-  <div class="absolute top-3 sm:top-5 xl:top-8 left-1/2 -translate-x-1/2 max-w-[1600px]">
-    <div class="flex justify-center">
-      <img loading="lazy" class="h-[15vh] max-h-[100px] sm:max-h-[150px] md:max-h-[150px] xl:max-h-[200px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+  <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8">
+    <div class="flex justify-center xl:-translate-y-[20px] ">
+      <img loading="lazy" class="h-[40vh] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
-  <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
-    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
-    <p class="max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px]" data-lang-group="homepage_hero" data-lang-key="sub_title">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
+  <div class="absolute bottom-[20vh] sm:bottom-[32vh] md:bottom-[32vh] lg:bottom-[32vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
+    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[40px] lg:mb-[55px] xl:mb-[60px] 2xl:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] 2xl:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
+    <p class="max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px] 2xl:text-[18px]" data-lang-group="homepage_hero" data-lang-key="sub_title">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
     <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out " data-lang-group="homepage_hero" data-lang-key="button">
       Hubungi Kami
     </a>
   </div>
-  <div class="hidden lg:block absolute bottom-0 h-[210px] w-full bg-gradient-to-t from-white to-transparent z-10"></div>
+  <div class="absolute bottom-[20px] h-[100px] 2xl:h-[180px] w-full bg-gradient-to-t from-white to-transparent z-10"></div>
+  <div class="absolute bottom-0 h-[20px] w-full bg-white z-10"></div>
 </section>
 
 <!-- Mengapa memilih kami -->
