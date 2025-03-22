@@ -6,8 +6,8 @@
         </div>
         <div class="flex flex-col h-full">
             <div class="flex-none mt-[10px] w-full">
-                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_title_3">PRODUK XPE</h3>
-                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] 2xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_description_3">
+                <h3 class="mt-[85px] min-h-[50px] place-content-end font-trebuchet text-white text-[36px] sm:text-[28px] md:text-[36px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_title_4">PRODUK XPE</h3>
+                <p class="mt-[24px] sm:h-[250px] md:h-[210px] lg:h-[180px] 2xl:h-[240px] font-humanist-normal text-white text-[16px] text-start font-[400]" data-lang-group="homepage_top_product" data-lang-key="product_description_4">
                     Produk berbahan XPE (Cross-Linked Polyethylene) menawarkan kenyamanan dan keamanan untuk playmat, wallpaper, dan matras. Playmat XPE ringan, empuk, dan anti-slip, aman bagi anak. Wallpaper XPE melindungi dinding dengan tekstur lembut, tahan air, dan mudah dipasang. Matras XPE fleksibel, ringan, tahan lama, serta mudah dirawat, cocok untuk berbagai aktivitas.
                 </p>
             </div>

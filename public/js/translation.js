@@ -577,7 +577,7 @@ const translations = {
   },
 };
 
-let currentLang = localStorage.getItem("lang") || "en";
+let currentLang = localStorage.getItem("lang") || "id";
 
 let buttonTitle = "Bahasa Indonesia";
 
