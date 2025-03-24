@@ -919,6 +919,9 @@
   .mt-\[32px\] {
     margin-top: 32px;
   }
+  .mt-\[34px\] {
+    margin-top: 34px;
+  }
   .mt-\[38px\] {
     margin-top: 38px;
   }
@@ -2166,6 +2169,9 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
@@ -2646,9 +2652,6 @@
   .bg-\[\#0D55C8\] {
     background-color: #0D55C8;
   }
-  .bg-\[\#00AD5E\] {
-    background-color: #00AD5E;
-  }
   .bg-\[\#1F2227\] {
     background-color: #1F2227;
   }
@@ -2724,6 +2727,9 @@
   .bg-\[\#FCCB50\] {
     background-color: #FCCB50;
   }
+  .bg-\[\#f25546\] {
+    background-color: #f25546;
+  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
@@ -2747,6 +2753,9 @@
   }
   .bg-blue-800\/60 {
     background-color: color-mix(in oklab, var(--color-blue-800) 60%, transparent);
+  }
+  .bg-dark-salmon {
+    background-color: var(--color-dark-salmon);
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
@@ -4417,6 +4426,13 @@
       }
     }
   }
+  .hover\:bg-light-salmon {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-light-salmon);
+      }
+    }
+  }
   .hover\:bg-orange-600 {
     &:hover {
       @media (hover: hover) {
@@ -4882,11 +4898,6 @@
       margin-top: 25px;
     }
   }
-  .md\:mt-\[34px\] {
-    @media (width >= 48rem) {
-      margin-top: 34px;
-    }
-  }
   .md\:mt-\[200px\] {
     @media (width >= 48rem) {
       margin-top: 200px;
@@ -5323,11 +5334,6 @@
       bottom: 23vh;
     }
   }
-  .xl\:mt-\[40px\] {
-    @media (width >= 80rem) {
-      margin-top: 40px;
-    }
-  }
   .xl\:mt-\[50px\] {
     @media (width >= 80rem) {
       margin-top: 50px;
@@ -5383,39 +5389,9 @@
       margin-top: 300px;
     }
   }
-  .xl\:mt-\[310px\] {
-    @media (width >= 80rem) {
-      margin-top: 310px;
-    }
-  }
-  .xl\:mt-\[320px\] {
-    @media (width >= 80rem) {
-      margin-top: 320px;
-    }
-  }
-  .xl\:mt-\[340px\] {
-    @media (width >= 80rem) {
-      margin-top: 340px;
-    }
-  }
-  .xl\:mt-\[350px\] {
-    @media (width >= 80rem) {
-      margin-top: 350px;
-    }
-  }
-  .xl\:mt-\[380px\] {
-    @media (width >= 80rem) {
-      margin-top: 380px;
-    }
-  }
   .xl\:mt-\[420px\] {
     @media (width >= 80rem) {
       margin-top: 420px;
-    }
-  }
-  .xl\:mt-\[490px\] {
-    @media (width >= 80rem) {
-      margin-top: 490px;
     }
   }
   .xl\:mb-\[60px\] {
@@ -5495,6 +5471,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .xl\:grid-cols-4 {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .xl\:grid-cols-8 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(8, minmax(0, 1fr));
@@ -5508,6 +5489,11 @@
   .xl\:justify-end {
     @media (width >= 80rem) {
       justify-content: flex-end;
+    }
+  }
+  .xl\:gap-15 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 15);
     }
   }
   .xl\:gap-30 {

@@ -55,7 +55,7 @@
   <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center mt-[240px] sm:mt-[320px] xl:mt-[300px]" data-lang-group="homepage_top_product" data-lang-key="cta">Belum menemukan produk yang anda cari? Telusuri semua produk yang ditawarkan</p>
 
   <div class="flex align-center justify-center mt-[43px]">
-    <a href="#" class="flex bg-light-salmon font-trebuchet w-[268px] h-[43px] text-white rounded-full shadow-lg hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out items-center justify-center" data-lang-group="homepage_top_product" data-lang-key="button">
+    <a href="/product" class="flex bg-light-salmon font-trebuchet w-[268px] h-[43px] text-white rounded-full shadow-lg hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out items-center justify-center" data-lang-group="homepage_top_product" data-lang-key="button">
       Lihat Semua Produk
     </a>
   </div>
