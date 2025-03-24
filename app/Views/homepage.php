@@ -33,113 +33,6 @@
   <div class="absolute bottom-0 h-[20px] w-full bg-white z-10"></div>
 </section>
 
-<!-- Mengapa memilih kami -->
-<section id="whyUsSection" class=" relative w-full mt-[30px] sm:mt-[40px] lg:mt-[60px] xl:mt-[100px]">
-  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_why_us" data-lang-key="title">Mengapa Memilih Kami</h2>
-  <div class="w-full  flex justify-center pt-[130px] lg:pt-[210px] xl:pt-[230px]">
-    <div class="relative  w-full  h-full">
-      <div class="xl:hidden relative w-full px-[10%]  overflow-hidden  whyUsSwiper">
-        <div id="normalWhyUsCard" class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Custom Merek</h3>
-              <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
-              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Best Service</h3>
-              <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
-              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
-            </div>
-          </div>
-        </div>
-        <div class="xl:hidden pt-[70px] md:pt-[150px]">
-          <div class="flex justify-center items-center why-us-swiper-pagination"></div>
-        </div>
-
-        <div class="xl:hidden">
-          <button onclick="prevWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 left-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
-          <button onclick="nextWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 right-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
-        </div>
-      </div>
-
-      <div class="hidden xl:flex justify-center relative w-full px-[5%] overflow-visible h-full">
-        <div id="xlWhyUsCard" class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Kustom Merek</h3>
-            <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
-          </div>
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
-            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
-          </div>
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Pelayanan Terbaik</h3>
-            <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
-          </div>
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
-            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Tentang kami -->
-<section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[300px] ">
-  <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="homepage_about_us" data-lang-key="title">Tentang Kami</h2>
-  <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
-    <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
-      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
-      <p id="about-us" class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="homepage_about_us" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
-      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver ml-10 rounded-full"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Horizontal Divider - Tentang kami -->
-<div class="flex justify-center mt-[100px] sm:mt-[140px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px]">
-  <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
-</div>
-
 <!-- Produk unggulan kami -->
 <section id="topProductSection" class=" relative w-full mt-[125px] xl:mt-[190px]">
   <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_top_product" data-lang-key="title">Berbagai produk unggulan kami</h2>
@@ -166,18 +59,16 @@
       Lihat Semua Produk
     </a>
   </div>
-
-
 </section>
 
 <!-- Horizontal Divider - Produk unggulan kami -->
-<div class="flex justify-center mt-[180px] xl:mt-[200px]">
+<div class="flex justify-center mt-[180px] xl:mt-[250px]">
   <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
 </div>
 
 <!-- Proses Produksi -->
-<section id="productionGalerySection" class=" relative w-full mt-[130px] xl:mt-[200px]">
-  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_production_process" data-lang-key="title">Intip Proses Produksinya</h2>
+<section id="productionGalerySection" class=" relative w-full mt-[130px] xl:mt-[150px]">
+  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_production_process" data-lang-key="title">Proses Produksi</h2>
   <div class="xl:hidden relative w-full px-[25px] pt-[120px] max-w-[1600px] overflow-hidden h-full productionGalerySwiper">
     <div id="normalProductionCard" class="swiper-wrapper">
       <div class="w-full swiper-slide">
@@ -313,6 +204,113 @@
 </section>
 
 <div class="flex justify-center mt-[170px] xl:mt-[300px]">
+  <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
+</div>
+
+<!-- Mengapa memilih kami -->
+<section id="whyUsSection" class=" relative w-full mt-[30px] sm:mt-[40px] lg:mt-[60px] xl:mt-[100px]">
+  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_why_us" data-lang-key="title">Mengapa Memilih Kami</h2>
+  <div class="w-full  flex justify-center pt-[130px] lg:pt-[210px] xl:pt-[230px]">
+    <div class="relative  w-full  h-full">
+      <div class="xl:hidden relative w-full px-[10%]  overflow-hidden  whyUsSwiper">
+        <div id="normalWhyUsCard" class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Custom Merek</h3>
+              <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center ">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
+              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center ">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Best Service</h3>
+              <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center ">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
+              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="xl:hidden pt-[70px] md:pt-[150px]">
+          <div class="flex justify-center items-center why-us-swiper-pagination"></div>
+        </div>
+
+        <div class="xl:hidden">
+          <button onclick="prevWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 left-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
+          <button onclick="nextWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 right-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
+        </div>
+      </div>
+
+      <div class="hidden xl:flex justify-center relative w-full px-[5%] overflow-visible h-full">
+        <div id="xlWhyUsCard" class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Kustom Merek</h3>
+            <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
+          </div>
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center ">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
+            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
+          </div>
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center ">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Pelayanan Terbaik</h3>
+            <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
+          </div>
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center ">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
+            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tentang kami -->
+<section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[420px] ">
+  <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="homepage_about_us" data-lang-key="title">Tentang Kami</h2>
+  <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
+    <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
+      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
+      <p id="about-us" class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="homepage_about_us" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver ml-10 rounded-full"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Horizontal Divider - Tentang kami -->
+<div class="flex justify-center mt-[100px] sm:mt-[140px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px]">
   <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
 </div>
 

@@ -99,7 +99,7 @@ const translations = {
       button: "Lihat Semua Produk",
     },
     homepage_production_process: {
-      title: "Intip Proses Produksinya",
+      title: "Proses Produksi",
       sub_title_1: "Produksi Tiang Kubus Apung",
       description_1:
         "Proses pencetakan tiang kubus apung dari bahan HDPE. Mesin berteknologi canggih ini dirancang untuk menghasilkan bentuk yang presisi dan konsisten, mencerminkan standar tinggi dalam setiap proses manufaktur.",
@@ -296,7 +296,7 @@ const translations = {
       button: "See All Products",
     },
     homepage_production_process: {
-      title: "Take a Peek at the Production Process",
+      title: "Production Process",
       sub_title_1: "Floating Cube Pole Production",
       description_1:
         "The process of molding floating cube poles from HDPE material. This advanced technology machine is designed to produce precise and consistent shapes, reflecting high standards in every manufacturing process.",
@@ -480,7 +480,7 @@ const translations = {
       button: "查看所有产品",
     },
     homepage_production_process: {
-      title: "一窥生产过程",
+      title: "生产过程",
       sub_title_1: "浮立方柱生产",
       description_1:
         "从 HDPE 材料中模制浮立方柱的过程。这台先进的技术机器旨在生产精确且一致的形状，反映了每个制造过程中的高标准。",
