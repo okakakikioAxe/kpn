@@ -1,16 +1,19 @@
 @font-face {
   font-family: "HumanistNormal";
   src: url("../Font/HumanistNormal.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "HumanistBold";
   src: url("../Font/HumanistBold.woff") format("woff");
+  font-display: swap;
   /* "line-height-normal" : leading-[%] */
 }
 @font-face {
   font-family: "Trebuchet";
   src: url("../Font/Trebuchet.woff") format("woff");
+  font-display: swap;
   /* "line-height-normal" : leading-4 */
 }
 

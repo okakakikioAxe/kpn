@@ -4,6 +4,8 @@
 <title>PT KPN - Produsen produk HDPE, EVA, XPE, dan TPE</title>
 <meta name="description" content="PT Karya Pilar Nusantara adalah produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur. Menawarkan produk berkualitas tinggi, aman, inovatif, dan terjangkau dengan teknologi modern serta standar premium." />
 <meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn " />
+<link rel="preload" as="image" href="/images/hero-background-3.webp" type="image/webp">
+<link rel="preload" as="image" href="kpn-logo.webp" type="image/webp">
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
@@ -12,17 +14,14 @@
 
 <?= $this->section('content') ?>
 <!-- Hero -->
-<section id="hero-section" class="relative h-[90vh] bg-white">
-  <div class="relative h-full lg:h-full w-full object-cover">
-    <img src="/images/hero-background-3.webp" alt="baner pt karya pilar nusantara" class="h-full w-full object-cover ">
-    <div class="h-full w-full top-0 left-0 absolute z-5 bg-blue-800/60 bg-blue "></div>
+<section id="hero-section" class="relative h-[90vh] w-full bg-green-200">
+  <div class="relative h-full w-full bg-[url('/images/hero-background-3.webp')] bg-cover bg-center bg-no-repeat">
+    <div class="h-full w-full top-0 left-0 absolute z-5 bg-blue-800/60 bg-blue"></div>
   </div>
-  <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8">
-    <div class="flex justify-center xl:-translate-y-[20px] ">
-      <img loading="lazy" class="h-[40vh] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+  <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8 h-[400px] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto aspect-[1/1] bg-[url('kpn-logo.webp')] bg-cover bg-center bg-no-repeat">
     </div>
   </div>
-  <div class="absolute bottom-[20vh] sm:bottom-[32vh] md:bottom-[32vh] lg:bottom-[32vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
+  <div class="absolute bottom-[20vh] sm:bottom-[32vh] md:bottom-[32vh] lg:bottom-[32vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-10">
     <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[40px] lg:mb-[55px] xl:mb-[60px] 2xl:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] 2xl:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
     <p class="max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px] 2xl:text-[18px]" data-lang-group="homepage_hero" data-lang-key="sub_title">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
     <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out " data-lang-group="homepage_hero" data-lang-key="button">
@@ -351,7 +350,7 @@
 <script type="text/javascript" src="js/homepage/about_us.js"></script>
 <script type="text/javascript" src="js/homepage/top product/top_product.js"></script>
 <script type="text/javascript" src="js/homepage/production_galery.js"></script>
-<script defer type="text/javascript">
+<script type="text/javascript">
   // ================= Why Us Swiper ================
   var whyUsSwiper = new Swiper(".whyUsSwiper", {
     speed: 700,

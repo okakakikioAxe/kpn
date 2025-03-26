@@ -163,6 +163,8 @@
       "backdrop-blur-0",
     );
     if (modalVideo.src != '') {
+      modalVideo.pause();
+      modalVideo.currentTime = 0; // Reset to start
       URL.revokeObjectURL(modalVideo.src);
     }
     setTimeout(() => {
@@ -184,6 +186,8 @@
         "backdrop-blur-0",
       );
       if (modalVideo.src != '') {
+        modalVideo.pause();
+        modalVideo.currentTime = 0; // Reset to start
         URL.revokeObjectURL(modalVideo.src);
       }
       setTimeout(() => {

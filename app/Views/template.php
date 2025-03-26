@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://www.karyapilarnusantara.com" />
     <meta property="og:site_name" content="PT Karya Pilar Nusantara" />
     <?= $this->renderSection('head') ?>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="output.css" fetchpriority="high">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/global_style.css">
     <style>
@@ -27,20 +27,18 @@
     <?= $this->renderSection('style') ?>
 </head>
 
-<body class="bg-white">
+<body class="bg-white h-auto min-h-[100vh]">
     <header>
         <!-- ---------------------------- Nav Bar ------------------------------------- -->
         <nav class="bg-gray-800 fixed top-0 left-0 w-full h-16 z-50 flex justify-center">
             <div class="w-full max-w-[1600px] sm:mx-[25px]">
                 <div class="relative flex h-16 items-center justify-between">
                     <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
-                        <!-- Logo di kiri -->
                         <div class="flex shrink-0 items-center ml-[25px] sm:ml-0">
-                            <img class="h-8 w-auto" src="white logo.png" alt="Your Company">
+                            <img class="h-8 w-auto" src="white logo.png" alt="Your Company" fetchpriority="high">
                         </div>
                         <div class="hidden md:ml-6 md:grid grid-cols-4 w-full ">
                             <div class="flex space-x-4 col-span-3">
-                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="/" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="homepage">Beranda</a> </a>
                                 <a href="/product" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="product">Produk</a>
                                 <a href="/contact-us" class="nav-link rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" data-lang-group="navbar" data-lang-key="contact_us">Hubungi Kami</a>
@@ -59,39 +57,36 @@
                                         </p>
                                     </div>
                                 </button>
-
-                                <div id="dropdownMenu1"
-                                    class="absolute w-[200px] h-[150px] bottom-full top-12 bg-[#182430] shadow-lg rounded-xl opacity-100 scale-95 transition-all duration-300 transform origin-bottom invisible">
-                                    <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
-                                    <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
-                                    <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">中文</button>
-                                </div>
                             </div>
                         </div>
 
                     </div>
 
-
-
-                    <!-- Mobile menu button (dipindah ke kanan) -->
                     <div class="absolute inset-y-0 right-0 flex items-center pr-[25px] md:hidden">
                         <button onclick="toggleMenu()" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset">
                             <span class="absolute -inset-0.5"></span>
                             <span class="sr-only">Open main menu</span>
-                            <!-- Open Menu Icon -->
                             <svg id="open-menu-icon" class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
-                            <!-- Close Menu Icon -->
                             <svg id="close-menu-icon" class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
                 </div>
+                <div class="absolute top-18 right-0 w-full   h-[200px] sm:mx-[25px] hidden md:block">
+                    <div class="w-full max-w[1600px] flex justify-end ">
+                        <div id="dropdownMenu1"
+                            class="w-[200px] h-[150px] bg-[#182430] shadow-lg rounded-xl opacity-100 scale-95 transition-all duration-300 transform invisible">
+                            <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>
+                            <button onclick="updateLanguage('en')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">English</button>
+                            <button onclick="updateLanguage('cn')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">中文</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
-
         <!-- Mobile Menu -->
         <div
             id="mobile-menu"
@@ -127,9 +122,9 @@
         <!-- ---------------------------- End of Nav Bar ---------------------------- -->
     </header>
 
-    <div class="h-16"></div>
+    <div style="min-height: 64px;"></div>
 
-    <div class="absolute z-10 w-full bg-white">
+    <div class="absolute z-10 w-full bg-white ">
         <main class="bg-container">
             <?= $this->renderSection('content') ?>
         </main>
@@ -217,7 +212,7 @@
 
     <div id="waButton" class="scale-75 md:scale-80 lg:scale-90 xl:scale-100 bottom-3 md:bottom-5 lg:bottom-8 xl:bottom-10 right-3 md:right-5 lg:right-8 xl:right-10 fixed z-50 rounded-full h-20 w-20 bg-green-500 hover:scale-110 transform duration-300 cursor-pointer place-content-center">
         <a href="http://wa.me/6282160050005" target="_blank">
-            <img loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.webp" alt="whatsapp icon">
+            <img width="100px" height="100px" loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.webp" alt="whatsapp icon">
         </a>
     </div>
 
