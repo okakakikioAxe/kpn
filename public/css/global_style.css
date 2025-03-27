@@ -17,8 +17,8 @@
   /* "line-height-normal" : leading-4 */
 }
 
-.bg-container {
-  background-image: url("../images/base-background.webp"); /* Your image */
+.bg-containers {
+  /* background-image: url("../images/base-background.webp"); */
   background-repeat: repeat;
   background-size: 430px 764px;
 }

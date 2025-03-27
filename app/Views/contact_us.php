@@ -1,5 +1,10 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('preload') ?>
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" type="image/webp">
+<?= $this->endSection() ?>
+
 <?= $this->section('head') ?>
 <title>PT KPN - Hubungi Kami</title>
 <meta name="description" content="Hubungi PT Karya Pilar Nusantara (PT KPN) untuk informasi produk dan layanan. Temukan kontak, alamat, telepon, dan email kami di KPN Sidoarjo. Kami siap membantu Anda!" />
@@ -7,18 +12,18 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
-<link rel="stylesheet" href="css/contact_us_style.css">
+<link rel="stylesheet" href="css/contact_us_style.css" async>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 <!-- Hero -->
 <section id="hero-section" class="relative h-[90vh] bg-white">
   <div class="relative h-full lg:h-full w-full object-cover">
-    <img src="/images/hero background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
+    <img src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
   </div>
   <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8">
     <div class="flex justify-center xl:-translate-y-[20px] ">
-      <img loading="lazy" class="h-[40vh] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+      <img loading="lazy" class="h-[40vh] max-h-[180px] md:max-h-[220px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">

@@ -1,11 +1,15 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('preload') ?>
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background-3.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" type="image/webp">
+<?= $this->endSection() ?>
+
 <?= $this->section('head') ?>
 <title>PT KPN - Produsen produk HDPE, EVA, XPE, dan TPE</title>
 <meta name="description" content="PT Karya Pilar Nusantara adalah produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur. Menawarkan produk berkualitas tinggi, aman, inovatif, dan terjangkau dengan teknologi modern serta standar premium." />
 <meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn " />
-<link rel="preload" as="image" href="/images/hero-background-3.webp" type="image/webp">
-<link rel="preload" as="image" href="kpn-logo.webp" type="image/webp">
+<!-- <link rel="preload" as="image" href="kpn-logo.webp" type="image/webp"> -->
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
@@ -15,14 +19,13 @@
 <?= $this->section('content') ?>
 <!-- Hero -->
 <section id="hero-section" class="relative h-[90vh] w-full bg-green-200">
-  <div class="relative h-full w-full bg-[url('/images/hero-background-3.webp')] bg-cover bg-center bg-no-repeat">
+  <div class=" h-full w-full bg-[url('https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background-3.webp')] bg-cover bg-center bg-no-repeat">
     <div class="h-full w-full top-0 left-0 absolute z-5 bg-blue-800/60 bg-blue"></div>
   </div>
-  <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8 h-[400px] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto aspect-[1/1] bg-[url('kpn-logo.webp')] bg-cover bg-center bg-no-repeat">
-    </div>
+  <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8 h-[400px] max-h-[180px] md:max-h-[220px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto aspect-[1/1] bg-[url('https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp')] bg-cover bg-center bg-no-repeat">
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[32vh] md:bottom-[32vh] lg:bottom-[32vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-10">
-    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[40px] lg:mb-[55px] xl:mb-[60px] 2xl:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] 2xl:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
+    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[40px] lg:mb-[55px] xl:mb-[60px] 2xl:mb-[70px] text-white text-[32px] md:text-[36px] lg:text-[40px] 2xl:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
     <p class="max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px] 2xl:text-[18px]" data-lang-group="homepage_hero" data-lang-key="sub_title">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
     <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out " data-lang-group="homepage_hero" data-lang-key="button">
       Hubungi Kami
@@ -216,7 +219,7 @@
           <div class="swiper-slide">
             <div class="h-auto w-full content-center animate-why-us-card">
               <div class="flex justify-center">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/custom-logo.gif" alt="animasi review bagus">
               </div>
               <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Custom Merek</h3>
               <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
@@ -225,7 +228,7 @@
           <div class="swiper-slide">
             <div class="h-auto w-full content-center animate-why-us-card">
               <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/best-price.gif" alt="animasi harga terbaik">
               </div>
               <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
               <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
@@ -234,7 +237,7 @@
           <div class="swiper-slide">
             <div class="h-auto w-full content-center animate-why-us-card">
               <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/star.gif" alt="animasi layanan terbaik">
               </div>
               <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Best Service</h3>
               <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
@@ -243,7 +246,7 @@
           <div class="swiper-slide">
             <div class="h-auto w-full content-center animate-why-us-card">
               <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/emerging-industries.gif" alt="animasi jangkauan luas">
               </div>
               <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
               <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
@@ -264,7 +267,7 @@
         <div id="xlWhyUsCard" class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
           <div class="h-auto w-full content-start animate-why-us-card">
             <div class="flex justify-center">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/custom-logo.gif" alt="animasi review bagus">
             </div>
             <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Kustom Merek</h3>
             <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>

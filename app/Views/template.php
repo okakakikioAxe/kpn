@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
+    <?= $this->renderSection('preload') ?>
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/whatsapp-icon.webp" type="image/webp">
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-white-logo.png" type="image/png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/kpn-logo.png">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp">
     <meta name="author" content="PT Karya Pilar Nusantara" />
     <meta name="robots" content="index, follow" />
     <html lang="id">
@@ -16,8 +19,9 @@
     <meta property="og:site_name" content="PT Karya Pilar Nusantara" />
     <?= $this->renderSection('head') ?>
     <link rel="stylesheet" href="output.css" fetchpriority="high">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/global_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" async />
+    <link rel="stylesheet" href="css/global_style.css" async>
+    
     <style>
         .nav-link.active {
             border-color: white;
@@ -35,7 +39,7 @@
                 <div class="relative flex h-16 items-center justify-between">
                     <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
                         <div class="flex shrink-0 items-center ml-[25px] sm:ml-0">
-                            <img class="h-8 w-auto" src="white logo.png" alt="Your Company" fetchpriority="high">
+                            <img height="32px" width="62.5px" class="h-8 w-auto" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-white-logo.png" alt="Your Company" fetchpriority="high">
                         </div>
                         <div class="hidden md:ml-6 md:grid grid-cols-4 w-full ">
                             <div class="flex space-x-4 col-span-3">
@@ -131,7 +135,7 @@
 
         <footer class="flex justify-center  bg-[#07172C]">
             <div class="bg-[#07172C] p-[24px] max-w-[1600px]">
-                <img loading="lazy" class="w-[110px] h-auto" src="white logo.png" alt="Logo KPN warna putih">
+                <img loading="lazy" height="56.3px" width="110px" class="w-[110px] h-auto" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-white-logo.png" alt="Logo KPN warna putih">
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[44px] mt-[46px]">
                     <p class="text-start text-white text-[18px] font-humanist-normal tracking-wide" data-lang-group="footer" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
@@ -203,16 +207,16 @@
                     </div>
 
                 </div>
-                <h5 class="mt-[48px] text-white">
+                <p class="mt-[48px] text-white">
                     @ 2025 PT. Karya Pilar Nusantara
-                </h5>
+                </p>
             </div>
         </footer>
     </div>
 
     <div id="waButton" class="scale-75 md:scale-80 lg:scale-90 xl:scale-100 bottom-3 md:bottom-5 lg:bottom-8 xl:bottom-10 right-3 md:right-5 lg:right-8 xl:right-10 fixed z-50 rounded-full h-20 w-20 bg-green-500 hover:scale-110 transform duration-300 cursor-pointer place-content-center">
         <a href="http://wa.me/6282160050005" target="_blank">
-            <img width="100px" height="100px" loading="lazy" class="w-10 h-10 mx-auto" src="images/whatsapp-icon.webp" alt="whatsapp icon">
+            <img width="100px" height="100px" loading="lazy" class="w-10 h-10 mx-auto" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/whatsapp-icon.webp" alt="whatsapp icon" fetchpriority="high">
         </a>
     </div>
 
