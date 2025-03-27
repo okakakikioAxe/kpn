@@ -7,7 +7,8 @@
     <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-white-logo.png" type="image/png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp">
+    <link rel="icon" href="/kpn-icon.ico" type="image/x-icon">
+<   <link rel="shortcut icon" href="/kpn-icon.ico" type="image/x-icon">
     <meta name="author" content="PT Karya Pilar Nusantara" />
     <meta name="robots" content="index, follow" />
     <html lang="id">
@@ -79,8 +80,8 @@
                         </button>
                     </div>
                 </div>
-                <div class="absolute top-18 right-0 w-full   h-[200px] sm:mx-[25px] hidden md:block">
-                    <div class="w-full max-w[1600px] flex justify-end ">
+                <div class="absolute top-18 right-0 w-full h-[200px] flex justify-center">
+                    <div class="w-full max-w-[1600px] flex justify-end sm:mx-[25px] ">
                         <div id="dropdownMenu1"
                             class="w-[200px] h-[150px] bg-[#182430] shadow-lg rounded-xl opacity-100 scale-95 transition-all duration-300 transform invisible">
                             <button onclick="updateLanguage('id')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Bahasa Indonesia</button>

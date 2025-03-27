@@ -138,23 +138,23 @@
         <div class="w-full md:max-w-[600px]">
           <form id="contactForm">
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="name">NAMA ANDA *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="name">NAMA ANDA *</p>
               <input type="text" name="name" id="name" autocomplete="name" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="Mr Budi">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">EMAIL</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">EMAIL</p>
               <input type="text" name="email" id="email" autocomplete="email" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="mail@example.com">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="phone">NOMOR TELEPON ANDA *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="phone">NOMOR TELEPON ANDA *</p>
               <input type="tel" name="phone" id="phone" autocomplete="tel" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="+62 8123 4567 891">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="company">NAMA INSTANSI / PERUSAHAAN ANDA *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="company">NAMA INSTANSI / PERUSAHAAN ANDA *</p>
               <input type="text" name="instantion" id="instantion" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="PT ABC">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="message">PESAN *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="message">PESAN *</p>
               <textarea rows="3" cols="1" id="message" name="message" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 bg-[#F0F0F0] rounded-[5px] mt-[10px] p-[15px] resize-y placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider text-wrap text-clip" placeholder="Apakah ada harga khusus untuk pesanan banyak?"></textarea>
             </div>
             <div class="flex justify-center mt-[50px] mb-[30px]">
