@@ -1418,6 +1418,9 @@
   .w-\[50px\] {
     width: 50px;
   }
+  .w-\[70\%\] {
+    width: 70%;
+  }
   .w-\[80\%\] {
     width: 80%;
   }
@@ -1636,6 +1639,10 @@
     --tw-translate-y: calc(10% * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .-translate-y-\[40\%\] {
+    --tw-translate-y: calc(40% * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-y-\[60\%\] {
     --tw-translate-y: calc(60% * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -1682,6 +1689,18 @@
   }
   .translate-x-full {
     --tw-translate-x: 100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[1\%\] {
+    --tw-translate-y: 1%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[5\%\] {
+    --tw-translate-y: 5%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[20\%\] {
+    --tw-translate-y: 20%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-full {
