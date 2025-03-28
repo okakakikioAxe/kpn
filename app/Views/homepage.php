@@ -6,8 +6,8 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('head') ?>
-<title>PT. KARYA PILAR NUSANTARA - Penyedia produk HDPE, EVA, XPE, dan TPE</title>
-<meta name="description" content="PT Karya Pilar Nusantara adalah produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur. Menawarkan produk berkualitas tinggi, aman, inovatif, dan terjangkau dengan teknologi modern serta standar premium." />
+<title>PT. KARYA PILAR NUSANTARA - Penyedia Produk HDPE, EVA, XPE, dan TPE</title>
+<meta name="description" content="PT Karya Pilar Nusantara (KPN) adalah produsen HDPE tangan pertama yang menghadirkan berbagai produk berkualitas tinggi, inovatif, dan aman untuk kebutuhan mainan anak HDPE, olahraga, serta infrastruktur. Kami menawarkan produk seperti kubus apung HDPE, EVA mat, matras TPE, dan playmat anak dengan teknologi modern dan standar premium." />
 <meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn " />
 <!-- <link rel="preload" as="image" href="kpn-logo.webp" type="image/webp"> -->
 <?= $this->endSection() ?>

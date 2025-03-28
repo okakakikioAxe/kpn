@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/kpn-icon.ico" type="image/x-icon">
-<   <link rel="shortcut icon" href="/kpn-icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/kpn-icon.ico" type="image/x-icon">
     <meta name="author" content="PT Karya Pilar Nusantara" />
     <meta name="robots" content="index, follow" />
     <html lang="id">
@@ -80,7 +80,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="absolute top-18 right-0 w-full h-[200px] flex justify-center">
+                <div id="dropdownMenu1Container" class="hidden absolute top-18 right-0 w-full h-[200px] justify-center">
                     <div class="w-full max-w-[1600px] flex justify-end sm:mx-[25px] ">
                         <div id="dropdownMenu1"
                             class="w-[200px] h-[150px] bg-[#182430] shadow-lg rounded-xl opacity-100 scale-95 transition-all duration-300 transform invisible">
@@ -127,7 +127,7 @@
         <!-- ---------------------------- End of Nav Bar ---------------------------- -->
     </header>
 
-    <div style="min-height: 64px;"></div>
+    <div style="min-height: 32px;"></div>
 
     <div class="absolute z-10 w-full bg-white ">
         <main class="bg-container">
@@ -253,10 +253,17 @@
                 document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
                 document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
                 document.getElementById('dropdownIcon1').classList.remove("rotate-180");
+                setTimeout(() => {
+                    document.getElementById('dropdownMenu1Container').classList.replace('flex', 'hidden');
+                }, 300);
             } else {
-                document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
-                document.getElementById('dropdownMenu1').classList.replace('invisible', 'visible');
-                document.getElementById('dropdownIcon1').classList.add("rotate-180");
+                document.getElementById('dropdownMenu1Container').classList.replace('hidden', 'flex');
+                setTimeout(() => {
+                    document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
+                    document.getElementById('dropdownMenu1').classList.replace('invisible', 'visible');
+                    document.getElementById('dropdownIcon1').classList.add("rotate-180");
+                }, 50);
+                
             }
         });
 

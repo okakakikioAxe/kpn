@@ -168,9 +168,9 @@
       URL.revokeObjectURL(modalVideo.src);
     }
     setTimeout(() => {
+      modal.classList.replace("flex", "hidden");
       modalImage.classList.add("hidden");
       modalVideo.classList.add("hidden");
-      modal.classList.replace("flex", "hidden");
       waButton.classList.remove("hidden");
 
     }, 300);

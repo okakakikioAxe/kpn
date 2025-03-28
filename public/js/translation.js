@@ -8,7 +8,8 @@ const translations = {
       gallery: "Galeri",
     },
     homepage_hero: {
-      title: "Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur",
+      title:
+        "Mitra Anda Dalam Solusi Pengadaan Mainan Anak, Olahraga dan Infrastruktur",
       sub_title:
         "Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda",
       button: "Hubungi Kami",
@@ -121,7 +122,8 @@ const translations = {
       title: "PRODUK KAMI",
       sub_title:
         "Jelajahi produk kami dengan pengalaman interaktif dan menyenangkan",
-      button: "Jelajahi Produk",
+      sub_title_2: "Atau",
+      button: "DOWNLOAD KATALOG",
     },
     contact_us_hero: {
       title: "HUBUNGI KAMI",
@@ -206,7 +208,7 @@ const translations = {
     },
     homepage_hero: {
       title:
-        "Your Partner in Children's Toys, Sports, and Infrastructure Solutions.",
+        "Your Partner in Children's Toys, Sports, and Infrastructure Procurement Solutions",
       sub_title: "Get best offers for all your needs.",
       button: "Contact Us",
     },
@@ -317,7 +319,8 @@ const translations = {
     product_hero: {
       title: "OUR PRODUCTS",
       sub_title: "Explore our products with a fun and interactive experience",
-      button: "Explore Products",
+      sub_title_2: "Or",
+      button: "DOWNLOAD CATALOG",
     },
     contact_us_hero: {
       title: "Contact Us",
@@ -402,7 +405,7 @@ const translations = {
       gallery: "画廊",
     },
     homepage_hero: {
-      title: "您的儿童玩具、体育和基础设施解决方案合作伙伴。",
+      title: "您在儿童玩具、体育和基础设施采购解决方案中的合作伙伴",
       sub_title: "为您提供所有需求的最佳优惠。",
       button: "联系我们",
     },
@@ -501,7 +504,8 @@ const translations = {
     product_hero: {
       title: "我们的产品",
       sub_title: "以有趣且互动的方式探索我们的产品",
-      button: "探索产品",
+      sub_title_2: "或者",
+      button: "下载目录",
     },
     contact_us_hero: {
       title: "联系我们",

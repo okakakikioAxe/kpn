@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: 
+Disallow: /
+Allow: /$
+Allow: /product
+Allow: /contact-us
+Allow: /about-us
+Allow: /galeri
