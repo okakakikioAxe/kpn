@@ -3,8 +3,12 @@
 
 <head>
     <?= $this->renderSection('preload') ?>
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/base-background.webp" type="image/webp">
     <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/whatsapp-icon.webp" type="image/webp">
     <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-white-logo.png" type="image/png">
+    <link rel="preload" href="/Font/HumanistNormal.woff" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/Font/HumanistBold.woff" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/Font/Trebuchet.woff" as="font" type="font/woff2" crossorigin>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/kpn-icon.ico" type="image/x-icon">
@@ -20,8 +24,8 @@
     <meta property="og:site_name" content="PT Karya Pilar Nusantara" />
     <?= $this->renderSection('head') ?>
     <link rel="stylesheet" href="output.css" fetchpriority="high">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" async />
-    <link rel="stylesheet" href="css/global_style.css" async>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/global_style.css">
     
     <style>
         .nav-link.active {
