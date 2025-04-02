@@ -6,10 +6,9 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('head') ?>
-<title>PT. KARYA PILAR NUSANTARA - Penyedia Produk HDPE, EVA, XPE, dan TPE</title>
+<title>PT. Karya Pilar Nusantara - Penyedia Produk HDPE, EVA, XPE, dan TPE</title>
 <meta name="description" content="PT Karya Pilar Nusantara (KPN) adalah produsen HDPE tangan pertama yang menghadirkan berbagai produk berkualitas tinggi, inovatif, dan aman untuk kebutuhan mainan anak HDPE, olahraga, serta infrastruktur. Kami menawarkan produk seperti kubus apung HDPE, EVA mat, matras TPE, dan playmat anak dengan teknologi modern dan standar premium." />
-<meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn " />
-<!-- <link rel="preload" as="image" href="kpn-logo.webp" type="image/webp"> -->
+<meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn, karyapilarnusantara, pt kpn, karya pilar nusantara, pt karya pilar nusantara, penyedia kpn, penyedia kubus apung, penyedia toren, kubus apung HDPE berkualitas" />
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
@@ -19,7 +18,7 @@
 <?= $this->section('content') ?>
 <!-- Hero -->
 <section id="hero-section" class="relative h-[90vh] w-full bg-green-200 overflow-hidden">
-  <div class=" h-full w-full bg-[url('https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background-5.avif')] bg-cover bg-center bg-no-repeat">
+  <div class=" h-[90vh] w-full bg-[url('https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background-5.avif')] bg-cover bg-center bg-no-repeat">
     <div class="h-full w-full top-0 left-0 absolute z-2 bg-gradient-to-tl from-blue-700/80 to-transparent "></div>
     <div class="h-full w-full bottom-0 right-0 absolute z-5 -translate-y-[23vh] md:-translate-y-[14vh] lg:translate-y-0 2xl:translate-y-[8vh] -translate-x-[25vw] md:-translate-x-[14.8vw] lg:translate-x-0 2xl:translate-x-[10vw] scale-150 md:scale-130 lg:scale-100 2xl:scale-80 overflow-hidden">
       <!-- HDPE - Kubus Apung -->
