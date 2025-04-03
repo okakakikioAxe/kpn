@@ -112,7 +112,8 @@
             <h1 class="text-xl font-bold">KPN</h1>
             <nav class="mt-5">
                 <ul>
-                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700">Galery</a></li>
+                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700">Gallery</a></li>
+                    <li class="py-2"><a href="/admin/product" class="block px-4 py-2 hover:bg-gray-700">Produk</a></li>
                     <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah Password</a></li>
                     <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 ">
                             <p class="text-red-400">Logout</p>
