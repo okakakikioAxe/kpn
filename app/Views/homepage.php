@@ -117,7 +117,7 @@
     <div class="w-[80vw] max-w-[1600px] h-auto">
       <h1 class="max-w-[600px] lg:max-w-[800px] mb-[60px] md:mb-[40px] lg:mb-[55px] xl:mb-[60px] 2xl:mb-[70px] text-white text-[28px] md:text-[34px] lg:text-[40px] 2xl:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
       <p class="max-w-[600px] sm:max-w-[400px] lg:max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px] 2xl:text-[18px]" data-lang-group="homepage_hero" data-lang-key="sub_title">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
-      <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out " data-lang-group="homepage_hero" data-lang-key="button">
+      <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out " data-lang-group="homepage_hero" data-lang-key="button">
         Hubungi Kami
       </a>
     </div>
@@ -148,7 +148,7 @@
   <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center mt-[240px] sm:mt-[320px] xl:mt-[300px]" data-lang-group="homepage_top_product" data-lang-key="cta">Belum menemukan produk yang anda cari? Telusuri semua produk yang ditawarkan</p>
 
   <div class="flex align-center justify-center mt-[43px]">
-    <a href="/product" class="flex bg-light-salmon font-trebuchet w-[268px] h-[43px] text-white rounded-full shadow-lg hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out items-center justify-center" data-lang-group="homepage_top_product" data-lang-key="button">
+    <a href="/product" class="flex bg-light-salmon font-trebuchet w-[268px] h-[43px] text-white rounded-full shadow-lg xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out items-center justify-center" data-lang-group="homepage_top_product" data-lang-key="button">
       Lihat Semua Produk
     </a>
   </div>
@@ -412,7 +412,7 @@
   <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center" data-lang-group="homepage_bottom_cta" data-lang-key="cta">Hubungi kami dan dapatkan penawaran khusus untuk kebutuhan Anda!</p>
 
   <div class="flex align-center justify-center mt-[43px]">
-    <a href="/contact-us" class="flex bg-light-salmon w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out  items-center justify-center" data-lang-group="homepage_bottom_cta" data-lang-key="button">
+    <a href="/contact-us" class="flex bg-light-salmon w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out  items-center justify-center" data-lang-group="homepage_bottom_cta" data-lang-key="button">
       Hubungi Kami
     </a>
   </div>

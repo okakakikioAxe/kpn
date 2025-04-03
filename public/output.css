@@ -4884,6 +4884,19 @@
       outline-color: var(--color-indigo-600);
     }
   }
+  .active\:scale-105 {
+    &:active {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .active\:bg-dark-salmon {
+    &:active {
+      background-color: var(--color-dark-salmon);
+    }
+  }
   .sm\:top-5 {
     @media (width >= 40rem) {
       top: calc(var(--spacing) * 5);
@@ -5161,6 +5174,11 @@
   .sm\:px-0 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:px-\[10\%\] {
+    @media (width >= 40rem) {
+      padding-inline: 10%;
     }
   }
   .sm\:px-\[25px\] {
@@ -6051,6 +6069,27 @@
     @media (width >= 80rem) {
       --tw-tracking: 0.035em;
       letter-spacing: 0.035em;
+    }
+  }
+  .xl\:hover\:scale-105 {
+    @media (width >= 80rem) {
+      &:hover {
+        @media (hover: hover) {
+          --tw-scale-x: 105%;
+          --tw-scale-y: 105%;
+          --tw-scale-z: 105%;
+          scale: var(--tw-scale-x) var(--tw-scale-y);
+        }
+      }
+    }
+  }
+  .xl\:hover\:bg-dark-salmon {
+    @media (width >= 80rem) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-dark-salmon);
+        }
+      }
     }
   }
   .\32 xl\:top-\[4vh\] {

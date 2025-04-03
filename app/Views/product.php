@@ -19,7 +19,7 @@
 <!-- Hero -->
 <section id="galerySection" class="relative pb-[200px] min-h-[100vh] w-full bg-white">
   <!-- Background Image -->
-  <div class=" w-full px-[25px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
+  <div class=" w-full px-[40px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
     <div class="w-full max-w-[1600px] pt-[62px] pb-[40px]">
       <h1 class=" text-[#001F47] text-start text-[32px] md:text-[34px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="gallery" data-lang-key="title">GALERI</h1>
       <p class="mt-[12px] text-[#001F47] text-start font-humanist-normal leading-4 text-[14px] md:text-[16px] xl:text-[18px]" data-lang-group="gallery" data-lang-key="sub_title">Temukan inspirasi lewat kegiatan yang kami bagikan.</p>
@@ -31,22 +31,22 @@
       <div class="flex w-full justify-center">
         <div class="grid gap-[15px] xl:gap-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 max-w-[1200px] mt-[34px] xl:mt-[45px] items-center justify-center">
           <div class="flex justify-center">
-            <a href="https://online.fliphtml5.com/kxrpo/xtvk/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_1">
+            <a href="https://online.fliphtml5.com/kxrpo/xtvk/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_1">
               PRODUK HDPE
             </a>
           </div>
           <div class="flex justify-center">
-            <a href="https://online.fliphtml5.com/kxrpo/izka/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_2">
+            <a href="https://online.fliphtml5.com/kxrpo/izka/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_2">
               PRODUK MAINAN
             </a>
           </div>
           <div class="flex justify-center">
-            <a href="https://online.fliphtml5.com/kxrpo/ewzp/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_3">
+            <a href="https://online.fliphtml5.com/kxrpo/ewzp/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_3">
               PRODUK EVA
             </a>
           </div>
           <div class="flex justify-center">
-            <a href="https://online.fliphtml5.com/kxrpo/kisc/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_4">
+            <a href="https://online.fliphtml5.com/kxrpo/kisc/" target="_blank" download class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_top_product" data-lang-key="product_title_4">
               PRODUK XPE
             </a>
           </div>
@@ -54,7 +54,7 @@
       </div>
       <p class="text-[#001F47] pt-[45px] sm:pt-[60px] xl:pt-[75px] text-center font-humanist-normal leading-4 text-[18px] md:text-[20px] xl:text-[22px]">Download katalog lengkap</p>
       <div class="flex w-full justify-center">
-        <a href="/Catalog-KPN-2025.zip" target="_blank" download class="flex mt-[35px] sm:mt-[50px] xl:mt-[65px] bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out">
+        <a href="/Catalog-KPN-2025.zip" target="_blank" download class="flex mt-[35px] sm:mt-[50px] xl:mt-[65px] bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out">
           DOWNLOAD KATALOG
         </a>
       </div>

@@ -29,7 +29,7 @@
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
     <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="about_us_hero" data-lang-key="title">Tentang Kami</h1>
     <p class="max-w-[800px] mb-[20px] text-white font-trebuchet tracking-[0.025em] leading-4 lg:leading-5 text-[16px] md:text-[18px]" data-lang-group="about_us_hero" data-lang-key="sub_title">Produsen Tangan Pertama Produk HDPE, TPE, dan XPE untuk Mainan Anak, Olahraga, serta Infrastruktur dengan Kualitas Premium dan Harga Terjangkau</p>
-    <button id="aboutUsHeroButton" class="flex cursor-pointer bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="about_us_hero" data-lang-key="button">
+    <button id="aboutUsHeroButton" class="flex cursor-pointer bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out" data-lang-group="about_us_hero" data-lang-key="button">
       Selengkapnya
     </button>
   </div>
@@ -185,7 +185,7 @@
   <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center" data-lang-group="homepage_bottom_cta" data-lang-key="cta">Hubungi kami dan dapatkan penawaran khusus untuk kebutuhan Anda!</p>
 
   <div class="flex align-center justify-center mt-[43px]">
-    <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_bottom_cta" data-lang-key="button">
+    <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out" data-lang-group="homepage_bottom_cta" data-lang-key="button">
       Hubungi Kami
     </a>
   </div>
