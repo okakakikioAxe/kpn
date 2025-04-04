@@ -26,3 +26,5 @@ $routes->post('/admin/galery/update/(:segment)', 'GaleryController::update/$1', 
 $routes->get('/video/stream/(:segment)', 'GaleryController::stream/$1');
 $routes->get('/gallery/toggle-status/(:num)', 'GaleryController::toggleStatus/$1', ['filter' => 'authRedirect']);
 $routes->get('/gallery/delete/(:num)', 'GaleryController::delete/$1', ['filter' => 'authRedirect']);
+$routes->get('/admin/product', 'ProductController::index', ['filter' => 'authRedirect']);
+$routes->get('/admin/product/create', 'ProductController::create', ['filter' => 'authRedirect']);

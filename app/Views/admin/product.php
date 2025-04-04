@@ -65,10 +65,37 @@
         <div class="flex-1 flex flex-col">
             <!-- Navbar -->
             <header class="header sticky top-0 z-5 bg-white shadow-md flex justify-between items-center p-6">
-                <h2 class="text-xl font-bold">Galery</h2>
-                <a href="/admin/galery/create" type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5">
-                    Tambah Galery
-                </a>
+                <h2 class="text-xl font-bold">Produk</h2>
+                <div>
+                    <div class="relative inline-block text-left mr-4">
+                        <button id="dropdownButton1" class="px-5 py-[2.5px] w-auto text-white rounded-lg border-[1px] border-white bg-gray-400  cursor-pointer">
+                            <div class="flex items-center">
+                                <p class="grow text-sm font-medium text-gray-50 selected-language">Semua Kategori</p>
+                                <p class="w-[30px]">
+                                    <svg id="dropdownIcon1" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition-transform duration-300 transform" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </p>
+                            </div>
+                        </button>
+                        <div id="dropdownMenu1Container" class="absolute top-18 right-4 w-full h-[200px] justify-center">
+                            <div class="w-full max-w-[1600px] flex justify-end sm:mx-[25px] ">
+                                <div id="dropdownMenu1"
+                                    class="w-[200px] h-[250px] bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform invisible">
+                                    <button onclick="filter('all')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Semua Kategori</button>
+                                    <button onclick="filter('hdpe')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">HDPE</button>
+                                    <button onclick="filter('xpe')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">XPE</button>
+                                    <button onclick="filter('eva')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">EVA</button>
+                                    <button onclick="filter('toy')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">MAINAN</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/admin/product/create" type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                        Tambah Produk
+                    </a>
+                </div>
+                
             </header>
 
             <!-- Scrollable Content -->
@@ -377,6 +404,46 @@
                 }, 300);
             }
         });
+
+        document.getElementById('dropdownButton1').addEventListener('click', function() {
+            if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
+                document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
+                document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
+                document.getElementById('dropdownIcon1').classList.remove("rotate-180");
+                setTimeout(() => {
+                    document.getElementById('dropdownMenu1Container').classList.replace('flex', 'hidden');
+                }, 300);
+            } else {
+                document.getElementById('dropdownMenu1Container').classList.replace('hidden', 'flex');
+                setTimeout(() => {
+                    document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
+                    document.getElementById('dropdownMenu1').classList.replace('invisible', 'visible');
+                    document.getElementById('dropdownIcon1').classList.add("rotate-180");
+                }, 50);
+                
+            }
+        });
+
+        function filter(category) {
+            switch (category){
+                case 'hdpe' : 
+                    console.log('hdpe');
+                    break;
+                case 'xpe' : 
+                    console.log('xpe');
+                    break;
+                case 'eva' : 
+                    console.log('eva');
+                    break;
+                case 'toy' : 
+                    console.log('toy');
+                    break;
+                default:
+                    console.log('all');
+                    break;
+            }
+        }
+        
     </script>
 </body>
 
