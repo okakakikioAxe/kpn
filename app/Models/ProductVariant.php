@@ -9,7 +9,7 @@ class ProductVariant extends Model
     protected $table            = 'product_variants';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['product_id', 'image', 'title', 'status', 'color'];
+    protected $allowedFields    = ['product_id', 'image', 'title', 'order', 'color'];
 
     // Automatically handle timestamps
     protected $useTimestamps = true;

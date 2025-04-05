@@ -9,7 +9,7 @@ class Product extends Model
     protected $table            = 'products';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['image', 'thumbnail', 'title', 'description', 'status'];
+    protected $allowedFields    = ['image', 'thumbnail', 'title', 'description', 'category'];
 
     // Automatically handle timestamps
     protected $useTimestamps = true;

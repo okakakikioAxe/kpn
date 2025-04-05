@@ -100,81 +100,42 @@
 
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
-                <div class="grid grid-cols-6 2xl:grid-cols-12 gap-4">
+                <div id="product-list-container" class="grid grid-cols-6 2xl:grid-cols-12 gap-4">
                     <?php foreach ($images as $image): ?>
                         <div class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
-                            <img loading="lazy" data-id="<?= $image['id'] ?>" data-image="<?= $image['image'] ?>" data-title="<?= $image['title'] ?>" data-description="<?= $image['description'] ?>" data-status="<?= $image['status'] ?>" data-created="<?= $image['created_at'] ?>" data-type="<?= $image['type'] ?>" src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['image_alt'] ?>"
+                            <img loading="lazy" data-product='<?= json_encode($image) ?>' src="/galery/thumbnail/<?= $image['thumbnail'] ?>" alt="<?= $image['title'] ?>"
                                 class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
-
-                            <?php if ($image['type'] == 1): ?>
-                                <div class="absolute top-0 left-0 h-full w-auto aspect-square flex items-center justify-center mx-auto">
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="#ffffff" data-name="Layer 1" viewBox="0 0 24 24" width="50%">
-                                        <path d="m16.55,10.435l-5.848-3.203c-.562-.316-1.228-.309-1.783.014-.556.325-.888.904-.888,1.548v6.411c0,.644.332,1.223.888,1.548.283.165.595.248.905.248.301,0,.6-.077.873-.23l5.857-3.208c.572-.322.914-.906.914-1.562s-.342-1.241-.919-1.565Zm-.48,2.253l-5.857,3.208c-.249.139-.543.137-.788-.006-.246-.144-.393-.4-.393-.685v-6.411c0-.285.146-.541.393-.685.124-.072.261-.109.398-.109.134,0,.27.035.395.105l5.848,3.203c.253.142.404.4.404.69s-.151.548-.399.688ZM12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Z" />
-                                    </svg>
-                                </div>
-                            <?php endif; ?>
-                            <div id="status-<?= $image['id'] ?>" class="absolute top-3 right-3 h-[15%] max-h-[18px] aspect-square rounded-full <?= ($image['status'] == 1) ? 'bg-green-400' : 'bg-red-400'; ?>  "></div>
-
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div id="imageModal" class="fixed z-10 top-0 left-0 w-full pt-16 h-[100vh] hidden items-center justify-center bg-black/70 opacity-100 backdrop-blur-0 transition-opacity duration-300 ease-in-out">
-
-                    <div id="imageContent" class="block sm:flex bg-black rounded-lg shadow-lg h-full w-full sm:max-h-[800px] sm:max-w-[1200px]  transform scale-95 transition-transform duration-300 ease-in-out relative ">
-
-                        <button id="closeModal" class=" absolute z-15 top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
-                            ✖
-                        </button>
-
-                        <div id="topSection" class="h-[75%] sm:h-full w-full sm:w-[50%] sm:py-6 bg-black flex items-center justify-center sm:rounded-l-lg">
-                            <img id="modalImage" loading="lazy" src="" class="relative w-full h-full object-contain hidden">
-                            <video loading="lazy" id="modalVideo" src="" controls preload="auto" class="relative w-full h-full object-contain hidden" type="video/mp4"></video>
+                <div id="product-detail-container" class="w-full justify-center hidden bg-white">
+                    <div class="flex w-full max-w-[1200px]">
+                        <div class="w-1/2 p-10">
+                            <img id="product-detail-image" src="" class="w-full h-full object-cover">    
                         </div>
-                        <div id="bottomSection" class="relative h-[25%] sm:h-full w-full sm:w-[50%] bg-white sm:py-6 rounded-t-4xl sm:rounded-t-none sm:rounded-r-lg">
-                            <div class="relative h-[100%] pb-[20px] px-6 w-full ">
-                                <div id="dragArea" class="sm:hidden relative h-[30px] w-full flex justify-center items-center cursor-pointer touch-none">
-                                    <div class="h-[5px] w-[100px] rounded-full bg-gray-300 mt-2"></div>
-                                </div>
-                                <h2 id="modalTitle" class="overflow-hidden sm:overflow-visible line-clamp-1 sm:line-clamp-none text-stone-800 text-[20px] xl:text-[22px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
-                                <div class="flex items-end justify-start mt-[10px] h-6">
-                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Dibuat</span>
-                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
-                                    <span id="modalDate" class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px]"></span>
-                                </div>
-                                <div class="flex items-end justify-start mt-[8px] h-6">
-                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Status</span>
-                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
-                                    <label class="relative inline-flex items-center cursor-pointer h-6">
-                                        <input id="statusToggle" type="checkbox" value="" class="sr-only peer">
-                                        <div class="w-11 h-6 bg-gray-300 peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
-                                    </label>
-                                </div>
-                                <div class="flex items-end justify-start mt-[20px] h-6">
-                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[100px] ">Deskripsi</span>
-                                    <span class="text-stone-600 font-humanist-normal text-[16px] xl:text-[18px] w-[20px] "> : </span>
-
-                                </div>
-
-                                <p id="modalDesc" class="h-auto max-h-[65%] sm:max-h-[70%] relative overflow-clip sm:overflow-auto line-clamp-3 sm:line-clamp-none text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]"></p>
-
-                                <!-- Buttons -->
-                                <div class="mt-[20px] flex gap-3 justify-end">
-                                    <a href="" id="editBtn" class="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                                        Edit
-                                    </a>
-                                    <button id="deleteBtn" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 cursor-pointer">
-                                        Delete
-                                    </button>
+                        <div class="flex flex-col w-1/2 justify-start items-start p-10">
+                            <div class="relative w-full">
+                                <div class="absolute top-0 right-0 h-20 z-10 flex justify-end items-center -translate-y-15">
+                                    <button onclick="closeProductDetail()" class="px-4 py-2 text-gray-600 hover:bg-gray-100 cursor-pointer">X</button>
                                 </div>
                             </div>
+                            <h3 id="product-detail-title" class=" text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold">Kubus Apung HDPE</h3>
+                            <div id="product-detail-variant-container" class="w-full mt-6">
+                                <div class="flex">
+                                    <p class="mb-3 mr-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
+                                    <p id="product-detail-variant-title" class="mb-3 text-stone-800 text-[16px] font-humanist-normal font-bold">-</p>
+                                </div>
+                                <div id="variant-select-container" class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;">
+                                </div>
+                            </div>
+                            <p id="product-detail-description" class="mt-7 text-stone-800 text-[18px] font-humanist-normal"></p>
                         </div>
-
                     </div>
                 </div>
 
                 <div id="deleteModal" class="fixed inset-0 z-80 items-center justify-center bg-black bg-opacity-50 hidden">
                     <div class="bg-white rounded-lg shadow-lg p-6 w-96">
-                        <h2 class="text-lg font-semibold text-gray-800">Hapus konten ini?</h2>
+                        <h2 class="text-lg font-semibold text-gray-800">Hapus produk ini?</h2>
                         <p id="contentTitle" class="text-gray-600 mt-2"></p>
 
                         <div class="flex justify-end mt-4">
@@ -202,15 +163,7 @@
         <?php endif; ?>
 
         const modal = document.getElementById("imageModal");
-        const modalContent = document.getElementById("imageContent");
-        const closeModal = document.getElementById("closeModal");
-        const modalImage = document.getElementById("modalImage");
-        const modalVideo = document.getElementById("modalVideo");
-        const modalTitle = document.getElementById("modalTitle");
-        const modalDesc = document.getElementById("modalDesc");
-        const modalDate = document.getElementById("modalDate");
-        const statusToggle = document.getElementById("statusToggle");
-        const editButton = document.getElementById("editBtn");
+        
         let currentItem = null;
         const toastModal = document.getElementById("toastModal");
         const toastMessage = document.getElementById("toastMessage");
@@ -239,6 +192,17 @@
             const minutes = String(date.getMinutes()).padStart(2, '0');
 
             return `${formattedDate} - ${hours}:${minutes}`;
+        }
+
+        function closeProductDetail(){
+            document.getElementById('product-detail-container').classList.replace("flex", "hidden");
+            document.getElementById('product-list-container').classList.replace("hidden", "grid");
+            document.getElementById('product-detail-image').src = '';
+            document.getElementById('product-detail-title').innerHTML = '';
+            document.getElementById('product-detail-description').innerHTML = '';
+            document.getElementById('variant-select-container').innerHTML = '';
+            document.getElementById('product-detail-variant-title').innerHTML = '-';
+            document.getElementById('product-detail-variant-container').classList.add('hidden');
         }
 
         // Function to create and show toast with progress bar
@@ -285,125 +249,96 @@
         // Event listener for image click
         document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
             thumbnailContainer.addEventListener("click", async (e) => {
-                let contentDetail = thumbnailContainer.firstElementChild;
-                // console.log('open modal');
-                if (contentDetail.dataset.type == 0) {
-                    // image
-                    modalImage.src = '/galery/content/' + contentDetail.dataset.image;
-                    modalImage.classList.remove("hidden");
-                } else {
-                    // video
-                    let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
+                // console.log(thumbnailContainer.firstElementChild.dataset.product);
+                let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
 
-                    try {
-                        let response = await fetch(videoUrl, {
-                            method: 'GET',
-                            headers: {
-                                'Range': 'bytes=0-' // Enable seeking support
-                            }
-                        });
+                document.getElementById('product-detail-container').classList.replace("hidden", "flex");
+                document.getElementById('product-list-container').classList.replace("grid", "hidden");
+                
+                document.getElementById('product-detail-image').src = '/galery/content/' + data.image;
+                document.getElementById('product-detail-title').innerHTML = data.title;
+                document.getElementById('product-detail-description').innerHTML = data.description;
 
-                        if (!response.ok) throw new Error('Failed to load video');
-
-                        let blob = await response.blob();
-                        let objectUrl = URL.createObjectURL(blob);
-
-                        modalVideo.src = objectUrl;
-                        modalVideo.classList.remove("hidden");
-                    } catch (error) {
-                        console.error('Error loading video:', error);
+                let variants = data.variant_list;
+                if(variants.length > 0){
+                    document.getElementById('product-detail-variant-container').classList.remove('hidden');
+                    for (let i = 0; i < variants.length; i++) {
+                        let variant = variants[i];
+                        let variantContainer = document.createElement('div');
+                        variantContainer.classList.add('variant-list','max-w-[35px]', 'h-auto', 'aspect-square', 'rounded-full', 'bg-red-200', 'cursor-pointer', 'hover:scale-105', 'transition-transform', 'duration-150', 'ease-in-out');
+                        variantContainer.style.backgroundColor = variant.color;
+                        variantContainer.setAttribute('data-productVariantId', variant.id);
+                        variantContainer.setAttribute('data-productVariantImage', variant.image);
+                        variantContainer.setAttribute('data-productVariantTitle', variant.title);
+                        variantContainer.setAttribute('data-productVariantColor', variant.color);
+                        document.getElementById('product-detail-variant-title').innerHTML = variant.title;
+                        document.getElementById('variant-select-container').appendChild(variantContainer);
+                        if(i == 0){
+                            document.getElementById('product-detail-variant-title').innerHTML = "-";
+                        }
                     }
-                }
-                modalTitle.textContent = contentDetail.dataset.title;
-                modalDesc.textContent = contentDetail.dataset.description;
-                modalDate.textContent = formatDateTime(contentDetail.dataset.created);
-                statusToggle.checked = contentDetail.dataset.status == 1;
-                currentItem = contentDetail;
-                editButton.setAttribute('href', "/admin/galery/show/" + contentDetail.dataset.id);
-                document.getElementById('deleteBtn').addEventListener("click", function() {
-                    openDeleteModal(contentDetail.dataset.id, contentDetail.dataset.title);
-                });
 
-                modal.classList.replace("hidden", "flex");
-                setTimeout(() => {
-                    modal.classList.replace("opacity-0", "opacity-100");
-                    modalContent.classList.replace("scale-95", "scale-100");
-                    modal.classList.replace(
-                        "backdrop-blur-0",
-                        "backdrop-blur-sm",
-                    );
-                }, 100);
+                    document.querySelectorAll(".variant-list").forEach(variantList => {
+                        variantList.addEventListener("click", async (e) => {
+                            let variantTitle = e.target.dataset.productvarianttitle;
+                            let variantImage = e.target.dataset.productvariantimage;
+                            document.getElementById('product-detail-image').src = '/galery/content/' + variantImage;
+                            document.getElementById('product-detail-variant-title').innerHTML = variantTitle;
+                        });
+                    });
+                }else{
+                    document.getElementById('product-detail-variant-container').classList.add('hidden');
+                }
+                
+                    
+                // console.log('open modal');
+                
+
+                // modal.classList.replace("hidden", "flex");
+                // setTimeout(() => {
+                //     modal.classList.replace("opacity-0", "opacity-100");
+                //     modalContent.classList.replace("scale-95", "scale-100");
+                //     modal.classList.replace(
+                //         "backdrop-blur-0",
+                //         "backdrop-blur-sm",
+                //     );
+                // }, 100);
                 // modalContent.classList.replace("scale-80", "scale-100");
 
             });
         });
 
-        // Status toggle event listener
-        statusToggle.addEventListener("change", async function() {
-            if (currentItem) {
-                try {
-                    let response = await fetch(`/gallery/toggle-status/${currentItem.dataset.id}`, {
-                        method: 'GET',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'X-Requested-With': 'XMLHttpRequest' // Required for CI4 AJAX requests
-                        },
-                        credentials: 'include' // Ensures authentication cookies/tokens are sent
-                    });
-
-                    let data = await response.json();
-
-                    if (response.ok) {
-                        // ✅ Proceed with updating UI
-                        currentItem.dataset.status = currentItem.dataset.status == 1 ? 0 : 1;
-                        document.getElementById('status-' + currentItem.dataset.id).classList.remove('bg-red-400', 'bg-green-400');
-                        if (currentItem.dataset.status == 1) {
-                            document.getElementById('status-' + currentItem.dataset.id).classList.add('bg-green-400');
-                        } else {
-                            document.getElementById('status-' + currentItem.dataset.id).classList.add('bg-red-400');
-                        }
-
-                        showToast(`Status changed to ${statusToggle.checked ? "Active" : "Inactive"}`);
-                    } else {
-                        throw new Error(data.message || 'Failed to update status');
-                    }
-                } catch (error) {
-                    console.error('Error updating status:', error);
-                }
-            }
-        });
-
         // Close Modal
-        closeModal.addEventListener("click", () => {
-            modal.classList.replace("opacity-100", "opacity-0");
-            modalContent.classList.replace("scale-100", "scale-95");
-            modal.classList.replace(
-                "backdrop-blur-sm",
-                "backdrop-blur-0",
-            );
-            setTimeout(() => {
-                modalImage.classList.add("hidden");
-                modalVideo.classList.add("hidden");
-                modal.classList.replace("flex", "hidden");
-            }, 300);
-        });
+        // closeModal.addEventListener("click", () => {
+        //     modal.classList.replace("opacity-100", "opacity-0");
+        //     modalContent.classList.replace("scale-100", "scale-95");
+        //     modal.classList.replace(
+        //         "backdrop-blur-sm",
+        //         "backdrop-blur-0",
+        //     );
+        //     setTimeout(() => {
+        //         modalImage.classList.add("hidden");
+        //         modalVideo.classList.add("hidden");
+        //         modal.classList.replace("flex", "hidden");
+        //     }, 300);
+        // });
 
-        // Close when clicking outside modal
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modal.classList.replace("opacity-100", "opacity-0");
-                modalContent.classList.replace("scale-100", "scale-95");
-                modal.classList.replace(
-                    "backdrop-blur-sm",
-                    "backdrop-blur-0",
-                );
-                setTimeout(() => {
-                    modal.classList.replace("flex", "hidden");
-                    modalImage.classList.add("hidden");
-                    modalVideo.classList.add("hidden");
-                }, 300);
-            }
-        });
+        // // Close when clicking outside modal
+        // modal.addEventListener("click", (e) => {
+        //     if (e.target === modal) {
+        //         modal.classList.replace("opacity-100", "opacity-0");
+        //         modalContent.classList.replace("scale-100", "scale-95");
+        //         modal.classList.replace(
+        //             "backdrop-blur-sm",
+        //             "backdrop-blur-0",
+        //         );
+        //         setTimeout(() => {
+        //             modal.classList.replace("flex", "hidden");
+        //             modalImage.classList.add("hidden");
+        //             modalVideo.classList.add("hidden");
+        //         }, 300);
+        //     }
+        // });
 
         document.getElementById('dropdownButton1').addEventListener('click', function() {
             if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {

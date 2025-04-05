@@ -132,7 +132,7 @@
 
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
-                <form id="upload-form" action="/admin/galery/store" method="POST">
+                <form id="upload-form" action="/admin/product/store" method="POST">
                     <?= csrf_field() ?>
                     <div class=" space-y-12 flex w-full justify-center">
                         <div class="border-b w-full max-w-[800px] border-gray-900/10 pb-12">
@@ -140,7 +140,7 @@
                                 <h2 class="text-base/7 font-semibold text-gray-900">Gambar</h2>
                                 <div class="mt-2 py-6 w-[400px] aspect-square">
                                     <div class="relative text-center rounded-lg border border-dashed border-gray-900/25 h-full flex justify-center items-center">
-                                        <div>
+                                        <div id="placeholder-container">
                                             <svg id="image-icon" class="mx-auto size-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
                                                 <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clip-rule="evenodd" />
                                             </svg>
@@ -150,19 +150,43 @@
                                                     <span>Upload gambar</span>
                                                 </label>
                                             </div>
-                                            <p class="text-xs/5 text-gray-600">Gambar up to 50MB</p>
-                                            <input required id="file-upload" name="file-upload" type="file" class="sr-only">
+                                            <p class="text-xs/5 text-gray-600">Gambar up to 5MB</p>
                                         </div>
+                                        <input required id="file-upload" name="file-upload" type="file" class="sr-only">
+                                        <img id="image-preview" class="mt-2 max-h-110 rounded-lg shadow-lg hidden" />
+                                        <input type="hidden" name="thumbnail" id="thumbnail-data">
+                                        <canvas id="thumbnailCanvas" class=" aspect-square w-[200px] hidden"></canvas>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                                <div class="col-span-full">
+                            <div class="mt-10 grid grid-cols-6 gap-x-6 gap-y-8 sm:grid-cols-6">
+                                <div class="col-span-4">
                                     <h2 class="text-base/7 font-semibold text-gray-900">Judul</h2>
                                     <div class="mt-2">
                                         <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                             <input required type="text" name="title" id="title" class="block w-full grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="Judul konten">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-2">
+                                    <h2 class="text-base/7 font-semibold text-gray-900">Kategori</h2>
+                                    <div class="mt-2 w-full">
+                                        <div id="dropdown-container" class="cursor-pointer flex h-9 w-full items-center justify-between rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+                                            <div class="custom-dropdown relative w-full h-9 flex justify-start items-center px-4">
+                                                <div id="dropdownInput" class="dropdown-input   w-full items-center flex h-9 justify-between ">
+                                                    <p id="dropdownText" class=" text-base text-gray-900  focus:outline-none font-trebuchet text-[16px] font-bold"  placeholder="Pilih kategori">HDPE</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="22" height="22"><path d="M6.414,9H17.586a1,1,0,0,1,.707,1.707l-5.586,5.586a1,1,0,0,1-1.414,0L5.707,10.707A1,1,0,0,1,6.414,9Z"/></svg>
+                                                </div>
+                                                <div class="dropdown-content hidden absolute flex-col gap-1 bg-white w-full top-9 left-0 px-4 py-2 outline-1 outline-gray-300" id="dropdownContent">
+                                                    <div class="dropdown-item cursor-pointer" data-value="hdpe">HDPE</div>
+                                                    <div class="dropdown-item cursor-pointer" data-value="xpe">XPE</div>
+                                                    <div class="dropdown-item cursor-pointer" data-value="eva">EVA</div>
+                                                    <div class="dropdown-item cursor-pointer" data-value="toy">MAINAN</div>
+                                                </div>
+                                                <!-- Hidden input to store the actual value -->
+                                                <input type="hidden" name="category" id="selectedOption">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -177,26 +201,31 @@
                                 <div class="col-span-full">
                                     <div class="container w-full">
                                         <h1>Variant List</h1>
-
                                         <div class="variants-container w-full " id="variants-list">
-                                            
                                         </div>
+                                        <input type="hidden" name="variant-order" id="variant-order">
                                         <button class="add-variant" id="add-variant">+ Add New Variant</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div id="action-button" class="mt-6 flex items-center justify-end gap-x-6">
-                        <a href="javascript:history.back()" id="cancel-button" type="button" class="text-sm/6 font-semibold text-gray-900 cursor-pointer ">Cancel</a>
-                        <button type="submit" id="save-button" class="cursor-pointer rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                    <div id="action-button" class="mt-6 flex items-center justify-center gap-x-6">
+                        <div class="w-full max-w-[800px] flex justify-end items-center gap-x-6">
+                            <a href="/admin/product" id="cancel-button" type="button" class="text-sm/6 font-semibold text-gray-900 cursor-pointer ">Cancel</a>
+                            <button type="submit" id="save-button" class="cursor-pointer rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                        </div>
                     </div>
+
                 </form>
 
                 <!-- Progress Bar -->
-                <div class="progress-bar">
-                    <div id="progress-bar-inner" class="progress-bar-inner">0%</div>
+                <div class="flex w-full justify-center">
+                    <div class="w-full max-w-[800px]">
+                        <div class="progress-bar">
+                            <div id="progress-bar-inner" class="progress-bar-inner">0%</div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Modal -->
@@ -204,7 +233,7 @@
                     <div class="modal-content">
                         <div class="icon">✔️</div>
                         <div class="message">Konten telah ditambahkan</div>
-                        <button class="ok-button" onclick="redirectToGallery()">OK</button>
+                        <button class="ok-button" onclick="redirectToProduct()">OK</button>
                     </div>
                 </div>
 
@@ -217,40 +246,36 @@
         const ctx = canvas.getContext('2d');
         const maxSize = 350;
 
-        const previewContainer = document.getElementById("preview-container");
         const imagePreview = document.getElementById("image-preview");
-        const videoPreview = document.getElementById('video-preview');
-        const contentType = document.getElementById("content-type");
         const imageIcon = document.getElementById("image-icon");
+        const fileUpload = document.getElementById("file-upload");
 
         // Set canvas size
         canvas.width = maxSize;
         canvas.height = maxSize;
 
-        document.getElementById("file-upload").addEventListener("change", function(event) {
+        imagePreview.addEventListener("click", function(event) {
+            fileUpload.click();
+            document.getElementById("placeholder-container").classList.add("hidden");
+        });
+
+        fileUpload.addEventListener("change", function(event) {
+            document.getElementById("placeholder-container").classList.add("hidden");
             const file = event.target.files[0];
             // check if file is not empty
             if (file) {
-                if (videoPreview.src) {
-                    URL.revokeObjectURL(videoPreview.src); // Hapus URL sebelumnya sebelum mengganti file
-                }
 
                 // delete all src and hide the preview
                 imagePreview.classList.add("hidden");
-                videoPreview.classList.add("hidden");
                 imagePreview.src = "";
-                videoPreview.src = "";
 
-                // check if input is video or image
-                const fileType = file.type;
-                if (fileType.startsWith('image/')) {
+  
 
                     const reader = new FileReader();
                     reader.onload = function(e) {
 
                         imagePreview.src = e.target.result;
                         imagePreview.classList.remove("hidden");
-                        previewContainer.classList.remove("hidden");
                         imageIcon.classList.add("hidden");
 
                         const img = new Image();
@@ -269,46 +294,10 @@
 
                             // Store the cropped thumbnail as Base64
                             document.getElementById('thumbnail-data').value = canvas.toDataURL('image/jpeg');
-                            contentType.value = 0;
                         };
 
                     };
                     reader.readAsDataURL(file);
-                } else if (fileType.startsWith('video/')) {
-
-                    const video = document.getElementById('video');
-
-                    const url = URL.createObjectURL(file);
-
-                    videoPreview.src = url;
-                    videoPreview.addEventListener('loadeddata', function() {
-                        videoPreview.currentTime = 1;
-                    });
-
-                    videoPreview.addEventListener('seeked', function() {
-                        if (videoPreview.videoWidth > 0 && videoPreview.videoHeight > 0) {
-                            let width = videoPreview.videoWidth;
-                            let height = videoPreview.videoHeight;
-
-                            let cropSize = Math.min(width, height);
-                            let cropX = (width - cropSize) / 2;
-                            let cropY = (height - cropSize) / 2;
-
-                            previewContainer.classList.remove("hidden");
-                            videoPreview.classList.remove("hidden");
-                            imageIcon.classList.add("hidden");
-
-                            ctx.drawImage(videoPreview, cropX, cropY, cropSize, cropSize, 0, 0, maxSize, maxSize);
-                            document.getElementById('thumbnail-data').value = canvas.toDataURL('image/jpeg');
-                            contentType.value = 1;
-                        } else {
-                            console.error("Failed to capture thumbnail: Invalid video dimensions.");
-                        }
-                    });
-
-                } else {
-                    alert('File harus berupa gambar maupun video');
-                }
             }
         });
 
@@ -339,9 +328,11 @@
                 if (xhr.status === 200) {
                     // Show success modal
                     document.getElementById('success-modal').style.display = 'block';
+                    localStorage.removeItem('variants');
                 } else {
                     alert('Upload failed!');
                     // Enable buttons if upload failed
+                    document.getElementById('action-button').classList.remove('hidden');
                     document.getElementById('cancel-button').disabled = false;
                     document.getElementById('save-button').disabled = false;
                 }
@@ -350,15 +341,58 @@
             xhr.send(formData);
         });
 
-        function redirectToGallery() {
-            window.location.href = '/admin/galery/toast?text=Konten%20Berhasil%20Ditambahkan!';
+        function redirectToProduct() {
+            window.location.href = '/admin/product/toast?text=Produk%20Berhasil%20Ditambahkan!';
         }
+    </script>
+
+    <script>
+        // Get all necessary elements
+const dropdownContainer = document.getElementById('dropdown-container');
+const dropdownInput = document.getElementById('dropdownInput');
+const dropdownText = document.getElementById('dropdownText');
+const dropdownContent = document.getElementById('dropdownContent');
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+const selectedOptionInput = document.getElementById('selectedOption');
+
+// Toggle dropdown when clicking the input
+dropdownContainer.addEventListener('click', function() {
+   toggleDropdown();
+});
+
+function toggleDropdown() {
+    console.log('clicked');
+    if(dropdownContent.classList.contains('hidden')){
+        dropdownContent.classList.replace('hidden','flex');
+    }
+    else{
+        dropdownContent.classList.replace('flex','hidden');
+    }
+}
+
+// Handle item selection
+dropdownItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Get the value and text from the clicked item
+    const value = this.getAttribute('data-value');
+    const text = this.textContent;
+    
+    // Update the display and hidden input
+    dropdownText.innerHTML = text;
+    selectedOptionInput.value = value;
+    
+    // Hide the dropdown
+    // dropdownContent.classList.replace('hidden','block');
+  });
+});
+
     </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const variantsList = document.getElementById('variants-list');
             const addVariantBtn = document.getElementById('add-variant');
+            const variantOrder = document.getElementById('variant-order');
             let variants = [];
             let draggedItem = null;
 
@@ -383,6 +417,7 @@
                 };
 
                 variants.push(variant);
+                variantOrder.value = JSON.stringify(variants.map(v => v.id));
                 renderVariant(variant);
                 saveVariants();
             }
@@ -398,23 +433,23 @@
                                     <div class="w-30 image-container aspect-square flex justify-center items-center bg-gray-50 hover:border-dashed hover:border-[1px] hover:border-green-700 cursor-pointer">
                                         <div class=" flex justify-center items-center flex-col">
                                             <div class="image-placeholder flex justify-center flex-col items-center ${variant.image == '' ? '' : 'hidden'}">
-                                                <input type="file" class="file-input" accept="image/*" style="display:none;">
+                                                <input type="file" name="variants[]" class="file-input" accept="image/*" style="display:none;">
                                                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="22" height="22" fill="#555555"><path d="M9,7.5c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5-.67,1.5-1.5,1.5-1.5-.67-1.5-1.5Zm15-.5v6c0,2.76-2.24,5-5,5H10c-2.76,0-5-2.24-5-5V7c0-2.76,2.24-5,5-5h9c2.76,0,5,2.24,5,5ZM7,13c0,.77,.29,1.47,.77,2.01l5.24-5.24c.98-.98,2.69-.98,3.67,0l1.04,1.04c.23,.23,.62,.23,.85,0l3.43-3.43v-.38c0-1.65-1.35-3-3-3H10c-1.65,0-3,1.35-3,3v6Zm15,0v-2.79l-2.02,2.02c-.98,.98-2.69,.98-3.67,0l-1.04-1.04c-.23-.23-.61-.23-.85,0l-4.79,4.79c.12,.02,.24,.02,.37,.02h9c1.65,0,3-1.35,3-3Zm-5,7H5c-1.65,0-3-1.35-3-3v-6c0-.74,.27-1.45,.77-2,.37-.41,.33-1.04-.08-1.41-.41-.37-1.04-.33-1.41,.08-.82,.92-1.28,2.1-1.28,3.34v6c0,2.76,2.24,5,5,5h12c.55,0,1-.45,1-1s-.45-1-1-1Z"/></svg>
                                                 <p class="text-gray-700">Unggah</p>
                                                 <p class="text-gray-700">Gambar</p>
                                             </div>
-                                            <div class="image-data ${variant.image == '' ? 'hidden' : ''}">
+                                            <div class="image-data relative ${variant.image == '' ? 'hidden' : ''}">
                                                 <img src="${variant.image}" alt="Variant Images" class="variant-image w-full rounded-lg aspect-square">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="variant-details flex-3 items-center justify-center h-full w-full">
-                                    <input type="text" class="variant-title bg-gray-50/80 border-gray-300 border-[1px] w-full px-2 py-1 rounded-md" value="New Variant">
+                                    <input type="text" name="titles[]" class="variant-title bg-gray-50/80 border-gray-300 border-[1px] w-full px-2 py-1 rounded-md" value="New Variant">
                                 </div>
                                 <div class="variant-controls flex-1 flex justify-end items-start">
                                     <div class="flex-1 justify-end items-end flex rounded-full h-8 aspect-square">
-                                        <input type="color" class="color-picker h-8 aspect-square rounded-full cursor-pointer" value="#3498db">
+                                        <input type="color" name="colors[]" class="color-picker h-8 aspect-square rounded-full cursor-pointer" value="#3498db">
                                     </div>
                                     <div class="flex-1 w-full justify-end h-8 items-center flex">
                                         <button class="delete-btn cursor-pointer">
@@ -578,14 +613,15 @@
                     placeholder.remove();
                 }
             }
-
+            
             // Add some sample variants for demonstration
             if (!localStorage.getItem('variants')) {
+                removePlaceholder();
                 addNewVariant({ title: 'Blue Variant', color: '#3498db' });
-                addNewVariant({ title: 'Green Variant', color: '#2ecc71' });
-                addNewVariant({ title: 'Purple Variant', color: '#9b59b6' });
             } else {
-                loadVariants();
+                localStorage.removeItem('variants')
+                removePlaceholder();
+                addNewVariant({ title: 'Blue Variant', color: '#3498db' });
             }
         });
     </script>

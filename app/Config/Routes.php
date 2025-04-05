@@ -28,3 +28,5 @@ $routes->get('/gallery/toggle-status/(:num)', 'GaleryController::toggleStatus/$1
 $routes->get('/gallery/delete/(:num)', 'GaleryController::delete/$1', ['filter' => 'authRedirect']);
 $routes->get('/admin/product', 'ProductController::index', ['filter' => 'authRedirect']);
 $routes->get('/admin/product/create', 'ProductController::create', ['filter' => 'authRedirect']);
+$routes->post('/admin/product/store', 'ProductController::store', ['filter' => 'authRedirect']);
+$routes->get('/admin/product/toast', 'ProductController::showToast', ['filter' => 'authRedirect']);
