@@ -109,26 +109,33 @@
                     <?php endforeach; ?>
                 </div>
                 <div id="product-detail-container" class="w-full justify-center hidden bg-white">
-                    <div class="flex w-full max-w-[1200px]">
-                        <div class="w-1/2 p-10">
-                            <img id="product-detail-image" src="" class="w-full h-full object-cover">    
+                    <div class="flex flex-col w-full max-w-[1200px]" >
+                        <div class="flex w-full max-w-[1200px]">
+                            <div class="w-1/2 p-10">
+                                <img id="product-detail-image" src="" class="w-full h-full object-cover">    
+                            </div>
+                            <div class="flex flex-col w-1/2 justify-start items-start p-10">
+                                <div class="relative w-full">
+                                    <div class="absolute top-0 right-0 h-20 z-10 flex justify-end items-center -translate-y-15">
+                                        <button onclick="closeProductDetail()" class="px-4 py-2 text-gray-600 hover:bg-gray-100 cursor-pointer">X</button>
+                                    </div>
+                                </div>
+                                <h3 id="product-detail-title" class=" text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
+                                <div id="product-detail-variant-container" class="w-full mt-6">
+                                    <div class="flex">
+                                        <p class="mb-3 mr-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
+                                        <p id="product-detail-variant-title" class="mb-3 text-stone-800 text-[16px] font-humanist-normal font-bold">-</p>
+                                    </div>
+                                    <div id="variant-select-container" class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
+                                    </div>
+                                </div>
+                                <p id="product-detail-description" class="mt-7 text-stone-800 text-[18px] font-humanist-normal"></p>
+                            </div>
                         </div>
-                        <div class="flex flex-col w-1/2 justify-start items-start p-10">
-                            <div class="relative w-full">
-                                <div class="absolute top-0 right-0 h-20 z-10 flex justify-end items-center -translate-y-15">
-                                    <button onclick="closeProductDetail()" class="px-4 py-2 text-gray-600 hover:bg-gray-100 cursor-pointer">X</button>
-                                </div>
-                            </div>
-                            <h3 id="product-detail-title" class=" text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold">Kubus Apung HDPE</h3>
-                            <div id="product-detail-variant-container" class="w-full mt-6">
-                                <div class="flex">
-                                    <p class="mb-3 mr-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
-                                    <p id="product-detail-variant-title" class="mb-3 text-stone-800 text-[16px] font-humanist-normal font-bold">-</p>
-                                </div>
-                                <div id="variant-select-container" class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;">
-                                </div>
-                            </div>
-                            <p id="product-detail-description" class="mt-7 text-stone-800 text-[18px] font-humanist-normal"></p>
+                        <div class="w-full h-[2px] bg-gray-100 my-3.5"></div>
+                        <div class="flex w-full justify-end space-x-2 mb-6">
+                            <button id="editBtn" class="py-2 px-4 rounded-lg bg-orange-400 text-white hover:bg-orange-500 cursor-pointer">Edit</button>
+                            <button id="deleteBtn" class="py-2 px-4 rounded-lg bg-red-400 text-white hover:bg-red-600 cursor-pointer">Hapus</button>
                         </div>
                     </div>
                 </div>
@@ -243,7 +250,7 @@
         }
 
         function confirmDelete() {
-            window.location.href = '/gallery/delete/' + itemIdToDelete;
+            window.location.href = '/admin/product/delete/' + itemIdToDelete;
         }
 
         // Event listener for image click
@@ -271,7 +278,6 @@
                         variantContainer.setAttribute('data-productVariantImage', variant.image);
                         variantContainer.setAttribute('data-productVariantTitle', variant.title);
                         variantContainer.setAttribute('data-productVariantColor', variant.color);
-                        document.getElementById('product-detail-variant-title').innerHTML = variant.title;
                         document.getElementById('variant-select-container').appendChild(variantContainer);
                         if(i == 0){
                             document.getElementById('product-detail-variant-title').innerHTML = "-";
@@ -289,22 +295,12 @@
                 }else{
                     document.getElementById('product-detail-variant-container').classList.add('hidden');
                 }
-                
-                    
-                // console.log('open modal');
-                
-
-                // modal.classList.replace("hidden", "flex");
-                // setTimeout(() => {
-                //     modal.classList.replace("opacity-0", "opacity-100");
-                //     modalContent.classList.replace("scale-95", "scale-100");
-                //     modal.classList.replace(
-                //         "backdrop-blur-0",
-                //         "backdrop-blur-sm",
-                //     );
-                // }, 100);
-                // modalContent.classList.replace("scale-80", "scale-100");
-
+                document.getElementById('deleteBtn').addEventListener("click", function() {
+                    openDeleteModal(data.id, data.title);
+                });
+                document.getElementById('editBtn').addEventListener("click", function() {
+                    location.href = '/admin/product/edit/' + data.id;
+                });
             });
         });
 

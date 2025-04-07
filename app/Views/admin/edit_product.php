@@ -126,21 +126,21 @@
         <div class="flex-1 flex flex-col">
             <!-- Navbar -->
             <header class="header sticky top-0 z-5 bg-white shadow-md flex justify-between items-center p-6">
-                <h2 class="text-xl font-bold">Tambah Produk</h2>
+                <h2 class="text-xl font-bold">Edit Produk</h2>
 
             </header>
 
             <!-- Scrollable Content -->
             <main class="p-6 flex-1 overflow-y-auto">
-                <form id="upload-form" action="/admin/product/store" method="POST" enctype="multipart/form-data">
+                <form id="upload-form" action="/admin/product/update/<?= $product['id'] ?>" method="POST">
                     <?= csrf_field() ?>
                     <div class=" space-y-12 flex w-full justify-center">
                         <div class="border-b w-full max-w-[800px] border-gray-900/10 pb-12">
                             <div>
                                 <h2 class="text-base/7 font-semibold text-gray-900">Gambar</h2>
                                 <div class="mt-2 py-6 w-[400px] aspect-square">
-                                    <div class="relative text-center rounded-lg border border-dashed border-gray-900/25 h-full flex justify-center items-center">
-                                        <div id="placeholder-container">
+                                    <div class="relative text-center rounded-lg border border-dashed border-gray-900/25 h-full flex justify-center items-center cursor-pointer">
+                                        <div id="placeholder-container" class="hidden">
                                             <svg id="image-icon" class="mx-auto size-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
                                                 <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clip-rule="evenodd" />
                                             </svg>
@@ -152,8 +152,8 @@
                                             </div>
                                             <p class="text-xs/5 text-gray-600">Gambar up to 5MB</p>
                                         </div>
-                                        <input required id="file-upload" name="file-upload" type="file" class="sr-only">
-                                        <img id="image-preview" class="mt-2 max-h-110 rounded-lg shadow-lg hidden" />
+                                        <input id="file-upload" name="file-upload" type="file" class="sr-only" accept="image/*" />
+                                        <img id="image-preview" class="mt-2 max-h-110 rounded-lg shadow-lg" src="/galery/content/<?= $product['image'] ?>" />
                                         <input type="hidden" name="thumbnail" id="thumbnail-data">
                                         <canvas id="thumbnailCanvas" class=" aspect-square w-[200px] hidden"></canvas>
                                     </div>
@@ -165,7 +165,7 @@
                                     <h2 class="text-base/7 font-semibold text-gray-900">Judul</h2>
                                     <div class="mt-2">
                                         <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
-                                            <input required type="text" name="title" id="title" class="block w-full grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="Judul konten">
+                                            <input required type="text" name="title" id="title" class="block w-full grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="Judul konten" value="<?= $product['title'] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +175,7 @@
                                         <div id="dropdown-container" class="cursor-pointer flex h-9 w-full items-center justify-between rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                             <div class="custom-dropdown relative w-full h-9 flex justify-start items-center px-4">
                                                 <div id="dropdownInput" class="dropdown-input   w-full items-center flex h-9 justify-between ">
-                                                    <p id="dropdownText" class=" text-base text-gray-900  focus:outline-none font-trebuchet text-[16px] font-bold"  placeholder="Pilih kategori">HDPE</p>
+                                                    <p id="dropdownText" class=" text-base text-gray-900  focus:outline-none font-trebuchet text-[16px] font-bold"  placeholder="Pilih kategori"><?= strtoupper($product['category']) ?></p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="22" height="22"><path d="M6.414,9H17.586a1,1,0,0,1,.707,1.707l-5.586,5.586a1,1,0,0,1-1.414,0L5.707,10.707A1,1,0,0,1,6.414,9Z"/></svg>
                                                 </div>
                                                 <div class="dropdown-content hidden absolute flex-col gap-1 bg-white w-full top-9 left-0 px-4 py-2 outline-1 outline-gray-300" id="dropdownContent">
@@ -185,7 +185,7 @@
                                                     <div class="dropdown-item cursor-pointer" data-value="toy">MAINAN</div>
                                                 </div>
                                                 <!-- Hidden input to store the actual value -->
-                                                <input type="hidden" name="category" id="selectedOption" value="hdpe">
+                                                <input type="hidden" name="category" id="selectedOption" value="<?= $product['category'] ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@
                                 <div class="col-span-full">
                                     <h2 class="text-base/7 font-semibold text-gray-900">Deskripsi</h2>
                                     <div class="mt-2">
-                                        <textarea required name="description" id="description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="Deskripsi konten"></textarea>
+                                        <textarea required name="description" id="description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="Deskripsi konten" value="<?= $product['description'] ?>"><?= $product['description'] ?></textarea>
                                     </div>
                                 </div>
 
@@ -204,7 +204,7 @@
                                         <div class="variants-container w-full " id="variants-list">
                                         </div>
                                         <input type="hidden" name="variant-order" id="variant-order">
-                                        <div class="add-variant cursor-pointer" id="add-variant">+ Add New Variant</div>
+                                        <button class="add-variant" id="add-variant">+ Add New Variant</button>
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@
                 <div id="success-modal" class="modal">
                     <div class="modal-content">
                         <div class="icon">✔️</div>
-                        <div class="message">Konten telah ditambahkan</div>
+                        <div class="message">Konten telah diupdate</div>
                         <button class="ok-button" onclick="redirectToProduct()">OK</button>
                     </div>
                 </div>
@@ -325,7 +325,6 @@
             });
 
             xhr.addEventListener('load', function() {
-                console.log(xhr);
                 if (xhr.status === 200) {
                     // Show success modal
                     document.getElementById('success-modal').style.display = 'block';
@@ -343,49 +342,49 @@
         });
 
         function redirectToProduct() {
-            window.location.href = '/admin/product/toast?text=Produk%20Berhasil%20Ditambahkan!';
+            window.location.href = '/admin/product/toast?text=Produk%20Berhasil%20Diupdate!';
         }
     </script>
 
     <script>
         // Get all necessary elements
-        const dropdownContainer = document.getElementById('dropdown-container');
-        const dropdownInput = document.getElementById('dropdownInput');
-        const dropdownText = document.getElementById('dropdownText');
-        const dropdownContent = document.getElementById('dropdownContent');
-        const dropdownItems = document.querySelectorAll('.dropdown-item');
-        const selectedOptionInput = document.getElementById('selectedOption');
+const dropdownContainer = document.getElementById('dropdown-container');
+const dropdownInput = document.getElementById('dropdownInput');
+const dropdownText = document.getElementById('dropdownText');
+const dropdownContent = document.getElementById('dropdownContent');
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+const selectedOptionInput = document.getElementById('selectedOption');
 
-        // Toggle dropdown when clicking the input
-        dropdownContainer.addEventListener('click', function() {
-        toggleDropdown();
-        });
+// Toggle dropdown when clicking the input
+dropdownContainer.addEventListener('click', function() {
+   toggleDropdown();
+});
 
-        function toggleDropdown() {
-            console.log('clicked');
-            if(dropdownContent.classList.contains('hidden')){
-                dropdownContent.classList.replace('hidden','flex');
-            }
-            else{
-                dropdownContent.classList.replace('flex','hidden');
-            }
-        }
+function toggleDropdown() {
+    console.log('clicked');
+    if(dropdownContent.classList.contains('hidden')){
+        dropdownContent.classList.replace('hidden','flex');
+    }
+    else{
+        dropdownContent.classList.replace('flex','hidden');
+    }
+}
 
-        // Handle item selection
-        dropdownItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Get the value and text from the clicked item
-            const value = this.getAttribute('data-value');
-            const text = this.textContent;
-            
-            // Update the display and hidden input
-            dropdownText.innerHTML = text;
-            selectedOptionInput.value = value;
-            
-            // Hide the dropdown
-            // dropdownContent.classList.replace('hidden','block');
-        });
-        });
+// Handle item selection
+dropdownItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Get the value and text from the clicked item
+    const value = this.getAttribute('data-value');
+    const text = this.textContent;
+    
+    // Update the display and hidden input
+    dropdownText.innerHTML = text;
+    selectedOptionInput.value = value;
+    
+    // Hide the dropdown
+    // dropdownContent.classList.replace('hidden','block');
+  });
+});
 
     </script>
 
@@ -409,9 +408,9 @@
             });
 
             function addNewVariant(data = {}) {
-                const id = Date.now().toString();
+                const randomId = Date.now().toString();
                 const variant = {
-                    id,
+                    id : data.id || randomId,
                     title: data.title || 'New Variant',
                     color: data.color || '#3498db',
                     image: data.image || ''
@@ -446,11 +445,11 @@
                                     </div>
                                 </div>
                                 <div class="variant-details flex-3 items-center justify-center h-full w-full">
-                                    <input type="text" name="titles[]" class="variant-title bg-gray-50/80 border-gray-300 border-[1px] w-full px-2 py-1 rounded-md" value="New Variant">
+                                    <input type="text" name="titles[]" class="variant-title bg-gray-50/80 border-gray-300 border-[1px] w-full px-2 py-1 rounded-md" value="${variant.title}">
                                 </div>
                                 <div class="variant-controls flex-1 flex justify-end items-start">
                                     <div class="flex-1 justify-end items-end flex rounded-full h-8 aspect-square">
-                                        <input type="color" name="colors[]" class="color-picker h-8 aspect-square rounded-full cursor-pointer" value="#3498db">
+                                        <input type="color" name="colors[]" class="color-picker h-8 aspect-square rounded-full cursor-pointer" value="${variant.color}">
                                     </div>
                                     <div class="flex-1 w-full justify-end h-8 items-center flex">
                                         <button class="delete-btn cursor-pointer">
@@ -614,16 +613,33 @@
                     placeholder.remove();
                 }
             }
-            
-            // Add some sample variants for demonstration
-            if (!localStorage.getItem('variants')) {
-                removePlaceholder();
-                addNewVariant({ title: 'Blue Variant', color: '#3498db' });
-            } else {
+
+            function fetchVariantData() {
                 localStorage.removeItem('variants')
                 removePlaceholder();
-                addNewVariant({ title: 'Blue Variant', color: '#3498db' });
+                let variants = <?= json_encode($product['variant_list']) ?>;
+                if (variants.length > 0) {
+                    variants.forEach(variant => {
+                        console.log(variant);
+                        const variantData = {
+                            id: variant['id'],
+                            title:  variant['title'],
+                            color:  variant['color'],
+                            image:  ('/galery/content/' + variant['image'])
+                        };
+                        variants.push(variantData);
+                        variantOrder.value = JSON.stringify(variants.map(v => v.id));
+                        renderVariant(variantData);
+                        saveVariants();
+                    });
+                } else {
+                    showPlaceholder();
+                    addNewVariant({ title: 'Blue Variant', color: '#3498db' });
+                }
+                
             }
+
+            fetchVariantData();
         });
     </script>
 </body>

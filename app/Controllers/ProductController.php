@@ -41,6 +41,32 @@ class ProductController extends BaseController
         return view('admin/product', ['images' => $products, 'successMessage' => $successMessage]);
     }
 
+    public function edit($id): string
+    {
+        $db = \Config\Database::connect();
+        
+        $productModel = new Product();
+        $product = $productModel->find($id);
+        
+        // Get variants for this product ordered by 'order'
+        $variants = $db->table('product_variants')
+            ->where('product_id', $id)
+            ->orderBy('order', 'ASC')
+            ->get()
+            ->getResultArray();
+        
+        // Extract colors into a separate list
+        $colorList = array_column($variants, 'color');
+        
+        // Add the formatted data to the product
+        $product['color_list'] = $colorList;
+        $product['variant_list'] = $variants;
+        
+
+        $successMessage = session()->getFlashdata('successMessage');
+        return view('admin/edit_product', ['product' => $product, 'successMessage' => $successMessage]);
+    }
+
     // public function show($id): string
     // {
     //     // $this->cachePage(86400);
@@ -63,7 +89,6 @@ class ProductController extends BaseController
  
         $validation->setRules([
             'file-upload' => [
-                'label' => 'File Upload',
                 'rules' => 'uploaded[file-upload]|mime_in[file-upload,image/jpg,image/jpeg,image/png]|max_size[file-upload,5000]',
                 'errors' => [
                     'uploaded' => 'No file was uploaded',
@@ -73,13 +98,13 @@ class ProductController extends BaseController
             ],
             'title' => 'required|min_length[3]|max_length[255]',
             'description' => 'required|min_length[3]',
-            'category' => 'required|in_list["hdpe","eva","xpe","toy",]',
+            'category' => 'required|in_list[hdpe,eva,xpe,toy]',
         ]);
 
 
         if (!$validation->withRequest($this->request)->run()) {
-            session()->setFlashdata('successMessage', 'Error!');
-            return redirect()->to('/admin/product/create')->withInput()->with('errors', $validation->getErrors());
+            session()->setFlashdata('successMessage',  json_encode($validation->getErrors()));
+            return redirect()->to('/admin/product');
         }
 
 
@@ -149,38 +174,75 @@ class ProductController extends BaseController
                 }
             }
         }
+
         session()->setFlashdata('successMessage', 'Konten berhasil ditambahkan!');
         return redirect()->to('/admin/product');
     }
 
 
-    // public function update($id): ResponseInterface
-    // {
-    //     date_default_timezone_set('Asia/Jakarta');
-    //     $validation = \Config\Services::validation();
+    public function update($id): ResponseInterface
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $validation = \Config\Services::validation();
 
-    //     $validation->setRules([
-    //         'title' => 'required|min_length[3]|max_length[255]',
-    //         'description' => 'required|min_length[3]',
-    //     ]);
+        $validation->setRules([
+            'title' => 'required|min_length[3]|max_length[255]',
+            'description' => 'required|min_length[3]',
+            'category' => 'required|in_list[hdpe,eva,xpe,toy]',
+        ]);
 
+        if (!$validation->withRequest($this->request)->run()) {
+            session()->setFlashdata('successMessage',  json_encode($validation->getErrors()));
+            return redirect()->to('/admin/product');
+        }
 
-    //     if (!$validation->withRequest($this->request)->run()) {
-    //         return redirect()->back()->withInput()->with('errors', $validation->getErrors());
-    //     }
+        $updatedData = [];
+        $updatedImage = [];
 
-    //     $galleryModel = new Galery();
-    //     $gallery = $galleryModel->find($id);
+        $productModel = new Product();
+        $product = $productModel->find($id);
 
-    //     if (!$gallery) {
-    //         return redirect()->back()->withInput()->with('errors', 'data tidak ditemukan');
-    //     }
+        if ($product) {
 
-    //     $galleryModel->update($id, ['title' => $this->request->getPost('title'), 'description' => $this->request->getPost('description')]);
+            $file = $this->request->getFile('file-upload');
+            $thumbnailFile = $this->request->getPost('thumbnail');
+            $fileNamePrefix = date('Y-m-d-H-i-s') . '-product-';
+            $fileName =  $fileNamePrefix . str_replace(' ', '-', $this->request->getPost('title')) . '.';
 
-    //     session()->setFlashdata('successMessage', 'Konten berhasil diupdate!');
-    //     return redirect()->to('/admin/galery');
-    // }
+            if ($file && $file->isValid() && !$file->hasMoved()) {
+                // delete product image and thumbnail
+                $filePath = FCPATH . 'galery/content/' . $product['image'];
+                $thumbnailPath = FCPATH . 'galery/thumbnail/' . $product['thumbnail'];
+                if(file_exists($filePath)){
+                    unlink($filePath);
+                }
+                if(file_exists($thumbnailPath)){
+                    unlink($thumbnailPath);
+                }
+
+                $newFileName = $fileName . $file->getExtension();
+                $newThumbnailName = $fileName . 'jpeg';
+                $file->move('galery/content', $newFileName);
+    
+                // Convert base64 thumbnail to file and store it
+                $this->saveThumbnail($thumbnailFile, $newThumbnailName);
+                
+                $updatedImage = [
+                    'image' => $newFileName,
+                    'thumbnail' => $newThumbnailName,
+                ];
+            }
+            $updatedData = ['title' => $this->request->getPost('title'), 'description' => $this->request->getPost('description'),'category' => $this->request->getPost('category')];
+            $updatedValue = array_merge($updatedData, $updatedImage); 
+            $productModel->update($id, $updatedValue);
+    
+            session()->setFlashdata('successMessage', 'Konten berhasil diupdate!');
+            return redirect()->to('/admin/product');
+        } else{
+            return redirect()->back()->withInput()->with('errors', 'data tidak ditemukan');
+        }
+    }
+
 
     public function saveThumbnail($base64Image, $fileName)
     {
@@ -203,76 +265,44 @@ class ProductController extends BaseController
         return redirect()->to('/admin/product');
     }
 
-    // public function stream($filename)
-    // {
-    //     $videoPath = FCPATH . 'galery/content/' . $filename; // Change the path as needed
+    public function delete($id)
+    {
+        $db = \Config\Database::connect();
+        $productModel = new Product();
+        $product = $productModel->find($id);
 
-    //     if (!file_exists($videoPath)) {
-    //         return $this->response->setStatusCode(404)->setBody('File not found');
-    //     }
+        // delete product image and thumbnail
+        $filePath = FCPATH . 'galery/content/' . $product['image'];
+        $thumbnailPath = FCPATH . 'galery/thumbnail/' . $product['thumbnail'];
+        if(file_exists($filePath)){
+            unlink($filePath);
+        }
+        if(file_exists($thumbnailPath)){
+            unlink($thumbnailPath);
+        }
 
-    //     $fileSize = filesize($videoPath);
-    //     $handle = fopen($videoPath, 'rb');
-    //     $start = 0;
-    //     $end = $fileSize - 1;
+        // Get variants for this product ordered by 'id'
+        $variants = $db->table('product_variants')
+        ->where('product_id', $product['id'])
+        ->orderBy('id', 'ASC')
+        ->get()
+        ->getResultArray();
 
-    //     if (isset($_SERVER['HTTP_RANGE'])) {
-    //         preg_match('/bytes=(\d+)-(\d+)?/', $_SERVER['HTTP_RANGE'], $matches);
-    //         $start = intval($matches[1]);
-    //         $end = isset($matches[2]) ? intval($matches[2]) : $end;
-    //         header('HTTP/1.1 206 Partial Content');
-    //     } else {
-    //         header('HTTP/1.1 200 OK');
-    //     }
+        // Delete each variant image
+        if($variants) {
+            foreach ($variants as $variant) {
+                $variantFilePath = FCPATH . 'galery/content/' . $variant['image'];
+                if(file_exists($variantFilePath)){
+                    unlink($variantFilePath);
+                }
 
-    //     header('Content-Type: video/mp4'); // Adjust according to the video format
-    //     header('Accept-Ranges: bytes');
-    //     header("Content-Length: " . ($end - $start + 1));
-    //     header("Content-Range: bytes $start-$end/$fileSize");
-
-    //     fseek($handle, $start);
-    //     while (!feof($handle) && ($pos = ftell($handle)) <= $end) {
-    //         echo fread($handle, 8192);
-    //         flush();
-    //     }
-    //     fclose($handle);
-    //     exit;
-    // }
-
-    // public function toggleStatus($id)
-    // {
-    //     date_default_timezone_set('Asia/Jakarta');
-    //     $galleryModel = new Galery();
-    //     $gallery = $galleryModel->find($id);
-
-    //     if (!$gallery) {
-    //         return $this->response->setJSON([
-    //             'message' => 'Gallery item not found.'
-    //         ])->setStatusCode(ResponseInterface::HTTP_NOT_FOUND);
-    //     }
-
-    //     // Toggle status
-    //     $newStatus = $gallery['status'] == 1 ? 0 : 1;
-    //     $galleryModel->update($id, ['status' => (int) $newStatus]);
-
-    //     return $this->response->setJSON([
-    //         'message' => 'Status updated successfully.',
-    //         'new_status' => $newStatus
-    //     ])->setStatusCode(ResponseInterface::HTTP_OK);
-    // }
-
-    // public function delete($id)
-    // {
-    //     $galleryModel = new Galery();
-    //     $gallery = $galleryModel->find($id);
-
-    //     $filePath = FCPATH . 'galery/content/' . $gallery['image'];
-    //     $thumbnailPath = FCPATH . 'galery/thumbnail/' . $gallery['thumbnail'];
-    //     unlink($filePath);
-    //     unlink($thumbnailPath);
-
-    //     $galleryModel->delete($id);
-    //     session()->setFlashdata('successMessage', 'Konten berhasil dihapus!');
-    //     return redirect()->to('/admin/galery');
-    // }
+                // delete each variant
+                $variantModel = new ProductVariant();
+                $variantModel->delete($variant['id']);
+            }
+        }
+        $productModel->delete($id);
+        session()->setFlashdata('successMessage', 'Produk berhasil dihapus!');
+        return redirect()->to('/admin/product');
+    }
 }

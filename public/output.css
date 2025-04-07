@@ -610,9 +610,6 @@
   .top-4 {
     top: calc(var(--spacing) * 4);
   }
-  .top-5 {
-    top: calc(var(--spacing) * 5);
-  }
   .top-9 {
     top: calc(var(--spacing) * 9);
   }
@@ -621,9 +618,6 @@
   }
   .top-18 {
     top: calc(var(--spacing) * 18);
-  }
-  .top-50 {
-    top: calc(var(--spacing) * 50);
   }
   .top-\[20px\] {
     top: 20px;
@@ -724,14 +718,8 @@
   .left-4 {
     left: calc(var(--spacing) * 4);
   }
-  .left-5 {
-    left: calc(var(--spacing) * 5);
-  }
   .left-6 {
     left: calc(var(--spacing) * 6);
-  }
-  .left-50 {
-    left: calc(var(--spacing) * 50);
   }
   .isolate {
     isolation: isolate;
@@ -901,9 +889,6 @@
   .m-1323 {
     margin: calc(var(--spacing) * 1323);
   }
-  .mx-4 {
-    margin-inline: calc(var(--spacing) * 4);
-  }
   .mx-\[5px\] {
     margin-inline: 5px;
   }
@@ -915,6 +900,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-3\.5 {
+    margin-block: calc(var(--spacing) * 3.5);
   }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
@@ -1283,6 +1271,9 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-\[2px\] {
+    height: 2px;
+  }
   .h-\[5px\] {
     height: 5px;
   }
@@ -1384,9 +1375,6 @@
   }
   .h-\[670px\] {
     height: 670px;
-  }
-  .h-\[800px\] {
-    height: 800px;
   }
   .h-auto {
     height: auto;
@@ -1583,9 +1571,6 @@
   .w-\[400px\] {
     width: 400px;
   }
-  .w-\[500px\] {
-    width: 500px;
-  }
   .w-\[600px\] {
     width: 600px;
   }
@@ -1774,20 +1759,8 @@
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .-translate-y-5 {
-    --tw-translate-y: calc(var(--spacing) * -5);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-10 {
-    --tw-translate-y: calc(var(--spacing) * -10);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .-translate-y-15 {
     --tw-translate-y: calc(var(--spacing) * -15);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-20 {
-    --tw-translate-y: calc(var(--spacing) * -20);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-\[23vh\] {
@@ -1830,26 +1803,6 @@
     --tw-translate-x: calc(var(--spacing) * 0);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .translate-x-1\/2 {
-    --tw-translate-x: calc(1/2 * 100%);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-5 {
-    --tw-translate-x: calc(var(--spacing) * 5);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-10 {
-    --tw-translate-x: calc(var(--spacing) * 10);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-12 {
-    --tw-translate-x: calc(var(--spacing) * 12);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-22 {
-    --tw-translate-x: calc(var(--spacing) * 22);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .translate-x-\[10\%\] {
     --tw-translate-x: 10%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -1860,14 +1813,6 @@
   }
   .translate-x-full {
     --tw-translate-x: 100%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-10 {
-    --tw-translate-y: calc(var(--spacing) * 10);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-12 {
-    --tw-translate-y: calc(var(--spacing) * 12);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-\[1\%\] {
@@ -2467,6 +2412,13 @@
   .gap-y-8 {
     row-gap: calc(var(--spacing) * 8);
   }
+  .space-x-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .space-x-4 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -2973,12 +2925,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-amber-50 {
-    background-color: var(--color-amber-50);
-  }
-  .bg-amber-100 {
-    background-color: var(--color-amber-100);
-  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -3018,9 +2964,6 @@
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
-  .bg-green-50 {
-    background-color: var(--color-green-50);
-  }
   .bg-green-200 {
     background-color: var(--color-green-200);
   }
@@ -3038,6 +2981,9 @@
   }
   .bg-light-salmon {
     background-color: var(--color-light-salmon);
+  }
+  .bg-orange-300 {
+    background-color: var(--color-orange-300);
   }
   .bg-orange-400 {
     background-color: var(--color-orange-400);
@@ -3469,9 +3415,6 @@
   }
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
-  }
-  .pr-4 {
-    padding-right: calc(var(--spacing) * 4);
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
@@ -4213,10 +4156,6 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .outline-0 {
-    outline-style: var(--tw-outline-style);
-    outline-width: 0px;
-  }
   .outline-1 {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -4683,13 +4622,6 @@
       outline-color: var(--color-indigo-600);
     }
   }
-  .hover\:flex {
-    &:hover {
-      @media (hover: hover) {
-        display: flex;
-      }
-    }
-  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -4761,6 +4693,13 @@
       }
     }
   }
+  .hover\:bg-gray-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-300);
+      }
+    }
+  }
   .hover\:bg-gray-700 {
     &:hover {
       @media (hover: hover) {
@@ -4789,10 +4728,59 @@
       }
     }
   }
+  .hover\:bg-orange-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-orange-400);
+      }
+    }
+  }
+  .hover\:bg-orange-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-orange-500);
+      }
+    }
+  }
   .hover\:bg-orange-600 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-orange-600);
+      }
+    }
+  }
+  .hover\:bg-orange-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-orange-700);
+      }
+    }
+  }
+  .hover\:bg-red-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-300);
+      }
+    }
+  }
+  .hover\:bg-red-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-400);
+      }
+    }
+  }
+  .hover\:bg-red-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-500);
+      }
+    }
+  }
+  .hover\:bg-red-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-600);
       }
     }
   }
