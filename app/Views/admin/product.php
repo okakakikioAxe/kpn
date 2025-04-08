@@ -272,7 +272,7 @@
                     for (let i = 0; i < variants.length; i++) {
                         let variant = variants[i];
                         let variantContainer = document.createElement('div');
-                        variantContainer.classList.add('variant-list','max-w-[35px]', 'h-auto', 'aspect-square', 'rounded-full', 'bg-red-200', 'cursor-pointer', 'hover:scale-105', 'transition-transform', 'duration-150', 'ease-in-out');
+                        variantContainer.classList.add('variant-list','max-w-[35px]', 'h-auto', 'aspect-square', 'rounded-full', 'bg-red-200', 'border-[#f5f5f5]', 'border-[3px]', 'cursor-pointer', 'hover:scale-105', 'transition-transform', 'duration-150', 'ease-in-out');
                         variantContainer.style.backgroundColor = variant.color;
                         variantContainer.setAttribute('data-productVariantId', variant.id);
                         variantContainer.setAttribute('data-productVariantImage', variant.image);

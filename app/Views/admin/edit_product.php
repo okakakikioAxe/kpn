@@ -201,10 +201,10 @@
                                 <div class="col-span-full">
                                     <div class="container w-full">
                                         <h1>Variant List</h1>
-                                        <div class="variants-container w-full " id="variants-list">
-                                        </div>
+                                        <div class="variants-container w-full " id="variants-list"></div>
                                         <input type="hidden" name="variant-order" id="variant-order">
-                                        <button class="add-variant" id="add-variant">+ Add New Variant</button>
+                                        <input type="hidden" name="deleted-variant" id="deleted-variant">
+                                        <div class="add-variant cursor-pointer" id="add-variant">+ Add New Variant</div>
                                     </div>
                                 </div>
                             </div>
@@ -212,6 +212,7 @@
                     </div>
                     <div id="action-button" class="mt-6 flex items-center justify-center gap-x-6">
                         <div class="w-full max-w-[800px] flex justify-end items-center gap-x-6">
+                            <button type="button" id="check-variants" class="cursor-pointer rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Print Variants</button>
                             <a href="/admin/product" id="cancel-button" type="button" class="text-sm/6 font-semibold text-gray-900 cursor-pointer ">Cancel</a>
                             <button type="submit" id="save-button" class="cursor-pointer rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
                         </div>
@@ -250,6 +251,9 @@
         const imageIcon = document.getElementById("image-icon");
         const fileUpload = document.getElementById("file-upload");
 
+        let variantOrder = document.getElementById('variant-order');
+        let variants = [];
+
         // Set canvas size
         canvas.width = maxSize;
         canvas.height = maxSize;
@@ -268,8 +272,6 @@
                 // delete all src and hide the preview
                 imagePreview.classList.add("hidden");
                 imagePreview.src = "";
-
-  
 
                     const reader = new FileReader();
                     reader.onload = function(e) {
@@ -302,6 +304,7 @@
         });
 
         document.getElementById('upload-form').addEventListener('submit', function(event) {
+            document.getElementById('variant-order').value = JSON.stringify(variants);
             document.getElementById('action-button').classList.add('hidden');
             event.preventDefault();
 
@@ -348,43 +351,43 @@
 
     <script>
         // Get all necessary elements
-const dropdownContainer = document.getElementById('dropdown-container');
-const dropdownInput = document.getElementById('dropdownInput');
-const dropdownText = document.getElementById('dropdownText');
-const dropdownContent = document.getElementById('dropdownContent');
-const dropdownItems = document.querySelectorAll('.dropdown-item');
-const selectedOptionInput = document.getElementById('selectedOption');
+        const dropdownContainer = document.getElementById('dropdown-container');
+        const dropdownInput = document.getElementById('dropdownInput');
+        const dropdownText = document.getElementById('dropdownText');
+        const dropdownContent = document.getElementById('dropdownContent');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        const selectedOptionInput = document.getElementById('selectedOption');
 
-// Toggle dropdown when clicking the input
-dropdownContainer.addEventListener('click', function() {
-   toggleDropdown();
-});
+        // Toggle dropdown when clicking the input
+        dropdownContainer.addEventListener('click', function() {
+        toggleDropdown();
+        });
 
-function toggleDropdown() {
-    console.log('clicked');
-    if(dropdownContent.classList.contains('hidden')){
-        dropdownContent.classList.replace('hidden','flex');
-    }
-    else{
-        dropdownContent.classList.replace('flex','hidden');
-    }
-}
+        function toggleDropdown() {
+            console.log('clicked');
+            if(dropdownContent.classList.contains('hidden')){
+                dropdownContent.classList.replace('hidden','flex');
+            }
+            else{
+                dropdownContent.classList.replace('flex','hidden');
+            }
+        }
 
-// Handle item selection
-dropdownItems.forEach(item => {
-  item.addEventListener('click', function() {
-    // Get the value and text from the clicked item
-    const value = this.getAttribute('data-value');
-    const text = this.textContent;
-    
-    // Update the display and hidden input
-    dropdownText.innerHTML = text;
-    selectedOptionInput.value = value;
-    
-    // Hide the dropdown
-    // dropdownContent.classList.replace('hidden','block');
-  });
-});
+        // Handle item selection
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Get the value and text from the clicked item
+                const value = this.getAttribute('data-value');
+                const text = this.textContent;
+                
+                // Update the display and hidden input
+                dropdownText.innerHTML = text;
+                selectedOptionInput.value = value;
+                
+                // Hide the dropdown
+                // dropdownContent.classList.replace('hidden','block');
+            });
+        });
 
     </script>
 
@@ -392,8 +395,7 @@ dropdownItems.forEach(item => {
         document.addEventListener('DOMContentLoaded', function() {
             const variantsList = document.getElementById('variants-list');
             const addVariantBtn = document.getElementById('add-variant');
-            const variantOrder = document.getElementById('variant-order');
-            let variants = [];
+            
             let draggedItem = null;
 
             // Load initial variants or show placeholder
@@ -402,13 +404,20 @@ dropdownItems.forEach(item => {
             }
 
             // Add new variant
+            document.getElementById('check-variants').addEventListener('click', function() {
+                document.getElementById('variant-order').value = JSON.stringify(variants);
+                console.log(document.getElementById('variant-order').value);
+                console.log(document.getElementById('deleted-variant').value);
+            });
+
+            // Add new variant
             addVariantBtn.addEventListener('click', function() {
                 addNewVariant();
                 removePlaceholder();
             });
 
             function addNewVariant(data = {}) {
-                const randomId = Date.now().toString();
+                const randomId = 'new-' + Math.random().toString(36).substr(2, 9);
                 const variant = {
                     id : data.id || randomId,
                     title: data.title || 'New Variant',
@@ -417,7 +426,7 @@ dropdownItems.forEach(item => {
                 };
 
                 variants.push(variant);
-                variantOrder.value = JSON.stringify(variants.map(v => v.id));
+                variantOrder.value = JSON.stringify(variants);
                 renderVariant(variant);
                 saveVariants();
             }
@@ -541,6 +550,13 @@ dropdownItems.forEach(item => {
 
             function deleteVariant(id) {
                 variants = variants.filter(v => v.id !== id);
+                // add id to deleted variant
+
+                if(!(id.startsWith('new-'))) {
+                    const deletedVariant = document.getElementById('deleted-variant');
+                    deletedVariant.value += id + ',';
+                }
+
                 const variantElement = document.getElementById(`variant-${id}`);
                 if (variantElement) {
                     variantElement.remove();
@@ -617,9 +633,9 @@ dropdownItems.forEach(item => {
             function fetchVariantData() {
                 localStorage.removeItem('variants')
                 removePlaceholder();
-                let variants = <?= json_encode($product['variant_list']) ?>;
-                if (variants.length > 0) {
-                    variants.forEach(variant => {
+                let productVariants = <?= json_encode($product['variant_list']) ?>;
+                if (productVariants.length > 0) {
+                    productVariants.forEach(variant => {
                         console.log(variant);
                         const variantData = {
                             id: variant['id'],
@@ -628,7 +644,7 @@ dropdownItems.forEach(item => {
                             image:  ('/galery/content/' + variant['image'])
                         };
                         variants.push(variantData);
-                        variantOrder.value = JSON.stringify(variants.map(v => v.id));
+                        variantOrder.value = JSON.stringify(variants);
                         renderVariant(variantData);
                         saveVariants();
                     });

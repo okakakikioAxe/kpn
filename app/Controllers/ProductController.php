@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\Product;
 use App\Models\ProductVariant;
+use App\Helpers\Base64ImageHelper;
 
 class ProductController extends BaseController
 {
@@ -182,65 +183,153 @@ class ProductController extends BaseController
 
     public function update($id): ResponseInterface
     {
-        date_default_timezone_set('Asia/Jakarta');
-        $validation = \Config\Services::validation();
+        // date_default_timezone_set('Asia/Jakarta');
+        // $validation = \Config\Services::validation();
 
-        $validation->setRules([
-            'title' => 'required|min_length[3]|max_length[255]',
-            'description' => 'required|min_length[3]',
-            'category' => 'required|in_list[hdpe,eva,xpe,toy]',
-        ]);
+        // $validation->setRules([
+        //     'title' => 'required|min_length[3]|max_length[255]',
+        //     'description' => 'required|min_length[3]',
+        //     'category' => 'required|in_list[hdpe,eva,xpe,toy]',
+        // ]);
 
-        if (!$validation->withRequest($this->request)->run()) {
-            session()->setFlashdata('successMessage',  json_encode($validation->getErrors()));
-            return redirect()->to('/admin/product');
-        }
+        // if (!$validation->withRequest($this->request)->run()) {
+        //     session()->setFlashdata('successMessage',  json_encode($validation->getErrors()));
+        //     return redirect()->to('/admin/product');
+        // }
 
-        $updatedData = [];
-        $updatedImage = [];
+        // $updatedData = [];
+        // $updatedImage = [];
 
-        $productModel = new Product();
-        $product = $productModel->find($id);
+        // $productModel = new Product();
+        // $product = $productModel->find($id);
 
-        if ($product) {
+        // if ($product) {
 
-            $file = $this->request->getFile('file-upload');
-            $thumbnailFile = $this->request->getPost('thumbnail');
+        //     $file = $this->request->getFile('file-upload');
+        //     $thumbnailFile = $this->request->getPost('thumbnail');
             $fileNamePrefix = date('Y-m-d-H-i-s') . '-product-';
+            $fileNameOnly =  $fileNamePrefix . str_replace(' ', '-', $this->request->getPost('title'));
             $fileName =  $fileNamePrefix . str_replace(' ', '-', $this->request->getPost('title')) . '.';
 
-            if ($file && $file->isValid() && !$file->hasMoved()) {
-                // delete product image and thumbnail
-                $filePath = FCPATH . 'galery/content/' . $product['image'];
-                $thumbnailPath = FCPATH . 'galery/thumbnail/' . $product['thumbnail'];
-                if(file_exists($filePath)){
-                    unlink($filePath);
-                }
-                if(file_exists($thumbnailPath)){
-                    unlink($thumbnailPath);
+        //     if ($file && $file->isValid() && !$file->hasMoved()) {
+        //         // delete product image and thumbnail
+        //         $filePath = FCPATH . 'galery/content/' . $product['image'];
+        //         $thumbnailPath = FCPATH . 'galery/thumbnail/' . $product['thumbnail'];
+        //         if(file_exists($filePath)){
+        //             unlink($filePath);
+        //         }
+        //         if(file_exists($thumbnailPath)){
+        //             unlink($thumbnailPath);
+        //         }
+
+        //         $newFileName = $fileName . $file->getExtension();
+        //         $newThumbnailName = $fileName . 'jpeg';
+        //         $file->move('galery/content', $newFileName);
+    
+        //         // Convert base64 thumbnail to file and store it
+        //         $this->saveThumbnail($thumbnailFile, $newThumbnailName);
+                
+        //         $updatedImage = [
+        //             'image' => $newFileName,
+        //             'thumbnail' => $newThumbnailName,
+        //         ];
+        //     }
+        //     $updatedData = ['title' => $this->request->getPost('title'), 'description' => $this->request->getPost('description'),'category' => $this->request->getPost('category')];
+        //     $updatedValue = array_merge($updatedData, $updatedImage); 
+        //     $productModel->update($id, $updatedValue);
+
+            
+        //     session()->setFlashdata('successMessage', 'Konten berhasil diupdate!');
+        //     return redirect()->to('/admin/product');
+        // } else{
+        //     return redirect()->back()->withInput()->with('errors', 'data tidak ditemukan');
+        // }
+        // update variants order
+        $variantOrder = json_decode($this->request->getPost('variant-order'), true);
+        // loop throught variant order and update each variant
+        foreach ($variantOrder as $index => $variant) {
+            $variantId = $variant['id'];
+            $newImageName = null;
+            $imageType = null;
+            if(Base64ImageHelper::isValidBase64Image($variant['image'])){
+                // If the base64 string contains the data URI scheme (e.g., data:image/jpeg;base64,), extract the base64 part
+                if (preg_match('/^data:image\/(\w+);base64,/', $variant['image'], $matches)) {
+                    // Get the image type (jpeg, png, etc.)
+                    $imageType = $matches[1];
+                    
+                    // Remove the data URI scheme part
+                    $base64Image = substr($variant['image'], strpos($variant['image'], ',') + 1);
+                } else {
+                    // Try to determine image type from base64 data
+                    $decodedData = base64_decode($variant['image']);
+                    $firstBytes = substr($decodedData, 0, 12);
+                    
+                    if (strpos($firstBytes, "\xFF\xD8\xFF") === 0) {
+                        $imageType = 'jpeg';
+                    } elseif (strpos($firstBytes, "\x89\x50\x4E\x47\x0D\x0A\x1A\x0A") === 0) {
+                        $imageType = 'png';
+                    } elseif (strpos($firstBytes, "GIF") === 0) {
+                        $imageType = 'gif';
+                    } elseif (strpos($firstBytes, "WEBP") !== false) {
+                        $imageType = 'webp';
+                    } else {
+                        $imageType = 'png'; // Default to png if can't determine type
+                    }
                 }
 
-                $newFileName = $fileName . $file->getExtension();
-                $newThumbnailName = $fileName . 'jpeg';
-                $file->move('galery/content', $newFileName);
-    
-                // Convert base64 thumbnail to file and store it
-                $this->saveThumbnail($thumbnailFile, $newThumbnailName);
-                
-                $updatedImage = [
-                    'image' => $newFileName,
-                    'thumbnail' => $newThumbnailName,
-                ];
+                // Save the image
+                $result = Base64ImageHelper::saveBase64Image(
+                    $variant['image'],
+                    'galery/content/',
+                    $variantName = "var-".$index."-".$fileNameOnly
+                );
+                $newImageName = "var-".$index."-".$fileNameOnly;
             }
-            $updatedData = ['title' => $this->request->getPost('title'), 'description' => $this->request->getPost('description'),'category' => $this->request->getPost('category')];
-            $updatedValue = array_merge($updatedData, $updatedImage); 
-            $productModel->update($id, $updatedValue);
-    
-            session()->setFlashdata('successMessage', 'Konten berhasil diupdate!');
-            return redirect()->to('/admin/product');
-        } else{
-            return redirect()->back()->withInput()->with('errors', 'data tidak ditemukan');
+            else{
+                $newImageName = null;
+
+            }
+
+            
+
+            if(str_starts_with($variant['id'], 'new')){
+                if ($result === false) {
+                    session()->setFlashdata('successMessage', 'Produk gagal diupdate!');
+                    return redirect()->to('/admin/product');
+                }
+                else{
+                     // store to database
+                    $data = [
+                        'product_id' => $id,
+                        'image' => $newImageName.'.'.$imageType,
+                        'title' => $this->request->getPost('titles')[$index],
+                        'color' => $this->request->getPost('colors')[$index],
+                        'order' => $index,
+                    ];
+                    $variantModel = new ProductVariant();
+                    $variantModel->insert($data);
+                }
+            }
+            else{
+                $variantModel = new ProductVariant();
+                $newImageData = [];
+                if($newImageName !== null){
+                    $dbVariant = $variantModel->find($variantId);
+                    // delete old image from storage
+                    $filePath = FCPATH . 'galery/content/' . $dbVariant['image'];
+                    if(file_exists($filePath)){
+                        unlink($filePath);
+                    }
+                    $newImageData = ['image' => $newImageName.'.'.$imageType];
+                }
+                $variantModel->update($variantId, ['order' => $index,'title' => $this->request->getPost('titles')[$index],
+                        'color' => $this->request->getPost('colors')[$index],]
+                        + $newImageData);
+            }
         }
+        session()->setFlashdata('successMessage', 'Konten berhasil diupdate!');
+        return redirect()->to('/admin/product');
+
     }
 
 
