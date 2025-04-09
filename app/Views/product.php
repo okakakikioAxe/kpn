@@ -64,32 +64,33 @@
       </div>
       <h2 class="flex align-center justify-center mt-[95px] sm:mt-[115px] md:mt-[150px] h2-title" data-lang-group="homepage_production_process" data-lang-key="title">Proses Produksi</h2>
       <div id="category-menu" class="grid gap-[10px] md:gap-[15px] sm:gap-3 grid-cols-2 sm:grid-cols-4 max-w-[600px] mt-[80px] md:mt-[90px] xl:mt-[160px]">
-        <button class="flex bg-[#B22222] border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
+        <button data-category="hdpe" class="flex category-button bg-[#B22222] border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
           HDPE
         </button>
-        <button class="flex bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
+        <button data-category="toy" class="flex category-button bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
           MAINAN
         </button>
-        <button class="flex bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
+        <button data-category="xpe" class="flex category-button bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
           XPE
         </button>
-        <button class="flex bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
+        <button data-category="eva" class="flex category-button bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
           EVA
         </button>
       </div>
       <!-- Horizontal Divider - Produk unggulan kami -->
       <div class="border-[1px] border-[#B22222] w-full max-w-[1600px] mt-[30px] sm:mt-[20px] mb-[70px]"></div>
       <div id="grid-container" class="relative h-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-[15px] xl:gap-[20px] 2xl:gap-[25px]">
-        <?php for ($i = 0; $i < 10; $i++): ?>
-          <div id="product-<?= $i ?>" class="product-cards w-full relative cursor-pointer aspect-square bg-white hover:scale-105 transform duration-200 ease-in-out rounded-[14px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.10)]">
+        <?php foreach($products as $product): ?>
+          <div id="product-<?= $product['id'] ?>" data-product='<?= json_encode($product) ?>' class="product-cards thumbnail-container w-full relative cursor-pointer aspect-square bg-white hover:scale-105 transform duration-200 ease-in-out rounded-[14px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.10)]">
             <div class="w-full aspect-square rounded-[14px] p-[12px] bg-gradient-to-tr from-[#F2F8FF] to-[#FFFAFA]">
-              <img class="relative w-full h-full object-contain rounded-[14px]" src="/images/hero_compressed/kubus_apung.webp">
+              <img loading="lazy" class="relative w-full h-full object-contain rounded-[14px]" src="/galery/content/<?= $product['image'] ?>">
             </div>
             <div class="flex justify-center items-center px-[12px] rounded-b-[14px] bg-white w-full h-[39px]">
-              <p class="font-trebuchet text-center font-bold text-[16px] text-[#3E3C3C] overflow-ellipsis line-clamp-1">Kubus Apung-<?= $i ?></p>
+              <p class="font-trebuchet text-center font-bold text-[16px] text-[#3E3C3C] overflow-ellipsis line-clamp-1"><?= $product['title'] ?></p>
+              
             </div>
           </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
       </div>
       <div id="product-detail" class="w-full max-w-[1600px] bg-[#f7faff] h-auto rounded-xl hidden opacity-0 scale-95 transform transition-all duration-300 ease-in-out">
         <button id="closeModal" class=" absolute z-15 top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
@@ -98,37 +99,35 @@
         <div class="block md:hidden p-4">
           <div class="flex mt-10 mb-6 h-full max-h-[300px] w-full justify-center items-center ">
             <div class="w-full aspect-square grow">
-              <img class="relative w-full h-full object-contain rounded-[14px]" src="/images/hero_compressed/kubus_apung.webp">
+              <img class="product-detail-image relative w-full h-full object-contain rounded-[14px]" src="">
             </div>
           </div>
-          <h3 id="title" class="mb-6 text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold">Kubus Apung HDPE</h3>
-          <div class="flex  w-full justify-start items-start">
-            <div class="w-full ">
-              <div class="flex mb-4">
+          <h3 class="product-detail-title mb-6 text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
+          <div class=" flex  w-full justify-start items-start">
+            <div class="product-detail-variant-container w-full ">
+              <div  class="flex mb-4">
                 <p class=" mr-4 text-stone-500 text-[18px] font-[500]">Varian :</p>
-                <p class=" text-stone-800 text-[18px] font-humanist-bold">Biru </p>
+                <p class="product-detail-variant-title text-stone-800 text-[18px] font-humanist-bold">-</p>
               </div>
-              <div class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;">
-                <?php for ($i = 0; $i < 13; $i++): ?>
-                  <div class="max-w-[35px] h-auto aspect-square rounded-full bg-red-200"></div>
-                <?php endfor; ?>
+              <div id="variant-select-container" class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
+               
               </div>
             </div>
           </div>
-          <p class="mt-8 mb-4 text-stone-800 text-[18px] font-humanist-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada tristique maximus. Maecenas nec interdum turpis. In hac habitasse platea dictumst. Donec aliquam eu libero vitae eleifend. Integer hendrerit, libero congue tincidunt blandit, urna tortor ullamcorper nunc, a bibendum ante lorem at nibh. Aliquam a vulputate risus, quis faucibus elit. Nunc rhoncus, mi id ullamcorper faucibus, augue ipsum posuere turpis, at venenatis erat dui eu nisi. Ut at metus luctus, consectetur dui consectetur, tincidunt mauris. Fusce dapibus mollis leo, vel. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos libero architecto repellendus! Blanditiis dolor neque iste dicta necessitatibus culpa magnam maxime, dolores, sit consectetur voluptates laboriosam ex hic aliquid.</p>
+          <p class="product-detail-description mt-8 mb-4 text-stone-800 text-[18px] font-humanist-normal"></p>
         </div>
         <div class="hidden md:block lg:hidden">
           <div class="flex">
             <div class="flex w-3/4 h-full justify-center items-center p-8">
               <div class="w-full aspect-square grow">
-                <img class="relative w-full h-full object-contain rounded-[14px]" src="/images/hero_compressed/kubus_apung.webp">
+                <img loading="lazy" class="product-detail-image relative w-full h-full object-contain rounded-[14px]" src="">
               </div>
             </div>
-            <div class="flex flex-col w-1/4 justify-start items-start p-8 ">
-              <div class="w-full ">
+            <div class=" flex flex-col w-1/4 justify-start items-start p-8 ">
+              <div class="product-detail-variant-container w-full ">
                 <div class="flex flex-col mb-6">
                   <p class=" text-stone-500 text-[18px] font-[500]">Varian :</p>
-                  <p class=" text-stone-800 text-[18px] font-humanist-bold">Biru </p>
+                  <p class="product-detail-variant-title text-stone-800 text-[18px] font-humanist-bold">-</p>
                 </div>
                 <div class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;">
                   <?php for ($i = 0; $i < 13; $i++): ?>
@@ -139,41 +138,40 @@
             </div>
           </div>
           <div class="w-full p-8">
-            <h3 id="title" class="mb-6 text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold">Kubus Apung HDPE</h3>
-            <p class="mt-7 text-stone-800 text-[18px] font-humanist-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada tristique maximus. Maecenas nec interdum turpis. In hac habitasse platea dictumst. Donec aliquam eu libero vitae eleifend. Integer hendrerit, libero congue tincidunt blandit, urna tortor ullamcorper nunc, a bibendum ante lorem at nibh. Aliquam a vulputate risus, quis faucibus elit. Nunc rhoncus, mi id ullamcorper faucibus, augue ipsum posuere turpis, at venenatis erat dui eu nisi. Ut at metus luctus, consectetur dui consectetur, tincidunt mauris. Fusce dapibus mollis leo, vel. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos libero architecto repellendus! Blanditiis dolor neque iste dicta necessitatibus culpa magnam maxime, dolores, sit consectetur voluptates laboriosam ex hic aliquid.</p>
+            <h3 class="product-detail-title mb-6 text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
+            <p class="product-detail-description mt-7 text-stone-800 text-[18px] font-humanist-normal"></p>
           </div>
         </div>
         <div class="hidden lg:flex justify-center items-start">
           <div class="flex w-1/2 h-full justify-center flex-col items-center p-10">
             <div class="w-full aspect-square grow">
-              <img class="relative w-full h-full object-contain rounded-[14px]" src="/images/hero_compressed/kubus_apung.webp">
+              <img loading="lazy" class="product-detail-image relative w-full h-full object-contain rounded-[14px]" src="">
             </div>
-            <div class="xl:hidden w-full flex-none">
-              <div class="flex">
-                <p class="mb-3 mr-[4px] text-stone-500 text-[18px] font-[500]">Varian :</p>
-                <p class="mb-3 text-stone-800 text-[18px] font-humanist-bold">Biru </p>
-              </div>
-              <div class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;">
-                <?php for ($i = 0; $i < 20; $i++): ?>
-                  <div class="max-w-[35px] h-auto aspect-square rounded-full bg-red-200"></div>
-                <?php endfor; ?>
+            <div class=" xl:hidden w-full flex-none">
+              <div class="product-detail-variant-container">
+                <div class="flex">
+                  <p class="mb-3 mr-[4px] text-stone-500 text-[18px] font-[500]">Varian :</p>
+                  <p class="product-detail-variant-title mb-3 text-stone-800 text-[18px] font-humanist-bold">-</p>
+                </div>
+                <div class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
+                  
+                </div>
               </div>
             </div>
           </div>
           <div class="flex flex-col w-1/2 justify-start items-start p-10">
-            <h3 id="title" class="mb-6 text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold">Kubus Apung HDPE</h3>
-            <div class="hidden xl:block w-full">
-              <div class="flex">
-                <p class="mb-3 mr-[4px] text-stone-500 text-[18px] font-[500]">Varian :</p>
-                <p class="mb-3 text-stone-800 text-[18px] font-humanist-bold">Biru </p>
-              </div>
-              <div class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;">
-                <?php for ($i = 0; $i < 20; $i++): ?>
-                  <div class="max-w-[35px] h-auto aspect-square rounded-full bg-red-200"></div>
-                <?php endfor; ?>
+            <h3 class="product-detail-title text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
+            <div id="product-detail-category" class="mt-2 mb-4 px-2 border-2 rounded-4xl font-humanist-normal text-[14px] tracking-wider font-bold text-white"></div>
+            <div class=" hidden xl:block w-full">
+              <div class="product-detail-variant-container mb-5">
+                <div class="flex">
+                  <p class="mb-1 mr-[4px] text-stone-500 text-[18px] font-[500]">Varian :</p>
+                  <p class="product-detail-variant-title mb-1 text-stone-800 text-[18px] font-humanist-bold">-</p>
+                </div>
+                <div class="variant-select-container w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;"></div>
               </div>
             </div>
-            <p class="mt-7 text-stone-800 text-[18px] font-humanist-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada tristique maximus. Maecenas nec interdum turpis. In hac habitasse platea dictumst. Donec aliquam eu libero vitae eleifend. Integer hendrerit, libero congue tincidunt blandit, urna tortor ullamcorper nunc, a bibendum ante lorem at nibh. Aliquam a vulputate risus, quis faucibus elit. Nunc rhoncus, mi id ullamcorper faucibus, augue ipsum posuere turpis, at venenatis erat dui eu nisi. Ut at metus luctus, consectetur dui consectetur, tincidunt mauris. Fusce dapibus mollis leo, vel. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos libero architecto repellendus! Blanditiis dolor neque iste dicta necessitatibus culpa magnam maxime, dolores, sit consectetur voluptates laboriosam ex hic aliquid.</p>
+            <p class="product-detail-description text-stone-800 text-[18px] font-humanist-normal"></p>
           </div>
         </div>
       </div>
@@ -189,14 +187,8 @@
   let productTitle = document.getElementById("title");
   const closeModal = document.getElementById("closeModal");
 
-  document.querySelectorAll('.product-cards').forEach(element => {
-    element.addEventListener('click', function(e) {
-      // Log the ID of the clicked element or its closest parent with an ID
-      const id = this.id;
-
-
-      productTitle.innerHTML = id;
-      gridContainer.classList.add('invisible');
+   function openModal(){
+    gridContainer.classList.add('invisible');
 
       setTimeout(() => {
         productDetail.classList.replace('hidden', 'flex');
@@ -209,8 +201,7 @@
           p.classList.add('hidden');
         });
       }, 300);
-    });
-  });
+  }
 
   closeModal.addEventListener("click", () => {
     productDetail.classList.replace('scale-100', 'scale-95');
@@ -223,5 +214,151 @@
       productDetail.classList.add('hidden');
     }, 300);
   });
+
+  document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+    thumbnailContainer.addEventListener("click", async (e) => {
+      // console.log(thumbnailContainer.firstElementChild.dataset.product);
+      let data = JSON.parse(thumbnailContainer.dataset.product);
+
+      document.querySelectorAll(".product-detail-title").forEach(productTitle => {
+        productTitle.innerHTML = data.title;
+      });
+      document.querySelectorAll(".product-detail-image").forEach(productImage=> {
+        productImage.src = '/galery/content/' + data.image;
+      });
+      document.querySelectorAll(".product-detail-description").forEach(productDescription=> {
+        productDescription.innerHTML = data.description;
+      });
+
+      let variants = data.variant_list;
+      document.getElementById('product-detail-category').classList.remove('bg-[#6eb43c]','border-[#8acf59]', 'bg-[#5170FF]', 'border-[#7d94fa]', 'bg-[#B75FE7]', 'border-[#cc81f5]', 'bg-[#39bbc7]', 'border-[#43D9E7]');
+
+      document.getElementById('product-detail-category').innerHTML = data.category == 'toy' ? 'MAINAN' : ('' + data.category).toUpperCase();
+      switch (data.category) {
+          case 'toy':
+              document.getElementById('product-detail-category').classList.add('bg-[#6eb43c]', 'border-[#8acf59]');
+              break;
+          case 'hdpe':
+              document.getElementById('product-detail-category').classList.add('bg-[#5170FF]', 'border-[#7d94fa]');
+              break;
+          case 'eva':
+              document.getElementById('product-detail-category').classList.add('bg-[#B75FE7]', 'border-[#cc81f5]');
+              break;
+          case 'xpe':
+              document.getElementById('product-detail-category').classList.add('bg-[#39bbc7]', 'border-[#43D9E7]');
+              break;
+      }
+
+      if(variants.length > 0){
+          document.querySelectorAll(".product-detail-variant-container").forEach(productVariantContainer=> {
+            productVariantContainer.classList.remove('hidden');
+          });
+          for (let i = 0; i < variants.length; i++) {
+              let variant = variants[i];
+              let variantContainer = document.createElement('div');
+              variantContainer.classList.add('variant-list','max-w-[35px]', 'h-auto', 'aspect-square', 'rounded-full', 'bg-red-200', 'border-[#f5f5f5]', 'border-[3px]', 'cursor-pointer', 'hover:scale-105', 'transition-transform', 'duration-150', 'ease-in-out');
+              variantContainer.style.backgroundColor = variant.color;
+              variantContainer.setAttribute('data-productVariantId', variant.id);
+              variantContainer.setAttribute('data-productVariantImage', variant.image);
+              variantContainer.setAttribute('data-productVariantTitle', variant.title);
+              variantContainer.setAttribute('data-productVariantColor', variant.color);
+              document.querySelectorAll(".variant-select-container").forEach(variantSelectContainer=> {
+                variantSelectContainer.appendChild(variantContainer);
+              });
+              
+          }
+
+          document.querySelectorAll(".variant-list").forEach(variantList => {
+              variantList.addEventListener("click", async (e) => {
+                  let variantTitle = variantList.dataset.productvarianttitle;
+                  let variantImage = variantList.dataset.productvariantimage;
+                  console.log(variantTitle);
+
+                  document.querySelectorAll(".product-detail-variant-title").forEach(productVariantTitle => {
+                      productVariantTitle.innerHTML = variantTitle;
+                  });
+                  document.querySelectorAll(".product-detail-image").forEach(productImage=> {
+                      productImage.src = '/galery/content/' + variantImage;
+                  });
+              });
+          });
+      }else{
+        document.querySelectorAll(".product-detail-variant-container").forEach(productVariantContainer=> {
+          productVariantContainer.classList.add('hidden');
+        });
+      }
+
+      openModal();
+    });
+  })
+
+  document.querySelectorAll(".category-button").forEach(categoryButton => {
+    categoryButton.addEventListener("click", async (e) => {
+      productDetail.classList.replace('scale-100', 'scale-95');
+      productDetail.classList.replace('opacity-100', 'opacity-0');
+      setTimeout(() => {
+        gridContainer.classList.remove('invisible');
+        productDetail.classList.add('hidden');
+      }, 300);
+      
+      let category = e.target.dataset.category;
+      document.querySelectorAll(".category-button").forEach(button => {
+        button.classList.remove('bg-[#B22222]', 'text-white');
+        button.classList.add('bg-white', 'text-[#B22222]');
+      })
+      e.target.classList.remove('bg-white', 'text-[#B22222]');
+      e.target.classList.add('bg-[#B22222]', 'text-white');
+
+      switch (category){
+        case 'hdpe' : 
+            document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                let data = JSON.parse(thumbnailContainer.dataset.product);
+                if(data.category == 'hdpe'){
+                    thumbnailContainer.classList.remove('hidden');
+                }else{
+                    thumbnailContainer.classList.add('hidden');
+                }
+            })
+            break;
+        case 'xpe' : 
+            document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                let data = JSON.parse(thumbnailContainer.dataset.product);
+                if(data.category == 'xpe'){
+                    thumbnailContainer.classList.remove('hidden');
+                }else{
+                    thumbnailContainer.classList.add('hidden');
+                }
+            })
+            break;
+        case 'eva' : 
+            document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                let data = JSON.parse(thumbnailContainer.dataset.product);
+                if(data.category == 'eva'){
+                    thumbnailContainer.classList.remove('hidden');
+                }else{
+                    thumbnailContainer.classList.add('hidden');
+                }
+            })
+            break;
+        case 'toy' : 
+            document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                let data = JSON.parse(thumbnailContainer.dataset.product);
+                if(data.category == 'toy'){
+                    thumbnailContainer.classList.remove('hidden');
+                }else{
+                    thumbnailContainer.classList.add('hidden');
+                }
+            })
+            break;
+        default:
+            document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                thumbnailContainer.classList.remove('hidden');
+            })
+            break;
+      }
+    }) 
+  })
+
+
 </script>
 <?= $this->endSection() ?>

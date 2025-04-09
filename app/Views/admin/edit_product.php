@@ -175,7 +175,7 @@
                                         <div id="dropdown-container" class="cursor-pointer flex h-9 w-full items-center justify-between rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                             <div class="custom-dropdown relative w-full h-9 flex justify-start items-center px-4">
                                                 <div id="dropdownInput" class="dropdown-input   w-full items-center flex h-9 justify-between ">
-                                                    <p id="dropdownText" class=" text-base text-gray-900  focus:outline-none font-trebuchet text-[16px] font-bold"  placeholder="Pilih kategori"><?= strtoupper($product['category']) ?></p>
+                                                    <p id="dropdownText" class=" text-base text-gray-900  focus:outline-none font-trebuchet text-[16px] font-bold"  placeholder="Pilih kategori"><?= strtoupper($product['category'] == 'toy' ? 'MAINAN' : $product['category']) ?></p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="22" height="22"><path d="M6.414,9H17.586a1,1,0,0,1,.707,1.707l-5.586,5.586a1,1,0,0,1-1.414,0L5.707,10.707A1,1,0,0,1,6.414,9Z"/></svg>
                                                 </div>
                                                 <div class="dropdown-content hidden absolute flex-col gap-1 bg-white w-full top-9 left-0 px-4 py-2 outline-1 outline-gray-300" id="dropdownContent">
@@ -203,7 +203,7 @@
                                         <h1>Variant List</h1>
                                         <div class="variants-container w-full " id="variants-list"></div>
                                         <input type="hidden" name="variant-order" id="variant-order">
-                                        <input type="hidden" name="deleted-variant" id="deleted-variant">
+                                        <input type="hidden" name="deleted-variants" id="deleted-variant">
                                         <div class="add-variant cursor-pointer" id="add-variant">+ Add New Variant</div>
                                     </div>
                                 </div>
@@ -397,6 +397,7 @@
             const addVariantBtn = document.getElementById('add-variant');
             
             let draggedItem = null;
+            let deletedVariants = [];
 
             // Load initial variants or show placeholder
             if (variants.length === 0) {
@@ -553,8 +554,9 @@
                 // add id to deleted variant
 
                 if(!(id.startsWith('new-'))) {
+                    deletedVariants.push(id);
                     const deletedVariant = document.getElementById('deleted-variant');
-                    deletedVariant.value += id + ',';
+                    deletedVariant.value = deletedVariants;
                 }
 
                 const variantElement = document.getElementById(`variant-${id}`);

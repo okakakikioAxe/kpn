@@ -121,10 +121,11 @@
                                     </div>
                                 </div>
                                 <h3 id="product-detail-title" class=" text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
+                                <div id="product-detail-category" class="mt-1 px-2 py-1 border-2 rounded-4xl font-humanist-normal text-[14px] tracking-wider font-bold text-white"></div>
                                 <div id="product-detail-variant-container" class="w-full mt-6">
                                     <div class="flex">
-                                        <p class="mb-3 mr-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
-                                        <p id="product-detail-variant-title" class="mb-3 text-stone-800 text-[16px] font-humanist-normal font-bold">-</p>
+                                        <p class="mr-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
+                                        <p id="product-detail-variant-title" class="mb-1 text-stone-800 text-[16px] font-humanist-normal font-bold">-</p>
                                     </div>
                                     <div id="variant-select-container" class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
                                     </div>
@@ -267,6 +268,24 @@
                 document.getElementById('product-detail-description').innerHTML = data.description;
 
                 let variants = data.variant_list;
+                document.getElementById('product-detail-category').classList.remove('bg-[#6eb43c]','border-[#8acf59]', 'bg-[#5170FF]', 'border-[#7d94fa]', 'bg-[#B75FE7]', 'border-[#cc81f5]', 'bg-[#39bbc7]', 'border-[#43D9E7]');
+          
+                document.getElementById('product-detail-category').innerHTML = data.category == 'toy' ? 'MAINAN' : ('' + data.category).toUpperCase();
+                switch (data.category) {
+                    case 'toy':
+                        document.getElementById('product-detail-category').classList.add('bg-[#6eb43c]', 'border-[#8acf59]');
+                        break;
+                    case 'hdpe':
+                        document.getElementById('product-detail-category').classList.add('bg-[#5170FF]', 'border-[#7d94fa]');
+                        break;
+                    case 'eva':
+                        document.getElementById('product-detail-category').classList.add('bg-[#B75FE7]', 'border-[#cc81f5]');
+                        break;
+                    case 'xpe':
+                        document.getElementById('product-detail-category').classList.add('bg-[#39bbc7]', 'border-[#43D9E7]');
+                        break;
+                }
+
                 if(variants.length > 0){
                     document.getElementById('product-detail-variant-container').classList.remove('hidden');
                     for (let i = 0; i < variants.length; i++) {
@@ -304,38 +323,6 @@
             });
         });
 
-        // Close Modal
-        // closeModal.addEventListener("click", () => {
-        //     modal.classList.replace("opacity-100", "opacity-0");
-        //     modalContent.classList.replace("scale-100", "scale-95");
-        //     modal.classList.replace(
-        //         "backdrop-blur-sm",
-        //         "backdrop-blur-0",
-        //     );
-        //     setTimeout(() => {
-        //         modalImage.classList.add("hidden");
-        //         modalVideo.classList.add("hidden");
-        //         modal.classList.replace("flex", "hidden");
-        //     }, 300);
-        // });
-
-        // // Close when clicking outside modal
-        // modal.addEventListener("click", (e) => {
-        //     if (e.target === modal) {
-        //         modal.classList.replace("opacity-100", "opacity-0");
-        //         modalContent.classList.replace("scale-100", "scale-95");
-        //         modal.classList.replace(
-        //             "backdrop-blur-sm",
-        //             "backdrop-blur-0",
-        //         );
-        //         setTimeout(() => {
-        //             modal.classList.replace("flex", "hidden");
-        //             modalImage.classList.add("hidden");
-        //             modalVideo.classList.add("hidden");
-        //         }, 300);
-        //     }
-        // });
-
         document.getElementById('dropdownButton1').addEventListener('click', function() {
             if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
                 document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
@@ -358,21 +345,52 @@
         function filter(category) {
             switch (category){
                 case 'hdpe' : 
-                    console.log('hdpe');
+                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                        if(data.category == 'hdpe'){
+                            thumbnailContainer.classList.remove('hidden');
+                        }else{
+                            thumbnailContainer.classList.add('hidden');
+                        }
+                    })
                     break;
                 case 'xpe' : 
-                    console.log('xpe');
+                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                        if(data.category == 'xpe'){
+                            thumbnailContainer.classList.remove('hidden');
+                        }else{
+                            thumbnailContainer.classList.add('hidden');
+                        }
+                    })
                     break;
                 case 'eva' : 
-                    console.log('eva');
+                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                        if(data.category == 'eva'){
+                            thumbnailContainer.classList.remove('hidden');
+                        }else{
+                            thumbnailContainer.classList.add('hidden');
+                        }
+                    })
                     break;
                 case 'toy' : 
-                    console.log('toy');
+                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                        if(data.category == 'toy'){
+                            thumbnailContainer.classList.remove('hidden');
+                        }else{
+                            thumbnailContainer.classList.add('hidden');
+                        }
+                    })
                     break;
                 default:
-                    console.log('all');
+                document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                        thumbnailContainer.classList.remove('hidden');
+                    })
                     break;
             }
+            document.getElementById('dropdownButton1').click();
         }
         
     </script>
