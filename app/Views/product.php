@@ -92,30 +92,36 @@
           </div>
         <?php endforeach; ?>
       </div>
-      <div id="product-detail" class="w-full max-w-[1600px] bg-[#f7faff] h-auto rounded-xl hidden opacity-0 scale-95 transform transition-all duration-300 ease-in-out">
+
+
+      <div id="product-detail" class="w-full max-w-[1600px] bg-gradient-to-tr from-[#F2F8FF] to-[#FFFAFA] h-auto rounded-xl hidden opacity-0 scale-95 transform transition-all duration-300 ease-in-out">
         <button id="closeModal" class=" absolute z-15 top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
           ✖
         </button>
+        <!-- phone : default - md -->
         <div class="block md:hidden p-4">
-          <div class="flex mt-10 mb-6 h-full max-h-[300px] w-full justify-center items-center ">
-            <div class="w-full aspect-square grow">
-              <img class="product-detail-image relative w-full h-full object-contain rounded-[14px]" src="">
+          <div class="flex mt-10 mb-6 w-full justify-center items-center ">
+              <img class="product-detail-image aspect-square relative w-full h-full object-cover rounded-[14px]" src="">
+          </div>
+          <h3 class="product-detail-title text-stone-800 text-[20px] font-trebuchet leading-[135%] font-bold"></h3>
+          <div class="flex bg-orange justify-start">
+            <div class="product-detail-category mt-1 px-2 border-2 rounded-4xl font-humanist-normal text-[14px] tracking-wider font-bold text-white"></div>
+          </div>
+          <div class="product-detail-variant-container flex  w-full justify-start items-start mt-4 mb-4">
+            <div class=" w-full ">
+              <div  class="flex">
+                <p class=" mr-2 text-stone-500 text-[14px] font-[500]">Varian :</p>
+                <p class="product-detail-variant-title text-stone-800 text-[14px] font-humanist-bold">-</p>
+              </div>
+              <div id="variant-select-container-1" class="variant-select-container w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
+              </div>
             </div>
           </div>
-          <h3 class="product-detail-title mb-6 text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
-          <div class=" flex  w-full justify-start items-start">
-            <div class="product-detail-variant-container w-full ">
-              <div  class="flex mb-4">
-                <p class=" mr-4 text-stone-500 text-[18px] font-[500]">Varian :</p>
-                <p class="product-detail-variant-title text-stone-800 text-[18px] font-humanist-bold">-</p>
-              </div>
-              <div id="variant-select-container" class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
-               
-              </div>
-            </div>
-          </div>
-          <p class="product-detail-description mt-8 mb-4 text-stone-800 text-[18px] font-humanist-normal"></p>
+          <p class="product-detail-description mt-4 mb-4 text-stone-800 text-[18px] font-humanist-normal"></p>
         </div>
+        <!-- ================================ -->
+
+        <!-- tablet : md - lg -->
         <div class="hidden md:block lg:hidden">
           <div class="flex">
             <div class="flex w-3/4 h-full justify-center items-center p-8">
@@ -123,57 +129,65 @@
                 <img loading="lazy" class="product-detail-image relative w-full h-full object-contain rounded-[14px]" src="">
               </div>
             </div>
-            <div class=" flex flex-col w-1/4 justify-start items-start p-8 ">
+            <div class=" flex flex-col w-1/4 justify-start items-start py-8">
               <div class="product-detail-variant-container w-full ">
-                <div class="flex flex-col mb-6">
-                  <p class=" text-stone-500 text-[18px] font-[500]">Varian :</p>
-                  <p class="product-detail-variant-title text-stone-800 text-[18px] font-humanist-bold">-</p>
+                <div class="flex flex-col mb-3">
+                  <p class="ml-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
+                  <p class="product-detail-variant-title ml-[4px] text-stone-800 text-[16px] font-humanist-bold">-</p>
                 </div>
-                <div class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;">
-                  <?php for ($i = 0; $i < 13; $i++): ?>
-                    <div class="max-w-[35px] h-auto aspect-square rounded-full bg-red-200"></div>
-                  <?php endfor; ?>
+                <div id="variant-select-container-2" class="variant-select-container w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
                 </div>
               </div>
             </div>
           </div>
-          <div class="w-full p-8">
-            <h3 class="product-detail-title mb-6 text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
-            <p class="product-detail-description mt-7 text-stone-800 text-[18px] font-humanist-normal"></p>
+          <div class="w-full px-8 pb-8">
+            <h3 class="product-detail-title text-stone-800 text-[22px] font-trebuchet leading-[135%] font-bold"></h3>
+            <div class="flex justify-start">
+              <div class="product-detail-category mt-1 px-2 border-2 rounded-4xl font-humanist-normal text-[14px] tracking-wider font-bold text-white"></div>
+            </div>
+            <p class="product-detail-description mt-5 text-stone-800 text-[18px] font-humanist-normal"></p>
           </div>
         </div>
+        <!-- ========================= -->
+
+        <!-- desktop : lg - xl -->
         <div class="hidden lg:flex justify-center items-start">
-          <div class="flex w-1/2 h-full justify-center flex-col items-center p-10">
+          <div class="flex w-1/2 h-full justify-center flex-col items-center p-8">
             <div class="w-full aspect-square grow">
               <img loading="lazy" class="product-detail-image relative w-full h-full object-contain rounded-[14px]" src="">
             </div>
-            <div class=" xl:hidden w-full flex-none">
+            <!-- lg screen  -->
+            <div class=" xl:hidden w-full flex-none mt-5">
               <div class="product-detail-variant-container">
                 <div class="flex">
-                  <p class="mb-3 mr-[4px] text-stone-500 text-[18px] font-[500]">Varian :</p>
-                  <p class="product-detail-variant-title mb-3 text-stone-800 text-[18px] font-humanist-bold">-</p>
+                  <p class="mb-2 ml-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
+                  <p class="product-detail-variant-title ml-[4px] mb-2 text-stone-800 text-[16px] font-humanist-bold">-</p>
                 </div>
-                <div class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
-                  
-                </div>
+                <div id="variant-select-container-3" class="variant-select-container w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;"></div>
               </div>
             </div>
+            <!-- ==================== -->
           </div>
-          <div class="flex flex-col w-1/2 justify-start items-start p-10">
+          <div class="flex flex-col w-1/2 justify-start items-start p-8">
             <h3 class="product-detail-title text-stone-800 text-[26px] font-trebuchet leading-[135%] font-bold"></h3>
-            <div id="product-detail-category" class="mt-2 mb-4 px-2 border-2 rounded-4xl font-humanist-normal text-[14px] tracking-wider font-bold text-white"></div>
+            <div class="product-detail-category mt-1 px-2 border-2 rounded-4xl font-humanist-normal text-[14px] tracking-wider font-bold text-white"></div>
             <div class=" hidden xl:block w-full">
-              <div class="product-detail-variant-container mb-5">
+
+              <!-- 2xl screen  -->
+              <div class="product-detail-variant-container mt-6">
                 <div class="flex">
-                  <p class="mb-1 mr-[4px] text-stone-500 text-[18px] font-[500]">Varian :</p>
-                  <p class="product-detail-variant-title mb-1 text-stone-800 text-[18px] font-humanist-bold">-</p>
+                  <p class="mb-1 ml-[4px] mr-[4px] text-stone-500 text-[16px] font-[500]">Varian :</p>
+                  <p class="product-detail-variant-title mb-1 text-stone-800 text-[16px] font-humanist-bold">-</p>
                 </div>
-                <div class="variant-select-container w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 4px;"></div>
+                <div id="variant-select-container-4" class="variant-select-container w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;"></div>
               </div>
+              <!-- ===================== -->
+
             </div>
-            <p class="product-detail-description text-stone-800 text-[18px] font-humanist-normal"></p>
+            <p class="product-detail-description text-stone-800 text-[18px] font-humanist-normal mt-6"></p>
           </div>
         </div>
+        <!-- ======================= -->
       </div>
     </div>
   </div>
@@ -187,9 +201,13 @@
   let productTitle = document.getElementById("title");
   const closeModal = document.getElementById("closeModal");
 
+  let selectedCategory = 'hdpe';
+
+
+  window.addEventListener('resize', closeTheModal);
+
    function openModal(){
     gridContainer.classList.add('invisible');
-
       setTimeout(() => {
         productDetail.classList.replace('hidden', 'flex');
 
@@ -203,14 +221,29 @@
       }, 300);
   }
 
+  function closeTheModal(){
+    closeModal.click();
+  }
+
   closeModal.addEventListener("click", () => {
     productDetail.classList.replace('scale-100', 'scale-95');
     productDetail.classList.replace('opacity-100', 'opacity-0');
     setTimeout(() => {
       gridContainer.classList.remove('invisible');
-      document.querySelectorAll('.product-cards').forEach(p => {
-        p.classList.remove('hidden');
-      });
+      document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+          let data = JSON.parse(thumbnailContainer.dataset.product);
+          if(data.category == selectedCategory){
+              thumbnailContainer.classList.remove('hidden');
+          }else{
+              thumbnailContainer.classList.add('hidden');
+          }
+      })
+      document.querySelectorAll(".variant-select-container").forEach(variantSelectContainer => {
+        variantSelectContainer.innerHTML = '';
+      })
+      document.querySelectorAll(".product-detail-variant-title").forEach(variantTitle => {
+        variantTitle.innerHTML = '-';
+      })
       productDetail.classList.add('hidden');
     }, 300);
   });
@@ -229,23 +262,34 @@
       document.querySelectorAll(".product-detail-description").forEach(productDescription=> {
         productDescription.innerHTML = data.description;
       });
-
+      
       let variants = data.variant_list;
-      document.getElementById('product-detail-category').classList.remove('bg-[#6eb43c]','border-[#8acf59]', 'bg-[#5170FF]', 'border-[#7d94fa]', 'bg-[#B75FE7]', 'border-[#cc81f5]', 'bg-[#39bbc7]', 'border-[#43D9E7]');
 
-      document.getElementById('product-detail-category').innerHTML = data.category == 'toy' ? 'MAINAN' : ('' + data.category).toUpperCase();
+      document.querySelectorAll(".product-detail-category").forEach(productCategory=> {
+        productCategory.classList.remove('bg-[#6eb43c]','border-[#8acf59]', 'bg-[#5170FF]', 'border-[#7d94fa]', 'bg-[#B75FE7]', 'border-[#cc81f5]', 'bg-[#39bbc7]', 'border-[#43D9E7]');
+        productCategory.innerHTML = data.category == 'toy' ? 'MAINAN' : ('' + data.category).toUpperCase();
+      });
+      
       switch (data.category) {
-          case 'toy':
-              document.getElementById('product-detail-category').classList.add('bg-[#6eb43c]', 'border-[#8acf59]');
+        case 'toy':
+              document.querySelectorAll(".product-detail-category").forEach(productCategory=> {
+                productCategory.classList.add('bg-[#6eb43c]', 'border-[#8acf59]');
+              });
               break;
-          case 'hdpe':
-              document.getElementById('product-detail-category').classList.add('bg-[#5170FF]', 'border-[#7d94fa]');
+        case 'hdpe':
+              document.querySelectorAll(".product-detail-category").forEach(productCategory=> {
+                productCategory.classList.add('bg-[#5170FF]', 'border-[#7d94fa]');
+              });
               break;
           case 'eva':
-              document.getElementById('product-detail-category').classList.add('bg-[#B75FE7]', 'border-[#cc81f5]');
+              document.querySelectorAll(".product-detail-category").forEach(productCategory=> {
+                productCategory.classList.add('bg-[#B75FE7]', 'border-[#cc81f5]');
+              });
               break;
           case 'xpe':
-              document.getElementById('product-detail-category').classList.add('bg-[#39bbc7]', 'border-[#43D9E7]');
+              document.querySelectorAll(".product-detail-category").forEach(productCategory=> {
+                productCategory.classList.add('bg-[#39bbc7]', 'border-[#43D9E7]');
+              });
               break;
       }
 
@@ -262,10 +306,10 @@
               variantContainer.setAttribute('data-productVariantImage', variant.image);
               variantContainer.setAttribute('data-productVariantTitle', variant.title);
               variantContainer.setAttribute('data-productVariantColor', variant.color);
-              document.querySelectorAll(".variant-select-container").forEach(variantSelectContainer=> {
-                variantSelectContainer.appendChild(variantContainer);
-              });
-              
+              document.getElementById('variant-select-container-1').appendChild(variantContainer);
+              document.getElementById('variant-select-container-2').appendChild(variantContainer.cloneNode(true));
+              document.getElementById('variant-select-container-3').appendChild(variantContainer.cloneNode(true));
+              document.getElementById('variant-select-container-4').appendChild(variantContainer.cloneNode(true));
           }
 
           document.querySelectorAll(".variant-list").forEach(variantList => {
@@ -292,8 +336,24 @@
     });
   })
 
+  document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+      let data = JSON.parse(thumbnailContainer.dataset.product);
+      if(data.category == 'hdpe'){
+          thumbnailContainer.classList.remove('hidden');
+      }else{
+          thumbnailContainer.classList.add('hidden');
+      }
+  })
+
   document.querySelectorAll(".category-button").forEach(categoryButton => {
     categoryButton.addEventListener("click", async (e) => {
+      document.querySelectorAll(".variant-select-container").forEach(variantSelectContainer => {
+        variantSelectContainer.innerHTML = '';
+      })
+      document.querySelectorAll(".product-detail-variant-title").forEach(variantTitle => {
+        variantTitle.innerHTML = '-';
+      })
+
       productDetail.classList.replace('scale-100', 'scale-95');
       productDetail.classList.replace('opacity-100', 'opacity-0');
       setTimeout(() => {
@@ -356,6 +416,8 @@
             })
             break;
       }
+
+      selectedCategory = category;
     }) 
   })
 
