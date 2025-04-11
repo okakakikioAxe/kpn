@@ -7,7 +7,6 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="/output.css">
     <link rel="stylesheet" href="/css/global_style.css">
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="/css/admin_galery_style.css">
     <style>
         body {

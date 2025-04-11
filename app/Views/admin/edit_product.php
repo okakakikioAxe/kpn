@@ -102,6 +102,8 @@
             cursor: pointer;
         }
     </style>
+    <!-- Include stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 </head>
 
 <body class="bg-gray-100">
@@ -194,7 +196,10 @@
                                 <div class="col-span-full">
                                     <h2 class="text-base/7 font-semibold text-gray-900">Deskripsi</h2>
                                     <div class="mt-2">
-                                        <textarea required name="description" id="description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="Deskripsi konten" value="<?= $product['description'] ?>"><?= $product['description'] ?></textarea>
+                                        <div id="editor">
+                                            <?= $product['description'] ?>
+                                        </div>
+                                        <input id="description" name="description" type="hidden" value="<?= $product['description'] ?>">
                                     </div>
                                 </div>
 
@@ -212,7 +217,6 @@
                     </div>
                     <div id="action-button" class="mt-6 flex items-center justify-center gap-x-6">
                         <div class="w-full max-w-[800px] flex justify-end items-center gap-x-6">
-                            <button type="button" id="check-variants" class="cursor-pointer rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Print Variants</button>
                             <a href="/admin/product" id="cancel-button" type="button" class="text-sm/6 font-semibold text-gray-900 cursor-pointer ">Cancel</a>
                             <button type="submit" id="save-button" class="cursor-pointer rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
                         </div>
@@ -241,7 +245,12 @@
             </main>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script>
+        const quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+    </script>
     <script>
         const canvas = document.getElementById('thumbnailCanvas');
         const ctx = canvas.getContext('2d');
@@ -307,6 +316,9 @@
             document.getElementById('variant-order').value = JSON.stringify(variants);
             document.getElementById('action-button').classList.add('hidden');
             event.preventDefault();
+
+            let htmlValue = quill.getSemanticHTML();
+            document.getElementById('description').value = htmlValue;
 
             const form = event.target;
             const formData = new FormData(form);
@@ -404,12 +416,6 @@
                 showPlaceholder();
             }
 
-            // Add new variant
-            document.getElementById('check-variants').addEventListener('click', function() {
-                document.getElementById('variant-order').value = JSON.stringify(variants);
-                console.log(document.getElementById('variant-order').value);
-                console.log(document.getElementById('deleted-variant').value);
-            });
 
             // Add new variant
             addVariantBtn.addEventListener('click', function() {

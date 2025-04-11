@@ -21,13 +21,13 @@
   <!-- Background Image -->
   <div class=" w-full px-[40px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
     <div class="w-full max-w-[1600px] pt-[62px] pb-[40px]">
-      <h1 class=" text-[#001F47] text-start text-[32px] md:text-[34px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="gallery" data-lang-key="title">GALERI</h1>
-      <p class="mt-[12px] text-[#001F47] text-start font-humanist-normal leading-4 text-[14px] md:text-[16px] xl:text-[18px]" data-lang-group="gallery" data-lang-key="sub_title">Temukan inspirasi lewat kegiatan yang kami bagikan.</p>
+      <h1 class=" text-[#001F47] text-start text-[32px] md:text-[34px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="product" data-lang-key="title">PRODUK</h1>
+      <p class="mt-[12px] text-[#001F47] text-start font-humanist-normal leading-4 text-[14px] md:text-[16px] xl:text-[18px]" data-lang-group="product" data-lang-key="sub_title">Berbagai produk berkualitas untuk keperluan Anda</p>
     </div>
   </div>
   <div class=" pt-[90px] sm:pt-[150px] px-[25px] md:px-[10%] flex justify-center">
     <div class="w-full max-w-[1600px] h-full ">
-      <p class="text-[#001F47] text-center font-humanist-normal leading-4 text-[18px] md:text-[20px] xl:text-[22px]" data-lang-group="product_hero" data-lang-key="sub_title">Jelajahi produk kami dengan pengalaman interaktif dan menyenangkan</p>
+      <p class="text-[#001F47] text-center font-humanist-normal leading-4 text-[18px] md:text-[20px] xl:text-[22px]" data-lang-group="product" data-lang-key="cta_1">Jelajahi produk kami dengan pengalaman interaktif dan menyenangkan</p>
       <div class="flex w-full justify-center">
         <div class="grid gap-[15px] xl:gap-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 max-w-[1200px] mt-[34px] xl:mt-[45px] items-center justify-center">
           <div class="flex justify-center">
@@ -52,9 +52,9 @@
           </div>
         </div>
       </div>
-      <p class="text-[#001F47] pt-[45px] sm:pt-[60px] xl:pt-[75px] text-center font-humanist-normal leading-4 text-[18px] md:text-[20px] xl:text-[22px]">Download katalog lengkap</p>
+      <p class="text-[#001F47] pt-[45px] sm:pt-[60px] xl:pt-[75px] text-center font-humanist-normal leading-4 text-[18px] md:text-[20px] xl:text-[22px]" data-lang-group="product" data-lang-key="cta_2">Download katalog lengkap</p>
       <div class="flex w-full justify-center">
-        <a href="/Catalog-KPN-2025.zip" target="_blank" download class="flex mt-[35px] sm:mt-[50px] xl:mt-[65px] bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out">
+        <a href="/Catalog-KPN-2025.zip" target="_blank" download class="flex mt-[35px] sm:mt-[50px] xl:mt-[65px] bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center xl:hover:bg-dark-salmon xl:hover:scale-105 active:bg-dark-salmon active:scale-105 transform duration-300 ease-in-out" data-lang-group="product" data-lang-key="cta_2_button">
           DOWNLOAD KATALOG
         </a>
       </div>
@@ -62,12 +62,12 @@
       <div class="flex justify-center mt-[110px] sm:mt-[160px] xl:mt-[250px]">
         <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
       </div>
-      <h2 class="flex align-center justify-center mt-[95px] sm:mt-[115px] md:mt-[150px] h2-title" data-lang-group="homepage_production_process" data-lang-key="title">Proses Produksi</h2>
+      <h2 class="flex align-center justify-center mt-[95px] sm:mt-[115px] md:mt-[150px] h2-title" data-lang-group="product" data-lang-key="product_list_title">Produk</h2>
       <div id="category-menu" class="grid gap-[10px] md:gap-[15px] sm:gap-3 grid-cols-2 sm:grid-cols-4 max-w-[600px] mt-[80px] md:mt-[90px] xl:mt-[160px]">
         <button data-category="hdpe" class="flex category-button bg-[#B22222] border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
           HDPE
         </button>
-        <button data-category="toy" class="flex category-button bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">
+        <button data-category="toy" class="flex category-button bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer" data-lang-group="product" data-lang-key="toy_category_title">
           MAINAN
         </button>
         <button data-category="xpe" class="flex category-button bg-white border-[2px] border-[#B22222] font-trebuchet text-[18px] h-[43px] text-[#B22222] font-bold rounded-full shadow-lg items-center justify-center hover:bg-light-salmon hover:scale-105 hover:text-white transform duration-300 ease-in-out cursor-pointer">

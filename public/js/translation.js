@@ -125,6 +125,16 @@ const translations = {
       sub_title_2: "Atau",
       button: "DOWNLOAD KATALOG",
     },
+    product: {
+      title: "Produk",
+      sub_title: "Berbagai produk berkualitas untuk keperluan Anda.",
+      cta_1:
+        "Jelajahi produk kami dengan pengalaman interaktif dan menyenangkan",
+      cta_2: "Download katalog lengkap",
+      cta_2_button: "Download Katalog",
+      product_list_title: "Produk",
+      toy_category_title: "MAINAN",
+    },
     contact_us_hero: {
       title: "HUBUNGI KAMI",
       sub_title:
@@ -322,6 +332,16 @@ const translations = {
       sub_title_2: "Or",
       button: "DOWNLOAD CATALOG",
     },
+    product: {
+      title: "Product",
+      sub_title: "A variety of quality products for your needs.",
+      cta_1:
+        "Explore our products with an interactive and enjoyable experience",
+      cta_2: "Download full catalog",
+      cta_2_button: "Download Catalog",
+      product_list_title: "Product",
+      toy_category_title: "TOY",
+    },
     contact_us_hero: {
       title: "Contact Us",
       sub_title:
@@ -506,6 +526,15 @@ const translations = {
       sub_title: "以有趣且互动的方式探索我们的产品",
       sub_title_2: "或者",
       button: "下载目录",
+    },
+    product: {
+      title: "产品",
+      sub_title: "多种优质产品满足您的需求。",
+      cta_1: "以互动且愉快的方式探索我们的产品",
+      cta_2: "下载完整目录",
+      cta_2_button: "下载目录",
+      product_list_title: "产品",
+      toy_category_title: "玩具",
     },
     contact_us_hero: {
       title: "联系我们",
