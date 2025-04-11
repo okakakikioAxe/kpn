@@ -40,6 +40,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 </head>
 
 <body class="bg-gray-100">
@@ -77,10 +78,10 @@
                                 </p>
                             </div>
                         </button>
-                        <div id="dropdownMenu1Container" class="absolute top-18 right-4 w-full h-[200px] justify-center">
+                        <div id="dropdownMenu1Container" class="absolute top-18 right-4 w-full justify-center hidden">
                             <div class="w-full max-w-[1600px] flex justify-end sm:mx-[25px] ">
                                 <div id="dropdownMenu1"
-                                    class="w-[200px] h-[250px] bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform invisible">
+                                    class="w-[200px] h-[250px] bg-[#182430] shadow-lg rounded-xl opacity-0 scale-95 transition-all duration-300 transform">
                                     <button onclick="filter('all')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">Semua Kategori</button>
                                     <button onclick="filter('hdpe')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">HDPE</button>
                                     <button onclick="filter('xpe')" class="block px-4 py-3 text-white hover:bg-gray-200 text-start w-full cursor-pointer">XPE</button>
@@ -129,7 +130,9 @@
                                     <div id="variant-select-container" class="w-full grid grid-cols-none" style="grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); gap: 4px;">
                                     </div>
                                 </div>
-                                <p id="product-detail-description" class="mt-7 text-stone-800 text-[18px] font-humanist-normal"></p>
+                                <div id="product-detail-description" class="mt-7 text-stone-800 text-[18px] font-humanist-normal">
+                                <!-- <p><strong>Kubus apung</strong> adalah struktur modular berbentuk kubus yang terbuat dari material plastik berkualitas tinggi, biasanya <strong>high-density polyethylene (HDPE)</strong>, yang dirancang untuk mengapung di atas air. Kubus ini saling terhubung satu sama lain membentuk platform terapung yang stabil, serbaguna, dan mudah dirakit.</p> -->
+                                </div>
                             </div>
                         </div>
                         <div class="w-full h-[2px] bg-gray-100 my-3.5"></div>
@@ -264,7 +267,8 @@
                 
                 document.getElementById('product-detail-image').src = '/galery/content/' + data.image;
                 document.getElementById('product-detail-title').innerHTML = data.title;
-                document.getElementById('product-detail-description').innerHTML = data.description;
+
+                document.getElementById('product-detail-description').innerHTML = (data.description.replace('&nbsp;', ' ')).replace(/\u00A0/g, ' ');
 
                 let variants = data.variant_list;
                 document.getElementById('product-detail-category').classList.remove('bg-[#6eb43c]','border-[#8acf59]', 'bg-[#5170FF]', 'border-[#7d94fa]', 'bg-[#B75FE7]', 'border-[#cc81f5]', 'bg-[#39bbc7]', 'border-[#43D9E7]');
@@ -325,7 +329,6 @@
         document.getElementById('dropdownButton1').addEventListener('click', function() {
             if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
                 document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
-                document.getElementById('dropdownMenu1').classList.replace('visible', 'invisible');
                 document.getElementById('dropdownIcon1').classList.remove("rotate-180");
                 setTimeout(() => {
                     document.getElementById('dropdownMenu1Container').classList.replace('flex', 'hidden');
@@ -334,7 +337,6 @@
                 document.getElementById('dropdownMenu1Container').classList.replace('hidden', 'flex');
                 setTimeout(() => {
                     document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
-                    document.getElementById('dropdownMenu1').classList.replace('invisible', 'visible');
                     document.getElementById('dropdownIcon1').classList.add("rotate-180");
                 }, 50);
                 

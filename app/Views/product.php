@@ -260,7 +260,7 @@
         productImage.src = '/galery/content/' + data.image;
       });
       document.querySelectorAll(".product-detail-description").forEach(productDescription=> {
-        productDescription.innerHTML = data.description;
+        productDescription.innerHTML = (data.description.replace('&nbsp;', ' ')).replace(/\u00A0/g, ' ');
       });
       
       let variants = data.variant_list;

@@ -17,7 +17,7 @@ class Base64ImageHelper
      * @param string $filename Optional filename (without extension). If not provided, a random name will be generated
      * @return array|bool Returns array with path info on success, false on failure
      */
-    public static function saveBase64Image(string $base64Image, string $outputPath = 'uploads/images', string $filename = null): array|bool
+    public static function saveBase64Image(string $base64Image, string $outputPath = 'galery/content', string $filename = null): array|bool
     {
         // Check if base64 string is not empty
         if (empty($base64Image)) {
@@ -58,7 +58,7 @@ class Base64ImageHelper
         }
         
         // Create output directory if it doesn't exist
-        $fullOutputPath = ROOTPATH . 'public/' . $outputPath;
+        $fullOutputPath = FCPATH . $outputPath;
         if (!is_dir($fullOutputPath)) {
             mkdir($fullOutputPath, 0755, true);
         }

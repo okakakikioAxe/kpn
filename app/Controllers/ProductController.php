@@ -136,35 +136,37 @@ class ProductController extends BaseController
         $failedFiles = [];
 
         // Process uploaded images
-        if ($files) {
-            // When using multiple file inputs with same name (images[])
-            foreach ($files['variants'] as $key => $img) {
-                if ($img->isValid() && !$img->hasMoved()) {
-                    // Generate a random file name
-                    $variantName = "var-".$key."-".$fileName. $img->getExtension();
-                    
-                    // Move the file to the uploads directory
-                    if ($img->move('galery/content', $variantName)) {
-                        $uploadedFiles[] = [
-                            'name' => $variantName,
-                            'order' => $key,
-                        ];
+        if ($files && array_key_exists('variants', $files)) {
+            if ($files['variants'] != null) {
+                // When using multiple file inputs with same name (images[])
+                foreach ($files['variants'] as $key => $img) {
+                    if ($img->isValid() && !$img->hasMoved()) {
+                        // Generate a random file name
+                        $variantName = "var-".$key."-".$fileName. $img->getExtension();
+                        
+                        // Move the file to the uploads directory
+                        if ($img->move('galery/content', $variantName)) {
+                            $uploadedFiles[] = [
+                                'name' => $variantName,
+                                'order' => $key,
+                            ];
 
-                        $data = [
-                            'product_id' => $productId,
-                            'image' => $variantName,
-                            'title' => $this->request->getPost('titles')[$key],
-                            'color' => $this->request->getPost('colors')[$key],
-                            'order' => $key,
-                        ];
-            
-                        $variantModel = new ProductVariant();
-                        $variantModel->insert($data);
+                            $data = [
+                                'product_id' => $productId,
+                                'image' => $variantName,
+                                'title' => $this->request->getPost('titles')[$key],
+                                'color' => $this->request->getPost('colors')[$key],
+                                'order' => $key,
+                            ];
+                
+                            $variantModel = new ProductVariant();
+                            $variantModel->insert($data);
+                        } else {
+                            $failedFiles[] = $img->getClientName();
+                        }
                     } else {
                         $failedFiles[] = $img->getClientName();
                     }
-                } else {
-                    $failedFiles[] = $img->getClientName();
                 }
             }
         }
@@ -256,7 +258,10 @@ class ProductController extends BaseController
                 
                 $newImageName = null;
                 $imageType = null;
-                if(Base64ImageHelper::isValidBase64Image($variant['image'])){
+                if($variant['image'] == null){
+                    continue;
+                }
+                else if(Base64ImageHelper::isValidBase64Image($variant['image'])){
                     // If the base64 string contains the data URI scheme (e.g., data:image/jpeg;base64,), extract the base64 part
                     if (preg_match('/^data:image\/(\w+);base64,/', $variant['image'], $matches)) {
                         // Get the image type (jpeg, png, etc.)
@@ -292,10 +297,7 @@ class ProductController extends BaseController
                 }
                 else{
                     $newImageName = null;
-
                 }
-
-                
 
                 if(str_starts_with($variant['id'], 'new')){
                     if ($result === false) {
