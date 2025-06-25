@@ -1,8 +1,8 @@
 <div class="flex justify-center sm:justify-end items-center pt-[150px] px-[20px] sm:px-0 animate-top-product-card">
     <div class="relative max-w-[420px] p-[20px] h-full bg-[#0D55C8] rounded-[25px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.2)]">
         <div class="absolute flex justify-center h-[200px] w-full top-0 right-0 -translate-y-[90%] sm:-translate-y-[85%] lg:-translate-y-[90%]">
-            <img loading="lazy" src="images/top product/eva-product.webp" alt="produk eva" class="absolute w-[80%] sm:w-[100%] lg:w-[80%] max-w-[320px] h-auto mx-auto ">
-            <img loading="lazy" src="images/top product/eva-shadow.webp" alt="shadow produk eva" class="absolute opacity-35 w-[70%] sm:w-[100%] lg:w-[80%] max-w-[320px] h-auto mx-auto rotate-y-180 translate-y-[1%] translate-x-[10%] scale-x-125 overflow-hidden">
+            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/tp-eva-product.webp" alt="produk eva" class="absolute w-[80%] sm:w-[100%] lg:w-[80%] max-w-[320px] h-auto mx-auto ">
+            <img loading="lazy" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/tp-eva-shadow.webp" alt="shadow produk eva" class="absolute opacity-35 w-[70%] sm:w-[100%] lg:w-[80%] max-w-[320px] h-auto mx-auto rotate-y-180 translate-y-[1%] translate-x-[10%] scale-x-125 overflow-hidden">
         </div>
         <div class="flex flex-col h-full">
             <div class="flex-none mt-[10px] w-full">

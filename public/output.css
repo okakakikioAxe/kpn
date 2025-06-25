@@ -2947,6 +2947,9 @@
   .bg-\[\#FCCB50\] {
     background-color: #FCCB50;
   }
+  .bg-\[\#b22222\] {
+    background-color: #b22222;
+  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
@@ -2967,6 +2970,9 @@
   }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
+  }
+  .bg-dark-salmon {
+    background-color: var(--color-dark-salmon);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
@@ -3006,6 +3012,9 @@
   }
   .bg-indigo-600 {
     background-color: var(--color-indigo-600);
+  }
+  .bg-iron-gray {
+    background-color: var(--color-iron-gray);
   }
   .bg-light-salmon {
     background-color: var(--color-light-salmon);
@@ -3625,6 +3634,10 @@
   .leading-7 {
     --tw-leading: calc(var(--spacing) * 7);
     line-height: calc(var(--spacing) * 7);
+  }
+  .leading-\[\%\] {
+    --tw-leading: %;
+    line-height: %;
   }
   .leading-\[100\%\] {
     --tw-leading: 100%;
@@ -4706,6 +4719,13 @@
       }
     }
   }
+  .hover\:bg-\[\#b22222\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #b22222;
+      }
+    }
+  }
   .hover\:bg-dark-salmon {
     &:hover {
       @media (hover: hover) {
@@ -4895,6 +4915,11 @@
       --tw-scale-y: 105%;
       --tw-scale-z: 105%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .active\:bg-\[\#ff3939\] {
+    &:active {
+      background-color: #ff3939;
     }
   }
   .active\:bg-dark-salmon {
@@ -6059,6 +6084,15 @@
           --tw-scale-y: 105%;
           --tw-scale-z: 105%;
           scale: var(--tw-scale-x) var(--tw-scale-y);
+        }
+      }
+    }
+  }
+  .xl\:hover\:bg-\[\#ff3939\] {
+    @media (width >= 80rem) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: #ff3939;
         }
       }
     }
