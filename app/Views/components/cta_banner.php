@@ -1,10 +1,10 @@
-<div class="w-full flex items-center justify-center px-5">
-    <div class=" bg-[#2563EB] w-full max-w-[1200px] p-8 rounded-[20px]">
+<div class="w-full flex items-center justify-center px-5 md:px-15">
+    <div class=" bg-[#2563EB] w-full max-w-[1400px] p-8 rounded-[20px]">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="w-full flex items-center justify-center md:col-span-2">
                 <p
                     class="open-sans-bold text-[14px] sm:text-[14px] 2xl:text-[16px] max-w-[600px] text-white text-center md:text-start">
-                    <?= esc( $text ?? 'Tidak menemukan produk yang Anda cari? hubungi kami untuk informasi lebih lengkap!') ?>
+                    <?= esc($text ?? 'Tidak menemukan produk yang Anda cari? hubungi kami untuk informasi lebih lengkap!') ?>
                 </p>
             </div>
             <div class="w-full flex items-center justify-center md:col-span-1">

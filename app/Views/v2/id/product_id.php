@@ -3,10 +3,17 @@
 
 <?= $this->section('header') ?>
 <html lang="id">
+<title>Produk</title>
+<meta name="description"
+    content="Jelajahi Beragam Pilihan Produk Berkualitas Kami dan Temukan Solusi Terbaik untuk Kebutuhan Bisnis Anda." />
+<meta name="keywords"
+    content="produk kpn, produk HDPE, produk EVA, produk TPE, produk XPE, katalog kpn, produk karya pilar nusantara, katalog karya pilar nusantara, product camping, product infrastruktur, kursi lipat, kubus apung " />
+
 <?= $this->endsection() ?>
 
 <?= $this->section('content') ?>
 <section id="hero-section" class="relative flex items-center justify-center h-screen w-full bg-[#EFF6FF] z-20">
+    <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[200px] w-full bg-transparent"></div>
     <!-- Hero Text -->
     <div id="hero-text" class="w-full flex items-center justify-center mx-auto px-4 py-8 text-white text-center">
         <div class="flex flex-col w-full h-full items-center justify-center relative z-10  my-[200px]">
@@ -23,7 +30,7 @@
                 class="w-full max-w-[600px] open-sans-regular text-[16px] lg:text-[18px] tracking-[4%] text-center text-[#4E4E4E] mb-[90px] md:mb-[120px] px-10 md:px-10 xl:px-0">
                 Jelajahi Beragam Pilihan Produk Berkualitas Kami dan Temukan Solusi Terbaik untuk Kebutuhan Bisnis Anda.
             </p>
-            <button
+            <button id="scroll-to-product"
                 class="cursor-pointer bg-blue-600 hover:bg-blue-700 px-[32px] md:px-[38px] transition-colors basic-contact-us-button py-[10px] md:py-[12px] rounded-[15px] md:rounded-[18px]"
                 type="button">
                 <div class="flex items-center justify-center w-full space-x-[14px]">
@@ -51,7 +58,7 @@
             yang Tepat untuk Bisnis Anda!.
         </p>
     </div>
-    <div class="flex flex-col items-center justify-center w-full px-4 sm:px-8 ">
+    <div class="flex flex-col items-center justify-center w-full px-5 md:px-15 sm:px-8 ">
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-[1400px] ">
             <?php foreach ($products as $product): ?>
                 <a href="/product/<?= $product['slug'] ?>">
@@ -84,29 +91,32 @@
     const navbarLanguageBorder = document.getElementById('navbar-language-border');
     const navbarLanguageIcon = document.getElementById('navbar-language-icon');
     const blur = navbar.querySelector('.blur-3xl');
-    const hero = document.getElementById('hero-section');
+    const hero = document.getElementById('nav-observer');
 
     // Observer untuk ubah background dan teks saat masuk ke overview
     const observer = new IntersectionObserver(
         ([entry]) => {
             navbar.classList.remove('text-white');
             navbar.classList.add('text-gray-700');
-            logoNavbar.classList.add('invert', 'brightness-75');
+            document.querySelectorAll('.logo-navbar').forEach(el => {
+                el.classList.add('invert', 'brightness-75');
+            });
             navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
             navbarLanguageIcon.setAttribute('fill', '#374151');
-
             if (entry.isIntersecting) {
                 // Masih di hero
                 navbar.classList.remove('bg-white');
 
                 if (blur) blur.classList.remove('hidden');
+                isInTop = true;
 
 
             } else {
                 // Di luar hero
                 navbar.classList.add('bg-white');
-
                 if (blur) blur.classList.add('hidden');
+                isInTop = false;
+
             }
         }, {
             root: null,
@@ -115,5 +125,15 @@
     );
 
     observer.observe(hero);
+</script>
+<script>
+    document.getElementById('scroll-to-product').addEventListener('click', function() {
+        const target = document.getElementById('product-section');
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 </script>
 <?= $this->endSection() ?>

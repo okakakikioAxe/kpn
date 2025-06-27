@@ -3,58 +3,55 @@
 
 <?= $this->section('header') ?>
 <html lang="id">
+<title>Tentang Kami</title>
+<meta name="description"
+    content="Mitra pengadaan terpercaya untuk berbagai macam kebutuhan Anda, mulai dari alat olahraga hingga infrastruktur dengan kualitas premium" />
+<meta name="keywords"
+    content="tentang kpn, pt karya pilar nusantara, pt kpn, kpn sidoarjo, produsen hdpe, produsen xpe, produsen tpe, produsen mainan anak, kustom merk" />
+
 <?= $this->endsection() ?>
 
 <?= $this->section('content') ?>
-<section id="hero-section" class="relative flex items-center justify-center h-screen w-full bg-cover bg-center">
-    <!-- Video Background -->
-    <div class="absolute top-0 left-0 -z-1 w-full h-full">
-        <video autoplay="" muted="" loop="" class="video-background w-full h-full object-cover">
-            <source src="/videos/hero.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <!-- Video Background -->
-
-
+<section id="hero-section" class="relative flex items-center justify-center h-screen w-full bg-[#AEAAA6] z-20">
+    <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[200px] w-full bg-transparent"></div>
     <!-- Hero Text -->
     <div id="hero-text" class="w-full flex items-center justify-center mx-auto px-4 py-8 text-white text-center">
-        <div class="absolute w-full h-auto">
-            <div class="w-full h-auto  flex items-center justify-center">
-                <img src="/images/white-logo-no-text-high-res.png" alt="logo kpn"
-                    class="w-[75%] md:w-full h-auto md:max-w-[600px] opacity-40 mix-blend-overlay filter saturate-150 brightness-150">
+        <div class="flex flex-col w-full h-full items-center justify-center relative z-10  my-[200px]">
+            <div class="block w-full items-center justify-center mb-[40px] md:mb-[60px]">
+                <h1
+                    class="ubuntu-bold h-[35px] md:h-[45px] text-[30px] md:text-[40px] tracking-[4%] text-center text-black title-shadow mr-2">
+                    Tentang</h1>
+                <p
+                    class=" ubuntu-bold text-[30px] md:text-[40px] tracking-[4%] text-[#2563EB] title-shadow text-center w-full">
+                    Karya Pilar Nusantara</p>
             </div>
-        </div>
-        <div class="max-w-[354px] md:max-w-[500px] lg:max-w-[800px]">
-            <h1 class="ubuntu-bold text-[32px] md:text-[44px] lg:text-[58px] leading-[110%] text-center pb-[52px]">
-                Solusi Pengadaan Terpercaya Beragam Kebutuhan Anda
-            </h1>
 
-        </div>
-        <div class="absolute bottom-15 md:bottom-5">
-            <div class="flex flex-col w-full items-center justify-center">
-                <div class="relative h-[100px] w-[2px] bg-gray-700 overflow-hidden">
-                    <!-- garis putih terjun -->
-                    <div class="drop-line absolute top-0 left-0 w-full h-6 bg-white">
-                    </div>
+            <p
+                class="w-full max-w-[600px] open-sans-regular text-[16px] lg:text-[18px] tracking-[4%] text-center text-[#4E4E4E] mb-[90px] md:mb-[120px] px-10 md:px-10 xl:px-0">
+                Mitra pengadaan terpercaya untuk berbagai macam kebutuhan Anda, mulai dari alat olahraga hingga
+                infrastruktur dengan kualitas premium
+            </p>
+            <button
+                class="cursor-pointer bg-blue-600 hover:bg-blue-700 px-[32px] md:px-[38px] transition-colors basic-contact-us-button py-[10px] md:py-[12px] rounded-[15px] md:rounded-[18px]"
+                type="button">
+                <div class="flex items-center justify-center w-full space-x-[14px]">
+
+                    <div class="roboto-bold tracking-wide text-[16px] sm:text-[18px] text-white">Hubungi Kami</div>
                 </div>
-                <p class="mt-2">SCROLL</p>
-            </div>
+            </button>
         </div>
     </div>
+    <img src="/images/about_us_page/aboutus1.png" alt="product group" width="505" height="595"
+        class="absolute right-0  bottom-[-20px] sm:bottom-[-20px] md:bottom-[-25px] lg:bottom-[-30px] xl:bottom-[-40px] 2xl:bottom-[-40px]  w-[40vw] max-w-[350px] lg:max-w-[400px] xl:w-[25vw] xl:max-w-[400px] 2xl:w-[25vw] 2xl:max-w-[500px] h-auto">
+    <img src="/images/about_us_page/aboutus2.png" alt="product group" width="655" height="490"
+        class="absolute bottom-[-20px] sm:bottom-[-20px] md:bottom-[-25px] lg:bottom-[-30px] xl:bottom-[-40px] 2xl:bottom-[-40px] left-0 w-[40vw] max-w-[350px] lg:max-w-[400px] xl:w-[25vw] xl:max-w-[400px] 2xl:w-[25vw] 2xl:max-w-[500px] h-auto">
 </section>
 
 <section id="about-us-section"
     class="w-full py-[80px] sm:py-[182px] relative min-h-screen flex flex-col items-center justify-center px-5">
-    <div id="introduce-section-title-mobile" class="block lg:hidden mb-[60px]">
-        <h2 class="h-[34px] md:h-[40px] ubuntu-bold text-[28px] md:text-[32px] text-[#242424] title-shadow text-center">
-            Hadir Sebagai
-        </h2>
-        <span
-            class="h-[40px] ubuntu-bold text-[32px] md:text-[34px] text-[#2563EB] title-shadow text-center w-full flex items-center justify-center">Solusi
-            Pengadaan</span>
-    </div>
+
+    <?= view('components/texts/title/title_group', ['id' => 'introduce-title-default','class' => 'block lg:hidden mb-[60px] text-center', 'top_title' => 'Hadir Sebagai', 'bottom_title' => 'Solusi Pengadaan']) ?>
+
     <div
         class="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-y-[60px] md:gap-x-[60px] lg:gap-x-[100px] md:px-15">
         <div>
@@ -62,15 +59,9 @@
                 class="w-full h-auto">
         </div>
         <div class="flex flex-col items-start justify-center">
-            <div id="overview-mobile-title" class="hidden lg:block w-full mb-[54px]">
-                <h2
-                    class="lg:h-[38px] xl:h-[45px] ubuntu-bold lg:text-[34px] xl:text-[40px] text-[#242424] title-shadow text-start">
-                    Hadir Sebagai
-                </h2>
-                <span
-                    class="lg:h-[40px] xl:h-[48px] ubuntu-bold lg:text-[38px] xl:text-[46px] text-[#2563EB] title-shadow text-start">Solusi
-                    Pengadaan</span>
-            </div>
+
+            <?= view('components/texts/title/title_group', ['id' => 'introduce-title-lg','class' => 'hidden lg:block w-full mb-[54px] text-start', 'top_title' => 'Hadir Sebagai', 'bottom_title' => 'Solusi Pengadaan']) ?>
+
             <p class="open-sans-regular text-[16px] tracking-[4%] text-center md:text-start lg:mb-[60px]">
                 Kami adalah mitra tepercaya dalam pengadaan berbagai produk kebutuhan masyarakat dan institusi,
                 mulai dari alat olahraga, perlengkapan camping, mainan edukatif anak, hingga produk infrastruktur
@@ -85,27 +76,13 @@
     <div class="lg:hidden mt-[60px]"><?= view('components/whatsapp_button') ?></div>
 </section>
 <section id="map-section"
-    class="relative flex flex-col items-center justify-center w-full min-h-screen py-[0px] md:py-[40px] lg:py-[80px] px-5 md:px-15 ">
+    class="relative flex flex-col items-center justify-center w-full md:min-h-screen py-[80px] md:py-[40px] lg:py-[80px] px-5 md:px-15 ">
     <div class="w-full max-w-[1200px] flex flex-col items-center justify-center relative">
         <div>
-            <div id="map-section-title-mobile" class="block md:hidden mb-[40px]">
-                <h2
-                    class="h-[38px] ubuntu-bold text-[28px] md:text-[32px] lg:text-[34px] xl:text-[40px] text-[#242424] title-shadow text-center">
-                    Menjangkau Seluruh
-                </h2>
-                <span
-                    class="h-[40px] ubuntu-bold text-[32px] md:text-[34px] lg:text-[38px] xl:text-[46px] text-[#2563EB] title-shadow text-center w-full flex items-center justify-center">
-                    Kota di Indonesia</span>
-            </div>
-            <div id="map-section-title-section" class="hidden md:block mb-[60px]">
-                <h2
-                    class="h-[38px] md:h-[40px] lg:h-[38px] xl:h-[50px] ubuntu-bold text-[28px] md:text-[32px] lg:text-[34px] xl:text-[40px] text-[#242424] title-shadow text-center">
-                    Menjangkau
-                </h2>
-                <span
-                    class="h-[40px] lg:h-[40px] xl:h-[58px] ubuntu-bold text-[32px] md:text-[34px] lg:text-[38px] xl:text-[46px] text-[#2563EB] title-shadow text-center w-full flex items-center justify-center">Seluruh
-                    Kota di Indonesia</span>
-            </div>
+
+            <?= view('components/texts/title/title_group', ['id' => 'map-title-default','class' => 'block md:hidden mb-[40px] text-center', 'top_title' => 'Menjangkau Seluruh', 'bottom_title' => 'Kota di Indonesia']) ?>
+            <?= view('components/texts/title/title_group', ['id' => 'map-title-md','class' => 'hidden md:block mb-[60px] text-center', 'top_title' => 'Menjangkau Seluruh', 'bottom_title' => 'Kota di Indonesia']) ?>
+
         </div>
         <p class="open-sans-regular text-[16px] tracking-[4%] text-center max-w-[600px] mb-[40px] md:mb-[46px]">
             Kami hadir di seluruh penjuru negeri, memastikan pengiriman cepat dan layanan terbaik hingga ke
@@ -187,26 +164,10 @@
     </div>
 </section>
 <section id="vision-mission-section"
-    class="w-full flex flex-col items-center justify-center min-h-screen px-5 md:px-15 py-[166px]">
+    class="w-full flex flex-col items-center justify-center min-h-screen px-5 md:px-15 py-[166px] lg:pb-[200px]">
     <div class="mb-[80px] max-w-[1200px] md:mb-[150px] lg:mb-[180px]">
-        <div id="vision-mission-section-title-mobile" class="block md:hidden ">
-            <h2
-                class="h-[38px] ubuntu-bold text-[28px] md:text-[32px] lg:text-[34px] xl:text-[40px] text-[#242424] title-shadow text-center">
-                Landasan Berkembang
-            </h2>
-            <span
-                class="h-[40px] ubuntu-bold text-[32px] md:text-[34px] lg:text-[38px] xl:text-[46px] text-[#2563EB] title-shadow text-center w-full flex items-center justify-center">Visi,
-                Misi dan Nilai</span>
-        </div>
-        <div id="vision-mission-section-title-desktop" class="hidden md:block ">
-            <h2
-                class="h-[38px] md:h-[40px] lg:h-[38px] xl:h-[50px] ubuntu-bold text-[28px] md:text-[32px] lg:text-[34px] xl:text-[40px] text-[#242424] title-shadow text-center">
-                Landasan Kami Berkembang
-            </h2>
-            <span
-                class="h-[40px] lg:h-[40px] xl:h-[58px] ubuntu-bold text-[32px] md:text-[34px] lg:text-[38px] xl:text-[46px] text-[#2563EB] title-shadow text-center w-full flex items-center justify-center">Visi,
-                Misi, dan Nilai Perusahaan</span>
-        </div>
+        <?= view('components/texts/title/title_group', ['id' => 'vision-title-default','class' => 'block md:hidden text-center', 'top_title' => 'Landasan Berkembang', 'bottom_title' => 'Visi, Misi & Nilai']) ?>
+        <?= view('components/texts/title/title_group', ['id' => 'vision-title-md','class' => 'hidden md:block text-center', 'top_title' => 'Landasan Kami Berkembang', 'bottom_title' => 'Visi, Misi & Nilai Perusahaan']) ?>
     </div>
     <div class="w-full max-w-[1200px] flex items-center justify-center flex-col">
         <div id="vision-mission"
@@ -396,31 +357,21 @@
         </div>
     </div>
 </section>
-<section id="legality-section" class="w-full relative min-h-screen flex flex-col items-center justify-center px-5">
-    <div id="legality-section-title-mobile" class="block lg:hidden mb-[60px]">
-        <h2 class="h-[34px] md:h-[40px] ubuntu-bold text-[28px] md:text-[32px] text-[#242424] title-shadow text-center">
-            Kami Sudah
-        </h2>
-        <span
-            class="h-[40px] ubuntu-bold text-[32px] md:text-[34px] text-[#2563EB] title-shadow text-center w-full flex items-center justify-center">Terdaftar
-            Resmi</span>
-    </div>
+<section id="legality-section"
+    class="w-full relative md:min-h-screen flex flex-col items-center justify-center px-5 pb-[200px]">
+
+    <?= view('components/texts/title/title_group', ['id' => 'vision-title-default','class' => 'block lg:hidden mb-[60px] text-center', 'top_title' => 'Kami Sudah', 'bottom_title' => 'Terdaftar Resmi']) ?>
+
     <div
-        class="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-y-[60px] md:gap-x-[60px] lg:gap-x-[100px] md:px-15">
+        class="w-full 2xl:w-[80vw] max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-y-[60px] md:gap-x-[60px] lg:gap-x-[100px] md:px-15 xl:px-0">
         <div>
             <img src="/images/about_us_page/aboutus9.png" alt="Produk karya pilar nusantara yang muncul dari box"
                 class="w-full h-auto">
         </div>
         <div class="flex flex-col items-start justify-center">
-            <div id="legality-mobile-title" class="hidden lg:block w-full mb-[54px]">
-                <h2
-                    class="lg:h-[38px] xl:h-[45px] ubuntu-bold lg:text-[34px] xl:text-[40px] text-[#242424] title-shadow text-start">
-                    Kami Sudah
-                </h2>
-                <span
-                    class="lg:h-[40px] xl:h-[48px] ubuntu-bold lg:text-[38px] xl:text-[46px] text-[#2563EB] title-shadow text-start">Terdaftar
-                    Resmi</span>
-            </div>
+
+            <?= view('components/texts/title/title_group', ['id' => 'vision-title-lg','class' => 'hidden lg:block w-full mb-[54px] text-start', 'top_title' => 'Kami Sudah', 'bottom_title' => 'Terdaftar Resmi']) ?>
+
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-y-[51px] gap-x-[50px] w-full">
                 <div>
@@ -500,29 +451,21 @@
     </div>
 </section>
 <section id="license-section"
-    class="w-full relative min-h-screen flex flex-col items-center justify-center px-5 lg:px-20">
-    <div id="license-section-title-mobile" class="block lg:hidden mb-[60px]">
-        <h2 class="h-[34px] md:h-[40px] ubuntu-bold text-[28px] md:text-[32px] text-[#242424] title-shadow text-center">
-            Lisensi & Bidang
-        </h2>
-        <span
-            class="h-[40px] ubuntu-bold text-[32px] md:text-[34px] text-[#2563EB] title-shadow text-center w-full flex items-center justify-center">Operasional</span>
-    </div>
+    class="w-full relative min-h-screen flex flex-col items-center justify-center px-5 md:px-15 mb-[200px]">
+
+    <?= view('components/texts/title/title_group', ['id' => 'license-title-default','class' => 'lg:hidden w-full mb-[54px] text-center', 'top_title' => 'Lisensi & Bidang', 'bottom_title' => 'Operasional']) ?>
+
+
     <div
-        class="w-full 2xl:w-[80vw] max-w-[1400px] grid grid-cols-1 lg:grid-cols-2 md:gap-x-[60px] lg:gap-x-[100px] md:px-15">
-        <div class="mb-[32px] lg:hidden">
+        class="w-full max-w-[1200px] 2xl:w-[80vw] 2xl:max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 md:gap-x-[60px] lg:gap-x-[100px]">
+        <div class="mb-[32px] lg:hidden ">
             <img src="/images/about_us_page/aboutus10.png" alt="Lisensi di atas meja"
-                class="w-full h-auto rounded-[20px]">
+                class="w-full h-auto rounded-[20px] md:aspect-square lg:aspect-auto">
         </div>
         <div>
-            <div id="license-section-title-desktop" class="hidden lg:block w-full mb-[32px]">
-                <h2
-                    class="lg:h-[38px] xl:h-[45px] ubuntu-bold lg:text-[34px] xl:text-[40px] text-[#242424] title-shadow text-start">
-                    Lisensi & Bidang
-                </h2>
-                <span
-                    class="lg:h-[40px] xl:h-[48px] ubuntu-bold lg:text-[38px] xl:text-[46px] text-[#2563EB] title-shadow text-start">Operasional</span>
-            </div>
+
+            <?= view('components/texts/title/title_group', ['id' => 'license-title-default','class' => 'hidden lg:block w-full mb-[32px] text-start', 'top_title' => 'Lisensi & Bidang', 'bottom_title' => 'Operasional']) ?>
+
             <div>
                 <p class="open-sans-regular text-[16px] tracking-[4%] text-start w-full mb-[60px] ">
                     Kami menjalankan usaha sesuai ketentuan resmi dan terdaftar dalam sistem OSS dengan KBLI sebagai
@@ -620,14 +563,15 @@
                 </div>
             </div>
         </div>
-        <div class="hidden lg:flex w-full h-auto items-center justify-center">
+        <div class="hidden lg:flex w-full h-full items-end justify-center">
             <img src="/images/about_us_page/aboutus10.png" alt="Produk karya pilar nusantara yang muncul dari box"
                 class="w-full h-auto rounded-[20px]">
         </div>
 
     </div>
 </section>
-<?= view ('components/cta_banner', ['text' => 'Butuh informasi lebih lanjut atau ingin bekerja sama? Kami siap melayani kebutuhan Anda']) ?>
+<?= view('components/cta_banner', ['text' => 'Butuh informasi lebih lanjut atau ingin bekerja sama? Kami siap melayani kebutuhan Anda']) ?>
+<div class="mb-[150px]"></div>
 <?= $this->endSection() ?>
 
 <?= $this->section('body-script') ?>
@@ -637,32 +581,32 @@ const logoNavbar = document.getElementById('logo-navbar');
 const navbarLanguageBorder = document.getElementById('navbar-language-border');
 const navbarLanguageIcon = document.getElementById('navbar-language-icon');
 const blur = navbar.querySelector('.blur-3xl');
-const hero = document.getElementById('hero-section');
+const hero = document.getElementById('nav-observer');
 
 // Observer untuk ubah background dan teks saat masuk ke overview
 const observer = new IntersectionObserver(
     ([entry]) => {
+        navbar.classList.remove('text-white');
+        navbar.classList.add('text-gray-700');
+        document.querySelectorAll('.logo-navbar').forEach(el => {
+            el.classList.add('invert', 'brightness-75');
+        });
+        navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
+        navbarLanguageIcon.setAttribute('fill', '#374151');
         if (entry.isIntersecting) {
             // Masih di hero
             navbar.classList.remove('bg-white');
-            navbar.classList.add('text-white');
-            navbar.classList.remove('text-gray-700');
-            logoNavbar.classList.remove('invert', 'brightness-75');
-            navbarLanguageBorder.classList.replace('border-gray-700', 'border-white');
-            navbarLanguageIcon.setAttribute('fill', 'white');
 
             if (blur) blur.classList.remove('hidden');
+            isInTop = true;
 
 
         } else {
             // Di luar hero
             navbar.classList.add('bg-white');
-            navbar.classList.remove('text-white');
-            navbar.classList.add('text-gray-700');
-            logoNavbar.classList.add('invert', 'brightness-75');
-            navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
-            navbarLanguageIcon.setAttribute('fill', '#374151');
             if (blur) blur.classList.add('hidden');
+            isInTop = false;
+
         }
     }, {
         root: null,

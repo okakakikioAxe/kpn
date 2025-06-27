@@ -1,18 +1,28 @@
 <?= $this->extend('v2/template/template_v2') ?>
 
-
 <?= $this->section('header') ?>
 <html lang="id">
+<title>Hubungi Kami</title>
+<meta name="description"
+    content="Hubungi PT Karya Pilar Nusantara (PT KPN) untuk informasi produk dan layanan. Temukan kontak, alamat, telepon, dan email kami di KPN Sidoarjo. Kami siap membantu Anda!" />
+<meta name="keywords"
+    content="hubungi KPN, kontak PT Karya Pilar Nusantara, kontak PT KPN, alamat KPN Sidoarjo, telepon KPN, email KPN, layanan pelanggan KPN" />
 <?= $this->endsection() ?>
 
 <?= $this->section('content') ?>
-<section id="hero-section" class="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center bg-[#EBEFFF]">
-    <div class="flex w-full h-full items-center justify-center  px-5">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[100px] w-full 2xl:w-[80vw] max-w-[1400px] ">
+<section id="hero-section"
+    class="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center lg:py-[200px] bg-[#EBEFFF]">
+    <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[200px] w-full bg-transparent"></div>
+
+    <div class="flex w-full h-full items-center justify-center  px-5 md:px-15">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[60px] 2xl:gap-x-[100px] w-full 2xl:w-[80vw] max-w-[1400px] ">
             <div>
                 <div class="flex flex-col h-screen lg:h-full justify-center">
-                    <h1 class="ubuntu-bold text-[#050505] text-[28px] md:text-[32px] lg:text-[34px] xl:text-[48px] title-shadow mb-[4px]">Hubungi<span class="text-[#2563EB]"> Kami</span></h1>
-                    <p class="open-sans-regular text-[16px] text-[#242424] mb-[50px]">Hubungi kami untuk mendapatkan update dan promo menarik lainnya</p>
+                    <h1
+                        class="text-[32px] h-[34px] md:text-[34px] md:h-[38px] xl:text-[42px] xl:h-[45px] 2xl:text-[48px] 2xl:h-[50px] ubuntu-bold text-[#050505] title-shadow mb-[20px]">
+                        Hubungi<span class="text-[#2563EB]"> Kami</span></h1>
+                    <p class="open-sans-regular text-[16px] text-[#242424] mb-[50px]">Hubungi kami untuk mendapatkan
+                        update dan promo menarik lainnya</p>
                     <div class="flex flex-col space-y-[25px] md:space-y-[35px]">
                         <div class="flex items-center">
                             <div>
@@ -29,7 +39,8 @@
                             </div>
                             <div class="pl-[14px] md:pl-[20px]">
                                 <p class="ubuntu-regular text-[16px] text-[#242424]">Email</p>
-                                <p class="open-sans-bold text-[16px] text-[#242424]">pt.karyapilarnusantara@gmail.com</p>
+                                <p class="open-sans-bold text-[16px] text-[#242424]">pt.karyapilarnusantara@gmail.com
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-center">
@@ -38,115 +49,151 @@
                             </div>
                             <div class="pl-[14px] md:pl-[20px]">
                                 <p class="ubuntu-regular text-[16px] text-[#242424]">Alamat</p>
-                                <p class="open-sans-bold text-[16px] text-[#242424]">Pergudangan Safe n Lock, Sidoarjo</p>
+                                <p class="open-sans-bold text-[16px] text-[#242424]">Pergudangan Safe n Lock, Sidoarjo
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pb-[120px] lg:pb-0">
-                <div class="w-full h-auto bg-white rounded-[20px] px-[20px] py-[50px] md:p-[50px] ">
-                    <p class="lg:w-[282px] ubuntu-bold text-[24px] text-[#242424] leading-7 title-shadow mb-[57px]">Terhubung dengan
-                        Kami, Hubungi
-                        Kami
-                        Kapanpun</p>
-                    <div class="grid grid-cols-2 gap-x-[15px] md:gap-x-[35px] mb-[16px]">
-                        <div>
-                            <label for="name" class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Nama</label>
-                            <input type="text" autocomplete="name" name="name" id="input-name" placeholder="mr x" class="w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]">
-                        </div>
-                        <div>
-                            <label for="unit" class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Unit</label>
-                            <input type="text" autocomplete="unit" name="unit" id="input-unit" placeholder="PT Karya Pilar Nusantara" class="w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-x-[15px] md:gap-x-[35px] mb-[16px]">
-                        <div>
-                            <label for="email" class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Email</label>
-                            <div class="relative w-full">
-                                <!-- Icon -->
-                                <div class="absolute inset-y-0 left-0 pl-3 hidden md:flex items-center pointer-events-none">
-                                    <?= view('components/icons/envelope', ['class' => 'h-[15px]', 'fill' => 'black']) ?>
-                                </div>
-
-                                <!-- Input -->
-                                <input type="email" autocomplete="email" name="email" id="input-email" placeholder="email@gmail.com"
-                                    class="w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] md:pl-10 text-[16px] open-sans-regular text-[#242424]" />
+            <form id="contactForm">
+                <div class="pb-[120px] lg:pb-0">
+                    <div class="w-full h-auto bg-white rounded-[20px] px-[20px] py-[50px] md:p-[30px] 2xl:p-[50px] ">
+                        <p
+                            class="lg:w-[282px] ubuntu-bold text-[20px] lg:text-[24px] text-[#242424] leading-7 title-shadow mb-[57px]">
+                            Terhubung dengan
+                            Kami, Hubungi
+                            Kami
+                            Kapanpun</p>
+                        <div class="grid grid-cols-2 gap-x-[15px] md:gap-x-[35px] mb-[16px]">
+                            <div>
+                                <label for="name"
+                                    class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Nama</label>
+                                <input type="text" autocomplete="name" name="name" id="name" placeholder="mr x" required
+                                    class="w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]">
+                            </div>
+                            <div>
+                                <label for="unit"
+                                    class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Unit</label>
+                                <input type="text" autocomplete="unit" name="unit" id="unit" required
+                                    placeholder="PT Karya Pilar Nusantara"
+                                    class="w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]">
                             </div>
                         </div>
-                        <div class="w-full">
-                            <label for="phone" class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">No Telepon</label>
-                            <div class="relative hidden md:flex items-center border border-gray-300 rounded-[12px] px-3 py-[6px] focus-within:ring-2 focus-within:ring-blue-500">
+                        <div class="grid grid-cols-2 gap-x-[15px] md:gap-x-[35px] mb-[16px]">
+                            <div>
+                                <label for="email"
+                                    class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Email</label>
+                                <div class="relative w-full">
 
-                                <!-- Dropdown -->
-                                <div class="relative">
-                                    <button type="button" id="dropdown-button" class="flex items-center space-x-1 pr-2 text-black focus:outline-none">
-                                        <span id="selected-code">ID</span>
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </button>
+                                    <div
+                                        class="absolute inset-y-0 left-0 pl-3 hidden md:flex items-center pointer-events-none">
+                                        <?= view('components/icons/envelope', ['class' => 'h-[15px]', 'fill' =>
+                                        'black']) ?>
+                                    </div>
 
-                                    <!-- Dropdown Menu -->
-                                    <ul id="dropdown-menu"
-                                        class="hidden absolute z-10 mt-1 bg-white border border-gray-200 rounded shadow-lg w-[30vw] max-w-[140px] max-h-[250px] overflow-y-auto text-[16px] open-sans-regular text-[#242424]">
-                                        <!-- <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-code="${r.code}" data-prefix="${r.prefix}">ID (+62)</li> -->
-                                    </ul>
+
+                                    <input type="email" autocomplete="email" name="email" id="email"
+                                        placeholder="email@gmail.com"
+                                        class="w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] md:pl-10 text-[16px] open-sans-regular text-[#242424]" />
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <label for="phone" class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">No
+                                    Telepon</label>
+                                <div
+                                    class="relative hidden md:flex items-center border border-gray-300 rounded-[12px] px-3 py-[6px] focus-within:ring-2 focus-within:ring-blue-500">
+
+                                    <div class="relative">
+                                        <button type="button" id="dropdown-button"
+                                            class="flex items-center space-x-1 pr-2 text-black focus:outline-none">
+                                            <span id="selected-code">ID</span>
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+
+                                        <ul id="dropdown-menu"
+                                            class="hidden absolute z-10 mt-1 bg-white border border-gray-200 rounded shadow-lg w-[30vw] max-w-[140px] max-h-[250px] overflow-y-auto text-[16px] open-sans-regular text-[#242424]">
+                                        </ul>
+                                    </div>
+
+                                    <input type="text" name="phone" id="phone-mobile"
+                                        class="pl-3 w-full outline-none border-none text-gray-700 placeholder-gray-400 bg-transparent"
+                                        placeholder="822xxxx" required>
                                 </div>
 
-                                <!-- Input -->
-                                <input type="text" name="phone" id="phone"
-                                    class="pl-3 w-full outline-none border-none text-gray-700 placeholder-gray-400 bg-transparent"
-                                    placeholder="822xxxx" value="+62 ">
-                            </div>
-                            <input type="number" autocomplete="phone" name="phone" id="input-phone-2" placeholder="0822xxxxx"
-                                class="md:hidden w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]" />
+                                <input type="number" autocomplete="phone" name="phone" id="phone"
+                                    placeholder="0822xxxxx"
+                                    class="md:hidden w-full placeholder:italic border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]" />
 
+                            </div>
                         </div>
+                        <div class="mb-[16px]">
+                            <div>
+                                <label for="address"
+                                    class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Alamat</label>
+                                <input type="text" autocomplete="address-line1" name="address" id="address" required
+                                    class="w-full border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]">
+                            </div>
+                        </div>
+                        <div class="mb-[32px]">
+                            <div>
+                                <label for="message"
+                                    class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Pesan</label>
+                                <textarea type="text" name="message" id="message" required
+                                    class="w-full border-[1px] h-[150px] min-h-[38px] max-h-[250px] overflow-y-auto border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424] placeholder:italic"
+                                    placeholder="Tulis pesan Anda di sini..."></textarea>
+                            </div>
+                        </div>
+                        <button type="button" id="contactSubmit" onclick="submitForm()"
+                            class=" cursor-pointer bg-blue-600 lg:hover:bg-blue-700 px-[32px] md:px-[34px] transition-colors basic-contact-us-button py-[8px] rounded-[15px]  wa-button"
+                            type="button">
+                            <div class="flex items-center justify-center w-full">
+                                <div class="roboto-bold tracking-wide text-[16px] text-white">
+                                    Kirim Pesan</div>
+                            </div>
+                        </button>
                     </div>
-                    <div class="mb-[16px]">
-                        <div>
-                            <label for="address" class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Alamat</label>
-                            <input type="text" autocomplete="address-line1" name="address" id="input-address" class="w-full border-[1px] border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424]">
-                        </div>
-                    </div>
-                    <div class="mb-[32px]">
-                        <div>
-                            <label for="message" class="open-sans-semi-bold text-[16px] text-[#242424] mb-[4px]">Pesan</label>
-                            <textarea type="text" name="message" id="input-message" class="w-full border-[1px] h-[150px] min-h-[38px] max-h-[250px] overflow-y-auto border-[#E0E0E0] focus:ring-2 focus:ring-[#2563EB] focus:outline-none rounded-[10px] p-[6px] text-[16px] open-sans-regular text-[#242424] placeholder:italic" placeholder="Tulis pesan Anda di sini..."></textarea>
-                        </div>
-                    </div>
-                    <button
-                        class="cursor-pointer bg-blue-600 lg:hover:bg-blue-700 px-[32px] md:px-[38px] transition-colors basic-contact-us-button py-[8px] md:py-[10px] rounded-[15px] md:rounded-[18px] wa-button"
-                        type="button">
-                        <div class="flex items-center justify-center w-full">
-                            <div class="roboto-bold tracking-wide text-[16px] sm:text-[18px] text-white">
-                                Kirim Pesan</div>
-                        </div>
-                    </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </section>
 <section id="faq-section" class="w-full min-h-screen flex items-start justify-center">
-    <div class="w-full h-full 2xl:w-[80vw] max-w-[1400px] flex flex-col items-center justify-start py-[150px] px-5 md:px-15">
-        <h2 class="text-center ubuntu-bold text-[#050505] text-[28px] md:text-[32px] lg:text-[34px] xl:text-[48px] title-shadow mb-[60px] ld:mb-[80px]">FAQ</h2>
-        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]" style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
-            <p class="open-sans-bold text-[20px] text-[#242424] mb-[14px]">Apakah produk bebas BPA?</p>
-            <p class="open-sans-regular text-[16px] text-[#242424]">Ya, produk kami yang berkaitan dengan anak-anak seperti playmat, perosotan, dan mainan anak, dibuat dari bahan bebas BPA sehingga aman digunakan.</p>
+    <div
+        class="w-full h-full 2xl:w-[80vw] max-w-[1400px] flex flex-col items-center justify-start py-[150px] px-5 md:px-15 2xl:px-0">
+        <h2
+            class="text-[32px] h-[34px] md:text-[34px] md:h-[38px] xl:text-[38px] xl:h-[40px] 2xl:text-[40px] 2xl:h-[40px] text-center ubuntu-bold text-[#050505] title-shadow mb-[60px] ld:mb-[80px]">
+            FAQ</h2>
+        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]"
+            style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
+            <p class="open-sans-bold text-[18px] text-[#242424] mb-[14px]">Apakah produk bebas BPA?</p>
+            <p class="open-sans-regular text-[16px] text-[#242424]">Ya, produk kami yang berkaitan dengan anak-anak
+                seperti playmat, perosotan, dan mainan anak, dibuat dari bahan bebas BPA sehingga aman digunakan.</p>
         </div>
-        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]" style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
-            <p class="open-sans-bold text-[20px] text-[#242424] mb-[14px]">Apakah bisa custom merk sendiri?</p>
-            <p class="open-sans-regular text-[16px] text-[#242424]">Tentu! Kami menyediakan layanan custom logo sesuai kebutuhan bisnis Anda. Hubungi kami untuk detail lebih lanjut.</p>
+        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]"
+            style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
+            <p class="open-sans-bold text-[18px] text-[#242424] mb-[14px]">Apakah bisa custom merk sendiri?</p>
+            <p class="open-sans-regular text-[16px] text-[#242424]">Tentu! Kami menyediakan layanan custom logo sesuai
+                kebutuhan bisnis Anda. Hubungi kami untuk detail lebih lanjut.</p>
         </div>
-        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]" style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
-            <p class="open-sans-bold text-[20px] text-[#242424] mb-[14px]">Apakah pengiriman bisa ke seluruh Indonesia?</p>
-            <p class="open-sans-regular text-[16px] text-[#242424]">Ya, kami melayani pengiriman ke seluruh Indonesia dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya.</p>
+        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]"
+            style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
+            <p class="open-sans-bold text-[18px] text-[#242424] mb-[14px]">Apakah pengiriman bisa ke seluruh Indonesia?
+            </p>
+            <p class="open-sans-regular text-[16px] text-[#242424]">Ya, kami melayani pengiriman ke seluruh Indonesia
+                dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya.</p>
         </div>
-        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]" style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
-            <p class="open-sans-bold text-[20px] text-[#242424] mb-[14px]">Apakah ada harga khusus untuk pembelian dalam jumlah besar?</p>
-            <p class="open-sans-regular text-[16px] text-[#242424]">Tentu, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email pt.karyapilarnusantara@gmail.com.</p>
+        <div class="w-full border-[1px] border-[#ECECEC] rounded-[20px] px-[25px] py-[30px] mb-[16px]"
+            style="box-shadow: 0 2px 2.5px 0 rgba(101, 101, 101, 0.10);">
+            <p class="open-sans-bold text-[18px] text-[#242424] mb-[14px]">Apakah ada harga khusus untuk pembelian dalam
+                jumlah besar?</p>
+            <p class="open-sans-regular text-[16px] text-[#242424]">Tentu, silakan hubungi tim marketing kami untuk
+                mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email
+                pt.karyapilarnusantara@gmail.com.</p>
         </div>
     </div>
 </section>
@@ -160,29 +207,32 @@
     const navbarLanguageBorder = document.getElementById('navbar-language-border');
     const navbarLanguageIcon = document.getElementById('navbar-language-icon');
     const blur = navbar.querySelector('.blur-3xl');
-    const hero = document.getElementById('hero-section');
+    const hero = document.getElementById('nav-observer');
 
     // Observer untuk ubah background dan teks saat masuk ke overview
     const observer = new IntersectionObserver(
         ([entry]) => {
             navbar.classList.remove('text-white');
             navbar.classList.add('text-gray-700');
-            logoNavbar.classList.add('invert', 'brightness-75');
+            document.querySelectorAll('.logo-navbar').forEach(el => {
+                el.classList.add('invert', 'brightness-75');
+            });
             navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
             navbarLanguageIcon.setAttribute('fill', '#374151');
-
             if (entry.isIntersecting) {
                 // Masih di hero
                 navbar.classList.remove('bg-white');
 
                 if (blur) blur.classList.remove('hidden');
+                isInTop = true;
 
 
             } else {
                 // Di luar hero
                 navbar.classList.add('bg-white');
-
                 if (blur) blur.classList.add('hidden');
+                isInTop = false;
+
             }
         }, {
             root: null,
@@ -191,8 +241,9 @@
     );
 
     observer.observe(hero);
+</script>
 
-
+<script>
     // dropdown kode nomor
     const regions = [{
             code: 'AF',
@@ -1112,6 +1163,37 @@
     dropdown.innerHTML = regions.map(r =>
         `<li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-code="${r.code}" data-prefix="${r.prefix}">${r.code} (${r.prefix})</li>`
     ).join('');
+
+
+    function submitForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phoneNumber = document.getElementById("phone").value;
+        const address = document.getElementById("address").value;
+        const instantion = document.getElementById("unit").value;
+        const message = document.getElementById("message").value;
+        let templateMessage =
+            `Halo, saya ` +
+            name +
+            ` dari ` +
+            instantion +
+            ` (` + address + `) ` +
+            `ingin bertanya tentang ` +
+            message +
+            `. Untuk menghubungi saya melalui nomor telepon ` +
+            phoneNumber;
+
+        email == "" ?
+            (templateMessage += ". Terima kasih.") :
+            (templateMessage += ` atau email ` + email + `. Terima kasih.`);
+
+
+        const whatsappURL =
+            `https://api.whatsapp.com/send?phone=6282160050005&text=${encodeURIComponent(templateMessage)}`;
+
+        window.open(whatsappURL, "_blank");
+        // alert(whatsappURL)
+    }
 </script>
 <?= $this->endSection() ?>
 
@@ -1146,5 +1228,113 @@
             dropdownMenu.classList.add('hidden');
         }
     });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const faqContents = document.querySelectorAll('.faq-content');
+
+        faqContents.forEach(content => {
+            content.dataset.height = content.scrollHeight + "px"; // Store actual height
+            content.style.height = "0px"; // Collapse initially
+        });
+    });
+
+    function toggleFAQ(index) {
+        const content = document.querySelectorAll('.faq-content')[index];
+        const iconContainer = document.querySelectorAll('.icon-container')[index];
+
+        if (content.style.height === "0px") {
+            content.style.height = content.dataset.height; // Expand
+            content.style.opacity = "1"; // Fade in text
+            iconContainer.innerHTML = `
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"></path>
+                    </svg>`; // Switch to minus
+        } else {
+            content.style.height = "0px"; // Collapse
+            content.style.opacity = "0"; // Fade out text
+            iconContainer.innerHTML = `
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m-8-8h16"></path>
+                    </svg>`; // Switch back to plus
+        }
+    }
+
+    function smoothScrollTo(targetY, duration = 1000) {
+        const startY = window.scrollY;
+        const difference = targetY - startY;
+        const startTime = performance.now();
+
+        function step(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easedProgress =
+                progress < 0.5 ?
+                2 * progress * progress :
+                1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            window.scrollTo(0, startY + difference * easedProgress);
+
+            if (elapsedTime < duration) {
+                requestAnimationFrame(step);
+            }
+        }
+        requestAnimationFrame(step);
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "PT Karya Pilar Nusantara",
+        "alternateName": "KPN",
+        "description": "Mitra pengadaan terpercaya untuk berbagai macam kebutuhan Anda, mulai dari alat olahraga hingga infrastruktur dengan kualitas premium",
+        "url": "https://www.karyapilarnusantara.com",
+        "logo": "https://www.karyapilarnusantara.com/kpn-logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62 821-6005-0005",
+            "contactType": "customer service",
+            "contactOption": "TollFree",
+            "areaServed": "ID",
+            "availableLanguage": "Indonesian"
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "Apakah produk bebas BPA?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, produk kami yang berkaitan dengan anak-anak seperti playmat, perosotan, dan mainan anak, dibuat dari bahan bebas BPA sehingga aman digunakan."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Apakah bisa custom merk sendiri?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu! Kami menyediakan layanan custom branding sesuai kebutuhan bisnis Anda. Hubungi kami untuk detail lebih lanjut."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Apakah pengiriman bisa ke seluruh Indonesia?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami melayani pengiriman ke seluruh Indonesia dan mendukung semua ekspedisi, termasuk JNE, J&T, SiCepat, POS Indonesia, Indah Cargo, dan lainnya."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Apakah ada harga khusus untuk pembelian dalam jumlah besar?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu, silakan hubungi tim marketing kami untuk mendapatkan penawaran terbaik. Hubungi kami melalui WhatsApp di +62 821-6005-0005 atau email admin@karyapilarnusantara.com."
+            }
+        }]
+    }
 </script>
 <?= $this->endSection() ?>

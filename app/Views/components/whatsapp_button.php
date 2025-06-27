@@ -1,4 +1,5 @@
-<a href="#">
+<a
+    href="<?= esc($button_url ?? 'https://api.whatsapp.com/send?phone=6282160050005&text=Halo%20saya%20butuh%20info') ?>">
     <button
         class="<?= esc( $buttonClass ?? 'cursor-pointer bg-blue-600 lg:hover:bg-blue-700 px-[32px] md:px-[38px] transition-colors basic-contact-us-button py-[10px] md:py-[12px] rounded-[15px] wa-button' ) ?>"
         type="button">
