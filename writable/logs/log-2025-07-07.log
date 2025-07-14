@@ -1,0 +1,51 @@
+CRITICAL - 2025-07-07 07:31:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v2/template/contact_us_template_v2.php"
+[Method: GET, Route: contact-us]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v2/template/contact_us_template_v2.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v2/template/contact_us_template_v2', [], true)
+ 3 APPPATH\Views\v2\id\contact_us_id.php(1): view('v2/template/contact_us_template_v2', [...])
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\LUKMAN\\PROJECT\\Code Igniter\\kpn\\app\\Views\\v2\\id\\contact_us_id.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v2/id/contact_us_id', [], true)
+ 7 APPPATH\Controllers\Home.php(210): view('v2/id/contact_us_id')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->contactUs_v2()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\LUKMAN\\PROJECT\\Code Igniter\\kpn\\public\\index.php')
+CRITICAL - 2025-07-07 07:31:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v2/template/contact_us_template_v2.php"
+[Method: GET, Route: en/contact-us]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v2/template/contact_us_template_v2.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v2/template/contact_us_template_v2', [], true)
+ 3 APPPATH\Views\v2\id\contact_us_id.php(1): view('v2/template/contact_us_template_v2', [...])
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\LUKMAN\\PROJECT\\Code Igniter\\kpn\\app\\Views\\v2\\id\\contact_us_id.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v2/id/contact_us_id', [], true)
+ 7 APPPATH\Controllers\Home.php(210): view('v2/id/contact_us_id')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->contactUs_v2('en')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\LUKMAN\\PROJECT\\Code Igniter\\kpn\\public\\index.php')
+CRITICAL - 2025-07-07 07:32:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v2/template/contact_us_template_v2.php"
+[Method: GET, Route: en/contact-us]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v2/template/contact_us_template_v2.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v2/template/contact_us_template_v2', [], true)
+ 3 APPPATH\Views\v2\en\contact_us_en.php(1): view('v2/template/contact_us_template_v2', [...])
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\LUKMAN\\PROJECT\\Code Igniter\\kpn\\app\\Views\\v2\\en\\contact_us_en.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v2/en/contact_us_en', [], true)
+ 7 APPPATH\Controllers\Home.php(216): view('v2/en/contact_us_en')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->contactUs_v2('en')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\LUKMAN\\PROJECT\\Code Igniter\\kpn\\public\\index.php')

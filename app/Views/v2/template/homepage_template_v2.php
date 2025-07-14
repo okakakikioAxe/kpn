@@ -2,7 +2,7 @@
 
 
 <?= $this->section('header') ?>
-<html lang="id">
+<html lang="<?= esc($lang ?? 'id') ?>">
 <title><?= esc($meta_title ?? 'PT. Karya Pilar Nusantara - Perusahaan Pengadaan Produk') ?></title>
 <meta name="description"
     content="<?= esc($meta_description ?? 'PT Karya Pilar Nusantara (KPN) adalah perusahaan pengadaan barang yang menyediakan berbagai macam produk berkualitas tinggi, mulai dari mainan playground indoor, berbagai jenis matras, hingga perlengkapan kebutuhan perairan seperti kubus apung, kincir air, toren, palet, dan masih banyak lagi.') ?>" />
@@ -335,7 +335,7 @@
                                             <h2
                                                 class="ubuntu-bold text-[18px] md:text-[20px] tracking-[4%]  text-[#2563EB] title-shadow mb-[20px]">
 
-                                                <?= esc($service_1_title ?? 'Pembayaran &amp; Garansi') ?></h2>
+                                                <?= ($service_1_title ?? 'Pembayaran & Garansi') ?></h2>
                                             <p
                                                 class="open-sans-regular text-[14px] md:text-[16px] tracking-[8%] text-[#4E4E4E]">
                                                 <?= esc($service_1_description ?? 'Nikmati kemudahan pembayaran dengan pilihan bank apapun serta garansi produk untuk kenyamanan Anda.') ?>
@@ -359,7 +359,7 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[18px] md:text-[20px] tracking-[4%]  text-[#2563EB] title-shadow mb-[20px]">
-                                                <?= esc($service_2_title ?? 'Harga, Stok, & Pengiriman') ?>
+                                                <?= ($service_2_title ?? 'Harga, Stok, & Pengiriman') ?>
                                             </h2>
                                             <p
                                                 class="open-sans-regular text-[14px] md:text-[16px] tracking-[8%] text-[#4E4E4E]">
@@ -384,11 +384,13 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[18px] md:text-[20px] tracking-[4%]  text-[#2563EB] title-shadow mb-[20px]">
-                                                Layanan Khusus &amp; Konsultasi</h2>
+                                                <?= ($service_3_title ?? 'Layanan Khusus & Konsultasi') ?>
+                                            </h2>
                                             <p
                                                 class="open-sans-regular text-[14px] md:text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Kami menyediakan layanan konsultasi produk, custom merk, gratis sampel
-                                                untuk produk tertentu.</p>
+
+                                                <?= esc($service_3_description ?? 'Kami menyediakan layanan konsultasi produk, custom merk, gratis sampel untuk produk tertentu.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -401,8 +403,7 @@
                 <div class="w-full flex items-center justify-center">
                     <p
                         class="w-full max-w-[600px] open-sans-regular text-[16px] tracking-[4%] text-center text-[#4E4E4E] mb-[48px] sm:mb-[80px] md:mb-[70px]">
-                        Pengadaan perlengkapan outdoor hingga infrastruktur dengan layanan cepat, terpercaya, dan
-                        dukungan profesional.
+                        <?= esc($service_description ?? 'Pengadaan perlengkapan outdoor hingga infrastruktur dengan layanan cepat, terpercaya, dan dukungan profesional.') ?>
                     </p>
 
                 </div>
@@ -413,13 +414,13 @@
         </div>
         <div id="service-section-desktop" class="hidden lg:block pt-[150px] lg:px-5">
             <div class="flex w-full itemx-center justify-center z-20 relative mb-[80px] xl:hidden">
-                <?= view('components/texts/title/title_group', ['id' => 'service-title-lg', 'class' => 'block text-center', 'top_title' => 'Kami Memberikan', 'bottom_title' => 'Yang Terbaik Untuk Anda']) ?>
+                <?= view('components/texts/title/title_group', ['id' => 'service-title-lg', 'class' => 'block text-center', 'top_title' => esc($service_top_title ?? 'Kami Memberikan'), 'bottom_title' => esc($service_bottom_title_2 ?? 'Yang Terbaik Untuk Anda')]) ?>
             </div>
             <div class="w-full max-w-[1400px] pb-[150px] z-20 relative px-10">
                 <div class="grid grid-cols-2 gap-x-[50px] mb-[144px]">
                     <div class="w-full">
                         <div>
-                            <?= view('components/texts/title/title_group', ['id' => 'service-title-xl', 'class' => 'hidden xl:block text-start', 'top_title' => 'Kami Memberikan', 'bottom_title' => 'Yang Terbaik Untuk Anda']) ?>
+                            <?= view('components/texts/title/title_group', ['id' => 'service-title-xl', 'class' => 'hidden xl:block text-start', 'top_title' => esc($service_top_title ?? 'Kami Memberikan'), 'bottom_title' => esc($service_bottom_title_2 ?? 'Yang Terbaik Untuk Anda')]) ?>
                         </div>
                         <div class="w-full  flex flex-col items-start gap-y-[55px] mt-[50px] xl:mt-[80px]">
                             <div class="w-[90%] ml-0">
@@ -437,10 +438,10 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[20px] xl:text-[22px] tracking-[4%]  text-[#2563EB] title-shadow mb-[18px]">
-                                                Pembayaran &amp; Garansi</h2>
+                                                <?= ($service_1_title ?? 'Pembayaran & Garansi') ?></h2>
                                             <p class="open-sans-regular text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Nikmati kemudahan pembayaran dengan pilihan bank apapun serta garansi
-                                                produk untuk kenyamanan Anda.</p>
+                                                <?= esc($service_1_description ?? 'Nikmati kemudahan pembayaran dengan pilihan bank apapun serta garansi produk untuk kenyamanan Anda.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -460,10 +461,11 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[20px] xl:text-[22px] tracking-[4%]  text-[#2563EB] title-shadow mb-[18px]">
-                                                Harga, Stok &amp; Pengiriman</h2>
+                                                <?= ($service_2_title ?? 'Harga, Stok, & Pengiriman') ?>
+                                            </h2>
                                             <p class="open-sans-regular text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Kami menawarkan harga yang lebih murah dari distributor lain, stok
-                                                selalu tersedia, dan pengiriman fleksibel sesuai kebutuhan Anda.</p>
+                                                <?= esc($service_2_description ?? 'Kami menawarkan harga yang lebih murah dari distributor lain, stok selalu tersedia, dan pengiriman fleksibel sesuai kebutuhan Anda.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -483,10 +485,11 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[20px] xl:text-[22px] tracking-[4%]  text-[#2563EB] title-shadow mb-[18px]">
-                                                Layanan Khusus &amp; Konsultasi</h2>
+                                                <?= ($service_3_title ?? 'Layanan Khusus & Konsultasi') ?>
+                                            </h2>
                                             <p class="open-sans-regular text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Kami menyediakan layanan konsultasi produk, custom merk, gratis sampel
-                                                untuk produk tertentu.</p>
+                                                <?= esc($service_3_description ?? 'Kami menyediakan layanan konsultasi produk, custom merk, gratis sampel untuk produk tertentu.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -501,8 +504,8 @@
                 <div class="w-full flex items-center justify-center">
                     <p
                         class="w-full max-w-[600px] open-sans-regular text-[18px] tracking-[4%] text-center text-[#4E4E4E] mb-[48px]">
-                        Pengadaan perlengkapan outdoor hingga infrastruktur dengan layanan cepat, terpercaya, dan
-                        dukungan profesional.</p>
+                        <?= esc($service_description ?? 'Pengadaan perlengkapan outdoor hingga infrastruktur dengan layanan cepat, terpercaya, dan dukungan profesional.') ?>
+                    </p>
 
                 </div>
                 <div class="w-full flex items-center justify-center">
@@ -515,9 +518,8 @@
 <section id="preparation-section"
     class="w-full h-full min-h-screen lg:min-h-0 lg:max-h-[100vh] relative overflow-hidden flex flex-col items-center justify-center bg-gray-200 md:py-[150px] lg:py-0">
     <div class="w-full h-auto">
-
-        <?= view('components/texts/title/title_group', ['id' => 'preparation-title', 'class' => 'block w-full mb-[60px] md:hidden text-center', 'top_title' => 'Dari Desain', 'bottom_title' => 'Sampai Pengiriman']) ?>
-        <?= view('components/texts/title/title_group', ['id' => 'preparation-title-md', 'class' => 'hidden md:block lg:hidden w-full mb-[90px] text-center', 'top_title' => 'Dari Desain', 'bottom_title' => 'Sampai Pengiriman']) ?>
+        <?= view('components/texts/title/title_group', ['id' => 'preparation-title', 'class' => 'block w-full mb-[60px] md:hidden text-center', 'top_title' => $preparation_top_title ?? 'Dari Desain', 'bottom_title' => $preparation_bottom_title ?? 'Sampai Pengiriman']) ?>
+        <?= view('components/texts/title/title_group', ['id' => 'preparation-title-md', 'class' => 'hidden md:block lg:hidden w-full mb-[90px] text-center', 'top_title' => $preparation_top_title ?? 'Dari Desain', 'bottom_title' => $preparation_bottom_title ?? 'Sampai Pengiriman']) ?>
         <!-- <p class="open-sans-regular text-center mb-[40px]">Semua permintaan Anda dimulai dari sini</p> -->
         <div
             class="preparation-swiper swiper-initialized swiper-horizontal swiper-backface-hidden mb-[60px] lg:mb-0 relative">
@@ -526,18 +528,20 @@
                 <div class="swiper-slide flex justify-center swiper-slide-active" role="group"
                     style="width: 326px; margin-right: 10px;">
                     <div class="overflow-hidden flex items-center justify-center p-5 lg:p-0">
-                        <div class="w-full ">
+                        <div class="w-full">
                             <img loading="lazy" src="/images/preparation/preparation1.webp"
-                                class="w-full aspect-3/2 object-cover shadow-lg lg:shadow-none rounded-[20px] lg:rounded-none">
+                                class="w-full aspect-3/2 object-cover shadow-lg lg:shadow-none rounded-[20px] lg:rounded-none"
+                                alt="gambar 1">
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide flex justify-center swiper-slide-active" role="group"
                     style="width: 326px; margin-right: 10px;">
                     <div class="overflow-hidden flex items-center justify-center p-5 lg:p-0">
-                        <div class="w-full ">
+                        <div class="w-full">
                             <img loading="lazy" src="/images/preparation/preparation2.webp"
-                                class="w-full aspect-3/2 object-cover shadow-lg lg:shadow-none rounded-[20px] lg:rounded-none">
+                                class="w-full aspect-3/2 object-cover shadow-lg lg:shadow-none rounded-[20px] lg:rounded-none"
+                                alt="gambar 2">
                         </div>
                     </div>
                 </div>
@@ -546,7 +550,8 @@
                     <div class="overflow-hidden flex items-center justify-center p-5 lg:p-0">
                         <div class="w-full ">
                             <img loading="lazy" src="/images/preparation/preparation3.webp"
-                                class="w-full aspect-3/2 object-cover shadow-lg lg:shadow-none rounded-[20px] lg:rounded-none">
+                                class="w-full aspect-3/2 object-cover shadow-lg lg:shadow-none rounded-[20px] lg:rounded-none"
+                                alt="gambar 3">
                         </div>
                     </div>
                 </div>
@@ -577,8 +582,10 @@
         </div>
         <div
             class="hidden lg:flex absolute bottom-0 pb-[40px] pt-[10px]  flex-col w-full items-center justify-center px-5 z-30 bg-gradient-to-t from-black to-black/10 backdrop-blur-xs">
-            <p id="dynamic-title-desktop" class="fade-text ubuntu-bold text-[24px] text-white mb-[12px]">Perencanaan &
-                Desain</p>
+            <p id="dynamic-title-desktop" class="fade-text ubuntu-bold text-[24px] text-white mb-[12px]">
+                <?= ($preparation_1_title ?? 'Perencanaan & Desain') ?>
+
+            </p>
             <div id="pagination-desktop" class="w-[250px] h-[10px] flex items-center mb-[30px]">
                 <div class="dot w-[10px] h-[10px] bg-white rounded-full"></div>
                 <div class="line flex-1 h-[2px] bg-white overflow-hidden relative">
@@ -598,12 +605,14 @@
                 <div class="dot w-[10px] h-[10px] bg-white rounded-full"></div>
             </div>
             <p id="dynamic-desc-desktop"
-                class="max-w-[428px] fade-text ubuntu-regular text-[16px] text-white text-center">Kami mulai dengan
-                perencanaan matang dan desain produk sesuai kebutuhan pelanggan. </p>
+                class="max-w-[428px] fade-text ubuntu-regular text-[16px] text-white text-center">
+                <?= esc($preparation_1_description ?? 'Kami mulai dengan perencanaan matang dan desain produk sesuai kebutuhan pelanggan.') ?>
+            </p>
         </div>
     </div>
     <div class="lg:hidden flex flex-col w-full items-center justify-center px-5">
-        <p id="dynamic-title" class="fade-text ubuntu-bold text-[24px] text-[#242424] mb-[12px]">Perencanaan & Desain
+        <p id="dynamic-title" class="fade-text ubuntu-bold text-[24px] text-[#242424] mb-[12px]">
+            <?= ($preparation_1_title ?? 'Perencanaan & Desain') ?>
         </p>
         <div id="pagination-mobile" class="w-[150px] h-[10px] flex items-center mb-[30px]">
             <div class="dot w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
@@ -620,8 +629,9 @@
             </div>
             <div class="dot w-[10px] h-[10px] bg-gray-500 rounded-full"></div>
         </div>
-        <p id="dynamic-desc" class="fade-text ubuntu-regular text-[16px] text-[#242424] text-center">Kami mulai dengan
-            perencanaan matang dan desain produk sesuai kebutuhan pelanggan. </p>
+        <p id="dynamic-desc" class="fade-text ubuntu-regular text-[16px] text-[#242424] text-center">
+            <?= esc($preparation_1_description ?? 'Kami mulai dengan perencanaan matang dan desain produk sesuai kebutuhan pelanggan.') ?>
+        </p>
     </div>
 
 </section>
@@ -636,11 +646,11 @@
             <div class="hidden sm:flex w-full mb-[60px] sm:mb-[90px] items-start justify-center">
                 <h2
                     class="text-[32px] h-[34px] md:text-[34px] md:h-[38px] xl:text-[38px] xl:h-[40px] 2xl:text-[40px] 2xl:h-[40px] ubuntu-bold text-black title-shadow text-center mr-2">
-                    Mengapa
+                    <?= esc($why_us_top_title ?? 'Mengapa') ?>
                 </h2>
                 <span
                     class="text-[32px] h-[34px] md:text-[34px] md:h-[38px] xl:text-[38px] xl:h-[40px] 2xl:text-[40px] 2xl:h-[40px] ubuntu-bold text-[#2563EB] title-shadow">
-                    Memilih Kami
+                    <?= esc($why_us_bottom_title ?? 'Memilih Kami') ?>
                 </span>
             </div>
         </div>
@@ -653,7 +663,6 @@
                 </div>
                 <div class=" mb-[100px] sm:mb-[120px]">
                     <div class="w-full">
-
                         <div class="w-full  flex flex-col items-start gap-y-[45px] md:gap-y-[55px] ">
                             <div class="w-full leading-[150%]">
                                 <div class="flex space-x-[35px] items-center">
@@ -695,10 +704,10 @@
                                         <div class="block">
                                             <h2
                                                 class="ubuntu-bold text-[18px] tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Kustom Merk</h2>
+                                                <?= esc($why_us_1_title ?? 'Kustom Merk') ?></h2>
                                             <p
                                                 class="open-sans-regular text-[14px] md:text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.
+                                                <?= esc($why_us_1_description ?? 'Memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.') ?>
                                             </p>
                                         </div>
                                     </div>
@@ -731,10 +740,11 @@
                                         <div class="block">
                                             <h2
                                                 class="ubuntu-bold text-[18px] tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Harga Kompetitif</h2>
+                                                <?= esc($why_us_2_title ?? 'Harga Kompetitif') ?></h2>
                                             <p
                                                 class="open-sans-regular text-[14px] md:text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Kami menawarkan harga terbaik yang bersaing di pasar.</p>
+                                                <?= esc($why_us_2_description ?? 'Kami menawarkan harga terbaik yang bersaing di pasar.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -770,10 +780,11 @@
                                         <div class="block">
                                             <h2
                                                 class="ubuntu-bold text-[18px] tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Kualitas Terjamin</h2>
+                                                <?= esc($why_us_3_title ?? 'Kualitas Terjamin') ?></h2>
                                             <p
                                                 class="open-sans-regular text-[14px] md:text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Produk kami melewati kontrol kualitas ketat untuk kepuasan Anda.</p>
+                                                <?= esc($why_us_3_description ?? 'Produk kami melewati kontrol kualitas ketat untuk kepuasan Anda.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -793,10 +804,11 @@
                                         <div class="block">
                                             <h2
                                                 class="ubuntu-bold text-[18px] tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Layanan Profesional</h2>
+                                                <?= esc($why_us_4_title ?? 'Layanan Profesional') ?></h2>
                                             <p
                                                 class="open-sans-regular text-[14px] md:text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Tim kami siap membantu dan memberikan konsultasi terbaik.</p>
+                                                <?= esc($why_us_4_description ?? 'Tim kami siap membantu dan memberikan konsultasi terbaik.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -807,9 +819,7 @@
                 <div class="w-full flex items-center justify-center">
                     <p
                         class="w-full max-w-[600px] open-sans-regular text-[16px] tracking-[4%] text-center text-[#4E4E4E] mb-[100px] md:mb-[120px]">
-                        Kami selalu mengutamakan kualitas produk dan pelayanan untuk memastikan setiap pelanggan
-                        mendapatkan solusi terbaik. Integritas dan kepercayaan menjadi landasan utama dalam setiap
-                        langkah kami.
+                        <?= esc($why_us_description ?? 'Kami selalu mengutamakan kualitas produk dan pelayanan untuk memastikan setiap pelanggan mendapatkan solusi terbaik. Integritas dan kepercayaan menjadi landasan utama dalam setiap langkah kami.') ?>
                     </p>
 
                 </div>
@@ -819,7 +829,6 @@
             </div>
         </div>
         <div id="why-us-section-desktop" class="hidden lg:block lg:px-5">
-
             <div class="w-full max-w-[1400px] pb-[50px] z-20 relative px-10">
                 <div class="grid grid-cols-2 gap-x-[80px] mb-[144px]">
                     <div class="w-full h-full flex flex-col items-center  justify-center">
@@ -868,9 +877,9 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[20px] xl:text-[22px] tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Kustom Merek</h2>
+                                                <?= esc($why_us_1_title ?? 'Kustom Merek') ?></h2>
                                             <p class="open-sans-regular text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.
+                                                <?= esc($why_us_1_description ?? 'Memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.') ?>
                                             </p>
                                         </div>
                                     </div>
@@ -903,9 +912,10 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[20px] xl:text-[22px]  tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Harga Kompetitif</h2>
+                                                <?= esc($why_us_2_title ?? 'Harga Kompetitif') ?></h2>
                                             <p class="open-sans-regular text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Kami menawarkan harga terbaik yang bersaing di pasar.</p>
+                                                <?= esc($why_us_2_description ?? 'Kami menawarkan harga terbaik yang bersaing di pasar.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -941,9 +951,10 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[20px] xl:text-[22px] tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Kualitas Terjamin</h2>
+                                                <?= esc($why_us_3_title ?? 'Kualitas Terjamin') ?></h2>
                                             <p class="open-sans-regular text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Produk kami melewati kontrol kualitas ketat untuk kepuasan Anda.</p>
+                                                <?= esc($why_us_3_description ?? 'Produk kami melewati kontrol kualitas ketat untuk kepuasan Anda.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -963,9 +974,10 @@
                                         <div class="block">
                                             <h2
                                                 class=" ubuntu-bold text-[20px] xl:text-[22px] tracking-[4%]  text-[#2563EB] title-shadow mb-[10px]">
-                                                Layanan Profesional</h2>
+                                                <?= esc($why_us_4_title ?? 'Layanan Profesional') ?></h2>
                                             <p class="open-sans-regular text-[16px] tracking-[8%] text-[#4E4E4E]">
-                                                Tim kami siap membantu dan memberikan konsultasi terbaik.</p>
+                                                <?= esc($why_us_4_description ?? 'Tim kami siap membantu dan memberikan konsultasi terbaik.') ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -977,9 +989,9 @@
                 <div class="w-full flex items-center justify-center">
                     <p
                         class="w-full max-w-[600px] open-sans-regular text-[18px] tracking-[4%] text-center text-[#4E4E4E] mb-[100px]">
-                        Kami selalu mengutamakan kualitas produk dan pelayanan untuk memastikan setiap pelanggan
-                        mendapatkan solusi terbaik. Integritas dan kepercayaan menjadi landasan utama dalam setiap
-                        langkah kami.</p>
+                        <?= esc($why_us_description ?? 'Kami selalu mengutamakan kualitas produk dan pelayanan untuk memastikan setiap pelanggan mendapatkan solusi terbaik. Integritas dan kepercayaan menjadi landasan utama dalam setiap langkah kami.') ?>
+
+                    </p>
                 </div>
                 <div class="w-full flex items-center justify-center">
                     <?= view('components/whatsapp_button') ?>
@@ -1000,19 +1012,20 @@
         <div class="hidden md:flex w-full items-center justify-center mb-[60px]">
             <h2
                 class="text-[32px] h-[34px] md:text-[34px] md:h-[38px] xl:text-[38px] xl:h-[40px] 2xl:text-[40px] 2xl:h-[40px] ubuntu-bold text-black title-shadow text-center mr-2">
-                Sekilas
+                <?= esc($about_us_top_title ?? 'Sekilas') ?>
             </h2>
             <span
                 class="text-[32px] h-[34px] md:text-[34px] md:h-[38px] xl:text-[38px] xl:h-[40px] 2xl:text-[40px] 2xl:h-[40px] ubuntu-bold text-[#2563EB] title-shadow">
-                Tentang Kami
+                <?= esc($about_us_bottom_title ?? 'Tentang Kami') ?>
             </span>
         </div>
         <p
             class="w-full max-w-[1200px] open-sans-regular text-[16px] lg:text-[18px] tracking-[4%] text-center text-[#4E4E4E] mb-[80px] md:px-10 xl:px-0">
-            PT. Karya Pilar Nusantara adalah perusahaan terpercaya yang berfokus pada pengadaan berbagai kebutuhan
+            <?= esc($about_us_description ?? 'PT. Karya Pilar Nusantara adalah perusahaan terpercaya yang berfokus pada pengadaan berbagai kebutuhan
             instansi dan dunia usaha. Kami berkomitmmen memberikan produk berkualitas, layanan profesional, dan solusi
             pengadaan yang efisien. Kami siap mendukung kesuksesan bisnis Anda dengan produk lengkap dan layanan
-            terbaik.</p>
+            terbaik.') ?>
+        </p>
         <?= view('components/whatsapp_button') ?>
     </div>
     <div class="absolute bottom-0 left-0 ">
@@ -1113,17 +1126,17 @@
     const linesDesktop = document.querySelectorAll('#pagination-desktop .line-fill');
 
     const titles = [
-        "Perencanaan & Desain",
-        "Produksi & Pengolahan",
-        "Kontrol Kualitas",
-        "Pengiriman & Distribusi"
+        "<?= ($preparation_1_title ?? 'Perencanaan & Desain') ?>",
+        "<?= ($preparation_2_title ?? 'Produksi & Pengolahan') ?>",
+        "<?= esc($preparation_3_title ?? 'Kontrol Kualitas') ?>",
+        "<?= ($preparation_4_title ?? 'Pengiriman & Distribusi') ?>"
     ];
 
     const descriptions = [
-        "Kami mulai dengan perencanaan matang dan desain produk sesuai kebutuhan pelanggan.",
-        "Proses produksi dilakukan dengan standar kualitas tinggi dan teknologi modern.",
-        "Setiap produk melewati pemeriksaan ketat untuk memastikan kualitas terbaik.",
-        "Produk dikirim tepat waktu dengan layanan pengiriman yang handal dan aman."
+        "<?= esc($preparation_1_description ?? 'Kami mulai dengan perencanaan matang dan desain produk sesuai kebutuhan pelanggan.') ?>",
+        "<?= esc($preparation_2_description ?? 'Proses produksi dilakukan dengan standar kualitas tinggi dan teknologi modern.') ?>",
+        "<?= esc($preparation_3_description ?? 'Setiap produk melewati pemeriksaan ketat untuk memastikan kualitas terbaik.') ?>",
+        "<?= esc($preparation_4_description ?? 'Produk dikirim tepat waktu dengan layanan pengiriman yang handal dan aman.') ?>"
     ];
 
     const titleEl = document.getElementById("dynamic-title");
@@ -1269,4 +1282,59 @@
 
     updatePagination(preparationSwiper.activeIndex);
 </script>
+<?= $this->endSection() ?>
+
+<?= $this->section('script') ?>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "PT Karya Pilar Nusantara",
+        "alternateName": "KPN",
+        "description": "PT Karya Pilar Nusantara (KPN) adalah perusahaan pengadaan barang yang menyediakan berbagai macam produk berkualitas tinggi, mulai dari mainan playground indoor, berbagai jenis matras, hingga perlengkapan kebutuhan perairan seperti kubus apung, kincir air, toren, palet, dan masih banyak lagi.",
+        "url": "https://www.karyapilarnusantara.com",
+        "logo": "https://www.karyapilarnusantara.com/favicon-kpn.ico",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62 821-6005-0005",
+            "contactType": "customer service",
+            "contactOption": "TollFree",
+            "areaServed": "ID",
+            "availableLanguage": "Indonesian"
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://www.karyapilarnusantara.com"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Produk",
+            "item": "https://www.karyapilarnusantara.com/product"
+        }, {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Kontak",
+            "item": "https://www.karyapilarnusantara.com/contact-us"
+        }, {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Tentang Kami",
+            "item": "https://www.karyapilarnusantara.com/about-us"
+        }, {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Galeri",
+            "item": "https://www.karyapilarnusantara.com/galeri"
+        }]
+    }
+</script>
+
 <?= $this->endSection() ?>

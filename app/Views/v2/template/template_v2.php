@@ -7,14 +7,13 @@
         type="image/png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/kpn-icon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/kpn-icon.ico" type="image/x-icon">
+    <link rel="icon" href="/kpn-icon.ico">
     <meta name="author" content="PT Karya Pilar Nusantara" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="<?= esc($robot_index ?? 'index') ?>, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PT Karya Pilar Nusantara" />
     <meta property="og:description"
-        content="Perusahaan pengadaan barang mulai dari alat camping, olahraga hingga infrastruktur" />
+        content="<?= esc($og_description ?? 'Perusahaan pengadaan barang mulai dari alat camping, olahraga hingga infrastruktur') ?>" />
     <meta property="og:image" content="https://www.karyapilarnusantara.com/kpn-banner.webp" />
     <meta property="og:url" content="https://www.karyapilarnusantara.com" />
     <meta property="og:site_name" content="PT Karya Pilar Nusantara" />
@@ -78,27 +77,27 @@
                 <ul class="flex items-center justify-center space-x-8 ">
                     <li>
                         <a href="<?= esc($homepage_link ?? '/') ?>" class="nav-link">
-                            Beranda
+                            <?= esc($homepage_link_title ?? 'Beranda') ?>
                         </a>
                     </li>
                     <li>
                         <a href="<?= esc($product_link ?? '/product') ?>" class="nav-link">
-                            Produk
+                            <?= esc($product_link_title ?? 'Produk') ?>
                         </a>
                     </li>
                     <li>
                         <a href="<?= esc($about_us_link ?? '/about-us') ?>" class="nav-link">
-                            Tentang Kami
+                            <?= esc($about_us_link_title ?? 'Tentang Kami') ?>
                         </a>
                     </li>
                     <li>
                         <a href="<?= esc($contact_us_link ?? '/contact-us') ?>" class="nav-link">
-                            Hubungi Kami
+                            <?= esc($contact_us_link_title ?? 'Hubungi Kami') ?>
                         </a>
                     </li>
                     <li>
                         <a href="<?= esc($gallery_link ?? '/galeri') ?>" class="nav-link">
-                            Galeri
+                            <?= esc($gallery_link_title ?? 'Galeri') ?>
                         </a>
                     </li>
                 </ul>
@@ -109,7 +108,7 @@
                     <div id="dropdown-selected" class="cursor-pointer nav-link ">
                         <div class="flex w-full h-full items-center space-x-9">
 
-                            <span class="nav-link px-[21px]">Bahasa Indonesia</span>
+                            <span class="nav-link px-[21px] language-button">Bahasa Indonesia</span>
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 version="1.1" x="0px" y="0px" viewBox="0 0 512 512"
                                 style="enable-background:new 0 0 512 512;" xml:space="preserve" width="32" height="32"
@@ -151,10 +150,13 @@
                         </div>
                         <div class="dropdown-content absolute hidden w-full z-10 pt-3">
                             <div class="bg-white rounded-md w-auto text-gray-800 text-[16px]">
-                                <div class="px-[21px] py-2 rounded-md cursor-pointer hover:bg-gray-100">Bahasa Indonesia
+                                <div class="px-[21px] py-2 rounded-md cursor-pointer hover:bg-gray-100 language-option"
+                                    data-lang='id'>Bahasa Indonesia
                                 </div>
-                                <!-- <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100">English</div>
-                                <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100">普通话</div> -->
+                                <div class="px-[21px] py-2 rounded-md cursor-pointer hover:bg-gray-100 language-option"
+                                    data-lang='en'>English</div>
+                                <div class="px-[21px] py-2 rounded-md cursor-pointer hover:bg-gray-100 language-option"
+                                    data-lang='cn'>普通话</div>
                             </div>
                         </div>
                     </div>
@@ -185,27 +187,27 @@
                 class="flex flex-col items-start justify-center space-y-4 text-[18px] text-gray-700 roboto-bold p-5 pt-[40px] md:px-15">
                 <li>
                     <a href="<?= esc($homepage_link ?? '/') ?>">
-                        Beranda
+                        <?= esc($homepage_link_title ?? 'Beranda') ?>
                     </a>
                 </li>
                 <li>
                     <a href="<?= esc($product_link ?? '/product') ?>">
-                        Produk
+                        <?= esc($product_link_title ?? 'Produk') ?>
                     </a>
                 </li>
                 <li>
                     <a href="<?= esc($about_us_link ?? '/about-us') ?>">
-                        Tentang Kami
+                        <?= esc($about_us_link_title ?? 'Tentang Kami') ?>
                     </a>
                 </li>
                 <li>
                     <a href="<?= esc($contact_us_link ?? '/contact-us') ?>">
-                        Hubungi Kami
+                        <?= esc($contact_us_link_title ?? 'Hubungi Kami') ?>
                     </a>
                 </li>
                 <li>
                     <a href="<?= esc($gallery_link ?? '/galeri') ?>">
-                        Galeri
+                        <?= esc($gallery_link_title ?? 'Galeri') ?>
                     </a>
                 </li>
                 <div id="navbar-language-border-mobile"
@@ -214,7 +216,8 @@
                         <div id="dropdown-selected-mobile" class="nav-link px-[21px] ">
                             <div class="flex w-full h-full items-center space-x-9">
 
-                                <span class="roboto-bold text-[16px] text-gray-700">Bahasa Indonesia</span>
+                                <span class="roboto-bold text-[16px] text-gray-700 language-button">Bahasa
+                                    Indonesia</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     version="1.1" x="0px" y="0px" viewBox="0 0 512 512"
                                     style="enable-background:new 0 0 512 512;" xml:space="preserve" width="32"
@@ -260,9 +263,12 @@
                         <div id="dropdown-content-mobile" class="hidden absolute top-[32px] w-full z-100 pt-3 ">
                             <div
                                 class="bg-white w-auto text-gray-700 text-[16px] border-1 border-gray-300 rounded-[10px]">
-                                <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100">Bahasa Indonesia</div>
-                                <!-- <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100">English</div>
-                                <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100">普通话</div> -->
+                                <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100 language-option"
+                                    data-lang='id'>Bahasa Indonesia</div>
+                                <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100 language-option"
+                                    data-lang='en'>English</div>
+                                <div class="p-2 rounded-md cursor-pointer hover:bg-gray-100 language-option"
+                                    data-lang='cn'>普通话</div>
                             </div>
                         </div>
                         <!-- Custom dropdown trigger -->
@@ -283,37 +289,29 @@
                         <h3 class="ubuntu-bold">PT KARYA PILAR NUSANTARA</h3>
                     </div>
                     <div>
-                        <p class="open-sans-regular text-[14px]">PT. Karya Pilar Nusantara adalah perusahaan terpercaya
-                            yang
-                            berfokus
-                            pada pengadaan berbagai
-                            kebutuhan
-                            instansi dan dunia usaha. Kami berkomitmmen memberikan produk berkualitas, layanan
-                            profesional,
-                            dan solusi
-                            pengadaan yang efisien. Kami siap mendukung kesuksesan bisnis Anda dengan produk lengkap dan
-                            layanan
-                            terbaik.</p>
+                        <p class="open-sans-regular text-[14px]">
+                            <?= esc($footer_description ?? 'PT. Karya Pilar Nusantara adalah perusahaan terpercaya yang berfokus pada pengadaan berbagai kebutuhan instansi dan dunia usaha. Kami berkomitmmen memberikan produk berkualitas, layanan profesional, dan solusi pengadaan yang efisien. Kami siap mendukung kesuksesan bisnis Anda dengan produk lengkap dan layanan terbaik.') ?>
+                        </p>
                     </div>
                 </div>
                 <div class="  sm:col-span-2 w-full h-full ">
                     <div class="flex flex-col gap-y-[10px]">
-                        <h3 class="ubuntu-bold text-[16px] mb-[5px]">Perusahaan</h3>
+                        <h3 class="ubuntu-bold text-[16px] mb-[5px]"><?= esc($footer_company_title ?? 'Perusahaan') ?>
+                        </h3>
                         <a href="<?= esc($about_us_link ?? '/about-us') ?>"><span
-                                class="roboto-regular text-[14px] cursor-pointer">Tentang</span></a>
+                                class="roboto-regular text-[14px] cursor-pointer"><?= esc($about_us_2_link_title ?? 'Tentang') ?></span></a>
                         <a href="<?= esc($product_link ?? '/product') ?>"><span
-                                class="roboto-regular text-[14px] cursor-pointer">Produk</span></a>
+                                class="roboto-regular text-[14px] cursor-pointer"><?= esc($product_link_title ?? 'Produk') ?></span></a>
                         <a href="<?= esc($gallery_link ?? '/galeri') ?>"><span
-                                class="roboto-regular text-[14px] cursor-pointer">Galeri</span></a>
+                                class="roboto-regular text-[14px] cursor-pointer"><?= esc($gallery_link_title ?? 'Galeri') ?></span></a>
                     </div>
-
                 </div>
                 <div class=" sm:col-span-2 w-full h-full ">
                     <div class="flex flex-col gap-y-[10px]">
-                        <h3 class="ubuntu-bold text-[16px] mb-[5px]">Hubungi Kami</h3>
+                        <h3 class="ubuntu-bold text-[16px] mb-[5px]">
+                            <?= esc($contact_us_link_title ?? 'Hubungi Kami') ?></h3>
                         <a href="<?= esc($contact_us_link ?? '/contact-us') ?>"><span
-                                class="roboto-regular text-[14px] cursor-pointer">Kontak</span></a>
-
+                                class="roboto-regular text-[14px] cursor-pointer"><?= esc($contact_us_2_link_title ?? 'Kontak') ?></span></a>
                     </div>
                 </div>
             </div>
@@ -345,6 +343,60 @@
             </div>
         </a>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const languageButton = document.querySelector(".language-button");
+            if (!languageButton) return;
+
+            const currentUrl = window.location.href;
+
+            if (currentUrl.includes("/en")) {
+                languageButton.textContent = "English";
+            } else if (currentUrl.includes("/cn")) {
+                languageButton.textContent = "普通话";
+            } else {
+                languageButton.textContent = "Bahasa Indonesia";
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const languageOptions = document.querySelectorAll(".language-option");
+
+            languageOptions.forEach(option => {
+                option.addEventListener("click", () => {
+                    const selectedLang = option.getAttribute("data-lang");
+                    const currentUrl = window.location.href;
+                    const pathname = window.location.pathname;
+                    const origin = window.location.origin;
+
+                    const parts = pathname.split('/').filter(Boolean);
+
+                    // Known language codes
+                    const langCodes = ['id', 'en', 'cn'];
+
+                    // Remove current language code if present
+                    if (langCodes.includes(parts[0])) {
+                        parts.shift();
+                    }
+
+                    // Only prepend selectedLang if not "id"
+                    if (selectedLang !== 'id') {
+                        parts.unshift(selectedLang);
+                    }
+
+                    // Rebuild and redirect
+                    const newPath = '/' + parts.join('/');
+                    const newUrl = origin + newPath + window.location.search;
+
+                    window.location.href = newUrl;
+                });
+            });
+        });
+    </script>
+
+
 
 
     <script>

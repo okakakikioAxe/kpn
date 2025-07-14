@@ -1,0 +1,77 @@
+<?= view('v2/template/homepage_template_v2', [
+    // meta
+    'lang' => 'en',
+    'robot_index' => 'noindex',
+    'meta_title' => 'PT. Karya Pilar Nusantara - Product Procurement Company',
+    'meta_description' => 'PT Karya Pilar Nusantara (KPN) is a procurement company that provides a wide range of high-quality products, from indoor playground equipment and various types of mattresses, to aquatic supplies such as floating cubes, waterwheels, water tanks, pallets, and much more.',
+    'meta_keyword' => 'PT Karya Pilar Nusantara, KPN, procurement company, indoor playground toys, mattress, floating cube, waterwheel, water tank, plastic pallet, aquatic products, playground equipment, outdoor equipment, procurement company Indonesia, high quality products',
+
+    // navbar & link
+    'homepage_link' => '/en',
+    'homepage_link_title' => 'Homepage',
+    'product_link' => '/en/product',
+    'product_link_title' => 'Products',
+    'about_us_link' => '/en/about-us',
+    'about_us_link_title' => 'About Us',
+    'about_us_2_link_title' => 'About',
+    'contact_us_link' => '/en/contact-us',
+    'contact_us_link_title' => 'Contact Us',
+    'contact_us_2_link_title' => 'Contact',
+    'gallery_link' => '/en/galeri',
+    'gallery_link_title' => 'Gallery',
+    'title' => 'Contact Us',
+
+    // content
+    'hero_title' => 'Trusted Procurement Solutions for Your Needs',
+    'overview_top_title' => 'Delivering Value,',
+    'overview_bottom_title' => 'Not Just Products',
+    'overview_description' => 'We provide not just products, but value-driven solutions for institutions and businesses. With trusted services, we support efficiency, quality, and sustainability in every procurement to enhance operations, public services, and long-term development.',
+    'order_title' => 'Orders Fulfilled',
+    'cities_title' => 'Cities Reached',
+    'total_product_title' => 'Total Products',
+    'claim_description' => 'Trusted by various institutions across Indonesia, we continue to grow and evolve to meet your needs.',
+    'see_product_button' => 'View Products',
+
+    'service_top_title' => 'We Deliver',
+    'service_bottom_title' => 'The Best',
+    'service_bottom_title_2' => 'The Best for You',
+    'service_1_title' => 'Payment & Warranty',
+    'service_1_description' => 'Enjoy flexible payments with any bank and product warranties for your convenience.',
+    'service_2_title' => 'Price, Stock, & Delivery',
+    'service_2_description' => 'We offer cheaper prices than other distributors, always available stock, and flexible delivery options.',
+    'service_3_title' => 'Custom Service & Consultation',
+    'service_3_description' => 'We provide product consultation, custom branding, and free samples for selected products.',
+    'service_description' => 'Procurement of outdoor and infrastructure equipment with fast service, trusted support, and professional assistance.',
+
+    'preparation_top_title' => 'From Design',
+    'preparation_bottom_title' => 'To Delivery',
+    'preparation_1_title' => 'Planning & Design',
+    'preparation_1_description' => 'We start with thorough planning and product design based on customer needs.',
+    'preparation_2_title' => 'Production & Processing',
+    'preparation_2_description' => 'We begin with detailed planning and product design tailored to customer needs.',
+    'preparation_3_title' => 'Quality Control',
+    'preparation_3_description' => 'Every product undergoes strict inspection to ensure the best quality.',
+    'preparation_4_title' => 'Shipping & Distribution',
+    'preparation_4_description' => 'Products are delivered on time with reliable and safe delivery services.',
+
+    'why_us_top_title' => 'Why',
+    'why_us_bottom_title' => 'Choose Us',
+    'why_us_1_title' => 'Custom Branding',
+    'why_us_1_description' => 'Products can be customized with your business logo and identity.',
+    'why_us_2_title' => 'Competitive Price',
+    'why_us_2_description' => 'We offer the best prices competitive in the market.',
+    'why_us_3_title' => 'Guaranteed Quality',
+    'why_us_3_description' => 'Our products go through strict quality control for your satisfaction.',
+    'why_us_4_title' => 'Professional Service',
+    'why_us_4_description' => 'Our team is ready to assist and provide the best consultation.',
+    'why_us_description' => 'We always prioritize product and service quality to ensure every customer gets the best solution. Integrity and trust are the foundations of everything we do.',
+
+    'about_us_top_title' => 'About',
+    'about_us_bottom_title' => 'Us',
+    'about_us_description' => 'PT. Karya Pilar Nusantara is a trusted company focused on the procurement of various needs for institutions and businesses. We are committed to providing high-quality products, professional services, and efficient procurement solutions. We are ready to support your business success with a complete range of products and the best services.',
+
+
+    // footer
+    'footer_description' => 'PT. Karya Pilar Nusantara is a trusted company focused on fulfilling procurement needs for institutions and businesses. We are committed to delivering quality products, professional services, and efficient procurement solutions. We are ready to support your business success with complete products and the best service.',
+    'footer_company_title' => 'Company',
+]) ?>

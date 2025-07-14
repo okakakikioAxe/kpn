@@ -4,7 +4,7 @@
             <div class="w-full flex items-center justify-center md:col-span-2">
                 <p
                     class="open-sans-bold text-[14px] sm:text-[14px] 2xl:text-[16px] max-w-[600px] text-white text-center md:text-start">
-                    <?= esc($text ?? 'Tidak menemukan produk yang Anda cari? hubungi kami untuk informasi lebih lengkap!') ?>
+                    <?= esc($cta_banner_text ?? 'Tidak menemukan produk yang Anda cari? hubungi kami untuk informasi lebih lengkap!') ?>
                 </p>
             </div>
             <div class="w-full flex items-center justify-center md:col-span-1">
@@ -26,8 +26,8 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div class="roboto-bold tracking-wide text-[16px] text-[#128C7E] md:w-[110px]">Hubungi
-                                Kami
+                            <div class="roboto-bold tracking-wide text-[16px] text-[#128C7E] md:w-[110px]">
+                                <?= ($cta_banner_button_title ?? 'Hubungi Kami') ?>
                             </div>
                         </div>
                     </button>
