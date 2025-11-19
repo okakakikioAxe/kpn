@@ -1,7 +1,12 @@
 User-agent: *
 Disallow: /
+Allow: /favicon-kpn.ico
+Allow: /kpn-logo.png
 Allow: /$
 Allow: /product
 Allow: /contact-us
 Allow: /about-us
 Allow: /galeri
+Allow: /sitemap.xml
+Allow: /images/products/
+Allow: /galery/content/

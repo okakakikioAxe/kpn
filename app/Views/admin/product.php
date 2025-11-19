@@ -9,36 +9,36 @@
     <link rel="stylesheet" href="/css/global_style.css">
     <link rel="stylesheet" href="/css/admin_galery_style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+    body {
+        font-family: Arial, sans-serif;
+    }
 
-        .sidebar {
-            width: 250px;
-            background: #1E293B;
-            color: white;
-            height: 100vh;
-            padding: 20px;
-        }
+    .sidebar {
+        width: 250px;
+        background: #1E293B;
+        color: white;
+        height: 100vh;
+        padding: 20px;
+    }
 
-        .sidebar a {
-            display: block;
-            padding: 10px;
-            margin: 5px 0;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+    .sidebar a {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
 
-        .sidebar a:hover {
-            background: #334155;
-        }
+    .sidebar a:hover {
+        background: #334155;
+    }
 
-        .header {
-            background: white;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    .header {
+        background: white;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 </head>
@@ -54,6 +54,8 @@
                     <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700">Gallery</a></li>
                     <li class="py-2"><a href="/admin/product"
                             class="block px-4 py-2 hover:bg-gray-700 bg-gray-700 rounded">Produk</a></li>
+                    <li class="py-2"><a href="/admin/category"
+                            class="block px-4 py-2 hover:bg-gray-700 rounded">Kategori</a></li>
                     <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah
                             Password</a></li>
                     <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 rounded">
@@ -116,13 +118,13 @@
             <main class="p-6 flex-1 overflow-y-auto">
                 <div id="product-list-container" class="grid grid-cols-6 2xl:grid-cols-12 gap-4">
                     <?php foreach ($products as $product): ?>
-                        <div
-                            class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
-                            <img loading="lazy" data-product='<?= json_encode($product) ?>'
-                                src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
-                                alt="<?= $product['title'] ?>"
-                                class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
-                        </div>
+                    <div
+                        class="thumbnail-container w-full relative cursor-pointer aspect-square  hover:scale-105 transform duration-200 ease-in-out">
+                        <img loading="lazy" data-product='<?= json_encode($product) ?>'
+                            src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
+                            alt="<?= $product['title'] ?>"
+                            class=" thumbnail rounded-lg shadow-lg hover:shadow-xl transition relative object-cover w-full h-full">
+                    </div>
                     <?php endforeach; ?>
                 </div>
                 <div id="product-detail-container" class="w-full justify-center hidden bg-white">
@@ -196,251 +198,251 @@
     </div>
 
     <script>
-        let successMessage = "";
-        // Data for the images
-        <?php if (isset($successMessage)): ?>
-            successMessage = "<?= $successMessage ?>";
-            console.log(successMessage);
-        <?php endif; ?>
+    let successMessage = "";
+    // Data for the images
+    <?php if (isset($successMessage)): ?>
+    successMessage = "<?= $successMessage ?>";
+    console.log(successMessage);
+    <?php endif; ?>
 
-        const modal = document.getElementById("imageModal");
+    const modal = document.getElementById("imageModal");
 
-        let currentItem = null;
-        const toastModal = document.getElementById("toastModal");
-        const toastMessage = document.getElementById("toastMessage");
-        const toastProgress = document.getElementById("toastProgress");
+    let currentItem = null;
+    const toastModal = document.getElementById("toastModal");
+    const toastMessage = document.getElementById("toastMessage");
+    const toastProgress = document.getElementById("toastProgress");
 
 
-        let toastOpenTimer;
-        let toastCloseTimer;
+    let toastOpenTimer;
+    let toastCloseTimer;
 
-        let itemTitleToDelete = null;
-        let itemIdToDelete = null;
+    let itemTitleToDelete = null;
+    let itemIdToDelete = null;
 
-        function formatDateTime(datetime) {
-            // Convert string to Date object
-            const date = new Date(datetime.replace(" ", "T")); // Ensure proper parsing
+    function formatDateTime(datetime) {
+        // Convert string to Date object
+        const date = new Date(datetime.replace(" ", "T")); // Ensure proper parsing
 
-            // Format date to "15 Maret 2025"
-            const formattedDate = new Intl.DateTimeFormat('id-ID', {
-                day: '2-digit',
-                month: 'long',
-                year: 'numeric'
-            }).format(date);
+        // Format date to "15 Maret 2025"
+        const formattedDate = new Intl.DateTimeFormat('id-ID', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        }).format(date);
 
-            // Format time to "00:46"
-            const hours = String(date.getHours()).padStart(2, '0');
-            const minutes = String(date.getMinutes()).padStart(2, '0');
+        // Format time to "00:46"
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
 
-            return `${formattedDate} - ${hours}:${minutes}`;
-        }
+        return `${formattedDate} - ${hours}:${minutes}`;
+    }
 
-        function closeProductDetail() {
-            document.getElementById('product-detail-container').classList.replace("flex", "hidden");
-            document.getElementById('product-list-container').classList.replace("hidden", "grid");
-            document.getElementById('product-detail-image').src = '';
-            document.getElementById('product-detail-title').innerHTML = '';
-            document.getElementById('product-detail-description').innerHTML = '';
-            document.getElementById('variant-select-container').innerHTML = '';
-            document.getElementById('product-detail-variant-title').innerHTML = '-';
-            document.getElementById('product-detail-variant-container').classList.add('hidden');
-        }
+    function closeProductDetail() {
+        document.getElementById('product-detail-container').classList.replace("flex", "hidden");
+        document.getElementById('product-list-container').classList.replace("hidden", "grid");
+        document.getElementById('product-detail-image').src = '';
+        document.getElementById('product-detail-title').innerHTML = '';
+        document.getElementById('product-detail-description').innerHTML = '';
+        document.getElementById('variant-select-container').innerHTML = '';
+        document.getElementById('product-detail-variant-title').innerHTML = '-';
+        document.getElementById('product-detail-variant-container').classList.add('hidden');
+    }
 
-        // Function to create and show toast with progress bar
-        function showToast(message) {
-            window.clearTimeout(toastOpenTimer);
-            window.clearTimeout(toastCloseTimer);
+    // Function to create and show toast with progress bar
+    function showToast(message) {
+        window.clearTimeout(toastOpenTimer);
+        window.clearTimeout(toastCloseTimer);
+        toastModal.classList.add("opacity-0");
+        toastProgress.classList.remove("animate-progress");
+
+        toastMessage.innerHTML = message;
+
+        toastOpenTimer = setTimeout(() => {
+            toastModal.classList.remove("opacity-0");
+            toastProgress.classList.add("animate-progress");
+        }, 100);
+
+        toastCloseTimer = setTimeout(() => {
             toastModal.classList.add("opacity-0");
             toastProgress.classList.remove("animate-progress");
+        }, 3000)
+    }
 
-            toastMessage.innerHTML = message;
+    // Show toast if success message exists
+    if (successMessage) {
+        showToast(successMessage);
+    }
 
-            toastOpenTimer = setTimeout(() => {
-                toastModal.classList.remove("opacity-0");
-                toastProgress.classList.add("animate-progress");
-            }, 100);
+    function openDeleteModal(idToDelete, titleToDelete) {
+        itemIdToDelete = idToDelete;
+        itemTitleToDelete = titleToDelete;
+        document.getElementById('contentTitle').innerHTML = itemTitleToDelete;
+        document.getElementById("deleteModal").classList.replace("hidden", "flex");
+    }
 
-            toastCloseTimer = setTimeout(() => {
-                toastModal.classList.add("opacity-0");
-                toastProgress.classList.remove("animate-progress");
-            }, 3000)
-        }
+    function closeDeleteModal() {
+        document.getElementById("deleteModal").classList.replace("flex", "hidden");
+        itemTitleToDelete = null;
+    }
 
-        // Show toast if success message exists
-        if (successMessage) {
-            showToast(successMessage);
-        }
+    function confirmDelete() {
+        window.location.href = '/admin/product/delete/' + itemIdToDelete;
+    }
 
-        function openDeleteModal(idToDelete, titleToDelete) {
-            itemIdToDelete = idToDelete;
-            itemTitleToDelete = titleToDelete;
-            document.getElementById('contentTitle').innerHTML = itemTitleToDelete;
-            document.getElementById("deleteModal").classList.replace("hidden", "flex");
-        }
+    // Event listener for image click
+    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+        thumbnailContainer.addEventListener("click", async (e) => {
+            // console.log(thumbnailContainer.firstElementChild.dataset.product);
+            let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
 
-        function closeDeleteModal() {
-            document.getElementById("deleteModal").classList.replace("flex", "hidden");
-            itemTitleToDelete = null;
-        }
+            document.getElementById('product-detail-container').classList.replace("hidden", "flex");
+            document.getElementById('product-list-container').classList.replace("grid", "hidden");
 
-        function confirmDelete() {
-            window.location.href = '/admin/product/delete/' + itemIdToDelete;
-        }
+            document.getElementById('product-detail-image').src = '/images/products/' + data.slug +
+                '/' + data.image;
+            document.getElementById('product-detail-title').innerHTML = data.title;
 
-        // Event listener for image click
-        document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
-            thumbnailContainer.addEventListener("click", async (e) => {
-                // console.log(thumbnailContainer.firstElementChild.dataset.product);
-                let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+            document.getElementById('product-detail-description').innerHTML = (data.description
+                .replace('&nbsp;', ' ')).replace(/\u00A0/g, ' ');
 
-                document.getElementById('product-detail-container').classList.replace("hidden", "flex");
-                document.getElementById('product-list-container').classList.replace("grid", "hidden");
+            let variants = data.variant_list;
+            document.getElementById('product-detail-category').classList.remove('bg-[#6eb43c]',
+                'border-[#8acf59]', 'bg-[#5170FF]', 'border-[#7d94fa]', 'bg-[#B75FE7]',
+                'border-[#cc81f5]', 'bg-[#39bbc7]', 'border-[#43D9E7]');
 
-                document.getElementById('product-detail-image').src = '/images/products/' + data.slug +
-                    '/' + data.image;
-                document.getElementById('product-detail-title').innerHTML = data.title;
-
-                document.getElementById('product-detail-description').innerHTML = (data.description
-                    .replace('&nbsp;', ' ')).replace(/\u00A0/g, ' ');
-
-                let variants = data.variant_list;
-                document.getElementById('product-detail-category').classList.remove('bg-[#6eb43c]',
-                    'border-[#8acf59]', 'bg-[#5170FF]', 'border-[#7d94fa]', 'bg-[#B75FE7]',
-                    'border-[#cc81f5]', 'bg-[#39bbc7]', 'border-[#43D9E7]');
-
-                document.getElementById('product-detail-category').innerHTML = data.category == 'toy' ?
-                    'MAINAN' : ('' + data.category).toUpperCase();
-                switch (data.category) {
-                    case 'toy':
-                        document.getElementById('product-detail-category').classList.add('bg-[#6eb43c]',
-                            'border-[#8acf59]');
-                        break;
-                    case 'hdpe':
-                        document.getElementById('product-detail-category').classList.add('bg-[#5170FF]',
-                            'border-[#7d94fa]');
-                        break;
-                    case 'eva':
-                        document.getElementById('product-detail-category').classList.add('bg-[#B75FE7]',
-                            'border-[#cc81f5]');
-                        break;
-                    case 'xpe':
-                        document.getElementById('product-detail-category').classList.add('bg-[#39bbc7]',
-                            'border-[#43D9E7]');
-                        break;
-                }
-
-                if (variants.length > 0) {
-                    document.getElementById('product-detail-variant-container').classList.remove(
-                        'hidden');
-                    for (let i = 0; i < variants.length; i++) {
-                        let variant = variants[i];
-                        let variantContainer = document.createElement('div');
-                        variantContainer.classList.add('variant-list', 'max-w-[35px]', 'h-auto',
-                            'aspect-square', 'rounded-full', 'bg-red-200', 'border-[#f5f5f5]',
-                            'border-[3px]', 'cursor-pointer', 'hover:scale-105',
-                            'transition-transform', 'duration-150', 'ease-in-out');
-                        variantContainer.style.backgroundColor = variant.color;
-                        variantContainer.setAttribute('data-productVariantId', variant.id);
-                        variantContainer.setAttribute('data-productVariantImage', variant.image);
-                        variantContainer.setAttribute('data-productVariantTitle', variant.title);
-                        variantContainer.setAttribute('data-productVariantColor', variant.color);
-                        document.getElementById('variant-select-container').appendChild(
-                            variantContainer);
-                        if (i == 0) {
-                            document.getElementById('product-detail-variant-title').innerHTML = "-";
-                        }
-                    }
-
-                    document.querySelectorAll(".variant-list").forEach(variantList => {
-                        variantList.addEventListener("click", async (e) => {
-                            let variantTitle = e.target.dataset.productvarianttitle;
-                            let variantImage = e.target.dataset.productvariantimage;
-                            document.getElementById('product-detail-image').src =
-                                '/images/products/' + data.slug + '/' +
-                                variantImage;
-                            document.getElementById('product-detail-variant-title')
-                                .innerHTML = variantTitle;
-                        });
-                    });
-                } else {
-                    document.getElementById('product-detail-variant-container').classList.add('hidden');
-                }
-                document.getElementById('deleteBtn').addEventListener("click", function() {
-                    openDeleteModal(data.id, data.title);
-                });
-                document.getElementById('editBtn').addEventListener("click", function() {
-                    location.href = '/admin/product/edit/' + data.id;
-                });
-            });
-        });
-
-        document.getElementById('dropdownButton1').addEventListener('click', function() {
-            if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
-                document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
-                document.getElementById('dropdownIcon1').classList.remove("rotate-180");
-                setTimeout(() => {
-                    document.getElementById('dropdownMenu1Container').classList.replace('flex', 'hidden');
-                }, 300);
-            } else {
-                document.getElementById('dropdownMenu1Container').classList.replace('hidden', 'flex');
-                setTimeout(() => {
-                    document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
-                    document.getElementById('dropdownIcon1').classList.add("rotate-180");
-                }, 50);
-
-            }
-        });
-
-        function filter(category) {
-            switch (category) {
-                case 'hdpe':
-                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
-                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
-                        if (data.category == 'hdpe') {
-                            thumbnailContainer.classList.remove('hidden');
-                        } else {
-                            thumbnailContainer.classList.add('hidden');
-                        }
-                    })
+            document.getElementById('product-detail-category').innerHTML = data.category == 'toy' ?
+                'MAINAN' : ('' + data.category).toUpperCase();
+            switch (data.category) {
+                case 'toy':
+                    document.getElementById('product-detail-category').classList.add('bg-[#6eb43c]',
+                        'border-[#8acf59]');
                     break;
-                case 'xpe':
-                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
-                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
-                        if (data.category == 'xpe') {
-                            thumbnailContainer.classList.remove('hidden');
-                        } else {
-                            thumbnailContainer.classList.add('hidden');
-                        }
-                    })
+                case 'hdpe':
+                    document.getElementById('product-detail-category').classList.add('bg-[#5170FF]',
+                        'border-[#7d94fa]');
                     break;
                 case 'eva':
-                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
-                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
-                        if (data.category == 'eva') {
-                            thumbnailContainer.classList.remove('hidden');
-                        } else {
-                            thumbnailContainer.classList.add('hidden');
-                        }
-                    })
+                    document.getElementById('product-detail-category').classList.add('bg-[#B75FE7]',
+                        'border-[#cc81f5]');
                     break;
-                case 'toy':
-                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
-                        let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
-                        if (data.category == 'toy') {
-                            thumbnailContainer.classList.remove('hidden');
-                        } else {
-                            thumbnailContainer.classList.add('hidden');
-                        }
-                    })
-                    break;
-                default:
-                    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
-                        thumbnailContainer.classList.remove('hidden');
-                    })
+                case 'xpe':
+                    document.getElementById('product-detail-category').classList.add('bg-[#39bbc7]',
+                        'border-[#43D9E7]');
                     break;
             }
-            document.getElementById('dropdownButton1').click();
+
+            if (variants.length > 0) {
+                document.getElementById('product-detail-variant-container').classList.remove(
+                    'hidden');
+                for (let i = 0; i < variants.length; i++) {
+                    let variant = variants[i];
+                    let variantContainer = document.createElement('div');
+                    variantContainer.classList.add('variant-list', 'max-w-[35px]', 'h-auto',
+                        'aspect-square', 'rounded-full', 'bg-red-200', 'border-[#f5f5f5]',
+                        'border-[3px]', 'cursor-pointer', 'hover:scale-105',
+                        'transition-transform', 'duration-150', 'ease-in-out');
+                    variantContainer.style.backgroundColor = variant.color;
+                    variantContainer.setAttribute('data-productVariantId', variant.id);
+                    variantContainer.setAttribute('data-productVariantImage', variant.image);
+                    variantContainer.setAttribute('data-productVariantTitle', variant.title);
+                    variantContainer.setAttribute('data-productVariantColor', variant.color);
+                    document.getElementById('variant-select-container').appendChild(
+                        variantContainer);
+                    if (i == 0) {
+                        document.getElementById('product-detail-variant-title').innerHTML = "-";
+                    }
+                }
+
+                document.querySelectorAll(".variant-list").forEach(variantList => {
+                    variantList.addEventListener("click", async (e) => {
+                        let variantTitle = e.target.dataset.productvarianttitle;
+                        let variantImage = e.target.dataset.productvariantimage;
+                        document.getElementById('product-detail-image').src =
+                            '/images/products/' + data.slug + '/' +
+                            variantImage;
+                        document.getElementById('product-detail-variant-title')
+                            .innerHTML = variantTitle;
+                    });
+                });
+            } else {
+                document.getElementById('product-detail-variant-container').classList.add('hidden');
+            }
+            document.getElementById('deleteBtn').addEventListener("click", function() {
+                openDeleteModal(data.id, data.title);
+            });
+            document.getElementById('editBtn').addEventListener("click", function() {
+                location.href = '/admin/product/edit/' + data.id;
+            });
+        });
+    });
+
+    document.getElementById('dropdownButton1').addEventListener('click', function() {
+        if (document.getElementById('dropdownMenu1').classList.contains('opacity-100')) {
+            document.getElementById('dropdownMenu1').classList.replace('opacity-100', 'opacity-0');
+            document.getElementById('dropdownIcon1').classList.remove("rotate-180");
+            setTimeout(() => {
+                document.getElementById('dropdownMenu1Container').classList.replace('flex', 'hidden');
+            }, 300);
+        } else {
+            document.getElementById('dropdownMenu1Container').classList.replace('hidden', 'flex');
+            setTimeout(() => {
+                document.getElementById('dropdownMenu1').classList.replace('opacity-0', 'opacity-100');
+                document.getElementById('dropdownIcon1').classList.add("rotate-180");
+            }, 50);
+
         }
+    });
+
+    function filter(category) {
+        switch (category) {
+            case 'hdpe':
+                document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                    let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                    if (data.category == 'hdpe') {
+                        thumbnailContainer.classList.remove('hidden');
+                    } else {
+                        thumbnailContainer.classList.add('hidden');
+                    }
+                })
+                break;
+            case 'xpe':
+                document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                    let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                    if (data.category == 'xpe') {
+                        thumbnailContainer.classList.remove('hidden');
+                    } else {
+                        thumbnailContainer.classList.add('hidden');
+                    }
+                })
+                break;
+            case 'eva':
+                document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                    let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                    if (data.category == 'eva') {
+                        thumbnailContainer.classList.remove('hidden');
+                    } else {
+                        thumbnailContainer.classList.add('hidden');
+                    }
+                })
+                break;
+            case 'toy':
+                document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                    let data = JSON.parse(thumbnailContainer.firstElementChild.dataset.product);
+                    if (data.category == 'toy') {
+                        thumbnailContainer.classList.remove('hidden');
+                    } else {
+                        thumbnailContainer.classList.add('hidden');
+                    }
+                })
+                break;
+            default:
+                document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+                    thumbnailContainer.classList.remove('hidden');
+                })
+                break;
+        }
+        document.getElementById('dropdownButton1').click();
+    }
     </script>
 </body>
 

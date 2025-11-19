@@ -44,20 +44,20 @@
 </section>
 <section id="product-section" class="w-full relative z-10 mb-[200px]">
     <div class="flex flex-col items-center justify-center w-full px-5 md:px-15 ">
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-[1400px] ">
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-[1200px] max-w-3xl-custom">
             <?php foreach ($galleries as $gallery): ?>
-            <div
-                class="thumbnail-container bg-[#FCFCFF] rounded-[8px] relative xl:rounded-t-[12px] drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex flex-col items-center cursor-pointer">
-                <img src="<?= '/galery/thumbnail/' . $gallery['thumbnail'] ?>" alt="<?= $gallery['image_alt'] ?>"
-                    class="w-full h-auto aspect-square rounded-[8px] xl:rounded-[12px]" data-id="<?= $gallery['id'] ?>"
-                    data-image="<?= $gallery['image'] ?>" data-title="<?= $gallery['title'] ?>"
-                    data-description="<?= $gallery['description'] ?>" data-status="<?= $gallery['status'] ?>"
-                    data-created="<?= $gallery['created_at'] ?>" data-type="<?= $gallery['type'] ?>"
-                    src="/galery/thumbnail/<?= $gallery['thumbnail'] ?>" alt="<?= $gallery['image_alt'] ?>">
-                <div class="absolute top-[15px] right-[15px] <?= $gallery['type'] == '0' ? 'hidden' : '' ?>">
-                    <?= view('/components/icons/video', ['class' => 'scale-140']) ?>
+                <div
+                    class="thumbnail-container bg-[#FCFCFF] rounded-[8px] relative xl:rounded-t-[12px] drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex flex-col items-center cursor-pointer">
+                    <img src="<?= '/galery/thumbnail/' . $gallery['thumbnail'] ?>" alt="<?= $gallery['image_alt'] ?>"
+                        class="w-full h-auto aspect-square rounded-[8px] xl:rounded-[12px]" data-id="<?= $gallery['id'] ?>"
+                        data-image="<?= $gallery['image'] ?>" data-title="<?= $gallery['title'] ?>"
+                        data-description="<?= $gallery['description'] ?>" data-status="<?= $gallery['status'] ?>"
+                        data-created="<?= $gallery['created_at'] ?>" data-type="<?= $gallery['type'] ?>"
+                        src="/galery/thumbnail/<?= $gallery['thumbnail'] ?>" alt="<?= $gallery['image_alt'] ?>">
+                    <div class="absolute top-[15px] right-[15px] <?= $gallery['type'] == '0' ? 'hidden' : '' ?>">
+                        <?= view('/components/icons/video', ['class' => 'scale-140']) ?>
+                    </div>
                 </div>
-            </div>
             <?php endforeach; ?>
         </div>
     </div>
@@ -109,157 +109,135 @@
 
 <?= $this->section('body-script') ?>
 <script>
-const navbar = document.getElementById('main-navbar');
-const logoNavbar = document.getElementById('logo-navbar');
-const navbarLanguageBorder = document.getElementById('navbar-language-border');
-const navbarLanguageIcon = document.getElementById('navbar-language-icon');
-const blur = navbar.querySelector('.blur-3xl');
-const hero = document.getElementById('nav-observer');
+    const navbar = document.getElementById('main-navbar');
+    const logoNavbar = document.getElementById('logo-navbar');
+    const navbarLanguageBorder = document.getElementById('navbar-language-border');
+    const navbarLanguageIcon = document.getElementById('navbar-language-icon');
+    const blur = navbar.querySelector('.blur-3xl');
+    const hero = document.getElementById('nav-observer');
 
-// Observer untuk ubah background dan teks saat masuk ke overview
-const observer = new IntersectionObserver(
-    ([entry]) => {
-        navbar.classList.remove('text-white');
-        navbar.classList.add('text-gray-700');
-        document.querySelectorAll('.logo-navbar').forEach(el => {
-            el.classList.add('invert', 'brightness-75');
-        });
-        navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
-        navbarLanguageIcon.setAttribute('fill', '#374151');
-        if (entry.isIntersecting) {
-            // Masih di hero
-            navbar.classList.remove('bg-white');
+    // Observer untuk ubah background dan teks saat masuk ke overview
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            navbar.classList.remove('text-white');
+            navbar.classList.add('text-gray-700');
+            document.querySelectorAll('.logo-navbar').forEach(el => {
+                el.classList.add('invert', 'brightness-75');
+            });
+            navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
+            navbarLanguageIcon.setAttribute('fill', '#374151');
+            if (entry.isIntersecting) {
+                // Masih di hero
+                navbar.classList.remove('bg-white');
 
-            if (blur) blur.classList.remove('hidden');
-            isInTop = true;
+                if (blur) blur.classList.remove('hidden');
+                isInTop = true;
+                document.getElementById('desktop-product-dropdown').classList.replace('bg-black/40', 'bg-white');
+                document.getElementById('desktop-product-dropdown').classList.add('text-black');
 
+            } else {
+                // Di luar hero
+                navbar.classList.add('bg-white');
+                if (blur) blur.classList.add('hidden');
+                isInTop = false;
 
-        } else {
-            // Di luar hero
-            navbar.classList.add('bg-white');
-            if (blur) blur.classList.add('hidden');
-            isInTop = false;
-
+            }
+        }, {
+            root: null,
+            threshold: 0.1,
         }
-    }, {
-        root: null,
-        threshold: 0.1,
-    }
-);
+    );
 
-observer.observe(hero);
+    observer.observe(hero);
 </script>
 <?= $this->endSection() ?>
 <?= $this->section('script') ?>
 <script>
-const closeModal = document.getElementById("closeModal");
-const waButton = document.getElementById("waButton");
-const modal = document.getElementById("imageModal");
-const modalContent = document.getElementById("imageContent");
-const modalImage = document.getElementById("modalImage");
-const modalVideo = document.getElementById("modalVideo");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const modalDate = document.getElementById("modalDate");
+    const closeModal = document.getElementById("closeModal");
+    const waButton = document.getElementById("waButton");
+    const modal = document.getElementById("imageModal");
+    const modalContent = document.getElementById("imageContent");
+    const modalImage = document.getElementById("modalImage");
+    const modalVideo = document.getElementById("modalVideo");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalDate = document.getElementById("modalDate");
 
-function formatDateTime(datetime) {
-    // Convert string to Date object
-    const date = new Date(datetime.replace(" ", "T")); // Ensure proper parsing
+    function formatDateTime(datetime) {
+        // Convert string to Date object
+        const date = new Date(datetime.replace(" ", "T")); // Ensure proper parsing
 
-    // Format date to "15 Maret 2025"
-    const formattedDate = new Intl.DateTimeFormat('id-ID', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-    }).format(date);
+        // Format date to "15 Maret 2025"
+        const formattedDate = new Intl.DateTimeFormat('id-ID', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        }).format(date);
 
-    // Format time to "00:46"
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
+        // Format time to "00:46"
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
 
-    return `${formattedDate} - ${hours}:${minutes}`;
-}
-
-document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
-    thumbnailContainer.addEventListener("click", async (e) => {
-        waButton.classList.add("hidden");
-        modalTitle.textContent = contentDetail.dataset.title;
-        modalDesc.textContent = contentDetail.dataset.description;
-        modalDate.textContent = formatDateTime(contentDetail.dataset.created);
-
-        modal.classList.replace("hidden", "flex");
-        setTimeout(() => {
-            modal.classList.replace("opacity-0", "opacity-100");
-            modalContent.classList.replace("scale-95", "scale-100");
-            modal.classList.replace(
-                "backdrop-blur-0",
-                "backdrop-blur-sm",
-            );
-        }, 100);
-        let contentDetail = thumbnailContainer.firstElementChild;
-        // console.log('open modal');
-        if (contentDetail.dataset.type == 0) {
-            // image
-            modalImage.src = '/galery/content/' + contentDetail.dataset.image;
-            modalImage.classList.remove("hidden");
-
-        } else {
-            // video
-            let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
-
-            try {
-                if (modalVideo.src != '') {
-                    URL.revokeObjectURL(modalVideo.src);
-                }
-                let response = await fetch(videoUrl, {
-                    method: 'GET',
-                    headers: {
-                        'Range': 'bytes=0-' // Enable seeking support
-                    }
-                });
-
-                if (!response.ok) throw new Error('Failed to load video');
-
-                let blob = await response.blob();
-                let objectUrl = URL.createObjectURL(blob);
-
-                modalVideo.src = objectUrl;
-                modalVideo.classList.remove("hidden");
-            } catch (error) {
-                console.error('Error loading video:', error);
-            }
-        }
-
-        // modalContent.classList.replace("scale-80", "scale-100");
-
-    });
-});
-
-// Close Modal
-closeModal.addEventListener("click", () => {
-    modal.classList.replace("opacity-100", "opacity-0");
-    modalContent.classList.replace("scale-100", "scale-95");
-    modal.classList.replace(
-        "backdrop-blur-sm",
-        "backdrop-blur-0",
-    );
-    if (modalVideo.src != '') {
-        modalVideo.pause();
-        modalVideo.currentTime = 0; // Reset to start
-        URL.revokeObjectURL(modalVideo.src);
+        return `${formattedDate} - ${hours}:${minutes}`;
     }
-    setTimeout(() => {
-        modal.classList.replace("flex", "hidden");
-        modalImage.classList.add("hidden");
-        modalVideo.classList.add("hidden");
-        waButton.classList.remove("hidden");
 
-    }, 300);
-});
+    document.querySelectorAll(".thumbnail-container").forEach(thumbnailContainer => {
+        thumbnailContainer.addEventListener("click", async (e) => {
+            waButton.classList.add("hidden");
+            modalTitle.textContent = contentDetail.dataset.title;
+            modalDesc.textContent = contentDetail.dataset.description;
+            modalDate.textContent = formatDateTime(contentDetail.dataset.created);
 
-// Close when clicking outside modal
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
+            modal.classList.replace("hidden", "flex");
+            setTimeout(() => {
+                modal.classList.replace("opacity-0", "opacity-100");
+                modalContent.classList.replace("scale-95", "scale-100");
+                modal.classList.replace(
+                    "backdrop-blur-0",
+                    "backdrop-blur-sm",
+                );
+            }, 100);
+            let contentDetail = thumbnailContainer.firstElementChild;
+            // console.log('open modal');
+            if (contentDetail.dataset.type == 0) {
+                // image
+                modalImage.src = '/galery/content/' + contentDetail.dataset.image;
+                modalImage.classList.remove("hidden");
+
+            } else {
+                // video
+                let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
+
+                try {
+                    if (modalVideo.src != '') {
+                        URL.revokeObjectURL(modalVideo.src);
+                    }
+                    let response = await fetch(videoUrl, {
+                        method: 'GET',
+                        headers: {
+                            'Range': 'bytes=0-' // Enable seeking support
+                        }
+                    });
+
+                    if (!response.ok) throw new Error('Failed to load video');
+
+                    let blob = await response.blob();
+                    let objectUrl = URL.createObjectURL(blob);
+
+                    modalVideo.src = objectUrl;
+                    modalVideo.classList.remove("hidden");
+                } catch (error) {
+                    console.error('Error loading video:', error);
+                }
+            }
+
+            // modalContent.classList.replace("scale-80", "scale-100");
+
+        });
+    });
+
+    // Close Modal
+    closeModal.addEventListener("click", () => {
         modal.classList.replace("opacity-100", "opacity-0");
         modalContent.classList.replace("scale-100", "scale-95");
         modal.classList.replace(
@@ -278,112 +256,135 @@ modal.addEventListener("click", (e) => {
             waButton.classList.remove("hidden");
 
         }, 300);
-    }
-});
+    });
+
+    // Close when clicking outside modal
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.replace("opacity-100", "opacity-0");
+            modalContent.classList.replace("scale-100", "scale-95");
+            modal.classList.replace(
+                "backdrop-blur-sm",
+                "backdrop-blur-0",
+            );
+            if (modalVideo.src != '') {
+                modalVideo.pause();
+                modalVideo.currentTime = 0; // Reset to start
+                URL.revokeObjectURL(modalVideo.src);
+            }
+            setTimeout(() => {
+                modal.classList.replace("flex", "hidden");
+                modalImage.classList.add("hidden");
+                modalVideo.classList.add("hidden");
+                waButton.classList.remove("hidden");
+
+            }, 300);
+        }
+    });
 </script>
 <script>
-const dragArea = document.getElementById("dragArea");
-const topSection = document.getElementById("topSection");
-const bottomSection = document.getElementById("bottomSection");
+    const dragArea = document.getElementById("dragArea");
+    const topSection = document.getElementById("topSection");
+    const bottomSection = document.getElementById("bottomSection");
 
-let startY = 0;
-let isDragging = false;
-let currentHeight = 25; // Awalnya 25%
+    let startY = 0;
+    let isDragging = false;
+    let currentHeight = 25; // Awalnya 25%
 
-function disableScroll(e) {
-    e.preventDefault();
-}
-
-// Prevent scrolling on title and date
-modalTitle.addEventListener("touchmove", disableScroll, {
-    passive: false
-});
-modalDate.addEventListener("touchmove", disableScroll, {
-    passive: false
-});
-
-// Fungsi untuk memperbarui ukuran modal
-function updateSize(height, animate = true) {
-    if (animate) {
-        topSection.style.transition = "height 0.3s ease-in-out";
-        bottomSection.style.transition = "height 0.3s ease-in-out";
-    } else {
-        topSection.style.transition = "none";
-        bottomSection.style.transition = "none";
+    function disableScroll(e) {
+        e.preventDefault();
     }
 
-    topSection.style.height = `${100 - height}%`;
-    bottomSection.style.height = `${height}%`;
-
-    // Ubah gaya modalDesc & modalTitle jika diubah ke 50%
-    if (height === 50) {
-        modalDesc.style.overflow = "auto";
-        modalDesc.classList.remove("line-clamp-3");
-        modalTitle.classList.remove("line-clamp-1");
-    } else {
-        modalDesc.style.overflow = "clip";
-        modalDesc.classList.add("line-clamp-3");
-        modalTitle.classList.add("line-clamp-1");
-    }
-}
-
-// Klik untuk toggle antara 25% dan 50%
-dragArea.addEventListener("click", () => {
-    currentHeight = currentHeight === 25 ? 50 : 25;
-    updateSize(currentHeight);
-});
-
-// Saat mulai drag
-dragArea.addEventListener("touchstart", (e) => {
-    startY = e.touches[0].clientY;
-    isDragging = true;
-
-    document.body.addEventListener("touchmove", disableScroll, {
+    // Prevent scrolling on title and date
+    modalTitle.addEventListener("touchmove", disableScroll, {
         passive: false
     });
-});
+    modalDate.addEventListener("touchmove", disableScroll, {
+        passive: false
+    });
 
+    // Fungsi untuk memperbarui ukuran modal
+    function updateSize(height, animate = true) {
+        if (animate) {
+            topSection.style.transition = "height 0.3s ease-in-out";
+            bottomSection.style.transition = "height 0.3s ease-in-out";
+        } else {
+            topSection.style.transition = "none";
+            bottomSection.style.transition = "none";
+        }
 
-bottomSection.addEventListener("touchmove", (e) => {
+        topSection.style.height = `${100 - height}%`;
+        bottomSection.style.height = `${height}%`;
 
-    let atTop = modalDesc.scrollTop === 0;
-    let atBottom = modalDesc.scrollTop + modalDesc.clientHeight >= modalDesc.scrollHeight;
-    let scrollingDown = e.touches[0].clientY < startY;
-    let scrollingUp = e.touches[0].clientY > startY;
-
-    if ((atTop && scrollingUp) || (atBottom && scrollingDown)) {
-        e.preventDefault(); // Prevent page scrolling
+        // Ubah gaya modalDesc & modalTitle jika diubah ke 50%
+        if (height === 50) {
+            modalDesc.style.overflow = "auto";
+            modalDesc.classList.remove("line-clamp-3");
+            modalTitle.classList.remove("line-clamp-1");
+        } else {
+            modalDesc.style.overflow = "clip";
+            modalDesc.classList.add("line-clamp-3");
+            modalTitle.classList.add("line-clamp-1");
+        }
     }
-});
 
-// Saat drag berlangsung
-dragArea.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
+    // Klik untuk toggle antara 25% dan 50%
+    dragArea.addEventListener("click", () => {
+        currentHeight = currentHeight === 25 ? 50 : 25;
+        updateSize(currentHeight);
+    });
 
-    let diff = startY - e.touches[0].clientY; // Perbedaan posisi awal dan sekarang
-    let newHeight = currentHeight + (diff / window.innerHeight) * 100;
+    // Saat mulai drag
+    dragArea.addEventListener("touchstart", (e) => {
+        startY = e.touches[0].clientY;
+        isDragging = true;
 
-    // Batasi ukuran antara 25% - 50%
-    if (newHeight >= 25 && newHeight <= 50) {
-        updateSize(newHeight, false);
-    }
-});
+        document.body.addEventListener("touchmove", disableScroll, {
+            passive: false
+        });
+    });
 
-// Saat drag dilepas
-dragArea.addEventListener("touchend", () => {
-    isDragging = false;
 
-    // Dapatkan posisi terakhir dan tentukan snap ke 25% atau 50%
-    let bottomHeight = parseFloat(bottomSection.style.height);
-    currentHeight = bottomHeight >= 37.5 ? 50 : 25;
+    bottomSection.addEventListener("touchmove", (e) => {
 
-    updateSize(currentHeight);
+        let atTop = modalDesc.scrollTop === 0;
+        let atBottom = modalDesc.scrollTop + modalDesc.clientHeight >= modalDesc.scrollHeight;
+        let scrollingDown = e.touches[0].clientY < startY;
+        let scrollingUp = e.touches[0].clientY > startY;
 
-    document.body.removeEventListener("touchmove", disableScroll);
-});
+        if ((atTop && scrollingUp) || (atBottom && scrollingDown)) {
+            e.preventDefault(); // Prevent page scrolling
+        }
+    });
 
-bottomSection.addEventListener("touchend", () => {
-    document.body.removeEventListener("touchmove", disableScroll);
-});
+    // Saat drag berlangsung
+    dragArea.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+
+        let diff = startY - e.touches[0].clientY; // Perbedaan posisi awal dan sekarang
+        let newHeight = currentHeight + (diff / window.innerHeight) * 100;
+
+        // Batasi ukuran antara 25% - 50%
+        if (newHeight >= 25 && newHeight <= 50) {
+            updateSize(newHeight, false);
+        }
+    });
+
+    // Saat drag dilepas
+    dragArea.addEventListener("touchend", () => {
+        isDragging = false;
+
+        // Dapatkan posisi terakhir dan tentukan snap ke 25% atau 50%
+        let bottomHeight = parseFloat(bottomSection.style.height);
+        currentHeight = bottomHeight >= 37.5 ? 50 : 25;
+
+        updateSize(currentHeight);
+
+        document.body.removeEventListener("touchmove", disableScroll);
+    });
+
+    bottomSection.addEventListener("touchend", () => {
+        document.body.removeEventListener("touchmove", disableScroll);
+    });
 </script>
 <?= $this->endSection() ?>

@@ -29,8 +29,11 @@
     'hero_button_title' => 'Exploe Products',
     'catalog_title' => 'Product Catalog',
     'catalog_sub_title' => 'Find the Best Products That Suit Your Needs. Explore Our Collection and Choose the Right Procurement Solutions for Your Business!',
+    'category_title' => 'Category',
     'cta_banner_text' => "Can't find the product you're looking for? Contact us for more information!",
     'cta_banner_button_title' => 'Contact Us',
+    'search_placeholder' => 'Search Product',
+    'see_detail_button_title' => 'See Detail',
 
 
     // footer

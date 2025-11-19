@@ -136,7 +136,7 @@
     <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[60px] w-full bg-transparent"></div>
 
     <div class="h-[70px] lg:h-[80px] 2xl:h-[90px] w-full"></div>
-    <div class="w-full h-full sm:max-w-[500px] md:max-w-[1400px] md:px-15 2xl:px-0">
+    <div class="w-full h-full sm:max-w-[500px] md:max-w-[1200px] max-w-3xl-custom md:px-15 2xl:px-0">
         <nav aria-label="Breadcrumb" class="w-full hidden md:flex">
             <ol class="flex  items-center justify-start py-[20px]">
                 <li>
@@ -294,7 +294,8 @@
 <section id="another-product-section" class="w-full flex flex-col items-center justify-start px-5 md:px-15">
     <?= view('components/texts/title/title_group', ['id' => 'another-title-default', 'class' => 'block mb-[60px] text-center', 'top_title' => ($recomended_product_top_title ?? 'Temukan'), 'bottom_title' => ($recomended_product_bottom_title ?? 'Produk Lainnya')]) ?>
 
-    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-[20px] w-full 2xl:w-[80vw] max-w-[1400px] xl:px-0">
+    <div
+        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-[20px] w-full 2xl:w-[80vw] max-w-[1200px] max-w-3xl-custom xl:px-0">
         <?php foreach ($products as $product): ?>
             <a href="<?= ($product_detail_link_prefix ?? '/product/') . $product['slug'] ?>">
                 <div
@@ -343,7 +344,7 @@
 
                 if (blur) blur.classList.remove('hidden');
                 isInTop = true;
-
+                document.getElementById('desktop-product-dropdown').classList.replace('bg-black/40', 'bg-white');
 
             } else {
                 // Di luar hero

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\Product;
+use App\Models\Category;
 use App\Models\ProductVariant;
 use App\Helpers\Base64ImageHelper;
 
@@ -46,8 +47,13 @@ class ProductController extends BaseController
             $product['image_list'] = $images;
         }
 
+        $categories = $db->table('categories c')
+            ->select('c.*')
+            ->orderBy('sort_order', 'ASC')
+            ->get()->getResultArray();
+
         $successMessage = session()->getFlashdata('successMessage');
-        return view('admin/v2/product_v2', ['products' => $products, 'successMessage' => $successMessage]);
+        return view('admin/v2/product_v2', ['products' => $products, 'categories' => $categories, 'successMessage' => $successMessage]);
     }
 
 
@@ -101,7 +107,6 @@ class ProductController extends BaseController
             ],
             'title' => 'required|min_length[3]|max_length[255]',
             'description' => 'required|min_length[3]',
-            'category' => 'required|in_list[hdpe,eva,xpe,toy]',
         ]);
 
 
@@ -430,14 +435,11 @@ class ProductController extends BaseController
         date_default_timezone_set('Asia/Jakarta');
         $db = \Config\Database::connect();
         // $request = $this->request->getJSON();
-
-
+        
         $productId = $this->request->getPost('product_id') ?? null;
         $slug = $this->request->getPost('slug') ?? null;
         $image = $this->request->getFile('image') ?? null;
         $thumbnail = $this->request->getPost('thumbnail') ?? null;
-
-
 
         if (!$productId || !$slug || !$image) {
             return $this->response->setJSON([
@@ -445,10 +447,6 @@ class ProductController extends BaseController
                 'message' => 'Missing required fields.'
             ]);
         }
-
-
-
-
 
         $productImagePath = FCPATH . "images/products/$slug/";
 
@@ -497,11 +495,9 @@ class ProductController extends BaseController
         $db = \Config\Database::connect();
         $request = $this->request->getJSON();
 
-
         $productId = $request->product_id ?? null;
         $slug = $request->slug ?? null;
         $images = $request->images ?? [];
-
 
         if (!$productId || !$slug || !is_array($images)) {
             return $this->response->setJSON([
@@ -510,15 +506,12 @@ class ProductController extends BaseController
             ]);
         }
 
-
         $productImagePath = FCPATH . "images/products/$slug/";
 
-        // // 1. Delete all DB records, don't delete physical files
+        // 1. Delete all DB records, don't delete physical files
         $db->table('product_images')->where('product_id', $productId)->delete();
 
         $savedFilenames = [];
-
-
 
         foreach ($images as $i => $item) {
             $src = $item->src ?? '';
@@ -547,8 +540,6 @@ class ProductController extends BaseController
 
             $savedFilenames[] = $filename;
         }
-
-
 
         return $this->response->setJSON([
             'success' => true,
@@ -641,7 +632,7 @@ class ProductController extends BaseController
                 'thumbnail'   => '-',
                 'title'       => 'title',
                 'description' => '<p>tulis deskripsimu disini...</p>',
-                'category'    => 'category',
+                'category'    => 'lainnya',
                 'specs'       => '{}',
                 'status'      => 3,
                 'sort_order'  => 999
@@ -840,6 +831,48 @@ class ProductController extends BaseController
             'success' => true,
             'message' => 'Status saved.'
         ]);
+    }
+
+    public function saveProductCategory()
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $db = \Config\Database::connect();
+        $request = $this->request->getJSON();
+
+        $productId = $request->product_id ?? null;
+        $categoryId = $request->category_id ?? null;
+
+        if (!$productId || !$categoryId) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Missing required fields.'
+            ]);
+        }
+
+        $categoryModel = new Category();
+        $category = $categoryModel->find($categoryId);
+
+        if($category){
+            $db->table('products')
+            ->where('id', $productId)
+            ->update([
+                'category' => $category['slug'], // bisa dari upload, atau base64 decode & simpan
+                // bisa dari upload, atau base64 decode & simpan
+            ]);
+
+            return $this->response->setJSON([
+                'success' => true,
+                'message' => 'Category saved.'
+            ]);
+        }
+        else{
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Category not Found'
+            ]);
+        }
+
+        
     }
 
     public function saveProductDescription()

@@ -15,7 +15,8 @@
     <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[200px] w-full bg-transparent"></div>
 
     <div class="flex w-full h-full items-center justify-center  px-5 md:px-15">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[60px] 2xl:gap-x-[100px] w-full 2xl:w-[80vw] max-w-[1400px] ">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-x-[60px] 2xl:gap-x-[100px] w-full 2xl:w-[80vw] max-w-[1200px] max-w-3xl-custom">
             <div>
                 <div class="flex flex-col h-screen lg:h-full justify-center">
                     <h1
@@ -167,7 +168,7 @@
 </section>
 <section id="faq-section" class="w-full min-h-screen flex items-start justify-center">
     <div
-        class="w-full h-full 2xl:w-[80vw] max-w-[1400px] flex flex-col items-center justify-start py-[150px] px-5 md:px-15 2xl:px-0">
+        class="w-full h-full 2xl:w-[80vw] max-w-[1200px] max-w-3xl-custom flex flex-col items-center justify-start py-[150px] px-5 md:px-15 2xl:px-0">
         <h2
             class="text-[32px] h-[34px] md:text-[34px] md:h-[38px] xl:text-[38px] xl:h-[40px] 2xl:text-[40px] 2xl:h-[40px] text-center ubuntu-bold text-[#050505] title-shadow mb-[60px] ld:mb-[80px]">
             <?= ($faq_title ?? 'FAQ') ?></h2>
@@ -234,7 +235,7 @@
 
                 if (blur) blur.classList.remove('hidden');
                 isInTop = true;
-
+                document.getElementById('desktop-product-dropdown').classList.replace('bg-black/40', 'bg-white');
             } else {
                 // Di luar hero
                 navbar.classList.add('bg-white');

@@ -582,44 +582,44 @@
 
 <?= $this->section('body-script') ?>
 <script>
-    const navbar = document.getElementById('main-navbar');
-    const logoNavbar = document.getElementById('logo-navbar');
-    const navbarLanguageBorder = document.getElementById('navbar-language-border');
-    const navbarLanguageIcon = document.getElementById('navbar-language-icon');
-    const blur = navbar.querySelector('.blur-3xl');
-    const hero = document.getElementById('nav-observer');
+const navbar = document.getElementById('main-navbar');
+const logoNavbar = document.getElementById('logo-navbar');
+const navbarLanguageBorder = document.getElementById('navbar-language-border');
+const navbarLanguageIcon = document.getElementById('navbar-language-icon');
+const blur = navbar.querySelector('.blur-3xl');
+const hero = document.getElementById('nav-observer');
 
-    // Observer untuk ubah background dan teks saat masuk ke overview
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-            navbar.classList.remove('text-white');
-            navbar.classList.add('text-gray-700');
-            document.querySelectorAll('.logo-navbar').forEach(el => {
-                el.classList.add('invert', 'brightness-75');
-            });
-            navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
-            navbarLanguageIcon.setAttribute('fill', '#374151');
-            if (entry.isIntersecting) {
-                // Masih di hero
-                navbar.classList.remove('bg-white');
+// Observer untuk ubah background dan teks saat masuk ke overview
+const observer = new IntersectionObserver(
+    ([entry]) => {
+        navbar.classList.remove('text-white');
+        navbar.classList.add('text-gray-700');
+        document.querySelectorAll('.logo-navbar').forEach(el => {
+            el.classList.add('invert', 'brightness-75');
+        });
+        navbarLanguageBorder.classList.replace('border-white', 'border-gray-700');
+        navbarLanguageIcon.setAttribute('fill', '#374151');
+        if (entry.isIntersecting) {
+            // Masih di hero
+            navbar.classList.remove('bg-white');
 
-                if (blur) blur.classList.remove('hidden');
-                isInTop = true;
+            if (blur) blur.classList.remove('hidden');
+            isInTop = true;
+            document.getElementById('desktop-product-dropdown').classList.replace('bg-black/40', 'bg-white');
 
+        } else {
+            // Di luar hero
+            navbar.classList.add('bg-white');
+            if (blur) blur.classList.add('hidden');
+            isInTop = false;
 
-            } else {
-                // Di luar hero
-                navbar.classList.add('bg-white');
-                if (blur) blur.classList.add('hidden');
-                isInTop = false;
-
-            }
-        }, {
-            root: null,
-            threshold: 0.1,
         }
-    );
+    }, {
+        root: null,
+        threshold: 0.1,
+    }
+);
 
-    observer.observe(hero);
+observer.observe(hero);
 </script>
 <?= $this->endSection() ?>

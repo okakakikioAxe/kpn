@@ -56,6 +56,27 @@
             font-weight: bold;
         }
     </style>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        @media (min-width: 1700px) {
+            .max-w-3xl-custom {
+                max-width: 1400px;
+            }
+
+        /* contoh utilitas display */
+        .\33xl\:block { display: block; }
+        .\33xl\:flex { display: flex; }
+        .\33xl\:hidden { display: none; }
+
+        /* contoh utilitas font */
+        .\33xl\:text-5xl { font-size: 3rem; line-height: 1; }
+
+        /* contoh utilitas width */
+        .\33xl\:w-1\/2 { width: 50%; }
+        }
+    }
+    </style>
+
     <?= $this->renderSection('style') ?>
     <?= $this->renderSection('header-script') ?>
 </head>
@@ -65,14 +86,16 @@
     <nav id="main-navbar" class="transition-all duration-300 transform fixed top-0 left-0 w-screen z-99 text-white  ">
         <div class="absolute top-0 left-0 w-full h-full z-10 blur-3xl"></div>
         <div id="desktop-navbar"
-            class="hidden lg:flex max-w-[1400px] mx-auto py-[20px] md:px-15 2xl:px-0 items-center justify-between relative z-20 ">
-            <div class="flex items-center">
-                <div>
-                    <img class="w-auto h-[30px] mr-[20px] logo-navbar" src="/images/white-logo-no-text-high-res.png"
-                        alt="logo kpn putih" width="60" height="30">
+            class="hidden lg:flex max-w-[1200px] max-w-3xl-custom mx-auto py-[20px] md:px-15 2xl:px-0 items-center justify-between relative z-20 ">
+            <a href="/">
+                <div class="flex items-center">
+                    <div>
+                        <img class="w-auto h-[30px] mr-[20px] logo-navbar" src="/images/white-logo-no-text-high-res.png"
+                            alt="logo kpn putih" width="60" height="30">
+                    </div>
+                    <span class=" roboto-bold text-[16px] tracking-wide hidden xl:flex">PT Karya Pilar Nusantara</span>
                 </div>
-                <span class=" roboto-bold text-[16px] tracking-wide">PT KARYA PILAR NUSANTARA</span>
-            </div>
+            </a>
             <div class="flex">
                 <ul class="flex items-center justify-center space-x-8 ">
                     <li>
@@ -80,11 +103,57 @@
                             <?= esc($homepage_link_title ?? 'Beranda') ?>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?= esc($product_link ?? '/product') ?>" class="nav-link">
+                    <!-- MENU PRODUK DENGAN DROPDOWN -->
+                    <li class="relative group">
+                        <a href="<?= esc($product_link ?? '/product') ?>" class="nav-link inline-flex items-center">
                             <?= esc($product_link_title ?? 'Produk') ?>
+                            <!-- panah kecil -->
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
                         </a>
+                        <!-- dropdown -->
+                        <ul
+                            class="absolute left-0 w-48  opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
+                            <!-- All Products -->
+                            <div id="desktop-product-dropdown" class="mt-[30px] bg-black/40 rounded">
+
+                                <li>
+                                    <a href="<?= esc($product_link ?? '/product') ?>"
+                                        class="block px-4 py-2 rounded hover:bg-gray-100 ">
+                                        <?=
+                                        (strpos($_SERVER['REQUEST_URI'], '/en/') !== false)
+                                            ? 'All Products'
+                                            : ((strpos($_SERVER['REQUEST_URI'], '/cn/') !== false)
+                                                ? '所有产品'
+                                                : 'Semua Produk')
+                                        ?>
+                                    </a>
+                                </li>
+                                <div class="border-b-1 border-gray-200"></div>
+
+                                <!-- Loop kategori -->
+                                <?php if (! empty($categories)): ?>
+                                    <?php foreach ($categories as $cat): ?>
+                                        <li>
+                                            <a href="<?= site_url((strpos($_SERVER['REQUEST_URI'], '/en/') !== false)
+                                                            ? 'en/product-category/'
+                                                            : ((strpos($_SERVER['REQUEST_URI'], '/cn/') !== false)
+                                                                ? 'cn/product-category/'
+                                                                : 'product-category/') . esc($cat['slug'])) ?>"
+                                                class="block px-4 py-2 rounded hover:bg-gray-100">
+                                                <?= esc($cat['title']) ?>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+
+                                <?php endif; ?>
+                            </div>
+                        </ul>
                     </li>
+                    <!-- AKHIR MENU PRODUK -->
                     <li>
                         <a href="<?= esc($about_us_link ?? '/about-us') ?>" class="nav-link">
                             <?= esc($about_us_link_title ?? 'Tentang Kami') ?>
@@ -103,8 +172,8 @@
                 </ul>
             </div>
             <div id="navbar-language-border"
-                class="h-[41px] rounded-[30px] items-center justify-center border-1 border-white lg:hidden xl:flex">
-                <div class="relative inline-block text-left dropdown ">
+                class="h-[41px] rounded-[30px] items-center justify-center  border-1 border-white flex">
+                <div class="relative inline-block text-left dropdown">
                     <div id="dropdown-selected" class="cursor-pointer nav-link ">
                         <div class="flex w-full h-full items-center space-x-9">
 
@@ -166,13 +235,19 @@
         </div>
         <div id="mobile-navbar"
             class="h-[60px] w-full px-5 md:px-15 flex justify-between items-center  lg:hidden relative z-99">
-            <div class="flex items-center">
-                <div>
-                    <img class="w-auto h-[30px] mr-[20px] logo-navbar" src="/images/white-logo-no-text-high-res.png"
-                        alt="logo kpn putih" width="60" height="30">
+            <a href="/">
+                <div class="flex items-center">
+                    <div>
+                        <img class="w-auto h-[30px] mr-[20px] logo-navbar" src="/images/white-logo-no-text-high-res.png"
+                            alt="logo kpn putih" width="60" height="30">
+                    </div>
+                    <div>
+                        <span class="roboto-bold text-[16px] tracking-wide">PT Karya</span>
+                        <span class="roboto-bold text-[16px] tracking-wide">Pilar</span>
+                        <span class="roboto-bold text-[16px] tracking-wide">Nusantara</span>
+                    </div>
                 </div>
-                <span class="roboto-bold text-[16px] tracking-wide">PT KPN</span>
-            </div>
+            </a>
             <div class="flex items-center">
                 <button id="hamburger-btn">
                     <?= view('components/icons/hamburger', ['class' => 'logo-navbar fill-white']) ?>
@@ -190,11 +265,51 @@
                         <?= esc($homepage_link_title ?? 'Beranda') ?>
                     </a>
                 </li>
-                <li>
-                    <a href="<?= esc($product_link ?? '/product') ?>">
-                        <?= esc($product_link_title ?? 'Produk') ?>
-                    </a>
+                <!-- START: Mobile Produk Dropdown -->
+                <li class="relative">
+                    <div id="mobile-product-trigger"
+                        class="flex justify-between items-center w-full nav-link cursor-pointer">
+                        <span
+                            class="text-[18px] text-gray-700 roboto-bold"><?= esc($product_link_title ?? 'Produk') ?></span>
+                        <svg id="mobile-product-icon" xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 transform transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+
+                    <ul id="mobile-product-dropdown"
+                        class="hidden flex-col space-y-1 pl-4 mt-2 ubuntu-regular text-[16px]">
+                        <li>
+                            <a href="<?= esc($product_link ?? '/product') ?>"
+                                class="block px-4 py-1 rounded hover:bg-gray-100">
+                                <?=
+                                (strpos($_SERVER['REQUEST_URI'], '/en/') !== false)
+                                    ? 'All Products'
+                                    : ((strpos($_SERVER['REQUEST_URI'], '/cn/') !== false)
+                                        ? '所有产品'
+                                        : 'Semua Produk')
+                                ?>
+                            </a>
+                        </li>
+
+                        <?php if (! empty($categories)): ?>
+                            <?php foreach ($categories as $cat): ?>
+                                <li>
+                                    <a href="<?= site_url((strpos($_SERVER['REQUEST_URI'], '/en/') !== false)
+                                                    ? 'en/product-category/'
+                                                    : ((strpos($_SERVER['REQUEST_URI'], '/cn/') !== false)
+                                                        ? 'cn/product-category/'
+                                                        : 'product-category/') . esc($cat['slug'])) ?>"
+                                        class="block px-4 py-1 rounded hover:bg-gray-100">
+                                        <?= esc($cat['title']) ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </ul>
                 </li>
+                <!-- END: Mobile Produk Dropdown -->
                 <li>
                     <a href="<?= esc($about_us_link ?? '/about-us') ?>">
                         <?= esc($about_us_link_title ?? 'Tentang Kami') ?>
@@ -216,8 +331,9 @@
                         <div id="dropdown-selected-mobile" class="nav-link px-[21px] ">
                             <div class="flex w-full h-full items-center space-x-9">
 
-                                <span class="roboto-bold text-[16px] text-gray-700 language-button">Bahasa
-                                    Indonesia</span>
+                                <span class="roboto-bold text-[16px] text-gray-700 language-button">
+                                    Bahasa Indonesia
+                                </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     version="1.1" x="0px" y="0px" viewBox="0 0 512 512"
                                     style="enable-background:new 0 0 512 512;" xml:space="preserve" width="32"
@@ -283,7 +399,7 @@
         <div
             class=" py-[30px] w-full bg-gray-700 flex items-center justify-center px-5 md:px-15 text-white/85 flex-col relative">
             <div
-                class="grid grid-cols-1 sm:grid-cols-10 md:grid-cols-10 gap-x-10 gap-y-10 w-full h-full max-w-[1400px] relative mb-[20px]">
+                class="grid grid-cols-1 sm:grid-cols-10 md:grid-cols-10 gap-x-10 gap-y-10 w-full h-full max-w-[1200px] max-w-3xl-custom relative mb-[20px]">
                 <div class=" sm:col-span-6 flex flex-col items-start justify-start w-full h-full ">
                     <div class="mb-[15px]">
                         <h3 class="ubuntu-bold">PT KARYA PILAR NUSANTARA</h3>
@@ -344,18 +460,47 @@
         </a>
     </div>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const prodTrigger = document.getElementById('mobile-product-trigger');
+            const prodDropdown = document.getElementById('mobile-product-dropdown');
+            const prodIcon = document.getElementById('mobile-product-icon');
+
+            // Toggle dropdown Produk
+            prodTrigger.addEventListener('click', e => {
+                e.stopPropagation();
+                prodDropdown.classList.toggle('hidden');
+                prodIcon.classList.toggle('rotate-180');
+            });
+
+            // Klik di luar: tutup dropdown
+            document.addEventListener('click', e => {
+                if (!prodTrigger.contains(e.target) && !prodDropdown.contains(e.target)) {
+                    prodDropdown.classList.add('hidden');
+                    prodIcon.classList.remove('rotate-180');
+                }
+            });
+        });
+    </script>
+
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const languageButton = document.querySelector(".language-button");
+            const languageButton = document.querySelectorAll(".language-button");
             if (!languageButton) return;
 
             const currentUrl = window.location.href;
 
             if (currentUrl.includes("/en")) {
-                languageButton.textContent = "English";
+                languageButton.forEach(el => {
+                    el.textContent = 'English';
+                });
             } else if (currentUrl.includes("/cn")) {
-                languageButton.textContent = "普通话";
+                languageButton.forEach(el => {
+                    el.textContent = '普通话';
+                });
             } else {
-                languageButton.textContent = "Bahasa Indonesia";
+                languageButton.forEach(el => {
+                    el.textContent = 'Bahasa Indonesia';
+                });
             }
         });
     </script>
@@ -401,21 +546,7 @@
 
     <script>
         let isInTop = true;
-        // update max width to 1400 when screen size greater than 1700
-        // function updateMaxWidthClass() {
-        //     if (window.innerWidth > 1700) {
-        //         // Ambil semua elemen dengan class 'max-w-[1200px]'
-        //         const elements = document.querySelectorAll('.max-w-\\[1200px\\]');
 
-        //         elements.forEach(el => {
-        //             el.classList.remove('max-w-\\[1200px\\]');
-        //             el.classList.add('max-w-\\[1400px\\]');
-        //         });
-        //     }
-        // }
-        // window.addEventListener('DOMContentLoaded', updateMaxWidthClass);
-        // window.addEventListener('resize', updateMaxWidthClass);
-        // ===================================
         // hide navbar when scroll down
         let lastScrollY = window.scrollY;
 
@@ -445,7 +576,7 @@
 
         hamburgerBtn.addEventListener('click', () => {
             if (!isOpen) {
-                mobileMenu.classList.remove('h-0');
+                mobileMenu.classList.replace('h-0', 'h-auto');
                 mobileMenu.classList.add('h-[400px]');
                 document.body.classList.add('overflow-hidden');
                 mainNavbar.classList.add('bg-white');
@@ -461,7 +592,7 @@
                 // cek apakah berada masih berada di observer
                 // jika masih, tutup seperti default
                 mobileMenu.classList.remove('h-[400px]');
-                mobileMenu.classList.add('h-0');
+                mobileMenu.classList.replace('h-auto', 'h-0');
                 document.body.classList.remove('overflow-hidden');
                 if (isInTop == true) {
                     mainNavbar.classList.remove('bg-white');
@@ -471,6 +602,7 @@
                             el.classList.remove('invert', 'brightness-75');
                         });
                     }
+
                 } else {
                     // jika tidak, tutup seperti di tengah
                     mainNavbar.classList.add('bg-white');

@@ -19,8 +19,11 @@
     'hero_button_title' => 'Jelajahi Produk',
     'catalog_title' => 'Katalog Produk',
     'catalog_sub_title' => 'Temukan Produk Terbaik yang Sesuai dengan Kebutuhan Anda. Jelajahi Koleksi Kami dan Pilih Solusi Pengadaan yang Tepat untuk Bisnis Anda!.',
+    'category_title' => 'Kategori',
     'cta_banner_text' => 'Tidak menemukan produk yang Anda cari? hubungi kami untuk informasi lebih lengkap!',
     'cta_banner_button_title' => 'Hubungi Kami',
+    'search_placeholder' => 'Cari Produk',
+    'see_detail_button_title' => 'Lihat Detail',
 
     // footer
     'footer_description' => 'PT. Karya Pilar Nusantara adalah perusahaan terpercaya yang berfokus pada pengadaan berbagai kebutuhan instansi dan dunia usaha. Kami berkomitmmen memberikan produk berkualitas, layanan profesional, dan solusi pengadaan yang efisien. Kami siap mendukung kesuksesan bisnis Anda dengan produk lengkap dan layanan terbaik.',

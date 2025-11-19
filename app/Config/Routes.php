@@ -27,6 +27,10 @@ $routes->get('/product', 'Home::product_v2');
 $routes->get('/en/product', 'Home::product_v2/en');
 $routes->get('/cn/product', 'Home::product_v2/cn');
 
+$routes->get('/product-category/(:segment)', 'Home::product_category_v2/$1');
+$routes->get('/en/product-category/(:segment)', 'Home::product_category_v2/$1/en');
+$routes->get('/cn/product-category/(:segment)', 'Home::product_category_v2/$1/cn');
+
 
 $routes->get('/product/(:segment)', 'Home::product_detail_v2/$1');
 // Language-specific
@@ -79,6 +83,7 @@ $routes->post('/admin/product/save-product-variant', 'ProductController::savePro
 $routes->post('/admin/product/save-product-specification', 'ProductController::saveProductSpecifications', ['filter' => 'authRedirect']);
 $routes->post('/admin/product/save-product-description', 'ProductController::saveProductDescription', ['filter' => 'authRedirect']);
 $routes->post('/admin/product/save-product-status', 'ProductController::saveProductStatus', ['filter' => 'authRedirect']);
+$routes->post('/admin/product/save-product-category', 'ProductController::saveProductCategory', ['filter' => 'authRedirect']);
 $routes->post('/admin/product/save-product-sort-order', 'ProductController::saveProductSortOrder', ['filter' => 'authRedirect']);
 $routes->post('/admin/product/delete-product', 'ProductController::deleteProduct', ['filter' => 'authRedirect']);
 $routes->get('/admin/product/edit/(:num)', 'ProductController::edit/$1', ['filter' => 'authRedirect']);
@@ -86,5 +91,9 @@ $routes->post('/admin/product/update/(:segment)', 'ProductController::update/$1'
 $routes->get('/admin/product/delete/(:num)', 'ProductController::delete/$1', ['filter' => 'authRedirect']);
 $routes->get('/admin/product/toast', 'ProductController::showToast', ['filter' => 'authRedirect']);
 $routes->get('/admin/product', 'ProductController::index', ['filter' => 'authRedirect']);
+$routes->get('/admin/category', 'CategoryController::index', ['filter' => 'authRedirect']);
+$routes->post('/admin/category/update/(:segment)', 'CategoryController::update/$1', ['filter' => 'authRedirect']);
+$routes->post('/admin/category/store', 'CategoryController::store', ['filter' => 'authRedirect']);
+$routes->post('/admin/category/delete-category', 'CategoryController::deleteCategory', ['filter' => 'authRedirect']);
 
 $routes->get('api/csrf-token', 'ProductController::csrfToken');

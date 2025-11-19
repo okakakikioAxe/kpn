@@ -1,5 +1,5 @@
 <div class="w-full flex items-center justify-center px-5 md:px-15">
-    <div class=" bg-[#2563EB] w-full max-w-[1400px] p-8 rounded-[20px]">
+    <div class=" bg-[#2563EB] w-full max-w-[1200px] max-w-3xl-custom p-8 rounded-[20px]">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="w-full flex items-center justify-center md:col-span-2">
                 <p
@@ -8,7 +8,7 @@
                 </p>
             </div>
             <div class="w-full flex items-center justify-center md:col-span-1">
-                <a href="#">
+                <a href="https://api.whatsapp.com/send?phone=6282160050005&text=Halo%20saya%20butuh%20info">
                     <button
                         class="cursor-pointer bg-white hover:bg-green-100 px-[32px] md:px-[38px] transition-colors basic-contact-us-button py-[7px] rounded-[15px]"
                         type="button">

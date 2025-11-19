@@ -51,7 +51,7 @@
 
 
     // footer
-    'footer_description' => 'PT. Karya Pilar Nusantara adalah perusahaan terpercaya yang berfokus pada pengadaan berbagai kebutuhan instansi dan dunia usaha. Kami berkomitmmen memberikan produk berkualitas, layanan profesional, dan solusi pengadaan yang efisien. Kami siap mendukung kesuksesan bisnis Anda dengan produk lengkap dan layanan terbaik.',
+    'footer_description' => 'PT. Karya Pilar Nusantara is a trusted company focused on fulfilling procurement needs for institutions and businesses. We are committed to delivering quality products, professional services, and efficient procurement solutions. We are ready to support your business success with complete products and the best service.',
     'footer_company_title' => 'Company',
 
 ]) ?>

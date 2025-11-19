@@ -183,7 +183,7 @@
     <div id="overview-desktop-content" class="hidden sm:block px-15">
         <?= view('components/texts/title/title_group', ['id' => 'overview-title-sm', 'class' => 'flex flex-col w-full items-center justify-center mb-[80px] lg:hidden', 'top_title' => esc($overview_top_title ?? 'Menghadirkan Nilai,'), 'bottom_title' => esc($overview_bottom_title ?? 'Bukan Sekadar Barang')]) ?>
 
-        <div class="md:grid md:grid-cols-2 md:gap-x-[20px] max-w-[1400px] ">
+        <div class="md:grid md:grid-cols-2 md:gap-x-[20px] max-w-[1200px] max-w-3xl-custom">
             <div class="flex w-full items-center justify-center">
                 <div id="image-container"
                     class="hidden sm:block w-full max-w-[650px] aspect-square relative sm:mx-10 md:mx-0 mb-[60px] sm:mb-[80px] md:mb-0">
@@ -307,7 +307,7 @@
         <img class="absolute object-cover w-full h-full opacity-23 z-5" src="/images/background/background1.jpg"
             alt="background service">
         <div id="service-section-mobile" class="lg:hidden">
-            <div class="w-full max-w-[1400px] my-[150px] z-20 relative px-10 md:px-15 ">
+            <div class="w-full max-w-[1200px] max-w-3xl-custom my-[150px] z-20 relative px-10 md:px-15 ">
                 <?= view('components/texts/title/title_group', ['id' => 'service-title', 'class' => 'block w-full mb-[60px] md:mb-[90px] text-center sm:hidden', 'top_title' => esc($service_top_title ?? 'Kami Memberikan'), 'bottom_title' => esc($service_bottom_title ?? 'Yang Terbaik')]) ?>
                 <?= view('components/texts/title/title_group', ['id' => 'service-title-sm', 'class' => 'hidden sm:block text-center w-full sm:mb-[90px] items-start justify-center', 'top_title' => esc($service_top_title ?? 'Kami Memberikan'), 'bottom_title' => esc($service_bottom_title_2 ?? 'Yang Terbaik Untuk Anda')]) ?>
 
@@ -416,7 +416,7 @@
             <div class="flex w-full itemx-center justify-center z-20 relative mb-[80px] xl:hidden">
                 <?= view('components/texts/title/title_group', ['id' => 'service-title-lg', 'class' => 'block text-center', 'top_title' => esc($service_top_title ?? 'Kami Memberikan'), 'bottom_title' => esc($service_bottom_title_2 ?? 'Yang Terbaik Untuk Anda')]) ?>
             </div>
-            <div class="w-full max-w-[1400px] pb-[150px] z-20 relative px-10">
+            <div class="w-full max-w-[1200px] max-w-3xl-custom pb-[150px] z-20 relative px-10">
                 <div class="grid grid-cols-2 gap-x-[50px] mb-[144px]">
                     <div class="w-full">
                         <div>
@@ -641,7 +641,12 @@
             src="/images/background/background1.jpg" alt="background service">
         <div class="w-full flex items-center justify-center relative z-20">
 
-            <?= view('components/texts/title/title_group', ['id' => 'why-us-title', 'class' => 'block w-full mb-[60px] sm:hidden text-center', 'top_title' => 'Mengapa', 'bottom_title' => 'Memilih Kami']) ?>
+            <?= view('components/texts/title/title_group', [
+                'id' => 'why-us-title',
+                'class' => 'block w-full mb-[60px] sm:hidden text-center',
+                'top_title' =>  $why_us_top_title ?? 'Mengapa',
+                'bottom_title' => $why_us_bottom_title ?? 'Memilih Kami'
+            ]) ?>
 
             <div class="hidden sm:flex w-full mb-[60px] sm:mb-[90px] items-start justify-center">
                 <h2
@@ -655,7 +660,7 @@
             </div>
         </div>
         <div id="why-us-section-mobile" class="lg:hidden">
-            <div class="w-full max-w-[1400px]  z-20 relative px-10 md:px-15 ">
+            <div class="w-full max-w-[1200px] max-w-3xl-custom z-20 relative px-10 md:px-15 ">
 
                 <div class="w-full flex items-center justify-center h-auto mb-[60px] sm:mb-[120px]">
                     <img class="w-[90%] h-auto md:w-[80%]" src="/images/why us/whyus2.png" alt="layanan kami"
@@ -829,7 +834,7 @@
             </div>
         </div>
         <div id="why-us-section-desktop" class="hidden lg:block lg:px-5">
-            <div class="w-full max-w-[1400px] pb-[50px] z-20 relative px-10">
+            <div class="w-full max-w-[1200px] max-w-3xl-custom pb-[50px] z-20 relative px-10">
                 <div class="grid grid-cols-2 gap-x-[80px] mb-[144px]">
                     <div class="w-full h-full flex flex-col items-center  justify-center">
                         <img class="w-full h-auto" src="/images/service/service4.png" alt="layanan kami" width="744"
@@ -1007,7 +1012,12 @@
         style="background-image: url('/images/background/background1.jpg'); opacity: 0.23;"></div>
     <div class="flex flex-col w-full h-full items-center justify-center relative z-10 px-10 my-[200px]">
 
-        <?= view('components/texts/title/title_group', ['id' => 'about-us-title', 'class' => 'block md:hidden w-full items-center justify-center mb-[60px] text-center', 'top_title' => 'Sekilas', 'bottom_title' => 'Tentang Kami']) ?>
+        <?= view('components/texts/title/title_group', [
+            'id' => 'about-us-title',
+            'class' => 'block md:hidden w-full items-center justify-center mb-[60px] text-center',
+            'top_title' => $about_us_top_title ?? 'Sekilas',
+            'bottom_title' => $about_us_bottom_title ?? 'Tentang Kami'
+        ]) ?>
 
         <div class="hidden md:flex w-full items-center justify-center mb-[60px]">
             <h2
@@ -1075,7 +1085,7 @@
 
                 if (blur) blur.classList.remove('hidden');
                 isInTop = true;
-
+                document.getElementById('desktop-product-dropdown').classList.replace('bg-white', 'bg-black/40');
 
             } else {
                 // Di luar hero
@@ -1089,7 +1099,7 @@
                 navbarLanguageIcon.setAttribute('fill', '#374151');
                 if (blur) blur.classList.add('hidden');
                 isInTop = false;
-
+                document.getElementById('desktop-product-dropdown').classList.replace('bg-black/40', 'bg-white');
             }
         }, {
             root: null,
