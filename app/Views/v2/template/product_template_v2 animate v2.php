@@ -182,32 +182,58 @@
     </div> -->
 
     <style>
-    .left-icon {
-        position: absolute;
-        width: 75px;
-        height: 75px;
+    @keyframes leftIconShrink {
+        0% {
+            height: 60px;
+        }
 
-        transition: height 0.4s ease, width 0.4s ease;
+
+        20% {
+            height: 30px;
+        }
+
+        100% {
+            height: 24px;
+        }
     }
 
-    .left-icon.shrink {
+    .animate-left-icon-shrink {
+        animation: leftIconShrink 0.5s forwards ease;
+    }
+
+    @keyframes leftIconExpand {
+
+        0% {
+            height: 24px;
+        }
+
+
+        40% {
+            height: 28px;
+        }
+
+        100% {
+            height: 60px;
+        }
+    }
+
+    .animate-left-icon-expand {
+        animation: leftIconExpand 0.5s forwards ease;
+    }
+
+    .left-icon {
+        position: absolute;
         width: 60px;
         height: 60px;
     }
 
-    .item-count {
-        margin-left: 8px;
-        width: 30px;
-        font-weight: 500;
-        font-size: 18px;
-    }
 
     .small-boxes {
         position: relative;
-        left: 86px;
+        left: 72px;
         display: flex;
-        width: 262px;
-        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: 12px;
     }
 
 
@@ -215,33 +241,27 @@
     .first-row-items {
         position: relative;
         aspect-ratio: 1 / 1;
-        width: 30px;
-        width: 30px;
+        width: 16px;
+        /* transform: scale(0.7); */
 
-        transition: transform 0.4s ease, width 0.5s ease;
+        transition: transform 0.4s ease, width 0.4s ease;
         /* jarak antar item */
     }
 
     .first-row-items.expand {
+        /* transform: scale(1); */
         /* membesar */
         width: 100%;
         /* akan melebar sesuai ruang */
     }
 
     @keyframes expandFull {
-
-        0% {
-            width: 262px;
-            left: 86;
+        from {
+            width: 168.2px;
+            left: 72;
         }
 
-
-        95% {
-            width: 100%;
-            left: 86;
-        }
-
-        100% {
+        to {
             width: 100%;
             left: 0px;
         }
@@ -253,26 +273,27 @@
     }
 
     @keyframes shrinkBack {
-        0% {
+        from {
             width: 100%;
             left: 0px;
         }
 
-
-        30% {
-            width: 100%;
-            left: 86px;
-        }
-
-        100% {
-            width: 262px;
-            left: 86px;
+        to {
+            width: 168.2px;
+            left: 72px;
         }
     }
 
     .animate-shrink {
         animation: shrinkBack 0.5s forwards ease;
     }
+
+
+    /* .grid-animated {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    } */
 
     /* ITEM BASE */
     .grid-item {
@@ -331,84 +352,68 @@
 
 
 
-    .title-container {
-        transform: translateY(0);
-        margin-bottom: 14px;
-        min-height: 28px;
-        left: 86px;
-        transition:
-            min-height 0.15s ease,
-            transform 0.3s ease;
-    }
+    /* ROW 1 */
+    /* .grid-animated.open .grid-item:nth-child(-n+5) {
+        animation: growFade 0.3s forwards ease;
+        animation-delay: 0.0s;
+    } */
 
-    .title-container.expand {
-        margin-bottom: 20px;
-        /* left: 72px; */
-        transform: translateX(-14px);
-        min-height: 60px;
-    }
+    /* ROW 2 */
+    /* .grid-animated.open .grid-item:nth-child(n+6):nth-child(-n+10) {
+        animation: growFade 0.3s forwards ease;
+        animation-delay: 0.15s;
+    } */
+
+    /* ROW 3 */
+    /* .grid-animated.open .grid-item:nth-child(n+11):nth-child(-n+15) {
+        animation: growFade 0.3s forwards ease;
+        animation-delay: 0.30s;
+    } */
     </style>
 
 
     <div class="max-w-[1200px] mx-auto">
 
         <!-- ACCORDION LIST -->
-        <div class="space-y-2 accordion-item">
-            <?php foreach ($categories as $category): ?>
-
+        <div class="space-y-4 accordion-item bg-red-100">
             <div data-accordion-header>
 
                 <!-- HEADER OPEN -->
-                <div class="flex items-start gap-4 cursor-pointer py-[12px] relative h-full">
+                <div class="flex items-start gap-4 cursor-pointer py-4 bg-green-50 relative h-full">
 
                     <!-- LEFT ICON BOX -->
-                    <div class="rounded-lg left-icon aspect-square overflow-hidden" data-left-icon>
-                        <img src="/images/category/<?= $category['image'] ?>"
-                            class="w-full h-full object-cover rounded-lg" alt="">
-                    </div>
+                    <div id="left-icon" class=" bg-red-100 rounded-lg left-icon" data-left-icon></div>
 
                     <!-- TITLE + SMALL BOXES -->
-                    <div class="flex-1 ">
-                        <div class="flex relative  items-center title-container" data-title-container>
-                            <div class="flex">
-                                <h2 class="  text-xl font-semibold ">Olahraga</h2>
+                    <div class="flex-1">
+                        <div class="flex relative left-[64px] items-end">
 
-                                <img loading="lazy"
-                                    class="h-[22px] w-[22px] transition-transform duration-300 ml-4 self-end"
-                                    src="arrow-right.svg" alt="panah kanan" data-arrow>
-                            </div>
+                            <h2 class="  text-xl font-semibold ">Olahraga</h2>
+
+                            <img id="data-arrow" loading="lazy"
+                                class="h-[22px] w-[22px] transition-transform duration-300 ml-4" src="arrow-right.svg"
+                                alt="panah kanan">
                         </div>
 
-                        <div class="flex">
+                        <div class="flex bg-orange-100 w-auto">
                             <!-- SMALL BOXES -->
-                            <div class="small-boxes gap-[4px] " data-first-row>
-                                <div class="first-row-items bg-gray-300 rounded-md">
-                                    <img src="/images/products/playground-set/thumbnail-playground-set-68a8352c7f8dc.webp"
-                                        alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                </div>
-                                <div class="first-row-items bg-gray-300 rounded-md">
-                                    <img src="/images/products/terowongan/thumbnail-terowongan-68a83338959fe.webp"
-                                        alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                </div>
-                                <div class="first-row-items bg-gray-300 rounded-md">
-                                    <img src="/images/products/peredam-panas/thumbnail-peredam-panas-10mm-280625.webp"
-                                        alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                </div>
-                                <div class="first-row-items bg-gray-300 rounded-md">
-                                    <img src="/images/products/pelampung-kincir-air/thumbnail-pelampung-kincir-air-6868eb27c1e9b.webp"
-                                        alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                </div>
-                                <div class="first-row-items bg-gray-300 rounded-md">
-                                    <img src="/images/products/road-barrier/thumbnail-road-barrier-6868ecba3da9a.webp"
-                                        alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                </div>
-                                <p class="item-count self-center" data-item-count>16+</p>
+                            <div id="first-row" class=" mt-2 bg-sky-400 small-boxes" data-small-boxes>
+                                <div class="first-row-items bg-gray-300 rounded"></div>
+                                <div class="first-row-items bg-gray-300 rounded"></div>
+                                <div class="first-row-items bg-gray-300 rounded"></div>
+                                <div class="first-row-items bg-gray-300 rounded"></div>
+                                <div class="first-row-items bg-gray-300 rounded"></div>
+                                <span id="item-count">16+</span>
                             </div>
                         </div>
                     </div>
+
                     <!-- AGE + CHEVRON DOWN -->
+
+
+
                 </div>
-                <div class="grid grid-cols-5 gap-4 grid-animated" data-grid>
+                <div class="grid grid-cols-5 gap-4 grid-animated" id="myGrid">
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
@@ -427,56 +432,36 @@
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
                 </div>
-
-                <div data-border-bottom></div>
             </div>
-
-            <?php endforeach; ?>
 
         </div>
 
     </div>
 
     <script>
-    document.querySelectorAll('[data-accordion-header]').forEach(header => {
+    const grid = document.querySelector('.grid-animated');
+    const firstRow = document.getElementById('first-row');
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        const header = item.querySelector('[data-accordion-header]');
+        const itemCount = document.getElementById('item-count');
+        header.addEventListener('click', () => {
 
-        const accordion = header.closest('[data-accordion-header]');
-        const grid = accordion.querySelector('.grid-animated');
-        const firstRow = header.querySelector('[data-first-row]');
-        const itemCount = header.querySelector('[data-item-count]');
-        const arrow = header.querySelector('[data-arrow]');
-        const titleContainer = header.querySelector('[data-title-container]');
-        const leftIcon = header.querySelector('[data-left-icon]');
-        const borderBottom = accordion.querySelector('[data-border-bottom]');
-        const contentContainer = header.querySelector('[data-first-row]');
-
-
-        header.addEventListener('click', async () => {
-            await closeAllAccordions(header);
             const isOpen = header.classList.contains('open');
 
-            if (!isOpen) {
-                // scrollToAccordion(header);
 
+            if (!isOpen) {
                 header.classList.add('open');
                 itemCount.classList.add('hidden');
-                arrow.classList.add('rotate-90');
-                titleContainer.classList.add('expand');
-                contentContainer.classList.replace('gap-[4px]', 'gap-[12px]');
-                leftIcon.classList.add('shrink');
-                borderBottom.classList.add('mt-[40px]');
-
-                focusAccordionSmooth(header);
+                document.getElementById('data-arrow').classList.add('rotate-90');
+                // document.querySelectorAll('[data-arrow]').forEach(a => a.classList.add('rotate-90'));
             } else {
                 header.classList.remove('open');
-                arrow.classList.remove('rotate-90');
-                titleContainer.classList.remove('expand');
-                contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
-                leftIcon.classList.remove('shrink');
-                borderBottom.classList.remove('mt-[40px]');
+                itemCount.classList.remove('hidden');
+                document.getElementById('data-arrow').classList.remove('rotate-90');
+                // document.querySelectorAll('[data-arrow]').forEach(a => a.classList.remove(
+                //     'rotate-90'));
             }
 
-            // CLOSE GRID
             if (grid.classList.contains('open')) {
                 grid.style.height = grid.scrollHeight + "px";
                 requestAnimationFrame(() => {
@@ -484,8 +469,12 @@
                 });
                 grid.classList.remove('open');
 
-                grid.querySelectorAll('.grid-item').forEach(el => {
-                    el.classList.remove('animate');
+                const items = document.querySelectorAll('.grid-item');
+                // const itemsPerRow = getItemsPerRow();
+
+                items.forEach((item, index) => {
+
+                    item.classList.remove('animate');
                 });
             }
 
@@ -493,155 +482,31 @@
                 if (event.animationName === "expandFull") {
                     grid.classList.add('open');
                     grid.style.height = grid.scrollHeight + "px";
-                    animateGridItems(grid);
+
+                    animateGridItems();
                 }
-                if (event.animationName === "shrinkBack") {
-                    setTimeout(() => resolve(), 50);
-                    itemCount.classList.remove('hidden');
-                }
-            }, {
-                once: true
             });
 
             toggleWidth(firstRow);
         });
     });
 
-    function closeAllAccordions(exceptHeader) {
-        const opened = document.querySelectorAll('[data-accordion-header].open');
 
-        if (opened.length === 0) {
-            return Promise.resolve();
-        }
-
-        const waits = [];
-
-        opened.forEach(openHeader => {
-            if (openHeader === exceptHeader) return;
-
-            const accordion = openHeader.closest('[data-accordion-header]');
-            const grid = accordion.querySelector('.grid-animated');
-            const firstRow = openHeader.querySelector('[data-first-row]');
-            const arrow = openHeader.querySelector('[data-arrow]');
-            const titleContainer = openHeader.querySelector('[data-title-container]');
-            const leftIcon = openHeader.querySelector('[data-left-icon]');
-            const borderBottom = accordion.querySelector('[data-border-bottom]');
-            const contentContainer = openHeader.querySelector('[data-first-row]');
-            const itemCount = openHeader.querySelector('[data-item-count]');
-
-            openHeader.classList.remove('open');
-            arrow.classList.remove('rotate-90');
-            titleContainer.classList.remove('expand');
-            contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
-            leftIcon.classList.remove('shrink');
-            borderBottom.classList.remove('mt-[40px]');
-
-            // Close grid
-            if (grid.classList.contains('open')) {
-                grid.style.height = 0;
-                grid.classList.remove('open');
-                grid.querySelectorAll('.grid-item').forEach(el => {
-                    el.classList.remove('animate');
-                });
-            }
-
-            firstRow.classList.remove("animate-expand");
-            firstRow.classList.add("animate-shrink");
-
-            firstRow.querySelectorAll('.first-row-items').forEach(el => {
-                el.classList.remove('expand');
-            });
-
-            itemCount.classList.remove('hidden');
-
-            // ✅ ONLY resolve when shrink animation finishes
-            waits.push(new Promise(resolve => {
-                const handler = (e) => {
-                    if (e.animationName === 'shrinkBack') {
-                        resolve();
-                    }
-                };
-                firstRow.addEventListener('animationend', handler, {
-                    once: true
-                });
-            }));
-        });
-
-        return Promise.all(waits);
-    }
-
-
-
-    function closeAllAccordions2(exceptHeader) {
-        document.querySelectorAll('[data-accordion-header].open').forEach(openHeader => {
-
-            if (openHeader === exceptHeader) return;
-
-            const accordion = openHeader.closest('[data-accordion-header]');
-            const grid = accordion.querySelector('.grid-animated');
-            const firstRow = openHeader.querySelector('[data-first-row]');
-            const arrow = openHeader.querySelector('[data-arrow]');
-            const titleContainer = openHeader.querySelector('[data-title-container]');
-            const leftIcon = openHeader.querySelector('[data-left-icon]');
-            const borderBottom = accordion.querySelector('[data-border-bottom]');
-            const contentContainer = openHeader.querySelector('[data-first-row]');
-            const itemCount = openHeader.querySelector('[data-item-count]');
-
-            openHeader.classList.remove('open');
-            arrow.classList.remove('rotate-90');
-            titleContainer.classList.remove('expand');
-            contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
-            leftIcon.classList.remove('shrink');
-            borderBottom.classList.remove('mt-[40px]');
-
-            // tutup grid
-            if (grid.classList.contains('open')) {
-                grid.style.height = 0;
-                grid.classList.remove('open');
-            }
-
-            // reset animasi row kecil
-            firstRow.classList.remove("animate-expand");
-            firstRow.classList.add("animate-shrink");
-
-            firstRow.querySelectorAll('.first-row-items').forEach(el => {
-                el.classList.remove('expand');
-            });
-
-            itemCount.classList.remove('hidden');
-        });
-    }
-
-    function focusAccordionSmooth(wrapper) {
-        const OFFSET = 80; // jarak dari atas (sesuaikan)
-
-        requestAnimationFrame(() => {
-            setTimeout(() => {
-                const top = wrapper.getBoundingClientRect().top + window.scrollY - OFFSET;
-
-                window.scrollTo({
-                    top: top,
-                    behavior: "smooth"
-                });
-            }, 200); // tunggu animasi expand mulai
-        });
-    }
-
-
-
-
-    function getItemsPerRow(wrapper) {
+    function getItemsPerRow() {
+        const wrapper = document.querySelector('.grid-animated');
         const style = window.getComputedStyle(wrapper);
-        return style.getPropertyValue("grid-template-columns").split(" ").length;
+        const cols = style.getPropertyValue("grid-template-columns").split(" ").length;
+        return cols;
     }
 
-    function animateGridItems(grid) {
-        const items = grid.querySelectorAll('.grid-item');
-        const itemsPerRow = getItemsPerRow(grid);
+    function animateGridItems() {
+        const items = document.querySelectorAll('.grid-item');
+        const itemsPerRow = getItemsPerRow();
 
         items.forEach((item, index) => {
             const row = Math.floor(index / itemsPerRow);
-            item.style.animationDelay = `${row * 0.15}s`;
+            const delay = row * 0.15; // per-row delay seperti sebelumnya
+            item.style.animationDelay = `${delay}s`;
             item.classList.add('animate');
         });
     }
@@ -652,22 +517,94 @@
             container.classList.add("animate-shrink");
             container.classList.remove("absolute", "left-0");
 
-            container.querySelectorAll('.first-row-items').forEach(el => {
+            document.querySelectorAll('.first-row-items').forEach(el => {
                 el.classList.remove('expand');
             });
-
+            document.getElementById('left-icon').classList.remove('animate-left-icon-shrink');
+            document.getElementById('left-icon').classList.add('animate-left-icon-expand');
         } else {
             container.classList.remove("animate-shrink");
             container.classList.add("animate-expand");
             container.classList.add("absolute", "left-0");
 
-            container.querySelectorAll('.first-row-items').forEach(el => {
+
+            document.querySelectorAll('.first-row-items').forEach(el => {
                 el.classList.add('expand');
             });
+
+            document.getElementById('left-icon').classList.add('animate-left-icon-shrink');
+            document.getElementById('left-icon').classList.remove('animate-left-icon-expand');
         }
     }
     </script>
 
+
+
+    <!-- ============================================================= -->
+    <!-- JAVASCRIPT (PURE, NO DEPENDENCIES) -->
+    <!-- ============================================================= -->
+    <!-- <script>
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        const header = item.querySelector('[data-accordion-header]');
+        const content = item.querySelector('[data-accordion-content]');
+        const arrow = item.querySelector('[data-arrow]');
+        const leftIcon = item.querySelector('[data-left-icon]');
+        const smallBoxes = item.querySelector('[data-small-boxes]');
+
+        header.addEventListener('click', () => {
+            const isOpen = content.classList.contains('open');
+
+            // Tutup semua accordion
+            document.querySelectorAll('[data-accordion-content]').forEach(c => c.classList.remove(
+                'open'));
+            document.querySelectorAll('[data-arrow]').forEach(a => a.classList.remove('rotate-180'));
+            document.querySelectorAll('[data-left-icon]').forEach(l => l.classList.remove('shrink'));
+            document.querySelectorAll('[data-small-boxes]').forEach(s => s.classList.remove('animate'));
+
+            if (!isOpen) {
+                content.classList.add('open');
+                arrow.classList.add('rotate-180');
+                leftIcon.classList.add('shrink');
+
+                // Panggil animasi baru
+                animateSmallBoxesToGrid(smallBoxes, content);
+                // Setelah animasi small boxes selesai, hapus animasi agar tetap di grid
+                setTimeout(() => {
+                    smallBoxes.classList.remove('animate');
+                }, 500); // durasi sesuai keyframe
+            }
+        });
+    });
+
+    function animateSmallBoxesToGrid(smallBoxesContainer, gridContainer) {
+        const smallBoxes = [...smallBoxesContainer.children];
+        const gridTargets = [...gridContainer.children].slice(0, 5);
+
+        smallBoxes.forEach((box, i) => {
+            const start = box.getBoundingClientRect();
+            const target = gridTargets[i].getBoundingClientRect();
+
+            const fly = box.cloneNode(true);
+            fly.classList.add('fly-box');
+            fly.style.width = start.width + "px";
+            fly.style.height = start.height + "px";
+            fly.style.left = start.left + "px";
+            fly.style.top = start.top + "px";
+
+            document.body.appendChild(fly);
+
+            requestAnimationFrame(() => {
+                const dx = target.left - start.left;
+                const dy = target.top - start.top;
+
+                fly.style.transform = `translate(${dx}px, ${dy}px) scale(${target.width/start.width})`;
+            });
+
+            // remove clone after animation
+            setTimeout(() => fly.remove(), 650);
+        });
+    }
+    </script> -->
 
 
 

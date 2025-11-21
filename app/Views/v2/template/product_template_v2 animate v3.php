@@ -354,34 +354,29 @@
 
         <!-- ACCORDION LIST -->
         <div class="space-y-2 accordion-item">
-            <?php foreach ($categories as $category): ?>
-
             <div data-accordion-header>
 
                 <!-- HEADER OPEN -->
-                <div class="flex items-start gap-4 cursor-pointer py-[12px] relative h-full">
+                <div class="flex items-start gap-4 cursor-pointer py-4 relative h-full">
 
                     <!-- LEFT ICON BOX -->
-                    <div class="rounded-lg left-icon aspect-square overflow-hidden" data-left-icon>
-                        <img src="/images/category/<?= $category['image'] ?>"
-                            class="w-full h-full object-cover rounded-lg" alt="">
-                    </div>
+                    <div id="left-icon" class="bg-red-100 rounded-lg left-icon" data-left-icon></div>
 
                     <!-- TITLE + SMALL BOXES -->
                     <div class="flex-1 ">
-                        <div class="flex relative  items-center title-container" data-title-container>
+                        <div id="title-container" class="flex relative  items-center title-container">
                             <div class="flex">
                                 <h2 class="  text-xl font-semibold ">Olahraga</h2>
 
-                                <img loading="lazy"
+                                <img id="data-arrow" loading="lazy"
                                     class="h-[22px] w-[22px] transition-transform duration-300 ml-4 self-end"
-                                    src="arrow-right.svg" alt="panah kanan" data-arrow>
+                                    src="arrow-right.svg" alt="panah kanan">
                             </div>
                         </div>
 
                         <div class="flex">
                             <!-- SMALL BOXES -->
-                            <div class="small-boxes gap-[4px] " data-first-row>
+                            <div id="first-row" class="small-boxes gap-[4px] " data-small-boxes>
                                 <div class="first-row-items bg-gray-300 rounded-md">
                                     <img src="/images/products/playground-set/thumbnail-playground-set-68a8352c7f8dc.webp"
                                         alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
@@ -402,13 +397,13 @@
                                     <img src="/images/products/road-barrier/thumbnail-road-barrier-6868ecba3da9a.webp"
                                         alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
                                 </div>
-                                <p class="item-count self-center" data-item-count>16+</p>
+                                <p id="item-count" class="item-count self-center">16+</p>
                             </div>
                         </div>
                     </div>
                     <!-- AGE + CHEVRON DOWN -->
                 </div>
-                <div class="grid grid-cols-5 gap-4 grid-animated" data-grid>
+                <div class="grid grid-cols-5 gap-4 grid-animated" id="myGrid">
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
@@ -428,55 +423,42 @@
                     <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
                 </div>
 
-                <div data-border-bottom></div>
+                <div id="border-bottom"></div>
             </div>
-
-            <?php endforeach; ?>
-
         </div>
 
     </div>
 
     <script>
-    document.querySelectorAll('[data-accordion-header]').forEach(header => {
+    const grid = document.querySelector('.grid-animated');
+    const firstRow = document.getElementById('first-row');
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        const header = item.querySelector('[data-accordion-header]');
+        const itemCount = document.getElementById('item-count');
+        const contentContainer = item.querySelector('[data-small-boxes]');
+        header.addEventListener('click', () => {
 
-        const accordion = header.closest('[data-accordion-header]');
-        const grid = accordion.querySelector('.grid-animated');
-        const firstRow = header.querySelector('[data-first-row]');
-        const itemCount = header.querySelector('[data-item-count]');
-        const arrow = header.querySelector('[data-arrow]');
-        const titleContainer = header.querySelector('[data-title-container]');
-        const leftIcon = header.querySelector('[data-left-icon]');
-        const borderBottom = accordion.querySelector('[data-border-bottom]');
-        const contentContainer = header.querySelector('[data-first-row]');
-
-
-        header.addEventListener('click', async () => {
-            await closeAllAccordions(header);
             const isOpen = header.classList.contains('open');
 
-            if (!isOpen) {
-                // scrollToAccordion(header);
 
+            if (!isOpen) {
                 header.classList.add('open');
                 itemCount.classList.add('hidden');
-                arrow.classList.add('rotate-90');
-                titleContainer.classList.add('expand');
+                document.getElementById('data-arrow').classList.add('rotate-90');
+                document.getElementById('title-container').classList.add('expand');
                 contentContainer.classList.replace('gap-[4px]', 'gap-[12px]');
-                leftIcon.classList.add('shrink');
-                borderBottom.classList.add('mt-[40px]');
-
-                focusAccordionSmooth(header);
+                document.getElementById('left-icon').classList.add('shrink');
+                document.getElementById('border-bottom').classList.add('mt-[40px]');
+                // document.querySelectorAll('[data-arrow]').forEach(a => a.classList.add('rotate-90'));
             } else {
                 header.classList.remove('open');
-                arrow.classList.remove('rotate-90');
-                titleContainer.classList.remove('expand');
+                document.getElementById('data-arrow').classList.remove('rotate-90');
+                document.getElementById('title-container').classList.remove('expand');
                 contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
-                leftIcon.classList.remove('shrink');
-                borderBottom.classList.remove('mt-[40px]');
+                document.getElementById('left-icon').classList.remove('shrink');
+                document.getElementById('border-bottom').classList.remove('mt-[40px]');
             }
 
-            // CLOSE GRID
             if (grid.classList.contains('open')) {
                 grid.style.height = grid.scrollHeight + "px";
                 requestAnimationFrame(() => {
@@ -484,8 +466,12 @@
                 });
                 grid.classList.remove('open');
 
-                grid.querySelectorAll('.grid-item').forEach(el => {
-                    el.classList.remove('animate');
+                const items = document.querySelectorAll('.grid-item');
+                // const itemsPerRow = getItemsPerRow();
+
+                items.forEach((item, index) => {
+
+                    item.classList.remove('animate');
                 });
             }
 
@@ -493,155 +479,32 @@
                 if (event.animationName === "expandFull") {
                     grid.classList.add('open');
                     grid.style.height = grid.scrollHeight + "px";
-                    animateGridItems(grid);
-                }
-                if (event.animationName === "shrinkBack") {
-                    setTimeout(() => resolve(), 50);
+
+                    animateGridItems();
+                } else if (event.animationName === "shrinkBack") {
                     itemCount.classList.remove('hidden');
                 }
-            }, {
-                once: true
             });
 
             toggleWidth(firstRow);
         });
     });
 
-    function closeAllAccordions(exceptHeader) {
-        const opened = document.querySelectorAll('[data-accordion-header].open');
-
-        if (opened.length === 0) {
-            return Promise.resolve();
-        }
-
-        const waits = [];
-
-        opened.forEach(openHeader => {
-            if (openHeader === exceptHeader) return;
-
-            const accordion = openHeader.closest('[data-accordion-header]');
-            const grid = accordion.querySelector('.grid-animated');
-            const firstRow = openHeader.querySelector('[data-first-row]');
-            const arrow = openHeader.querySelector('[data-arrow]');
-            const titleContainer = openHeader.querySelector('[data-title-container]');
-            const leftIcon = openHeader.querySelector('[data-left-icon]');
-            const borderBottom = accordion.querySelector('[data-border-bottom]');
-            const contentContainer = openHeader.querySelector('[data-first-row]');
-            const itemCount = openHeader.querySelector('[data-item-count]');
-
-            openHeader.classList.remove('open');
-            arrow.classList.remove('rotate-90');
-            titleContainer.classList.remove('expand');
-            contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
-            leftIcon.classList.remove('shrink');
-            borderBottom.classList.remove('mt-[40px]');
-
-            // Close grid
-            if (grid.classList.contains('open')) {
-                grid.style.height = 0;
-                grid.classList.remove('open');
-                grid.querySelectorAll('.grid-item').forEach(el => {
-                    el.classList.remove('animate');
-                });
-            }
-
-            firstRow.classList.remove("animate-expand");
-            firstRow.classList.add("animate-shrink");
-
-            firstRow.querySelectorAll('.first-row-items').forEach(el => {
-                el.classList.remove('expand');
-            });
-
-            itemCount.classList.remove('hidden');
-
-            // ✅ ONLY resolve when shrink animation finishes
-            waits.push(new Promise(resolve => {
-                const handler = (e) => {
-                    if (e.animationName === 'shrinkBack') {
-                        resolve();
-                    }
-                };
-                firstRow.addEventListener('animationend', handler, {
-                    once: true
-                });
-            }));
-        });
-
-        return Promise.all(waits);
-    }
-
-
-
-    function closeAllAccordions2(exceptHeader) {
-        document.querySelectorAll('[data-accordion-header].open').forEach(openHeader => {
-
-            if (openHeader === exceptHeader) return;
-
-            const accordion = openHeader.closest('[data-accordion-header]');
-            const grid = accordion.querySelector('.grid-animated');
-            const firstRow = openHeader.querySelector('[data-first-row]');
-            const arrow = openHeader.querySelector('[data-arrow]');
-            const titleContainer = openHeader.querySelector('[data-title-container]');
-            const leftIcon = openHeader.querySelector('[data-left-icon]');
-            const borderBottom = accordion.querySelector('[data-border-bottom]');
-            const contentContainer = openHeader.querySelector('[data-first-row]');
-            const itemCount = openHeader.querySelector('[data-item-count]');
-
-            openHeader.classList.remove('open');
-            arrow.classList.remove('rotate-90');
-            titleContainer.classList.remove('expand');
-            contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
-            leftIcon.classList.remove('shrink');
-            borderBottom.classList.remove('mt-[40px]');
-
-            // tutup grid
-            if (grid.classList.contains('open')) {
-                grid.style.height = 0;
-                grid.classList.remove('open');
-            }
-
-            // reset animasi row kecil
-            firstRow.classList.remove("animate-expand");
-            firstRow.classList.add("animate-shrink");
-
-            firstRow.querySelectorAll('.first-row-items').forEach(el => {
-                el.classList.remove('expand');
-            });
-
-            itemCount.classList.remove('hidden');
-        });
-    }
-
-    function focusAccordionSmooth(wrapper) {
-        const OFFSET = 80; // jarak dari atas (sesuaikan)
-
-        requestAnimationFrame(() => {
-            setTimeout(() => {
-                const top = wrapper.getBoundingClientRect().top + window.scrollY - OFFSET;
-
-                window.scrollTo({
-                    top: top,
-                    behavior: "smooth"
-                });
-            }, 200); // tunggu animasi expand mulai
-        });
-    }
-
-
-
-
-    function getItemsPerRow(wrapper) {
+    function getItemsPerRow() {
+        const wrapper = document.querySelector('.grid-animated');
         const style = window.getComputedStyle(wrapper);
-        return style.getPropertyValue("grid-template-columns").split(" ").length;
+        const cols = style.getPropertyValue("grid-template-columns").split(" ").length;
+        return cols;
     }
 
-    function animateGridItems(grid) {
-        const items = grid.querySelectorAll('.grid-item');
-        const itemsPerRow = getItemsPerRow(grid);
+    function animateGridItems() {
+        const items = document.querySelectorAll('.grid-item');
+        const itemsPerRow = getItemsPerRow();
 
         items.forEach((item, index) => {
             const row = Math.floor(index / itemsPerRow);
-            item.style.animationDelay = `${row * 0.15}s`;
+            const delay = row * 0.15; // per-row delay seperti sebelumnya
+            item.style.animationDelay = `${delay}s`;
             item.classList.add('animate');
         });
     }
@@ -652,16 +515,19 @@
             container.classList.add("animate-shrink");
             container.classList.remove("absolute", "left-0");
 
-            container.querySelectorAll('.first-row-items').forEach(el => {
+            document.querySelectorAll('.first-row-items').forEach(el => {
                 el.classList.remove('expand');
             });
+
+
 
         } else {
             container.classList.remove("animate-shrink");
             container.classList.add("animate-expand");
             container.classList.add("absolute", "left-0");
 
-            container.querySelectorAll('.first-row-items').forEach(el => {
+
+            document.querySelectorAll('.first-row-items').forEach(el => {
                 el.classList.add('expand');
             });
         }
