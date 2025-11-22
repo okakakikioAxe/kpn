@@ -200,14 +200,14 @@
             width: 30px;
             font-weight: 500;
             font-size: 18px;
+            left: 274px;
+            position: absolute;
         }
 
         .small-boxes {
             position: relative;
             left: 86px;
-            display: flex;
-            width: 262px;
-            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            width: 180px;
         }
 
 
@@ -215,23 +215,14 @@
         .first-row-items {
             position: relative;
             aspect-ratio: 1 / 1;
-            width: 30px;
-            width: 30px;
-
-            transition: transform 0.4s ease, width 0.5s ease;
-            /* jarak antar item */
-        }
-
-        .first-row-items.expand {
-            /* membesar */
             width: 100%;
-            /* akan melebar sesuai ruang */
+            /* jarak antar item */
         }
 
         @keyframes expandFull {
 
             0% {
-                width: 262px;
+                width: 180px;
                 left: 86;
             }
 
@@ -265,7 +256,7 @@
             }
 
             100% {
-                width: 262px;
+                width: 180px;
                 left: 86px;
             }
         }
@@ -306,7 +297,7 @@
             overflow: hidden;
             transition: height 0.5s ease;
             display: grid;
-            gap: 12px;
+            gap: 20px;
             grid-template-columns: repeat(5, 1fr);
             /* default = 5 kolom */
         }
@@ -365,11 +356,11 @@
         }
     </style>
 
-    <div class=" w-screen justify-center items-center flex bg-blue-600 px-5 md:px-15">
+    <div class=" w-screen justify-center items-center flex px-5 md:px-15">
 
-        <div class="flex w-full max-w-[1200px] bg-red-100 relative">
+        <div class="flex w-full max-w-[1200px] relative">
 
-            <div id="left-product-container" class="flex w-full mx-auto bg-green-300">
+            <div id="left-product-container" class="flex w-full mx-auto">
 
                 <!-- ACCORDION LIST -->
                 <div class="space-y-2 accordion-item">
@@ -378,7 +369,7 @@
                         <div data-accordion-header>
 
                             <!-- HEADER OPEN -->
-                            <div class="flex items-start gap-4 cursor-pointer pb-[24px] relative h-full">
+                            <div class="flex items-start gap-4 cursor-pointer pb-[20px] relative h-full">
 
                                 <!-- LEFT ICON BOX -->
                                 <div class="rounded-lg left-icon aspect-square overflow-hidden" data-left-icon>
@@ -388,9 +379,9 @@
 
                                 <!-- TITLE + SMALL BOXES -->
                                 <div class="flex-1 ">
-                                    <div class="flex relative  items-center title-container" data-title-container>
+                                    <div class="flex relative items-center title-container" data-title-container>
                                         <div class="flex">
-                                            <h2 class="  text-xl font-semibold ">Olahraga</h2>
+                                            <h2 class="  text-xl font-semibold "><?= $category['title'] ?></h2>
 
                                             <img loading="lazy"
                                                 class="h-[22px] w-[22px] transition-transform duration-300 ml-4 self-end"
@@ -400,51 +391,34 @@
 
                                     <div class="flex">
                                         <!-- SMALL BOXES -->
-                                        <div class="small-boxes gap-[4px] " data-first-row>
-                                            <div class="first-row-items bg-gray-300 rounded-md">
-                                                <img src="/images/products/playground-set/thumbnail-playground-set-68a8352c7f8dc.webp"
-                                                    alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                            </div>
-                                            <div class="first-row-items bg-gray-300 rounded-md">
-                                                <img src="/images/products/terowongan/thumbnail-terowongan-68a83338959fe.webp"
-                                                    alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                            </div>
-                                            <div class="first-row-items bg-gray-300 rounded-md">
-                                                <img src="/images/products/peredam-panas/thumbnail-peredam-panas-10mm-280625.webp"
-                                                    alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                            </div>
-                                            <div class="first-row-items bg-gray-300 rounded-md">
-                                                <img src="/images/products/pelampung-kincir-air/thumbnail-pelampung-kincir-air-6868eb27c1e9b.webp"
-                                                    alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                            </div>
-                                            <div class="first-row-items bg-gray-300 rounded-md">
-                                                <img src="/images/products/road-barrier/thumbnail-road-barrier-6868ecba3da9a.webp"
-                                                    alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
-                                            </div>
-                                            <p class="item-count self-center" data-item-count>16+</p>
+                                        <div class="small-boxes grid grid-cols-5 gap-x-[4px] " data-first-row>
+                                            <?php foreach ($category['first_row_products'] as $top_product): ?>
+                                                <div class="first-row-items bg-gray-300 rounded-md">
+                                                    <img src="/images/products/<?= $top_product['slug'] ?>/<?= $top_product['thumbnail'] ?>"
+                                                        alt="<?= $top_product['title'] ?>" class="w-full h-auto rounded-md">
+                                                </div>
+                                            <?php endforeach; ?>
+
                                         </div>
+                                        <?php if ($category['total_products'] > 0): ?>
+                                            <p class="item-count" data-item-count>
+                                                <?= $category['total_products'] ?>+
+                                            </p>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <!-- AGE + CHEVRON DOWN -->
                             </div>
-                            <div class="grid grid-cols-5 gap-4 grid-animated" data-grid>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
-                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-lg"></div>
+                            <div class="grid grid-cols-5 grid-animated" data-grid>
+                                <div class="grid-item w-full aspect-square bg-gray-300 rounded-md hidden">
+                                    <img src="/" alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
+                                </div>
+                                <?php foreach ($category['products'] as $product): ?>
+                                    <div class="grid-item w-full aspect-square bg-gray-300 rounded-md">
+                                        <img src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
+                                            alt="PLAY GROUND SET" class="w-full h-auto rounded-md">
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
 
                             <div data-border-bottom></div>
@@ -472,7 +446,6 @@
             const titleContainer = header.querySelector('[data-title-container]');
             const leftIcon = header.querySelector('[data-left-icon]');
             const borderBottom = accordion.querySelector('[data-border-bottom]');
-            const contentContainer = header.querySelector('[data-first-row]');
 
             const leftProductContainer = document.getElementById('left-product-container');
             const rightProductContainer = document.getElementById('right-product-container');
@@ -490,7 +463,7 @@
                     itemCount.classList.add('hidden');
                     arrow.classList.add('rotate-90');
                     titleContainer.classList.add('expand');
-                    contentContainer.classList.replace('gap-[4px]', 'gap-[12px]');
+                    firstRow.classList.replace('gap-x-[4px]', 'gap-x-[20px]');
                     leftIcon.classList.add('shrink');
                     borderBottom.classList.add('mt-[40px]');
 
@@ -499,7 +472,7 @@
                     header.classList.remove('open');
                     arrow.classList.remove('rotate-90');
                     titleContainer.classList.remove('expand');
-                    contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
+                    firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
                     leftIcon.classList.remove('shrink');
                     borderBottom.classList.remove('mt-[40px]');
                 }
@@ -524,7 +497,7 @@
                         animateGridItems(grid);
                     }
                     if (event.animationName === "shrinkBack") {
-                        setTimeout(() => resolve(), 50);
+                        // setTimeout(() => resolve(), 50);
                         itemCount.classList.remove('hidden');
                         rightProductContainer.classList.remove('animate-fade-in');
                     }
@@ -559,13 +532,12 @@
                 const titleContainer = openHeader.querySelector('[data-title-container]');
                 const leftIcon = openHeader.querySelector('[data-left-icon]');
                 const borderBottom = accordion.querySelector('[data-border-bottom]');
-                const contentContainer = openHeader.querySelector('[data-first-row]');
                 const itemCount = openHeader.querySelector('[data-item-count]');
 
                 openHeader.classList.remove('open');
                 arrow.classList.remove('rotate-90');
                 titleContainer.classList.remove('expand');
-                contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
+                firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
                 leftIcon.classList.remove('shrink');
                 borderBottom.classList.remove('mt-[40px]');
 
@@ -601,48 +573,6 @@
             });
 
             return Promise.all(waits);
-        }
-
-
-
-        function closeAllAccordions2(exceptHeader) {
-            document.querySelectorAll('[data-accordion-header].open').forEach(openHeader => {
-
-                if (openHeader === exceptHeader) return;
-
-                const accordion = openHeader.closest('[data-accordion-header]');
-                const grid = accordion.querySelector('.grid-animated');
-                const firstRow = openHeader.querySelector('[data-first-row]');
-                const arrow = openHeader.querySelector('[data-arrow]');
-                const titleContainer = openHeader.querySelector('[data-title-container]');
-                const leftIcon = openHeader.querySelector('[data-left-icon]');
-                const borderBottom = accordion.querySelector('[data-border-bottom]');
-                const contentContainer = openHeader.querySelector('[data-first-row]');
-                const itemCount = openHeader.querySelector('[data-item-count]');
-
-                openHeader.classList.remove('open');
-                arrow.classList.remove('rotate-90');
-                titleContainer.classList.remove('expand');
-                contentContainer.classList.replace('gap-[12px]', 'gap-[4px]');
-                leftIcon.classList.remove('shrink');
-                borderBottom.classList.remove('mt-[40px]');
-
-                // tutup grid
-                if (grid.classList.contains('open')) {
-                    grid.style.height = 0;
-                    grid.classList.remove('open');
-                }
-
-                // reset animasi row kecil
-                firstRow.classList.remove("animate-expand");
-                firstRow.classList.add("animate-shrink");
-
-                firstRow.querySelectorAll('.first-row-items').forEach(el => {
-                    el.classList.remove('expand');
-                });
-
-                itemCount.classList.remove('hidden');
-            });
         }
 
         function focusAccordionSmooth(wrapper) {

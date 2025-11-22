@@ -62,17 +62,6 @@
             .max-w-3xl-custom {
                 max-width: 1400px;
             }
-
-        /* contoh utilitas display */
-        .\33xl\:block { display: block; }
-        .\33xl\:flex { display: flex; }
-        .\33xl\:hidden { display: none; }
-
-        /* contoh utilitas font */
-        .\33xl\:text-5xl { font-size: 3rem; line-height: 1; }
-
-        /* contoh utilitas width */
-        .\33xl\:w-1\/2 { width: 50%; }
         }
     }
     </style>
@@ -86,7 +75,7 @@
     <nav id="main-navbar" class="transition-all duration-300 transform fixed top-0 left-0 w-screen z-99 text-white  ">
         <div class="absolute top-0 left-0 w-full h-full z-10 blur-3xl"></div>
         <div id="desktop-navbar"
-            class="hidden lg:flex max-w-[1200px] max-w-3xl-custom mx-auto py-[20px] md:px-15 2xl:px-0 items-center justify-between relative z-20 ">
+            class="hidden lg:flex max-w-[1200px] max-w-3xl-custom mx-auto py-[20px] md:px-15 xl:px-[0px] items-center justify-between relative z-20 ">
             <a href="/">
                 <div class="flex items-center">
                     <div>
