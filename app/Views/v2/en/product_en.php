@@ -24,12 +24,14 @@
     'title' => 'Contact Us',
 
     // content
-    'hero_top_title' => 'Featured Products',
+    'hero_top_title' => 'Featured ',
+    'hero_top_title_tail' => 'Products',
     'hero_sub_title' => 'Explore Our Wide Selection of High-Quality Products and Find the Best Solutions for Your Business Needs.',
     'hero_button_title' => 'Exploe Products',
     'catalog_title' => 'Product Catalog',
     'catalog_sub_title' => 'Find the Best Products That Suit Your Needs. Explore Our Collection and Choose the Right Procurement Solutions for Your Business!',
     'category_title' => 'Category',
+    'cta_top_product' => 'High-quality selected products designed to deliver maximum performance, optimal comfort, and a more satisfying user experience.',
     'cta_banner_text' => "Can't find the product you're looking for? Contact us for more information!",
     'cta_banner_button_title' => 'Contact Us',
     'search_placeholder' => 'Search Product',

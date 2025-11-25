@@ -14,12 +14,14 @@
     'gallery_link_title' => 'Galeri',
 
     // content
-    'hero_top_title' => 'Produk Unggulan',
+    'hero_top_title' => 'Produk ',
+    'hero_top_title_tail' => 'Unggulan',
     'hero_sub_title' => 'Jelajahi Beragam Pilihan Produk Berkualitas Kami dan Temukan Solusi Terbaik untuk Kebutuhan Bisnis Anda.',
     'hero_button_title' => 'Jelajahi Produk',
     'catalog_title' => 'Katalog Produk',
     'catalog_sub_title' => 'Temukan Produk Terbaik yang Sesuai dengan Kebutuhan Anda. Jelajahi Koleksi Kami dan Pilih Solusi Pengadaan yang Tepat untuk Bisnis Anda!.',
     'category_title' => 'Kategori',
+    'cta_top_product' => 'Produk pilihan berkualitas tinggi yang dirancang untuk menghadirkan performa maksimal, kenyamanan optimal, dan pengalaman penggunaan yang lebih memuaskan.',
     'cta_banner_text' => 'Tidak menemukan produk yang Anda cari? hubungi kami untuk informasi lebih lengkap!',
     'cta_banner_button_title' => 'Hubungi Kami',
     'search_placeholder' => 'Cari Produk',

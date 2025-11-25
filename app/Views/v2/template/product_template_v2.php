@@ -157,19 +157,36 @@
         height: 60px;
     }
 
+    .title-container {
+        position: relative;
+        width: 80%;
+        transform: translateY(0);
+        margin-bottom: 10px;
+        min-height: 28px;
+        left: 87px;
+        transition:
+            min-height 0.15s ease,
+            transform 0.3s ease;
+    }
+
+    .title-container.expand {
+        margin-bottom: 20px;
+        /* left: 72px; */
+        transform: translateX(-14px);
+        min-height: 60px;
+    }
+
+
     .item-count {
         margin-left: 8px;
-        width: 30px;
-        font-weight: 500;
-        font-size: 18px;
-        left: 274px;
+        left: 241px;
         position: absolute;
     }
 
     .small-boxes {
         position: relative;
-        left: 86px;
-        width: 180px;
+        left: 87px;
+        width: 146px;
     }
 
 
@@ -191,14 +208,14 @@
     @keyframes expandFull {
 
         0% {
-            width: 180px;
-            left: 86;
+            width: 146px;
+            left: 87;
         }
 
 
         95% {
             width: 100%;
-            left: 86;
+            left: 87;
         }
 
         100% {
@@ -221,12 +238,12 @@
 
         30% {
             width: 90%;
-            left: 86px;
+            left: 87px;
         }
 
         100% {
-            width: 180px;
-            left: 86px;
+            width: 146px;
+            left: 87px;
         }
     }
 
@@ -313,22 +330,6 @@
 
 
 
-    .title-container {
-        transform: translateY(0);
-        margin-bottom: 14px;
-        min-height: 28px;
-        left: 86px;
-        transition:
-            min-height 0.15s ease,
-            transform 0.3s ease;
-    }
-
-    .title-container.expand {
-        margin-bottom: 20px;
-        /* left: 72px; */
-        transform: translateX(-14px);
-        min-height: 60px;
-    }
 
     .right-product-container {
         opacity: 1;
@@ -400,11 +401,14 @@
                             <div class="flex-1 ">
                                 <div class="flex relative items-center title-container" data-title-container>
                                     <div class="flex">
-                                        <h2 class="  text-xl font-semibold "><?= $category['title'] ?></h2>
+                                        <h2
+                                            class="category-title  text-[18px] xl:text-[20px] 2xl:text-[22px] open-sans-bold text-black/90 transition-colors duration-100 ease-in hover:text-blue-700 max-w-[250px] xl:max-w-[300px] whitespace-nowrap overflow-hidden text-ellipsis">
+                                            <?= $category['title'] ?>
+                                        </h2>
 
                                         <img loading="lazy"
-                                            class="h-[22px] w-[22px] transition-transform duration-300 ml-4 self-end"
-                                            src="arrow-right.svg" alt="panah kanan" data-arrow>
+                                            class="h-[24px] w-[24px] transition-transform duration-300 ml-[6px] self-center"
+                                            src="/arrow-right.svg" alt="panah kanan" data-arrow>
                                     </div>
                                 </div>
 
@@ -425,7 +429,7 @@
                                         </div>
                                         <?php endforeach; ?>
                                     </div>
-                                    <p class="item-count" data-item-count>
+                                    <p class="item-count open-sans-bold text-[16px] text-black/70" data-item-count>
                                         <?php if ($category['total_products'] > 0): ?>
                                         <?= $category['total_products'] ?>+
                                         <?php endif; ?>
@@ -466,8 +470,9 @@
 
                         <div class="w-full items-start justify-center">
                             <h1 class="text-[24px] xl:text-[30px] ubuntu-bold text-black title-shadow text-center mr-2">
-                                Produk <span class="text-[24px] xl:text-[30px] ubuntu-bold text-[#2563EB] title-shadow">
-                                    Unggulan </span></h1>
+                                <?= esc($hero_top_title ?? 'Produk') ?> <span
+                                    class="text-[24px] xl:text-[30px] ubuntu-bold text-[#2563EB] title-shadow">
+                                    <?= esc($hero_top_title_tail ?? 'Unggulan') ?></span></h1>
 
                         </div>
                     </div>
@@ -475,158 +480,49 @@
 
                     <div class="relative flex justify-center mx-[60px]">
                         <div class="flex items-center"><img loading="lazy"
-                                class="slide-prev h-[22px] w-[22px] rotate-180" src="arrow-right.svg" alt="panah kanan"
-                                data-arrow=""></div>
+                                class="slide-prev h-[22px] w-[22px] rotate-180 cursor-pointer" src="/arrow-right.svg"
+                                alt="panah kanan" data-arrow=""></div>
                         <div class="swiper mySwiper w-[100%]">
                             <div class="swiper-wrapper">
-
+                                <?php foreach ($top_products as $index => $product): ?>
                                 <div class="swiper-slide">
-                                    <div
+                                    <a href="/product/<?= $product['slug'] ?>"
                                         class="product-card-container slide-inner rounded-[15px] xl:rounded-[20px] h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
-                                        <img src="/images/products/terowongan/thumbnail-terowongan-68a83338959fe.webp"
-                                            alt="Terowongan Anak Indoor"
-                                            class="w-full h-auto rounded-[15px] product-image">
-                                        <div
-                                            class="desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-[15px] opacity-0 transition-opacity duration-200 ease-in lg:hover:opacity-90 w-full bg-white aspect-square text-center open-sans-regular">
-                                            <!-- Text wrapper grows to take available space -->
-                                            <div class="flex flex-col flex-grow w-full">
-                                                <h4
-                                                    class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
-                                                    Terowongan Anak Indoor</h4>
-                                                <p
-                                                    class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3 2xl:line-clamp-4">
-                                                    Terowongan Ulat – PT. Karya Pilar NusantaraWahana Edukatif &amp;amp;
-                                                    Menyenangkan untuk AnakTerowongan Ulat ini adalah permainan anak …
-                                                </p>
-                                            </div>
+                                        <div>
+                                            <img src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
+                                                alt="Terowongan Anak Indoor"
+                                                class="w-full h-auto rounded-[15px] product-image">
+                                            <div
+                                                class="desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-[15px] opacity-0 transition-opacity duration-200 ease-in lg:hover:opacity-90 w-full bg-white aspect-square text-center open-sans-regular">
+                                                <!-- Text wrapper grows to take available space -->
+                                                <div class="flex flex-col flex-grow w-full items-center justify-end">
+                                                    <h4
+                                                        class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
+                                                        <?= $product['title'] ?></h4>
+                                                </div>
 
-                                            <!-- Button stays at bottom -->
-                                            <button
-                                                class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
-                                                Lihat Detail </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="product-card-container slide-inner rounded-[15px] xl:rounded-[20px] h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
-                                        <img src="/images/products/terowongan/thumbnail-terowongan-68a83338959fe.webp"
-                                            alt="Terowongan Anak Indoor"
-                                            class="w-full h-auto rounded-[15px] product-image">
-                                        <div
-                                            class="desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-[15px] opacity-0 transition-opacity duration-200 ease-in lg:hover:opacity-90 w-full bg-white aspect-square text-center open-sans-regular">
-                                            <!-- Text wrapper grows to take available space -->
-                                            <div class="flex flex-col flex-grow w-full">
-                                                <h4
-                                                    class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
-                                                    Terowongan Anak Indoor</h4>
-                                                <p
-                                                    class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3 2xl:line-clamp-4">
-                                                    Terowongan Ulat – PT. Karya Pilar NusantaraWahana Edukatif &amp;amp;
-                                                    Menyenangkan untuk AnakTerowongan Ulat ini adalah permainan anak …
-                                                </p>
+                                                <!-- Button stays at bottom -->
+                                                <button
+                                                    class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
+                                                    <?= esc($see_detail_button_title ?? 'Lihat Detail') ?></button>
                                             </div>
-
-                                            <!-- Button stays at bottom -->
-                                            <button
-                                                class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
-                                                Lihat Detail </button>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="product-card-container slide-inner rounded-[15px] xl:rounded-[20px] h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
-                                        <img src="/images/products/terowongan/thumbnail-terowongan-68a83338959fe.webp"
-                                            alt="Terowongan Anak Indoor"
-                                            class="w-full h-auto rounded-[15px] product-image">
-                                        <div
-                                            class="desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-[15px] opacity-0 transition-opacity duration-200 ease-in lg:hover:opacity-90 w-full bg-white aspect-square text-center open-sans-regular">
-                                            <!-- Text wrapper grows to take available space -->
-                                            <div class="flex flex-col flex-grow w-full">
-                                                <h4
-                                                    class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
-                                                    Terowongan Anak Indoor</h4>
-                                                <p
-                                                    class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3 2xl:line-clamp-4">
-                                                    Terowongan Ulat – PT. Karya Pilar NusantaraWahana Edukatif &amp;amp;
-                                                    Menyenangkan untuk AnakTerowongan Ulat ini adalah permainan anak …
-                                                </p>
-                                            </div>
-
-                                            <!-- Button stays at bottom -->
-                                            <button
-                                                class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
-                                                Lihat Detail </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="product-card-container slide-inner rounded-[15px] xl:rounded-[20px] h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
-                                        <img src="/images/products/terowongan/thumbnail-terowongan-68a83338959fe.webp"
-                                            alt="Terowongan Anak Indoor"
-                                            class="w-full h-auto rounded-[15px] product-image">
-                                        <div
-                                            class="desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-[15px] opacity-0 transition-opacity duration-200 ease-in lg:hover:opacity-90 w-full bg-white aspect-square text-center open-sans-regular">
-                                            <!-- Text wrapper grows to take available space -->
-                                            <div class="flex flex-col flex-grow w-full">
-                                                <h4
-                                                    class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
-                                                    Terowongan Anak Indoor</h4>
-                                                <p
-                                                    class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3 2xl:line-clamp-4">
-                                                    Terowongan Ulat – PT. Karya Pilar NusantaraWahana Edukatif &amp;amp;
-                                                    Menyenangkan untuk AnakTerowongan Ulat ini adalah permainan anak …
-                                                </p>
-                                            </div>
-
-                                            <!-- Button stays at bottom -->
-                                            <button
-                                                class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
-                                                Lihat Detail </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="product-card-container slide-inner rounded-[15px] xl:rounded-[20px] h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
-                                        <img src="/images/products/terowongan/thumbnail-terowongan-68a83338959fe.webp"
-                                            alt="Terowongan Anak Indoor"
-                                            class="w-full h-auto rounded-[15px] product-image">
-                                        <div
-                                            class="desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-[15px] opacity-0 transition-opacity duration-200 ease-in lg:hover:opacity-90 w-full bg-white aspect-square text-center open-sans-regular">
-                                            <!-- Text wrapper grows to take available space -->
-                                            <div class="flex flex-col flex-grow w-full">
-                                                <h4
-                                                    class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
-                                                    Terowongan Anak Indoor</h4>
-                                                <p
-                                                    class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3 2xl:line-clamp-4">
-                                                    Terowongan Ulat – PT. Karya Pilar NusantaraWahana Edukatif &amp;amp;
-                                                    Menyenangkan untuk AnakTerowongan Ulat ini adalah permainan anak …
-                                                </p>
-                                            </div>
-
-                                            <!-- Button stays at bottom -->
-                                            <button
-                                                class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
-                                                Lihat Detail </button>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
 
                             <div class="swiper-pagination"></div>
                         </div>
-                        <div class="flex items-center"><img loading="lazy" class="slide-next h-[22px] w-[22px]"
-                                src="arrow-right.svg" alt="panah kanan" data-arrow=""></div>
+                        <div class="flex items-center"><img loading="lazy"
+                                class="slide-next h-[22px] w-[22px] cursor-pointer" src="/arrow-right.svg"
+                                alt="panah kanan" data-arrow=""></div>
 
                     </div>
 
-                    <p class="open-sans-regular text-[14px] opacity-100 text-white z-10 absolute mx-[60px] mt-[20px]">
-                        PT. Karya Pilar Nusantara adalah perusahaan terpercaya yang berfokus pada pengadaan berbagai
-                        kebutuhan instansi dan dunia usaha.</p>
+                    <p
+                        class="open-sans-regular text-[14px] opacity-100 text-white z-10 absolute mx-[40px] xl:mx-[60px] mt-[20px]">
+                        <?= esc($cta_top_product ?? 'Unggulan') ?></p>
 
                 </div>
 
@@ -673,13 +569,6 @@
         });
     }
 
-    // run saat load
-    // applyGridFilter();
-
-    // run ulang saat resize
-    // document.addEventListener('DOMContentLoaded', applySecondRow);
-    // window.addEventListener('resize', applyGridFilter);
-    // window.addEventListener('resize', filterAllSecondRows);
     document.addEventListener('DOMContentLoaded', applyGridFilter);
     document.addEventListener('DOMContentLoaded', filterAllSecondRows);
 
@@ -890,7 +779,7 @@
 
 
 
-    <div class="flex w-full justify-center mb-[78px] mt-[200px] px-5 md:px-15">
+    <div class="flex w-full justify-center mb-[78px] mt-[100px] xl:mt-[200px] px-5 md:px-15">
         <div class="w-full flex items-center justify-end max-w-[1200px]">
 
             <div class="w-full max-w-[460px] flex items-center rounded-full border-1 border-[rgba(156,156,156,0.74)]">

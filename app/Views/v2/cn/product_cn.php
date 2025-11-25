@@ -25,12 +25,14 @@
 
 
     // content
-    'hero_top_title' => '精选产品',
+    'hero_top_title' => '产品 ',
+    'hero_top_title_tail' => '优选',
     'hero_sub_title' => '探索我们丰富的高品质产品，寻找最适合您业务需求的解决方案。',
     'hero_button_title' => '探索产品',
     'catalog_title' => '产品目录',
     'catalog_sub_title' => '寻找适合您需求的优质产品。浏览我们的系列，选择合适的采购解决方案！',
     'category_title' => '类别',
+    'cta_top_product' => '精选高品质产品，旨在带来卓越性能、舒适体验与更令人满意的使用感受。',
     'cta_banner_text' => '没有找到您想要的产品？欢迎联系我们获取更多信息！',
     'cta_banner_button_title' => '联系我们',
     'search_placeholder' => '搜索产品',

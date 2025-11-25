@@ -131,9 +131,20 @@ class Home extends BaseController
             $cat['total_products'] = $total;
         }
 
+        $topProducts = $db->table('top_products t')
+            ->join(
+                'products p',
+                'p.id = t.product_id AND p.status = 1',
+                'left' // <- PENTING agar tidak di-escape CI
+            )
+            ->orderBy('t.sort_order', 'ASC')
+            ->get()
+
+            ->getResultArray();
+
         // return dd($categories);
 
-        return view('v2/' . $lang . '/product_' . $lang, ['products' => $products, 'categories' => $categories]);
+        return view('v2/' . $lang . '/product_' . $lang, ['products' => $products, 'categories' => $categories, 'top_products' => $topProducts]);
     }
 
     public function product_category_v2($slug, $lang = 'id'): string
