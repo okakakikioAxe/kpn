@@ -105,42 +105,11 @@
     }
 }
 </style>
+
 <?= $this->endsection() ?>
 <?= $this->section('content') ?>
 <section id="hero-section" class="relative flex items-center justify-center w-full bg-[#EFF6FF] z-20">
     <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[100px] w-full bg-transparent"></div>
-    <!-- Hero Text -->
-    <!-- <div id="hero-text" class="w-full flex items-center justify-center mx-auto px-4 py-8 text-white text-center">
-        <div class="flex flex-col w-full h-full items-center justify-center relative z-10  my-[200px]">
-            <div class="block w-full items-center justify-center mb-[40px] md:mb-[60px]">
-                <h1
-                    class="ubuntu-bold h-[35px] md:h-[45px] text-[30px] md:text-[40px] tracking-[4%] text-center text-black title-shadow mr-2">
-                    <-?= esc($hero_top_title ?? 'Produk Unggulan') ?>
-                </h1>
-                <p
-                    class=" ubuntu-bold text-[30px] md:text-[40px] tracking-[4%] text-[#2563EB] title-shadow text-center w-full">
-                    Karya Pilar Nusantara</p>
-            </div>
-
-            <p
-                class="w-full max-w-[600px] open-sans-regular text-[16px] lg:text-[18px] tracking-[4%] text-center text-[#4E4E4E] mb-[90px] md:mb-[120px] px-10 md:px-10 xl:px-0">
-                <-?= esc($hero_sub_title ?? 'Jelajahi Beragam Pilihan Produk Berkualitas Kami dan Temukan Solusi Terbaik untuk Kebutuhan Bisnis Anda.') ?>
-            </p>
-            <button id="scroll-to-product"
-                class="cursor-pointer bg-blue-600 hover:bg-blue-700 px-[32px] md:px-[38px] transition-colors basic-contact-us-button py-[10px] md:py-[12px] rounded-[15px] md:rounded-[18px]"
-                type="button">
-                <div class="flex items-center justify-center w-full space-x-[14px]">
-
-                    <div class="roboto-bold tracking-wide text-[16px] sm:text-[18px] text-white">
-                        <-?= esc($hero_button_title ?? 'Jelajahi Produk') ?></div>
-                </div>
-            </button>
-        </div>
-    </div>
-    <img src="/images/product_page/product2.png" alt="product group" width="505" height="595"
-        class="absolute bottom-[-20px] md:bottom-[-40px] right-0 w-[180px] sm:w-[220px] lg:w-[280px] xl:w-[320px] 2xl:w-[380px] h-auto">
-    <img src="/images/product_page/product1.png" alt="product group" width="655" height="490"
-        class="absolute bottom-[-20px] sm:bottom-[-10px] left-[-80px] xl:left-[-120px] w-[220px] sm:w-[260px] lg:w-[300px] xl:w-[340px] 2xl:w-[440px] h-auto"> -->
 </section>
 <section id="product-section" class="w-full relative z-10 pt-[126px] mb-[200px]">
     <style>
@@ -375,7 +344,6 @@
         transform: scale(1);
     }
     </style>
-
     <div class=" w-full justify-center items-center flex px-5 md:px-15">
 
         <div class="flex w-full max-w-[1200px] relative parent">
@@ -415,17 +383,69 @@
                                 <div class="flex">
                                     <!-- SMALL BOXES -->
                                     <div class="small-boxes grid grid-cols-5 gap-x-[4px]" data-first-row>
-                                        <?php foreach ($category['first_row_products'] as $top_product): ?>
+                                        <?php foreach ($category['first_row_products'] as $product): ?>
                                         <div class="first-row-items bg-gray-300 rounded-md">
-                                            <img src="/images/products/<?= $top_product['slug'] ?>/<?= $top_product['thumbnail'] ?>"
-                                                alt="<?= $top_product['title'] ?>" class="w-full h-auto rounded-md">
+                                            <a href="/product/<?= $product['slug'] ?>"
+                                                class="relative first-row-product-link">
+                                                <div
+                                                    class=" rounded-md h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
+                                                    <img src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
+                                                        alt="title" class="w-full h-auto rounded-md">
+                                                    <div
+                                                        class="detail-card-container desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-md opacity-0 transition-opacity duration-200 ease-in  w-full bg-white aspect-square text-center open-sans-regular">
+                                                        <!-- Text wrapper grows to take available space -->
+                                                        <div class="flex flex-col flex-grow w-full">
+                                                            <h4
+                                                                class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
+                                                                <?= $product['title'] ?>
+                                                            </h4>
+                                                            <p
+                                                                class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3">
+                                                                <?= $product['description'] ?>
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- Button stays at bottom -->
+                                                        <button
+                                                            class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
+                                                            <?= esc($see_detail_button_title ?? 'Lihat Detail') ?>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
                                         <?php endforeach; ?>
-                                        <?php foreach ($category['products'] as $index => $top_product): ?>
+                                        <?php foreach ($category['products'] as $index => $product): ?>
                                         <div class="second-row-items bg-gray-300 rounded-md hidden"
                                             data-index="<?= $index ?>">
-                                            <img src="/images/products/<?= $top_product['slug'] ?>/<?= $top_product['thumbnail'] ?>"
-                                                alt="<?= $top_product['title'] ?>" class="w-full h-auto rounded-md">
+                                            <a href="/product/<?= $product['slug'] ?>"
+                                                class="relative second-row-product-link">
+                                                <div
+                                                    class=" rounded-md h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
+                                                    <img src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
+                                                        alt="title" class="w-full h-auto rounded-lg">
+                                                    <div
+                                                        class="detail-card-container desktop-product-card absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-lg opacity-0 transition-opacity duration-200 ease-in  w-full bg-white aspect-square text-center open-sans-regular">
+                                                        <!-- Text wrapper grows to take available space -->
+                                                        <div class="flex flex-col flex-grow w-full">
+                                                            <h4
+                                                                class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
+                                                                <?= $product['title'] ?>
+                                                            </h4>
+                                                            <p
+                                                                class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3">
+                                                                <?= $product['description'] ?>
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- Button stays at bottom -->
+                                                        <button
+                                                            class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
+                                                            <?= esc($see_detail_button_title ?? 'Lihat Detail') ?>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
                                         <?php endforeach; ?>
                                     </div>
@@ -446,8 +466,33 @@
                             <?php foreach ($category['products'] as $index => $product): ?>
                             <div class="grid-item w-full aspect-square bg-gray-300 rounded-md"
                                 data-index="<?= $index ?>">
-                                <img src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
-                                    alt="<?= $product['title'] ?>" class="w-full h-auto rounded-md">
+                                <a href="/product/<?= $product['slug'] ?>" class="relative">
+                                    <div
+                                        class="rounded-md h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex-col items-center cursor-pointer">
+                                        <img src="/images/products/<?= $product['slug'] ?>/<?= $product['thumbnail'] ?>"
+                                            alt="title" class="w-full h-auto rounded-md">
+                                        <div
+                                            class="absolute flex flex-col px-[5px] xl:px-[19px] py-[19px] justify-between items-center top-0 rounded-md opacity-0 transition-opacity duration-200 ease-in lg:hover:opacity-90 w-full bg-white aspect-square text-center open-sans-regular">
+                                            <!-- Text wrapper grows to take available space -->
+                                            <div class="flex flex-col flex-grow w-full">
+                                                <h4
+                                                    class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
+                                                    <?= $product['title'] ?>
+                                                </h4>
+                                                <p
+                                                    class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3">
+                                                    <?= $product['description'] ?>
+                                                </p>
+                                            </div>
+
+                                            <!-- Button stays at bottom -->
+                                            <button
+                                                class="w-[70%] mt-[12px] open-sans-bold text-[16px] text-white bg-[#2563EB] py-[6px] rounded-[10px] cursor-pointer lg:hover:bg-blue-700 opacity-100 transition-colors duration-100 ease-in product-button">
+                                                <?= esc($see_detail_button_title ?? 'Lihat Detail') ?>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                             <?php endforeach; ?>
                             <?php endif; ?>
@@ -529,255 +574,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-    function getSkipCount() {
-        const width = document.documentElement.clientWidth;
-        // if (width <= 480) return 0;
-        if (width <= 768) return 0;
-        if (width <= 1024) return 2;
-        return -1;
-    }
-
-    function filterAllSecondRows() {
-        const skip = getSkipCount();
-        // loop setiap parent container
-        document.querySelectorAll('[data-first-row]').forEach(wrapper => {
-            const items = wrapper.querySelectorAll('.second-row-items');
-            if (items.length > 5) {
-                items.forEach((item, index) => {
-                    if (index > skip) {
-                        item.remove(); // hapus hanya dalam parent ini
-                    }
-                });
-            }
-        });
-    }
-
-    function applyGridFilter() {
-        const skip = getSkipCount() + 1;
-
-        document.querySelectorAll('[data-grid]').forEach(wrapper => {
-            const items = wrapper.querySelectorAll('.grid-item');
-            if (items.length > 5) {
-                items.forEach((item, index) => {
-                    if (index < skip) {
-                        item.remove(); // hapus hanya dalam parent ini
-                    }
-                });
-            }
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', applyGridFilter);
-    document.addEventListener('DOMContentLoaded', filterAllSecondRows);
-
-    document.querySelectorAll('[data-accordion-header]').forEach(header => {
-
-        const accordion = header.closest('[data-accordion-header]');
-        const grid = accordion.querySelector('.grid-animated');
-        const firstRow = header.querySelector('[data-first-row]');
-        const secondRow = header.querySelectorAll('.second-row-items');
-        const itemCount = header.querySelector('[data-item-count]');
-        const arrow = header.querySelector('[data-arrow]');
-        const titleContainer = header.querySelector('[data-title-container]');
-        const leftIcon = header.querySelector('[data-left-icon]');
-        const borderBottom = accordion.querySelector('[data-border-bottom]');
-
-        const leftProductContainer = document.getElementById('left-product-container');
-        const rightProductContainer = document.getElementById('right-product-container');
-        const topProductContainer = document.getElementById('top-product-container');
-
-        header.addEventListener('click', async () => {
-            await closeAllAccordions(header);
-            const isOpen = header.classList.contains('open');
-
-            if (!isOpen) {
-                rightProductContainer.classList.add('animate-fade-in');
-
-                window.addEventListener('resize', async () => {
-                    if (window.innerWidth >= 1040) {
-                        await delay(300);
-                    }
-                });
-                header.classList.add('open');
-                itemCount.classList.add('hidden');
-                arrow.classList.add('rotate-90');
-                titleContainer.classList.add('expand');
-                firstRow.classList.replace('gap-x-[4px]', 'gap-x-[20px]');
-                leftIcon.classList.add('shrink');
-                borderBottom.classList.add('mt-[40px]');
-                secondRow.forEach(el => {
-                    el.classList.remove('hidden');
-                });
-
-                firstRow.classList.add('top-grid-animated');
-                focusAccordionSmooth(header);
-            } else {
-                header.classList.remove('open');
-                arrow.classList.remove('rotate-90');
-                titleContainer.classList.remove('expand');
-                firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
-                leftIcon.classList.remove('shrink');
-                borderBottom.classList.remove('mt-[40px]');
-                secondRow.forEach(el => {
-                    el.classList.add('hidden');
-                });
-                firstRow.classList.remove('top-grid-animated');
-            }
-
-            // CLOSE GRID
-            if (grid.classList.contains('open')) {
-                grid.style.height = grid.scrollHeight + "px";
-                requestAnimationFrame(() => {
-                    grid.style.height = 0;
-                });
-                grid.classList.remove('open');
-
-                grid.querySelectorAll('.grid-item').forEach(el => {
-                    el.classList.remove('animate');
-                });
-            }
-
-            firstRow.addEventListener('animationend', function(event) {
-                if (event.animationName === "expandFull") {
-                    grid.classList.add('open');
-                    grid.style.height = grid.scrollHeight + "px";
-                    animateGridItems(grid);
-                }
-                if (event.animationName === "shrinkBack") {
-                    // setTimeout(() => resolve(), 50);
-                    itemCount.classList.remove('hidden');
-                    rightProductContainer.classList.remove('animate-fade-in');
-                }
-            }, {
-                once: true
-            });
-
-            toggleWidth(firstRow);
-        });
-    });
-
-    function delay(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    function closeAllAccordions(exceptHeader) {
-        const opened = document.querySelectorAll('[data-accordion-header].open');
-
-        if (opened.length === 0) {
-            return Promise.resolve();
-        }
-
-        const waits = [];
-
-        opened.forEach(openHeader => {
-            if (openHeader === exceptHeader) return;
-
-            const accordion = openHeader.closest('[data-accordion-header]');
-            const grid = accordion.querySelector('.grid-animated');
-            const firstRow = openHeader.querySelector('[data-first-row]');
-            const secondRow = openHeader.querySelectorAll('.second-row-items');
-            const arrow = openHeader.querySelector('[data-arrow]');
-            const titleContainer = openHeader.querySelector('[data-title-container]');
-            const leftIcon = openHeader.querySelector('[data-left-icon]');
-            const borderBottom = accordion.querySelector('[data-border-bottom]');
-            const itemCount = openHeader.querySelector('[data-item-count]');
-
-            openHeader.classList.remove('open');
-            arrow.classList.remove('rotate-90');
-            titleContainer.classList.remove('expand');
-            firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
-            leftIcon.classList.remove('shrink');
-            borderBottom.classList.remove('mt-[40px]');
-
-            // Close grid
-            if (grid.classList.contains('open')) {
-                grid.style.height = 0;
-                grid.classList.remove('open');
-                grid.querySelectorAll('.grid-item').forEach(el => {
-                    el.classList.remove('animate');
-                });
-                secondRow.forEach(el => {
-                    el.classList.add('hidden');
-                });
-                firstRow.classList.remove('top-grid-animated');
-            }
-
-            firstRow.classList.remove("animate-expand");
-            firstRow.classList.add("animate-shrink");
-
-            firstRow.querySelectorAll('.first-row-items').forEach(el => {
-                el.classList.remove('expand');
-            });
-
-            itemCount.classList.remove('hidden');
-
-            // ✅ ONLY resolve when shrink animation finishes
-            waits.push(new Promise(resolve => {
-                const handler = (e) => {
-                    if (e.animationName === 'shrinkBack') {
-                        resolve();
-                    }
-                };
-                firstRow.addEventListener('animationend', handler, {
-                    once: true
-                });
-            }));
-        });
-
-        return Promise.all(waits);
-    }
-
-    function focusAccordionSmooth(wrapper) {
-        const OFFSET = 80; // jarak dari atas (sesuaikan)
-
-        requestAnimationFrame(() => {
-            setTimeout(() => {
-                const top = wrapper.getBoundingClientRect().top + window.scrollY - OFFSET;
-
-                window.scrollTo({
-                    top: top,
-                    behavior: "smooth"
-                });
-            }, 200); // tunggu animasi expand mulai
-        });
-    }
-
-
-
-
-    function getItemsPerRow(wrapper) {
-        const style = window.getComputedStyle(wrapper);
-        return style.getPropertyValue("grid-template-columns").split(" ").length;
-    }
-
-    function animateGridItems(grid) {
-        const items = grid.querySelectorAll('.grid-item');
-        const itemsPerRow = getItemsPerRow(grid);
-
-        items.forEach((item, index) => {
-            const row = Math.floor(index / itemsPerRow);
-            item.style.animationDelay = `${row * 0.15}s`;
-            item.classList.add('animate');
-        });
-    }
-
-    function toggleWidth(container) {
-        if (container.classList.contains("animate-expand")) {
-            container.classList.remove("animate-expand");
-            container.classList.add("animate-shrink");
-            container.classList.remove("absolute", "left-0");
-        } else {
-            container.classList.remove("animate-shrink");
-            container.classList.add("animate-expand");
-            container.classList.add("absolute", "left-0");
-        }
-    }
-    </script>
-
-
-
 
     <div class="flex w-full justify-center mb-[78px] mt-[100px] xl:mt-[200px] px-5 md:px-15">
         <div class="w-full flex items-center justify-end max-w-[1200px]">
@@ -1020,7 +816,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <h4 class="open-sans-bold text-[16px] tracking-wide text-[#2563EB] product-title mb-4">
                                     Product Title
                                 </h4>
-                                <p class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3 2xl:line-clamp-4">
+                                <p class="open-sans-regular text-[14px] product-description text-ellipsis overflow-hidden line-clamp-2 xl:line-clamp-3">
                                     Deskripsi produk yang panjang dan harus dipotong ketika melebihi dua baris agar tetap rapi secara visual.
                                 </p>
                             </div>
@@ -1170,6 +966,284 @@ document.addEventListener("DOMContentLoaded", function() {
     initiateProductGrid();
     initiateProduct();
 });
+</script>
+<script>
+function getSkipCount() {
+    const width = document.documentElement.clientWidth;
+    // if (width <= 480) return 0;
+    if (width <= 768) return 0;
+    if (width <= 1024) return 2;
+    return -1;
+}
+
+function filterAllSecondRows() {
+    const skip = getSkipCount();
+    // loop setiap parent container
+    document.querySelectorAll('[data-first-row]').forEach(wrapper => {
+        const items = wrapper.querySelectorAll('.second-row-items');
+        if (items.length > 5) {
+            items.forEach((item, index) => {
+                if (index > skip) {
+                    item.remove(); // hapus hanya dalam parent ini
+                }
+            });
+        }
+    });
+}
+
+function applyGridFilter() {
+    const skip = getSkipCount() + 1;
+
+    document.querySelectorAll('[data-grid]').forEach(wrapper => {
+        const items = wrapper.querySelectorAll('.grid-item');
+        if (items.length > 5) {
+            items.forEach((item, index) => {
+                if (index < skip) {
+                    item.remove(); // hapus hanya dalam parent ini
+                }
+            });
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', applyGridFilter);
+document.addEventListener('DOMContentLoaded', filterAllSecondRows);
+
+document.querySelectorAll('[data-accordion-header]').forEach(header => {
+
+    const accordion = header.closest('[data-accordion-header]');
+    const grid = accordion.querySelector('.grid-animated');
+    const firstRow = header.querySelector('[data-first-row]');
+    const secondRow = header.querySelectorAll('.second-row-items');
+    const itemCount = header.querySelector('[data-item-count]');
+    const arrow = header.querySelector('[data-arrow]');
+    const titleContainer = header.querySelector('[data-title-container]');
+    const leftIcon = header.querySelector('[data-left-icon]');
+    const borderBottom = accordion.querySelector('[data-border-bottom]');
+
+    const leftProductContainer = document.getElementById('left-product-container');
+    const rightProductContainer = document.getElementById('right-product-container');
+    const topProductContainer = document.getElementById('top-product-container');
+
+    firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+        link.setAttribute('aria-disabled', 'true');
+        link.style.pointerEvents = 'none';
+        link.tabIndex = -1;
+    });
+
+    header.addEventListener('click', async () => {
+        await closeAllAccordions(header);
+        const isOpen = header.classList.contains('open');
+
+        if (!isOpen) {
+            firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+                link.removeAttribute('aria-disabled'); // atau set ke 'false'
+                link.style.pointerEvents = 'auto'; // aktifkan kembali klik
+                link.tabIndex = 0; // bisa diakses via keyboard
+            });
+            leftProductContainer.classList.add('z-30');
+            rightProductContainer.classList.add('animate-fade-in');
+
+            window.addEventListener('resize', async () => {
+                if (window.innerWidth >= 1040) {
+                    await delay(300);
+                }
+            });
+            header.classList.add('open');
+            itemCount.classList.add('hidden');
+            arrow.classList.add('rotate-90');
+            titleContainer.classList.add('expand');
+            firstRow.classList.replace('gap-x-[4px]', 'gap-x-[20px]');
+            leftIcon.classList.add('shrink');
+            borderBottom.classList.add('mt-[40px]');
+            secondRow.forEach(el => {
+                el.classList.remove('hidden');
+            });
+            firstRow.querySelectorAll('.detail-card-container').forEach(el => {
+                el.classList.add('lg:hover:opacity-90');
+            });
+
+            firstRow.classList.add('top-grid-animated');
+
+            focusAccordionSmooth(header);
+
+
+        } else {
+            firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+                link.setAttribute('aria-disabled', 'true');
+                link.style.pointerEvents = 'none';
+                link.tabIndex = -1;
+            });
+            leftProductContainer.classList.remove('z-30');
+            header.classList.remove('open');
+            arrow.classList.remove('rotate-90');
+            titleContainer.classList.remove('expand');
+            firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
+            leftIcon.classList.remove('shrink');
+            borderBottom.classList.remove('mt-[40px]');
+            secondRow.forEach(el => {
+                el.classList.add('hidden');
+            });
+            firstRow.classList.remove('top-grid-animated');
+            firstRow.querySelectorAll('.detail-card-container').forEach(el => {
+                el.classList.remove('lg:hover:opacity-90');
+            });
+        }
+
+        // CLOSE GRID
+        if (grid.classList.contains('open')) {
+
+            grid.style.height = grid.scrollHeight + "px";
+            requestAnimationFrame(() => {
+                grid.style.height = 0;
+            });
+            grid.classList.remove('open');
+
+            grid.querySelectorAll('.grid-item').forEach(el => {
+                el.classList.remove('animate');
+            });
+        }
+
+        firstRow.addEventListener('animationend', function(event) {
+            if (event.animationName === "expandFull") {
+                grid.classList.add('open');
+                grid.style.height = grid.scrollHeight + "px";
+                animateGridItems(grid);
+            }
+            if (event.animationName === "shrinkBack") {
+                // setTimeout(() => resolve(), 50);
+                itemCount.classList.remove('hidden');
+                rightProductContainer.classList.remove('animate-fade-in');
+            }
+        }, {
+            once: true
+        });
+
+        toggleWidth(firstRow);
+    });
+});
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function closeAllAccordions(exceptHeader) {
+    const opened = document.querySelectorAll('[data-accordion-header].open');
+
+    if (opened.length === 0) {
+        return Promise.resolve();
+    }
+
+    const waits = [];
+
+    opened.forEach(openHeader => {
+        if (openHeader === exceptHeader) return;
+
+        const accordion = openHeader.closest('[data-accordion-header]');
+        const grid = accordion.querySelector('.grid-animated');
+        const firstRow = openHeader.querySelector('[data-first-row]');
+        const secondRow = openHeader.querySelectorAll('.second-row-items');
+        const arrow = openHeader.querySelector('[data-arrow]');
+        const titleContainer = openHeader.querySelector('[data-title-container]');
+        const leftIcon = openHeader.querySelector('[data-left-icon]');
+        const borderBottom = accordion.querySelector('[data-border-bottom]');
+        const itemCount = openHeader.querySelector('[data-item-count]');
+
+        openHeader.classList.remove('open');
+        arrow.classList.remove('rotate-90');
+        titleContainer.classList.remove('expand');
+        firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
+        leftIcon.classList.remove('shrink');
+        borderBottom.classList.remove('mt-[40px]');
+
+        // Close grid
+        if (grid.classList.contains('open')) {
+            grid.style.height = 0;
+            grid.classList.remove('open');
+            grid.querySelectorAll('.grid-item').forEach(el => {
+                el.classList.remove('animate');
+            });
+            secondRow.forEach(el => {
+                el.classList.add('hidden');
+            });
+            firstRow.classList.remove('top-grid-animated');
+            firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+                link.setAttribute('aria-disabled', 'true');
+                link.style.pointerEvents = 'none';
+                link.tabIndex = -1;
+            });
+        }
+
+        firstRow.classList.remove("animate-expand");
+        firstRow.classList.add("animate-shrink");
+
+        firstRow.querySelectorAll('.first-row-items').forEach(el => {
+            el.classList.remove('expand');
+        });
+
+        itemCount.classList.remove('hidden');
+
+        // ✅ ONLY resolve when shrink animation finishes
+        waits.push(new Promise(resolve => {
+            const handler = (e) => {
+                if (e.animationName === 'shrinkBack') {
+                    resolve();
+                }
+            };
+            firstRow.addEventListener('animationend', handler, {
+                once: true
+            });
+        }));
+    });
+
+    return Promise.all(waits);
+}
+
+function focusAccordionSmooth(wrapper) {
+    const OFFSET = 80; // jarak dari atas (sesuaikan)
+
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            const top = wrapper.getBoundingClientRect().top + window.scrollY - OFFSET;
+
+            window.scrollTo({
+                top: top,
+                behavior: "smooth"
+            });
+        }, 200); // tunggu animasi expand mulai
+    });
+}
+
+
+
+
+function getItemsPerRow(wrapper) {
+    const style = window.getComputedStyle(wrapper);
+    return style.getPropertyValue("grid-template-columns").split(" ").length;
+}
+
+function animateGridItems(grid) {
+    const items = grid.querySelectorAll('.grid-item');
+    const itemsPerRow = getItemsPerRow(grid);
+
+    items.forEach((item, index) => {
+        const row = Math.floor(index / itemsPerRow);
+        item.style.animationDelay = `${row * 0.15}s`;
+        item.classList.add('animate');
+    });
+}
+
+function toggleWidth(container) {
+    if (container.classList.contains("animate-expand")) {
+        container.classList.remove("animate-expand");
+        container.classList.add("animate-shrink");
+        container.classList.remove("absolute", "left-0");
+    } else {
+        container.classList.remove("animate-shrink");
+        container.classList.add("animate-expand");
+        container.classList.add("absolute", "left-0");
+    }
+}
 </script>
 <script>
 const swiper = new Swiper('.mySwiper', {

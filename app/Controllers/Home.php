@@ -94,7 +94,8 @@ class Home extends BaseController
                     'id' => $row['product_id'],
                     'title' => $row['product_title'],
                     'slug' => $row['product_slug'],
-                    'thumbnail' => $row['thumbnail']
+                    'thumbnail' => $row['thumbnail'],
+                    'description' => $row['description']
                 ];
 
 
