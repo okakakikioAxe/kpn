@@ -9,11 +9,13 @@ use CodeIgniter\Router\RouteCollection;
 $routes->post('login', 'AuthController::login');
 service('auth')->routes($routes);
 
-// $routes->get('/', 'Home::index');
-// $routes->get('/product', 'Home::product');
-// $routes->get('/contact-us', 'Home::contactUs');
-// $routes->get('/about-us', 'Home::aboutUs');
-// $routes->get('/galeri', 'Home::galery');
+// ------------------ v3 -------------------------
+$routes->group('v3', function ($routes) {
+    $routes->get('/', 'v3\Home::index_v3');
+    $routes->get('set-language/(:segment)', 'v3\Language::switch/$1');
+});
+
+// -----------------------------------------------
 
 
 $routes->get('/', 'Home::index_v2');
