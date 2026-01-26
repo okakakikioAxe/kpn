@@ -48,6 +48,7 @@ class Home extends BaseController
             'p.id as product_id',
             'p.title as product_title',
             'p.slug as product_slug',
+            'p.description as product_description',
             'p.thumbnail'
         ];
 
@@ -68,6 +69,7 @@ class Home extends BaseController
                 'left',
                 false // <- PENTING agar tidak di-escape CI
             )
+            ->where('p.status', 1)
             ->orderBy('category', 'DESC')
             ->get()
 
@@ -83,7 +85,7 @@ class Home extends BaseController
                     'title' => $row['title'],
                     'slug' => $row['slug'],
                     'image' => $row['image'],
-                    'description' => $row['description'],
+                    'description' => mb_substr(strip_tags($row['product_description']), 0, 130, 'UTF-8') . '…',
                     'products' => [],
                     'first_row_products' => []
                 ];
@@ -95,7 +97,7 @@ class Home extends BaseController
                     'title' => $row['product_title'],
                     'slug' => $row['product_slug'],
                     'thumbnail' => $row['thumbnail'],
-                    'description' => $row['description']
+                    'description' => mb_substr(strip_tags($row['product_description']), 0, 130, 'UTF-8') . '…',
                 ];
 
 
@@ -110,15 +112,11 @@ class Home extends BaseController
 
         $categories = array_values($result);
 
-        $products = $db->table('products p')
-            ->where('p.status', 1)
-            ->select('p.id, p.slug, p.title, p.thumbnail')
-            ->get()->getResultArray();
-
         $productCounts = $db->table('products')
             ->select('category, COUNT(id) as total_products')
             ->groupBy('category')
             ->orderBy('category', 'ASC')
+            ->where('status', 1)
             ->get()
             ->getResultArray();
 
@@ -143,9 +141,7 @@ class Home extends BaseController
 
             ->getResultArray();
 
-        // return dd($categories);
-
-        return view('v2/' . $lang . '/product_' . $lang, ['products' => $products, 'categories' => $categories, 'top_products' => $topProducts]);
+        return view('v2/' . $lang . '/product_' . $lang, ['categories' => $categories, 'top_products' => $topProducts]);
     }
 
     public function product_category_v2($slug, $lang = 'id'): string
