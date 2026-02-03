@@ -302,7 +302,7 @@
         </div>
     </div>
 </section>
-<section class="py-20 bg-gray-100 mb-16">
+<section class="py-20 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6 xl:px-0">
         <div class="mb-3">
             <span class="font-heading text-[12px] font-semibold text-[#0B2F9F]">LAYANAN</span>
@@ -465,7 +465,145 @@
                 </a>
             </div>
             <div>
-                <img src="/images/alur-pengadaan.png" alt="Alur pengadaan">
+                <div class="w-full h-full">
+                    <div class="grid grid-cols-4 w-full h-[123px]">
+                        <div class="w-full h-full flex flex-col items-center">
+                            <?= view('v3/icons/interpersonal_relationship', ['svgClass' => "w-[73px] h-[73px]"]) ?>
+                            <span>Konsultasi</span>
+                        </div>
+                        <div class="w-full flex justify-center pt-8">
+                            <div class="w-[80%]">
+                                <svg class="arrow-svg" viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <marker id="arrowhead"
+                                            markerWidth="8"
+                                            markerHeight="8"
+                                            refX="7"
+                                            refY="4"
+                                            orient="auto">
+                                            <polygon points="0 0, 8 4, 0 8" fill="#000" />
+                                        </marker>
+                                    </defs>
+
+                                    <line
+                                        class="arrow-line"
+                                        x1="0"
+                                        y1="20"
+                                        x2="280"
+                                        y2="20"
+                                        marker-end="url(#arrowhead)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full h-full flex flex-col items-center">
+                            <?= view('v3/icons/bargain', ['svgClass' => "w-[73px] h-[73px]"]) ?>
+                            <span>Penawaran Harga</span>
+                        </div>
+                        <div class="w-full h-full flex justify-center pt-6">
+                            <div class="w-[80%]">
+                                <svg width="100" height="100"
+                                    viewBox="0 0 200 200"
+                                    class="w-[80%]"
+                                    xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+                                        <marker id="arrowhead"
+                                            markerWidth="8"
+                                            markerHeight="8"
+                                            refX="7"
+                                            refY="4"
+                                            orient="auto">
+                                            <polygon points="0 0, 8 4, 0 8" fill="#000" />
+                                        </marker>
+                                    </defs>
+
+                                    <!-- 1/4 LINGKARAN -->
+                                    <path
+                                        class="draw-line"
+                                        d="M40 40 A120 120 0 0 1 160 160"
+                                        fill="none"
+                                        stroke="#000"
+                                        stroke-width="3"
+                                        stroke-linecap="round"
+                                        marker-end="url(#arrowhead)"
+                                        pathLength="100" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex w-full justify-end h-[123px]">
+                        <div class="w-auto h-full flex flex-col items-center">
+                            <?= view('v3/icons/interpersonal_relationship', ['svgClass' => "w-[73px] h-[73px]"]) ?>
+                            <span>Konsultasi</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 w-full h-[123px]">
+                        <div class="w-full h-full flex flex-col items-center">
+                            <?= view('v3/icons/interpersonal_relationship', ['svgClass' => "w-[73px] h-[73px]"]) ?>
+                            <span>Konsultasi</span>
+                        </div>
+                        <div class="w-full flex justify-center items-start pt-10">
+                            <div class="w-[80%] rotate-180">
+                                <svg class="arrow-svg" viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <marker id="arrowhead"
+                                            markerWidth="8"
+                                            markerHeight="8"
+                                            refX="7"
+                                            refY="4"
+                                            orient="auto">
+                                            <polygon points="0 0, 8 4, 0 8" fill="#000" />
+                                        </marker>
+                                    </defs>
+
+                                    <line
+                                        class="arrow-line"
+                                        x1="0"
+                                        y1="20"
+                                        x2="280"
+                                        y2="20"
+                                        marker-end="url(#arrowhead)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full h-full flex flex-col items-center">
+                            <?= view('v3/icons/bargain', ['svgClass' => "w-[73px] h-[73px]"]) ?>
+                            <span>Penawaran Harga</span>
+                        </div>
+                        <div class="w-full h-full flex justify-center items-start">
+                            <div class=" w-[80%] h-[80%] rotate-90">
+                                <svg width="100" height="100"
+                                    viewBox="0 0 200 200"
+                                    class="w-[80%]"
+                                    xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+                                        <marker id="arrowhead"
+                                            markerWidth="8"
+                                            markerHeight="8"
+                                            refX="7"
+                                            refY="4"
+                                            orient="auto">
+                                            <polygon points="0 0, 8 4, 0 8" fill="#000" />
+                                        </marker>
+                                    </defs>
+
+                                    <!-- 1/4 LINGKARAN -->
+                                    <path
+                                        class="draw-line"
+                                        d="M40 40 A120 120 0 0 1 160 160"
+                                        fill="none"
+                                        stroke="#000"
+                                        stroke-width="3"
+                                        stroke-linecap="round"
+                                        marker-end="url(#arrowhead)"
+                                        pathLength="100" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
