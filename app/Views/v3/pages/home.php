@@ -11,7 +11,7 @@
         min-height: 220px;
         border-radius: 6px;
         transition: all .3s ease;
-        background: #0B2F9F;
+        background: #ffffff;
         transform: scale(.92);
     }
 
@@ -31,7 +31,7 @@
     /* kiri kanan */
     .swiper-slide-prev,
     .swiper-slide-next {
-        background: #f3f4f6;
+        background: #ffffff;
     }
 
     .mySwiper {
@@ -132,7 +132,7 @@
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-10 items-center lg:min-h-96">
         <img src="/images/logo-big.png" alt="Logo Karya Pilar Nusantara" class="mx-auto w-[80%] sm:max-w-[75%] lg:col-span-2" />
         <div class="lg:col-span-3">
-            <div class="mb-3">
+            <div class="mb-1">
                 <span class="font-heading text-[12px] font-semibold text-[#0B2F9F]">SOLUSI UNTUK ANDA</span>
             </div>
             <h2 class="text-3xl font-semibold mb-9 font-heading">
@@ -187,7 +187,7 @@
 </section>
 <section class="py-20 bg-gray-100 px-6 md:px-8">
     <div class="max-w-7xl mx-auto">
-        <div class="mb-3">
+        <div class="mb-2">
             <span class="font-heading text-[12px] font-semibold text-[#0B2F9F]">TENTANG PENGADAAN BARANG</span>
         </div>
         <div class="flex mb-11 gap-x-10 flex-col lg:flex-row">
@@ -244,7 +244,7 @@
                 <div class="mb-3">
                     <span class="font-heading text-xs font-semibold text-[#0B2F9F]">KLIEN B2G</span>
                 </div>
-                <div class="h-[72px]">
+                <div class="mb-2 h-[74px] flex items-center">
                     <div class="flex gap-4">
                         <div class="aspect-square">
                             <img src="/images/partners/jambore.png" width="72" height="72" class="rounded-lg" alt="Project partner KPN dengan Jambore">
@@ -267,12 +267,12 @@
                     <p class="font-sans font-normal text-base">Dipercaya oleh pemerintahan republik Indonesia</p>
                 </div>
             </div>
-            <div class="flex xl:justify-center">
+            <div class="flex lg:justify-center">
                 <div>
-                    <div class="mb-3">
+                    <div class="mb-[10px]">
                         <span class="font-heading text-xs font-semibold text-[#0B2F9F]">PESANAN TERPENUHI</span>
                     </div>
-                    <div class="h-[72px] ">
+                    <div class="mb-2 h-[74px] flex items-center">
                         <span class="font-heading font-medium text-7xl">1.500k+</span>
                     </div>
                     <div class="mb-4">
@@ -285,10 +285,10 @@
             </div>
             <div class="flex xl:justify-center">
                 <div>
-                    <div class="mb-3">
+                    <div class="mb-[10px]">
                         <span class="font-heading text-xs font-semibold text-[#0B2F9F]">PRODUK</span>
                     </div>
-                    <div class="w-full h-[72px]">
+                    <div class="w-full mb-2 h-[74px] flex items-center">
                         <span class="font-heading font-medium text-7xl">200+</span>
                     </div>
                     <div class="mb-4">
@@ -302,19 +302,19 @@
         </div>
     </div>
 </section>
-<section class="py-20 bg-gray-100 mb-16">
-    <div class="max-w-7xl mx-auto px-6 xl:px-0">
-        <div class="mb-3">
+<section class="py-20 bg-gray-100 mb-16 md:mb-0">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 xl:px-0">
+        <div class="mb-1">
             <span class="font-heading text-[12px] font-semibold text-[#0B2F9F]">LAYANAN</span>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 mb-11">
-            <div class="col-span-1 mb-9">
+        <div class="flex mb-11 gap-x-10 flex-col lg:flex-row">
+            <div class="lg:w-2/6 mb-9">
                 <h2 class="text-3xl font-semibold font-heading">
                     Layanan Kami
                 </h2>
             </div>
 
-            <div class="col-span-2 mb-10">
+            <div class="lg:w-4/6 mb-10">
                 <p class="text-gray-600 font-sans text-base">
                     Kami menyediakan layanan pengadaan, distribusi, dan konsultasi produk untuk kebutuhan olahraga, outdoor, mainan anak, serta infrastruktur maritim, dengan standar kualitas tinggi dan dukungan teknis yang andal.
                 </p>
@@ -333,8 +333,8 @@
                 <div class="h-full flex items-center">
                     <div class="w-full h-full">
                         <div class="flex h-full relative items-center">
-                            <div class="w-[40%] md:w-[25%] hidden md:block"></div>
-                            <div class="w-full md:w-[75%] overflow-hidden">
+                            <div class="w-[40%] md:w-[25%] lg:w-[35%] hidden md:block"></div>
+                            <div class="w-full md:w-[75%] lg:w-[65%] overflow-hidden">
                                 <!-- Slider main container -->
                                 <div class="block w-full h-full">
                                     <!-- Slider main container -->
@@ -446,7 +446,7 @@
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
             <div>
-                <div class="mb-3">
+                <div class="mb-1">
                     <span class="font-heading text-[12px] font-semibold text-[#0B2F9F]">ALUR PENGADAAN</span>
                 </div>
                 <h2 class="text-3xl font-semibold mb-9 font-heading">
@@ -464,15 +464,15 @@
                     </div>
                 </a>
             </div>
-            <div>
-                <img src="/images/alur-pengadaan.png" alt="Alur pengadaan">
+            <div class="flex w-full items-center justify-center">
+                <img src="/images/alur-pengadaan.png" alt="Alur pengadaan" class="w-full">
             </div>
         </div>
     </div>
 </section>
 <section class="py-20 bg-gray-100 px-6 md:px-8">
-    <div class="w-full">
-        <div class="mb-3">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-1">
             <span class="font-heading text-[12px] font-semibold text-[#0B2F9F]">MENGAPA MEMILIH KAMI</span>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 mb-11">
@@ -482,7 +482,7 @@
                 </h2>
             </div>
 
-            <div class="col-span-2 mb-10">
+            <div class="col-span-2 mb-10 lg:pl-14">
                 <p class="text-gray-600 font-sans text-base">
                     Kami menyediakan layanan pengadaan, distribusi, dan konsultasi produk untuk kebutuhan olahraga, outdoor, mainan anak, serta infrastruktur maritim, dengan standar kualitas tinggi dan dukungan teknis yang andal.
                 </p>
@@ -538,34 +538,39 @@
         </div>
     </div>
 </section>
-<section class="py-20 bg-gray-100 px-6 md:px-8">
+<section class="py-20 px-6 md:px-8">
     <div class="max-w-7xl mx-auto">
-        <div class="mb-3">
+        <div class="mb-1">
             <span class="font-heading text-[12px] font-semibold text-[#0B2F9F]">PRODUK UNGGULAN</span>
         </div>
-        <div class="flex mb-11 gap-x-10 flex-col lg:flex-row">
+        <div class="flex gap-x-10 flex-col">
             <div class="lg:w-2/5 mb-9">
                 <h2 class="text-3xl font-semibold font-heading">
                     Produk Unggulan Kami
                 </h2>
             </div>
 
-            <div class="lg:w-3/5 mb-10">
-                <p class="text-gray-600 font-sans text-base">
-                    Pengadaan barang adalah serangkaian kegiatan mulai dari perencanaan kebutuhan, pemilihan pemasok, pembelian, penerimaan, hingga pengelolaan barang agar sesuai spesifikasi, waktu, dan anggaran.
-                </p>
-            </div>
-
-            <a href="#" class="inline-flex items-center rounded-full border border-[#7F7F7F] hover:bg-[#0B2F9F] hover:border-[#0B2F9F] transform w-44 hover:w-[185px] duration-300">
-                <div class="group items-center gap-2 px-5 py-2 text-sm font-medium hover:text-white hover:fill-slate-100 flex justify-around w-full">
-                    <span>
-                        Selengkapnya
-                    </span>
-                    <?= view('v3/icons/long_arrow_right', ['pathClass' => "fill-black group-hover:fill-white"]) ?>
+            <div class="flex flex-col lg:flex-row lg:gap-14 mb-14">
+                <div class="mb-10 lg:mb-0 lg:w-4/5">
+                    <p class="text-gray-600 font-sans text-base">
+                        Pengadaan barang adalah serangkaian kegiatan mulai dari perencanaan kebutuhan, pemilihan pemasok, pembelian, penerimaan, hingga pengelolaan barang agar sesuai spesifikasi, waktu, dan anggaran.
+                    </p>
                 </div>
-            </a>
+                <div class="lg:w-1/5 lg:flex justify-end">
+                    <div class="w-[185px]">
+                        <a href="#" class="inline-flex items-center rounded-full border border-[#7F7F7F] hover:bg-[#0B2F9F] hover:border-[#0B2F9F] transform w-44 hover:w-[185px] duration-300">
+                            <div class="group items-center gap-2 px-5 py-2 text-sm font-medium hover:text-white hover:fill-slate-100 flex justify-around w-full">
+                                <span>
+                                    Selengkapnya
+                                </span>
+                                <?= view('v3/icons/long_arrow_right', ['pathClass' => "fill-black group-hover:fill-white"]) ?>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-3 lg:grid-cols-6 gap-4">
             <div class="w-full h-full aspect-square bg-red-100">t</div>
             <div class="w-full h-full aspect-square bg-red-100">t</div>
             <div class="w-full h-full aspect-square bg-red-100">t</div>
@@ -585,11 +590,7 @@
         <div class="py-20 px-6 md:px-8 h-full flex items-center justify-center">
             <div class="relative max-w-7xl h-full w-full flex items-center">
                 <div class="flex-1">
-                    <div class="mb-3">
-                        <span class="font-heading text-[12px] font-semibold text-white">SEKILAS KARYA PILAR NUSANTARA</span>
-                    </div>
-
-                    <h2 class="text-3xl font-semibold mb-9 font-heading">Tentang Kami</h2>
+                    <h2 class="text-3xl font-semibold mb-9 font-heading">Siap memenuhi kebutuhan pengadaan Anda</h2>
                     <p class="mb-10 font-sans text-bases md:max-w-[80%] lg:max-w-[50%]">
                         PT Karya Pilar Nusantara adalah perusahaan terpercaya dalam pengadaan
                         berbagai kebutuhan instansi dan bisnis.
