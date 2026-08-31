@@ -1,0 +1,117 @@
+CRITICAL - 2025-08-06 08:58:42 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: products/list]
+in APPPATH/Controllers/Home.php on line 135.
+ 1 APPPATH/Controllers/Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->productList()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 08:59:17 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: products/list]
+in APPPATH/Controllers/Home.php on line 135.
+ 1 APPPATH/Controllers/Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->productList()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 08:59:46 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: products/list]
+in APPPATH/Controllers/Home.php on line 135.
+ 1 APPPATH/Controllers/Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->productList()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 09:01:39 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: products/list]
+in APPPATH/Controllers/Home.php on line 135.
+ 1 APPPATH/Controllers/Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->productList()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 09:02:05 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: products/list]
+in APPPATH/Controllers/Home.php on line 135.
+ 1 APPPATH/Controllers/Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->productList()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 09:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:27:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v2/template/product_category_template_v2.php"
+[Method: GET, Route: en/product-category/lainnya]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/v2/en/product_category_en.php(1): view()
+ 4 SYSTEMPATH/View/View.php(224): include('/home/u303612745/domains/karyapilarnusantara.com/kpn/app/Views/v2/en/product_category_en.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Home.php(95): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->product_category_v2()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 09:40:23 --> ErrorException: Undefined variable $galleries
+[Method: GET, Route: galeri]
+in APPPATH/Views/v2/template/gallery_template_v2.php on line 48.
+ 1 APPPATH/Views/v2/template/gallery_template_v2.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/u303612745/domains/karyapilarnusantara.com/kpn/app/Views/v2/template/gallery_template_v2.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Views/v2/id/gallery_id.php(1): view()
+ 6 SYSTEMPATH/View/View.php(224): include('/home/u303612745/domains/karyapilarnusantara.com/kpn/app/Views/v2/id/gallery_id.php')
+ 7 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH/Controllers/Home.php(29): view()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->galery_v2()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 09:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:41:19 --> ErrorException: Undefined variable $galleries
+[Method: GET, Route: galeri]
+in APPPATH/Views/v2/template/gallery_template_v2.php on line 48.
+ 1 APPPATH/Views/v2/template/gallery_template_v2.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/u303612745/domains/karyapilarnusantara.com/kpn/app/Views/v2/template/gallery_template_v2.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Views/v2/id/gallery_id.php(1): view()
+ 6 SYSTEMPATH/View/View.php(224): include('/home/u303612745/domains/karyapilarnusantara.com/kpn/app/Views/v2/id/gallery_id.php')
+ 7 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH/Controllers/Home.php(29): view()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->galery_v2()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 23:25:32 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: products/list]
+in APPPATH/Controllers/Home.php on line 135.
+ 1 APPPATH/Controllers/Home.php(135): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->productList()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

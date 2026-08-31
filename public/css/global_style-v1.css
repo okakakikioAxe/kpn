@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "HumanistNormal";
+  src: url("../Font/HumanistNormal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "HumanistBold";
+  src: url("../Font/HumanistBold.woff") format("woff");
+  /* "line-height-normal" : leading-[%] */
+}
+@font-face {
+  font-family: "Trebuchet";
+  src: url("../Font/Trebuchet.woff") format("woff");
+  /* "line-height-normal" : leading-4 */
+}
+
+.bg-container {
+  background-image: url("https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/base-background.webp"); /* Your image */
+  background-repeat: repeat;
+  background-size: 430px 764px;
+}
+
+.custom-class {
+    height: 25vh;
+    max-height: 160px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) { /* md */
+    .custom-class {
+        max-height: 180px;
+    }
+}
+
+@media (min-width: 1024px) { /* lg */
+    .custom-class {
+        max-height: 200px;
+    }
+}
+
+@media (min-width: 1280px) { /* xl */
+    .custom-class {
+        max-height: 220px;
+    }
+}
+
+@media (min-width: 1536px) { /* 2xl */
+    .custom-class {
+        max-height: 250px;
+    }
+}

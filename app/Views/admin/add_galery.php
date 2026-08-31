@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="/output-v5.css">
     <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
-    <link rel="stylesheet" href="/css/global_style.css">
+    <link rel="stylesheet" href="/css/global_style-v1.css">
     <link rel="stylesheet" href="/css/admin_galery_style.css">
     <style>
         body {
@@ -112,7 +112,9 @@
             <h1 class="text-xl font-bold">KPN</h1>
             <nav class="mt-5">
                 <ul>
-                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700">Galery</a></li>
+                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700">Gallery</a></li>
+                    <li class="py-2"><a href="/admin/product" class="block px-4 py-2 hover:bg-gray-700">Produk</a></li>
+                    <li class="py-2"><a href="/admin/category" class="block px-4 py-2 hover:bg-gray-700">Kategori</a></li>
                     <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah Password</a></li>
                     <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 ">
                             <p class="text-red-400">Logout</p>

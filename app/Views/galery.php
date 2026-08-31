@@ -1,7 +1,7 @@
 <?= $this->extend('./template') ?>
 
 <?= $this->section('head') ?>
-<title>PT KPN - Produsen produk HDPE, EVA, XPE, dan TPE</title>
+<title>Galeri</title>
 <meta name="description" content="Jelajahi galeri PT Karya Pilar Nusantara (PT KPN) dan temukan foto produk HDPE, EVA, TPE, dan XPE. Lihat koleksi terbaru dan portofolio produk berkualitas kami." />
 <meta name="keywords" content="galeri KPN, foto produk KPN, gambar produk HDPE, gambar produk EVA, gambar produk TPE, gambar produk XPE, portofolio PT KPN, koleksi produk KPN" />
 <?= $this->endSection() ?>
@@ -14,8 +14,8 @@
 <!-- Hero -->
 <section id="galerySection" class="relative pb-[200px] min-h-[100vh] w-full bg-white">
   <!-- Background Image -->
-  <div class="h-[140px] w-full px-[40px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
-    <div class="w-full max-w-[1600px] pt-[30px] ">
+  <div class=" w-full px-[40px] md:px-[10%] bg-[#F2F8FF] flex justify-center">
+    <div class="w-full max-w-[1600px] pt-[62px] pb-[40px]">
       <h1 class=" text-[#001F47] text-start text-[32px] md:text-[34px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="gallery" data-lang-key="title">GALERI</h1>
       <p class="mt-[12px] text-[#001F47] text-start font-humanist-normal leading-4 text-[14px] md:text-[16px] xl:text-[18px]" data-lang-group="gallery" data-lang-key="sub_title">Temukan inspirasi lewat kegiatan yang kami bagikan.</p>
     </div>
@@ -60,7 +60,7 @@
           </div>
           <h2 id="modalTitle" class="overflow-hidden sm:overflow-visible line-clamp-1 sm:line-clamp-none text-stone-800 text-[20px] xl:text-[22px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]">Proses pembuatan playmat test update tes judul yang panjaanang</h2>
           <p id="modalDate" class="text-stone-600 mb-[20px] font-humanist-normal text-[16px] xl:text-[18px]">19 Maret 2025 - 02:44</p>
-          <p id="modalDesc" class="h-auto max-h-[65%] sm:max-h-[80%] relative overflow-clip sm:overflow-auto line-clamp-3 sm:line-clamp-none text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]">Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below Just for the simplification of the mentioned solution on above link, they have used an http handler to solve the problem. But I would like to state that using/implementing an http handler is not a part of the required solution. The solution is that you have to put necessary headers to the response like below</p>
+          <p id="modalDesc" class="h-auto max-h-[65%] sm:max-h-[80%] relative overflow-clip sm:overflow-auto line-clamp-3 sm:line-clamp-none text-stone-500 text-[16px] xl:text-[18px] font-humanist-normal leading-[130%] tracking-[0.02em] font-[400]"></p>
 
         </div>
       </div>
@@ -112,29 +112,9 @@
 
       } else {
         // video
-        let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
+        modalVideo.src = '/galery/content/' + contentDetail.dataset.image;
+        modalVideo.classList.remove("hidden");
 
-        try {
-          if (modalVideo.src != '') {
-            URL.revokeObjectURL(modalVideo.src);
-          }
-          let response = await fetch(videoUrl, {
-            method: 'GET',
-            headers: {
-              'Range': 'bytes=0-' // Enable seeking support
-            }
-          });
-
-          if (!response.ok) throw new Error('Failed to load video');
-
-          let blob = await response.blob();
-          let objectUrl = URL.createObjectURL(blob);
-
-          modalVideo.src = objectUrl;
-          modalVideo.classList.remove("hidden");
-        } catch (error) {
-          console.error('Error loading video:', error);
-        }
       }
       modalTitle.textContent = contentDetail.dataset.title;
       modalDesc.textContent = contentDetail.dataset.description;
@@ -163,12 +143,14 @@
       "backdrop-blur-0",
     );
     if (modalVideo.src != '') {
+      modalVideo.pause();
+      modalVideo.currentTime = 0; // Reset to start
       URL.revokeObjectURL(modalVideo.src);
     }
     setTimeout(() => {
+      modal.classList.replace("flex", "hidden");
       modalImage.classList.add("hidden");
       modalVideo.classList.add("hidden");
-      modal.classList.replace("flex", "hidden");
       waButton.classList.remove("hidden");
 
     }, 300);
@@ -184,6 +166,8 @@
         "backdrop-blur-0",
       );
       if (modalVideo.src != '') {
+        modalVideo.pause();
+        modalVideo.currentTime = 0; // Reset to start
         URL.revokeObjectURL(modalVideo.src);
       }
       setTimeout(() => {

@@ -1,9 +1,18 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('preload') ?>
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/custom-logo.gif">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/best-price.gif">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/star.gif">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/emerging-industries.gif">
+<?= $this->endSection() ?>
+
 <?= $this->section('head') ?>
-<title>PT KPN - Tentang Kami</title>
-<meta name="description" content="Tentang KPN - PT Karya Pilar Nusantara (PT KPN), produsen HDPE, XPE, dan TPE terpercaya di Sidoarjo. Spesialis produsen mainan anak dan produk berkualitas dengan layanan kustom merk sesuai kebutuhan." />
-<meta name="keywords" content="tentang kpn, pt karya pilar nusantara, pt kpn, kpn sidoarjo, produsen hdpe, produsen xpe, produsen tpe, produsen mainan anak, kustom merk" />
+<title>Tentang Kami</title>
+<meta name="description" content="Tentang KPN - PT Karya Pilar Nusantara (PT KPN), perusahaan penyedia produk HDPE, XPE, dan TPE terpercaya di Jawa Timur. Spesialis menghadirkan mainan anak dan produk berkualitas dengan layanan kustom merk sesuai kebutuhan." />
+<meta name="keywords" content="tentang kpn, pt karya pilar nusantara, pt kpn, kpn sidoarjo, produsen hdpe, produsen xpe, produsen tpe, produsen mainan anak, kustom merk, pengadaan produk" />
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
@@ -14,16 +23,16 @@
 <!-- Hero -->
 <section id="hero-section" class="relative h-[90vh] bg-white">
   <div class="relative h-full lg:h-full w-full object-cover">
-    <img src="/images/hero background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
+    <img src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
   </div>
   <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8">
     <div class="flex justify-center xl:-translate-y-[20px] ">
-      <img loading="lazy" class="h-[40vh] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+      <img loading="lazy" class="h-[40vh] max-h-[180px] md:max-h-[220px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
     <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="about_us_hero" data-lang-key="title">Tentang Kami</h1>
-    <p class="max-w-[800px] mb-[20px] text-white font-trebuchet tracking-[0.025em] leading-4 lg:leading-5 text-[16px] md:text-[18px]" data-lang-group="about_us_hero" data-lang-key="sub_title">Produsen Tangan Pertama Produk HDPE, TPE, dan XPE untuk Mainan Anak, Olahraga, serta Infrastruktur dengan Kualitas Premium dan Harga Terjangkau</p>
+    <p class="max-w-[800px] mb-[20px] text-white font-trebuchet tracking-[0.025em] leading-4 lg:leading-5 text-[16px] md:text-[18px]" data-lang-group="about_us_hero" data-lang-key="sub_title">Perusahaan Pengadaan Produk HDPE, EVA, TPE, dan XPE untuk Mainan Anak, Olahraga, serta Infrastruktur dengan Kualitas Premium dan Harga Terjangkau</p>
     <button id="aboutUsHeroButton" class="flex cursor-pointer bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out" data-lang-group="about_us_hero" data-lang-key="button">
       Selengkapnya
     </button>
@@ -38,8 +47,7 @@
     <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
       <div class="hidden lg:flex h-1 w-[100px] bg-soft-silver mr-10 rounded-full"></div>
       <div class="flex flex-col w-full">
-        <p class="font-humanist-normal mt-10 text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="about_us_detail" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama yang menghadirkan produk berbahan HDPE, EVA, TPE, dan XPE. Kami bergerak di bidang mainan anak, olahraga, dan infrastruktur, menawarkan produk berkualitas tinggi dengan harga terjangkau. Sebagai produsen langsung, kami memastikan setiap produk tahan lama, aman, dan inovatif. Dengan teknologi modern dan standar premium, kami berkomitmen menghadirkan solusi terbaik bagi pelanggan. PT Karya Pilar Nusantara siap menjadi mitra terpercaya dalam menyediakan produk unggulan.</p>
-
+        <p class="font-humanist-normal mt-10 text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="about_us_detail" data-lang-key="description">PT Karya Pilar Nusantara adalah perusahaan pengadaan yang menyediakan produk berbahan HDPE, EVA, TPE, dan XPE. Kami bergerak di bidang mainan anak, olahraga, dan infrastruktur, menawarkan produk berkualitas tinggi dengan harga terjangkau. Didukung oleh tim profesional berpengalaman, kami memastikan setiap produk tahan lama, aman, dan inovatif. Dengan teknologi modern dan standar premium, kami berkomitmen menghadirkan solusi terbaik bagi pelanggan. PT Karya Pilar Nusantara siap menjadi mitra terpercaya dalam menyediakan produk unggulan.</p>
         <p class="font-humanist-normal mt-10 text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center font-bold  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="about_us_detail" data-lang-key="slogan">Pilihan terbaik untuk produk berkualitas, harga bersaing, dan layanan profesional.</p>
       </div>
       <div class="hidden lg:flex h-1 w-[100px] bg-soft-silver ml-10 rounded-full"></div>
@@ -59,7 +67,7 @@
       <h2 class="flex align-center justify-center text-iron-gray text-[22px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="about_us_detail" data-lang-key="vision_title">Visi</h2>
       <div class="mt-[40px] lg:mt-[60px] xl:mt-[80px] w-full flex justify-center h-full">
         <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] bg-gray-100 rounded-2xl animate-vision-mission-card">
-          <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7" data-lang-group="about_us_detail" data-lang-key="vision_description">Menjadi produsen dan distributor terdepan di Indonesia dalam menyediakan produk berkualitas tinggi untuk mainan anak, olahraga, dan infrastruktur, dengan inovasi berkelanjutan serta komitmen terhadap keamanan, daya tahan, dan kepuasan pelanggan.</p>
+          <p class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7" data-lang-group="about_us_detail" data-lang-key="vision_description">Menjadi perusahaan terdepan di Indonesia dalam menyediakan produk berkualitas tinggi untuk mainan anak, olahraga, dan infrastruktur, dengan inovasi berkelanjutan serta komitmen terhadap keamanan, daya tahan, dan kepuasan pelanggan.</p>
         </div>
       </div>
     </div>
@@ -138,28 +146,28 @@
         <div id="xlWhyUsCard" class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
           <div class="h-auto w-full content-start animate-why-us-card">
             <div class="flex justify-center">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/custom-logo.gif" alt="animasi review bagus">
             </div>
             <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Kustom Merek</h3>
             <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
           </div>
           <div class="h-auto w-full content-start animate-why-us-card">
             <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/best-price.gif" alt="animasi harga terbaik">
             </div>
             <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
             <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
           </div>
           <div class="h-auto w-full content-start animate-why-us-card">
             <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/star.gif" alt="animasi layanan terbaik">
             </div>
             <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Pelayanan Terbaik</h3>
             <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
           </div>
           <div class="h-auto w-full content-start animate-why-us-card">
             <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/emerging-industries.gif" alt="animasi jangkauan luas">
             </div>
             <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
             <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
@@ -192,7 +200,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="js/homepage/why_us.js"></script>
-<script type="text/javascript" src="js/about us/about_us.js"></script>
 <script type="text/javascript" src="js/homepage/vision_mission.js"></script>
 <script defer type="text/javascript">
   // ================= Why Us Swiper ================
@@ -234,5 +241,60 @@
     whyUsSwiper.slidePrev();
   }
   // ================= End of Why Us Swiper =================
+  
+  function revealAboutUsCards() {
+  const aboutUsCard = document.querySelectorAll(".animate-about-us");
+
+  let delay = 0;
+
+  aboutUsCard.forEach((card, index) => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if (cardTop < window.innerHeight * 0.9) {
+      setTimeout(() => {
+        card.classList.add("about-us-visible");
+      }, delay);
+      delay += 250; // Delay each card by 150ms
+    }
+      });
+    }
+    
+    function smoothScrollTo(targetY, duration = 1000) {
+      const startY = window.scrollY;
+      const difference = targetY - startY;
+      const startTime = performance.now();
+    
+      function step(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1); // Progres 0-1
+    
+        // Gunakan easing function (easeInOutQuad)
+        const easedProgress =
+          progress < 0.5
+            ? 2 * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+    
+        window.scrollTo(0, startY + difference * easedProgress);
+    
+        if (elapsedTime < duration) {
+          requestAnimationFrame(step);
+        }
+      }
+    
+      requestAnimationFrame(step);
+    }
+    
+    document
+      .getElementById("aboutUsHeroButton")
+      .addEventListener("click", function () {
+        const target = document.getElementById("aboutUsSection");
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+        const offset = window.innerHeight / 2 - target.clientHeight / 2;
+    
+        smoothScrollTo(targetPosition - offset, 1200); // 1200ms = 1.2 detik
+      });
+    
+    window.addEventListener("scroll", revealAboutUsCards);
+    window.addEventListener("load", revealAboutUsCards);
 </script>
 <?= $this->endSection() ?>

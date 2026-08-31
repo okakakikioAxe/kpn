@@ -1,0 +1,30 @@
+CRITICAL - 2026-03-29 01:21:36 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "sitemap.xmlge=3"
+[Method: GET, Route: sitemap.xmlge=3]
+in SYSTEMPATH/Router/Router.php on line 739.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-03-29 19:55:53 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "Kami memproduksi mainan anak menggunakan mesin produksi canggih yang memastikan setiap produk dibuat dengan presisi dan kualitas tinggi. Proses produksi dilakukan secara profesional di fasilitas yang tertata rapi dan higienis, menjamin keamanan dan daya tahan mainan untuk si kecil. Komitmen kami adalah memberikan mainan terbaik yang tidak hanya menyenangkan, tetapi juga aman dan terpercaya."
+[Method: GET, Route: Kami%20memproduksi%20mainan%20anak%20menggunakan%20mesin%20produksi%20canggih%20yang%20memastikan%20setiap%20produk%20dibuat%20dengan%20presisi%20dan%20kualitas%20tinggi.%20Proses%20produksi%20dilakukan%20secara%20profesional%20di%20fasilitas%20yang%20tertata%20rapi%20dan%20higienis,%20menjamin%20keamanan%20dan%20daya%20tahan%20mainan%20untuk%20si%20kecil.%20Komitmen%20kami%20adalah%20memberikan%20mainan%20terbaik%20yang%20tidak%20hanya%20menyenangkan,%20tetapi%20juga%20aman%20dan%20terpercaya.]
+in SYSTEMPATH/Router/Router.php on line 739.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-03-29 19:55:54 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "Kami memproduksi mainan anak menggunakan mesin produksi canggih yang memastikan setiap produk dibuat dengan presisi dan kualitas tinggi. Proses produksi dilakukan secara profesional di fasilitas yang tertata rapi dan higienis, menjamin keamanan dan daya tahan mainan untuk si kecil. Komitmen kami adalah memberikan mainan terbaik yang tidak hanya menyenangkan, tetapi juga aman dan terpercaya."
+[Method: GET, Route: Kami%20memproduksi%20mainan%20anak%20menggunakan%20mesin%20produksi%20canggih%20yang%20memastikan%20setiap%20produk%20dibuat%20dengan%20presisi%20dan%20kualitas%20tinggi.%20Proses%20produksi%20dilakukan%20secara%20profesional%20di%20fasilitas%20yang%20tertata%20rapi%20dan%20higienis,%20menjamin%20keamanan%20dan%20daya%20tahan%20mainan%20untuk%20si%20kecil.%20Komitmen%20kami%20adalah%20memberikan%20mainan%20terbaik%20yang%20tidak%20hanya%20menyenangkan,%20tetapi%20juga%20aman%20dan%20terpercaya.]
+in SYSTEMPATH/Router/Router.php on line 739.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

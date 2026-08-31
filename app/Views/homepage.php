@@ -1,9 +1,29 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('preload') ?>
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background-5.avif" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kubus_apung_shadow.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kubus_apung_shadow_2.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kubus_apung.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/pallete_shadow.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/pallete_shadow_2.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/pallete.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/slider.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/rocking_horse.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/rocking_horse_shadow.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/playmat.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/wallpaper.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/wallpaper_shadow.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/eva_mat_1.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/eva_mat_2.webp" type="image/webp">
+
+<?= $this->endSection() ?>
+
 <?= $this->section('head') ?>
-<title>PT KPN - Produsen produk HDPE, EVA, XPE, dan TPE</title>
-<meta name="description" content="PT Karya Pilar Nusantara adalah produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur. Menawarkan produk berkualitas tinggi, aman, inovatif, dan terjangkau dengan teknologi modern serta standar premium." />
-<meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn " />
+<title>PT. Karya Pilar Nusantara - Perusahaan Pengadaan Produk HDPE, EVA, XPE, dan TPE</title>
+<meta name="description" content="PT Karya Pilar Nusantara (KPN) adalah perusahaan yang bergerak dalam pengadaan produk HDPE, XPE, dan EVA yang menghadirkan berbagai produk berkualitas tinggi, inovatif, dan aman untuk kebutuhan mainan anak HDPE, olahraga, serta infrastruktur. Kami menawarkan produk seperti kubus apung HDPE, EVA mat, matras TPE, dan playmat anak dengan teknologi modern dan standar premium." />
+<meta name="keywords" content="toko peralatan terlengkap, karpinus, pengadaan produk, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn, karyapilarnusantara, pt kpn, karya pilar nusantara, pt karya pilar nusantara, penyedia kpn, penyedia kubus apung, penyedia toren, kubus apung HDPE berkualitas" />
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
@@ -12,133 +32,109 @@
 
 <?= $this->section('content') ?>
 <!-- Hero -->
-<section id="hero-section" class="relative h-[90vh] bg-white">
-  <div class="relative h-full lg:h-full w-full object-cover">
-    <img src="/images/hero-background-3.webp" alt="baner pt karya pilar nusantara" class="h-full w-full object-cover ">
-    <div class="h-full w-full top-0 left-0 absolute z-5 bg-blue-800/60 bg-blue "></div>
-  </div>
-  <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8">
-    <div class="flex justify-center xl:-translate-y-[20px] ">
-      <img loading="lazy" class="h-[40vh] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
-    </div>
-  </div>
-  <div class="absolute bottom-[20vh] sm:bottom-[32vh] md:bottom-[32vh] lg:bottom-[32vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
-    <h1 class="max-w-[600px] md:max-w-[800px] mb-[60px] md:mb-[40px] lg:mb-[55px] xl:mb-[60px] 2xl:mb-[90px] text-white text-[32px] md:text-[36px] lg:text-[40px] 2xl:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
-    <p class="max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px] 2xl:text-[18px]" data-lang-group="homepage_hero" data-lang-key="sub_title">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
-    <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-light-salmon font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out " data-lang-group="homepage_hero" data-lang-key="button">
-      Hubungi Kami
-    </a>
-  </div>
-  <div class="absolute bottom-[20px] h-[100px] 2xl:h-[180px] w-full bg-gradient-to-t from-white to-transparent z-10"></div>
-  <div class="absolute bottom-0 h-[20px] w-full bg-white z-10"></div>
-</section>
-
-<!-- Mengapa memilih kami -->
-<section id="whyUsSection" class=" relative w-full mt-[30px] sm:mt-[40px] lg:mt-[60px] xl:mt-[100px]">
-  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_why_us" data-lang-key="title">Mengapa Memilih Kami</h2>
-  <div class="w-full  flex justify-center pt-[130px] lg:pt-[210px] xl:pt-[230px]">
-    <div class="relative  w-full  h-full">
-      <div class="xl:hidden relative w-full px-[10%]  overflow-hidden  whyUsSwiper">
-        <div id="normalWhyUsCard" class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Custom Merek</h3>
-              <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
-              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Best Service</h3>
-              <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="h-auto w-full content-center animate-why-us-card">
-              <div class="flex justify-center ">
-                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
-              </div>
-              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
-              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
-            </div>
-          </div>
-        </div>
-        <div class="xl:hidden pt-[70px] md:pt-[150px]">
-          <div class="flex justify-center items-center why-us-swiper-pagination"></div>
-        </div>
-
-        <div class="xl:hidden">
-          <button onclick="prevWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 left-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
-          <button onclick="nextWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 right-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
-        </div>
+<section id="hero-section" class="relative h-[90vh] w-full bg-green-200 overflow-hidden">
+  <div class=" h-[90vh] w-full bg-[url('https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background-5.avif')] bg-cover bg-center bg-no-repeat">
+    <div class="h-full w-full top-0 left-0 absolute z-2 bg-gradient-to-tl from-blue-700/80 to-transparent "></div>
+    <div class="h-full w-full bottom-0 right-0 absolute z-5 -translate-y-[23vh] md:-translate-y-[14vh] lg:translate-y-0 2xl:translate-y-[8vh] -translate-x-[25vw] md:-translate-x-[14.8vw] lg:translate-x-0 2xl:translate-x-[10vw] scale-150 md:scale-130 lg:scale-100 2xl:scale-80 overflow-hidden">
+      <!-- HDPE - Kubus Apung -->
+      <div class="absolute bottom-0 right-[18.1vw] z-5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="scale-x-[-1] w-[12.8vw] h-auto" xmlns:xlink="http://www.w3.org/1999/xlink" width="328" height="295" viewBox="0 0 697 628">
+          <g id="kubus_apung" data-name="kubus apung">
+            <g>
+              <image y="528" width="697" height="100" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kubus_apung_shadow.webp"/>
+              <image x="46" y="498" width="544" height="117" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kubus_apung_shadow_2.webp" />
+              <image id="Layer_3_copy_2" data-name="Layer 3 copy 2" x="69" width="581" height="613" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kubus_apung.webp"/>
+            </g>
+          </g>
+        </svg>
       </div>
-
-      <div class="hidden xl:flex justify-center relative w-full px-[5%] overflow-visible h-full">
-        <div id="xlWhyUsCard" class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="custom-logo.gif" alt="animasi review bagus">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Kustom Merek</h3>
-            <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
-          </div>
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="best-price.gif" alt="animasi harga terbaik">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
-            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
-          </div>
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="star.gif" alt="animasi layanan terbaik">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Pelayanan Terbaik</h3>
-            <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
-          </div>
-          <div class="h-auto w-full content-start animate-why-us-card">
-            <div class="flex justify-center ">
-              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="emerging-industries.gif" alt="animasi jangkauan luas">
-            </div>
-            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
-            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
-          </div>
-        </div>
+      <!-- HDPE - Pallete -->
+      <div class="absolute bottom-0 right-[21vw] z-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="scale-x-[-1] w-[20vw] h-auto" xmlns:xlink="http://www.w3.org/1999/xlink" width="531" height="514" viewBox="0 0 531 514">
+          <g id="pallet">
+            <g>
+              <image id="Layer_11_copy_2" data-name="Layer 11 copy 2" x="93" y="423" width="520" height="92" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/pallete_shadow.webp"/>
+              <image x="-63" y="420" width="560" height="94" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/pallete_shadow_2.webp"/>
+              <image x="164" width="342" height="493" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/pallete.webp"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <!-- MAINAN - Prosotan -->
+      <div class="absolute bottom-[16.7vw] right-0 z-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-[30.6vw] h-auto" width="780" height="555" viewBox="0 0 1059 753">
+          <g id="set_mainan" data-name="set mainan">
+            <image id="Artboard_1" data-name="Artboard 1" width="1059" height="753" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/slider.webp"/>
+          </g>
+        </svg>
+      </div>
+      <!-- MAINAN - Rocking Horse -->
+      <div class="absolute bottom-0 right-[10vw] z-3">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scale-x-[-1] w-[20.3vw] h-auto" width="518" height="461" viewBox="0 0 644 572">
+          <g id="rocking_horses" data-name="rocking horses">
+            <image x="-12" y="364" width="656" height="208" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/rocking_horse_shadow.webp"/>
+            <image id="Layer_3_copy" data-name="Layer 3 copy" width="632" height="504" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/rocking_horse.webp"/>
+          </g>
+        </svg>
+      </div>
+      <!-- XPE -Playmat -->
+      <div class="absolute bottom-0 -right-[6vw] z-2">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-[23.5vw] h-auto" width="599" height="640" viewBox="0 0 480 513">
+          <g id="xpe_playmat" data-name="xpe playmat">
+            <image id="_180-200_copy" data-name="180-200 copy" y="-1" width="480" height="516" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/playmat.webp"/>
+          </g>
+        </svg>
+      </div>
+      <!-- XPE - Wallpaper -->
+      <div class="absolute bottom-0 right-[36vw] z-5">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-[13.5vw] h-auto" width="350" height="335" viewBox="0 0 536 513">
+          <g id="xpe_wallpapper" data-name="xpe wallpapper">
+            <image id="Layer_861_copy" data-name="Layer 861 copy" x="208" y="441" width="412" height="87" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/wallpaper_shadow.webp"/>
+            <image x="8" width="528" height="513" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/wallpaper.webp"/>
+          </g>
+        </svg>
+      </div>
+      <!-- EVA - Eva 1 -->
+      <div class="absolute bottom-[12.1vw] right-[21vw] -rotate-[31deg] z-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-[9.2vw] h-auto" width="235" height="238" viewBox="0 0 404 423">
+          <g id="eva_puzzle_1" data-name="eva puzzle 1">
+            <g id="PRODUCT">
+              <g>
+                <image id="Layer_9_copy" data-name="Layer 9 copy" width="402" height="402" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/eva_mat_1.webp"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <!-- EVA - Eva 2 -->
+      <div class="absolute bottom-[11vw] right-[15vw] rotate-[15deg] z-2">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-[9.6vw] h-auto" width="245" height="247" viewBox="0 0 421 423">
+          <g id="eva_puzzle_2" data-name="eva puzzle 2">
+            <g id="PRODUCT">
+              <image id="Group_1" data-name="Group 1" y="-2" width="421" height="425" xlink:href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/eva_mat_2.webp"/>
+            </g>
+          </g>
+        </svg>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Tentang kami -->
-<section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[300px] ">
-  <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="homepage_about_us" data-lang-key="title">Tentang Kami</h2>
-  <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
-    <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
-      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
-      <p id="about-us" class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="homepage_about_us" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
-      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver ml-10 rounded-full"></div>
+  <div class="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center">
+    <div class="flex-10 flex justify-center items-center mt-6">
+      <div class="h-full w-auto aspect-[1/1] bg-[url('https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp')] bg-cover bg-center bg-no-repeat max-h-[200px] md:max-h-[250px] xl:max-h-[280px]">
+      </div>
     </div>
+    <div class="w-[80vw] max-w-[1600px] h-auto">
+      <h1 class="max-w-[600px] lg:max-w-[800px] mb-[60px] md:mb-[40px] lg:mb-[55px] xl:mb-[60px] 2xl:mb-[70px] text-white text-[28px] md:text-[34px] lg:text-[40px] 2xl:text-[40px] font-humanist-bold leading-[100%] -tracking-[0.02em]" data-lang-group="homepage_hero" data-lang-key="title">Mitra Anda Dalam Solusi Mainan Anak, Olahraga dan Infrastruktur</h1>
+      <p class="max-w-[600px] sm:max-w-[400px] lg:max-w-[600px] mb-[15px] text-white font-trebuchet tracking-[0.01em] leading-4 lg:leading-5 text-[16px] md:text-[18px] 2xl:text-[18px]" data-lang-group="homepage_hero" data-lang-key="sub_title">Dapatkan penawaran menarik untuk berbagai macam kebutuhan anda</p>
+      <a href="http://wa.me/6282160050005" target="_blank" class="flex bg-[#b22222] font-trebuchet text-[18px] w-[230px] h-[43px] text-white font-bold rounded-full shadow-lg transition items-center justify-center xl:hover:bg-[#ff3939] xl:hover:scale-105 active:bg-[#ff3939] active:scale-105 transform duration-300 ease-in-out " data-lang-group="homepage_hero" data-lang-key="button">
+        Hubungi Kami
+      </a>
+    </div>
+    <div class="flex-9 bg-red-100"></div>
   </div>
+  <div class="absolute bottom-0 h-[50px] w-full bg-gradient-to-t from-white to-transparent z-10"></div> 
 </section>
-
-<!-- Horizontal Divider - Tentang kami -->
-<div class="flex justify-center mt-[100px] sm:mt-[140px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px]">
-  <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
-</div>
 
 <!-- Produk unggulan kami -->
 <section id="topProductSection" class=" relative w-full mt-[125px] xl:mt-[190px]">
@@ -162,29 +158,27 @@
   <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center mt-[240px] sm:mt-[320px] xl:mt-[300px]" data-lang-group="homepage_top_product" data-lang-key="cta">Belum menemukan produk yang anda cari? Telusuri semua produk yang ditawarkan</p>
 
   <div class="flex align-center justify-center mt-[43px]">
-    <a href="#" class="flex bg-light-salmon font-trebuchet w-[268px] h-[43px] text-white rounded-full shadow-lg hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out items-center justify-center" data-lang-group="homepage_top_product" data-lang-key="button">
+    <a href="/product" class="flex bg-[#b22222] font-trebuchet w-[268px] h-[43px] text-white rounded-full shadow-lg xl:hover:bg-[#ff3939] xl:hover:scale-105 active:bg-[#ff3939] active:scale-105 transform duration-300 ease-in-out items-center justify-center" data-lang-group="homepage_top_product" data-lang-key="button">
       Lihat Semua Produk
     </a>
   </div>
-
-
 </section>
 
 <!-- Horizontal Divider - Produk unggulan kami -->
-<div class="flex justify-center mt-[180px] xl:mt-[200px]">
+<div class="flex justify-center mt-[180px] xl:mt-[250px]">
   <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
 </div>
 
 <!-- Proses Produksi -->
-<section id="productionGalerySection" class=" relative w-full mt-[130px] xl:mt-[200px]">
-  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_production_process" data-lang-key="title">Intip Proses Produksinya</h2>
+<section id="productionGalerySection" class=" relative w-full mt-[130px] xl:mt-[150px]">
+  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_production_process" data-lang-key="title">Proses Produksi</h2>
   <div class="xl:hidden relative w-full px-[25px] pt-[120px] max-w-[1600px] overflow-hidden h-full productionGalerySwiper">
     <div id="normalProductionCard" class="swiper-wrapper">
       <div class="w-full swiper-slide">
         <div class="w-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/hdpe-product.webp" alt="proses pembuatan tiang kubus apung">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-hdpe-product.webp" alt="proses pembuatan tiang kubus apung">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -199,7 +193,7 @@
         <div class="w-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/kid-toy-product.webp" alt="contoh gambar">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-kid-toy-product.webp" alt="contoh gambar">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -214,7 +208,7 @@
         <div class="w-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/eva-product.webp" alt="Proses pembuatan eva mat">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-eva-product.webp" alt="Proses pembuatan eva mat">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -229,7 +223,7 @@
         <div class="w-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/xpe-product.webp" alt="Proses pembuatan playmat">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-xpe-product.webp" alt="Proses pembuatan playmat">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -258,7 +252,7 @@
         <div class="w-full h-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/hdpe-product.webp" alt="Proses pembuatan tiang kubus apung">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-hdpe-product.webp" alt="Proses pembuatan tiang kubus apung">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -271,7 +265,7 @@
         <div class="w-full h-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/kid-toy-product.webp" alt="proses pembuatan mainan anak">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-kid-toy-product.webp" alt="proses pembuatan mainan anak">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -284,7 +278,7 @@
         <div class="w-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/eva-product.webp" alt="contoh gambar">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-eva-product.webp" alt="contoh gambar">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -297,7 +291,7 @@
         <div class="w-full animate-production-galery-card">
           <div class="flex justify-center w-full ">
             <div class="max-h-[366px] aspect-4/3 rounded-[40px] overflow-hidden">
-              <img loading="lazy" class="object-cover" src="/images/manufacture/thumbnail/xpe-product.webp" alt="contoh gambar">
+              <img loading="lazy" class="object-cover" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/manufacture-xpe-product.webp" alt="contoh gambar">
             </div>
           </div>
           <div class="h-auto mt-[41px]">
@@ -316,12 +310,119 @@
   <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
 </div>
 
+<!-- Mengapa memilih kami -->
+<section id="whyUsSection" class=" relative w-full mt-[30px] sm:mt-[40px] lg:mt-[60px] xl:mt-[100px]">
+  <h2 class="flex align-center justify-center h2-title" data-lang-group="homepage_why_us" data-lang-key="title">Mengapa Memilih Kami</h2>
+  <div class="w-full  flex justify-center pt-[130px] lg:pt-[210px] xl:pt-[230px]">
+    <div class="relative  w-full  h-full">
+      <div class="xl:hidden relative w-full px-[10%]  overflow-hidden  whyUsSwiper">
+        <div id="normalWhyUsCard" class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/custom-logo.gif" alt="animasi review bagus">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Custom Merek</h3>
+              <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center ">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/best-price.gif" alt="animasi harga terbaik">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
+              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center ">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/star.gif" alt="animasi layanan terbaik">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Best Service</h3>
+              <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-auto w-full content-center animate-why-us-card">
+              <div class="flex justify-center ">
+                <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/emerging-industries.gif" alt="animasi jangkauan luas">
+              </div>
+              <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
+              <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="xl:hidden pt-[70px] md:pt-[150px]">
+          <div class="flex justify-center items-center why-us-swiper-pagination"></div>
+        </div>
+
+        <div class="xl:hidden">
+          <button onclick="prevWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 left-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pr-[4px] shadow-[0_35px_35px_rgba(0,0,0,0.25)]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-left.svg" alt="panah kiri"></button>
+          <button onclick="nextWhyUsSlides()" type="button" class="circle-button xl:hidden absolute z-5 right-1 top-[35%] md:top-[35%] -translate-y-1/2 bg-white h-[37px] w-[37px] rounded-full flex justify-center items-center pl-[2px]"><img loading="lazy" class="h-[28px] w-[28px]" src="arrow-right.svg" alt="panah kanan"></button>
+        </div>
+      </div>
+
+      <div class="hidden xl:flex justify-center relative w-full px-[5%] overflow-visible h-full">
+        <div id="xlWhyUsCard" class=" grid grid-cols-4 gap-5 2xl:gap-10 max-w-[1600px]">
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/custom-logo.gif" alt="animasi review bagus">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_1">Kustom Merek</h3>
+            <p class=" why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_1">Kami menyediakan layanan custom merek, memungkinkan produk disesuaikan dengan logo dan identitas bisnis Anda.</p>
+          </div>
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center ">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/best-price.gif" alt="animasi harga terbaik">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_2">Harga Kompetitif</h3>
+            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_2">Kami menawarkan produk terbaik dengan kualitas tinggi, harga bersaing, dan layanan pengiriman yang tepat waktu.</p>
+          </div>
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center ">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/star.gif" alt="animasi layanan terbaik">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_3">Pelayanan Terbaik</h3>
+            <p class="relative h-auto why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_3">Dengan profesionalisme, kami senantiasa menghadirkan layanan berkualitas terbaik karena kepuasan pelanggan menjadi prioritas utama kami.</p>
+          </div>
+          <div class="h-auto w-full content-start animate-why-us-card">
+            <div class="flex justify-center ">
+              <img loading="lazy" class="rounded-full w-[130px] h-[130px] sm:w-[100px] sm:h-[100px] xl:w-[120px] xl:h-[120px]" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/emerging-industries.gif" alt="animasi jangkauan luas">
+            </div>
+            <h3 class="why-us-title" data-lang-group="homepage_why_us" data-lang-key="sub_title_4">Jangkauan Luas</h3>
+            <p class="why-us-description" data-lang-group="homepage_why_us" data-lang-key="description_4">Produk telah terdistribusi ke berbagai daerah, termasuk wilayah terpencil dan kota-kota besar di seluruh Indonesia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tentang kami -->
+<section id="aboutUsSection" class=" relative w-full mt-[140px] lg:mt-[180px] xl:mt-[420px] ">
+  <h2 class="flex align-center justify-center text-iron-gray text-[28px] xl:text-[36px] font-trebuchet leading-[135%] -tracking-[0.03em] font-[500]" data-lang-group="homepage_about_us" data-lang-key="title">Tentang Kami</h2>
+  <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
+    <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
+      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
+      <p id="about-us" class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="homepage_about_us" data-lang-key="description">PT Karya Pilar Nusantara adalah perusahaan yang bergerak dalam pengadaan produk berbahan HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+      <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver ml-10 rounded-full"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Horizontal Divider - Tentang kami -->
+<div class="flex justify-center mt-[100px] sm:mt-[140px] md:mt-[200px] lg:mt-[200px] xl:mt-[300px]">
+  <div class="border-[1.5px] border-[#F0F0F0] w-full max-w-[1200px] mx-[76px] sm:mx-[20%]"></div>
+</div>
+
 <!-- Bottom CTA -->
 <section id="bottomCtaSection" class="relative w-full pt-[180px] xl:pt-[330px] pb-[250px] xl:pb-[450px]">
   <p class="mx-[25px] font-humanist-normal text-[#313030] text-[18px] xl:text-[22px] text-center" data-lang-group="homepage_bottom_cta" data-lang-key="cta">Hubungi kami dan dapatkan penawaran khusus untuk kebutuhan Anda!</p>
 
   <div class="flex align-center justify-center mt-[43px]">
-    <a href="/contact-us" class="flex bg-light-salmon w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg hover:bg-dark-salmon hover:scale-105 transform duration-300 ease-in-out  items-center justify-center" data-lang-group="homepage_bottom_cta" data-lang-key="button">
+    <a href="/contact-us" class="flex bg-[#b22222] w-[268px] h-[43px] text-white font-trebuchet text-[18px] rounded-full shadow-lg xl:hover:bg-[#ff3939] xl:hover:scale-105 active:bg-[#ff3939] active:scale-105 transform duration-300 ease-in-out  items-center justify-center" data-lang-group="homepage_bottom_cta" data-lang-key="button">
       Hubungi Kami
     </a>
   </div>
@@ -336,9 +437,9 @@
     "@type": "Corporation",
     "name": "PT Karya Pilar Nusantara",
     "alternateName": "KPN",
-    "description": "Produsen tangan pertama produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur.",
+    "description": "Perusahaan yang bergerak dalam pengadaan produk HDPE, EVA, TPE, dan XPE untuk mainan anak, olahraga, dan infrastruktur.",
     "url": "https://www.karyapilarnusantara.com",
-    "logo": "https://www.karyapilarnusantara.com/kpn-logo.png",
+    "logo": "https://www.karyapilarnusantara.com/favicon-kpn.ico",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+62 821-6005-0005",
@@ -349,11 +450,40 @@
     }
   }
 </script>
-<script type="text/javascript" src="js/homepage/why_us.js"></script>
-<script type="text/javascript" src="js/homepage/about_us.js"></script>
-<script type="text/javascript" src="js/homepage/top product/top_product.js"></script>
-<script type="text/javascript" src="js/homepage/production_galery.js"></script>
-<script defer type="text/javascript">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Beranda",
+      "item": "https://www.karyapilarnusantara.com"
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Produk",
+      "item": "https://www.karyapilarnusantara.com/product"
+    }, {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kontak",
+      "item": "https://www.karyapilarnusantara.com/contact-us"
+    }, {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Tentang Kami",
+      "item": "https://www.karyapilarnusantara.com/about-us"
+    }, {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Galeri",
+      "item": "https://www.karyapilarnusantara.com/galeri"
+    }]
+  }
+</script>
+<script type="text/javascript" src="js/homepage/main-minified.js" defer></script>
+<script type="text/javascript">
   // ================= Why Us Swiper ================
   var whyUsSwiper = new Swiper(".whyUsSwiper", {
     speed: 700,

@@ -107,4 +107,12 @@ class Filters extends BaseFilters
     public array $filters = [
         'csrf' => ['except' => ['gallery/toggle-status/*']],
     ];
+    // public array $filters = [
+    // 'csrf' => [
+    //     'except' => [
+    //         'gallery/toggle-status/*',
+    //         'form-kubus-apung',
+    //     ],
+    // ],
+// ];
 }

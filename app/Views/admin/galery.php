@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/output.css">
-    <link rel="stylesheet" href="/css/global_style.css">
+    <link rel="stylesheet" href="/output-v5.css">
+    <link rel="stylesheet" href="/css/global_style-v1.css">
     <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="/css/admin_galery_style.css">
     <style>
@@ -51,7 +51,9 @@
             <h1 class="text-xl font-bold">KPN</h1>
             <nav class="mt-5">
                 <ul>
-                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700 bg-gray-700 rounded">Galery</a></li>
+                    <li class="py-2"><a href="/admin/galery" class="block px-4 py-2 hover:bg-gray-700 bg-gray-700 rounded">Gallery</a></li>
+                    <li class="py-2"><a href="/admin/product" class="block px-4 py-2 hover:bg-gray-700">Produk</a></li>
+                    <li class="py-2"><a href="/admin/category" class="block px-4 py-2 hover:bg-gray-700">Kategori</a></li>
                     <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah Password</a></li>
                     <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 rounded ">
                             <p class="text-red-400">Logout</p>
@@ -265,26 +267,8 @@
                     modalImage.classList.remove("hidden");
                 } else {
                     // video
-                    let videoUrl = '/video/stream/' + contentDetail.dataset.image; // API URL
-
-                    try {
-                        let response = await fetch(videoUrl, {
-                            method: 'GET',
-                            headers: {
-                                'Range': 'bytes=0-' // Enable seeking support
-                            }
-                        });
-
-                        if (!response.ok) throw new Error('Failed to load video');
-
-                        let blob = await response.blob();
-                        let objectUrl = URL.createObjectURL(blob);
-
-                        modalVideo.src = objectUrl;
-                        modalVideo.classList.remove("hidden");
-                    } catch (error) {
-                        console.error('Error loading video:', error);
-                    }
+                    modalVideo.src = '/galery/content/' + contentDetail.dataset.image;
+                    modalVideo.classList.remove("hidden");
                 }
                 modalTitle.textContent = contentDetail.dataset.title;
                 modalDesc.textContent = contentDetail.dataset.description;

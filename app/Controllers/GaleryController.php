@@ -62,8 +62,8 @@ class GaleryController extends BaseController
         $file = $this->request->getFile('file-upload');
         $thumbnailFile = $this->request->getPost('thumbnail');
         if ($file->isValid() && !$file->hasMoved()) {
-            $newName = date('Y-m-d-H-i-s') . '-' . str_replace(' ', '-', $this->request->getPost('title')) . '.';
-            $newFileName = $newName . $file->getExtension();
+            $newName = $this->sanitizeFileName(date('Y-m-d-H-i-s') . '-' . str_replace(' ', '-', $this->request->getPost('title'))) . '.';
+            $newFileName = $newName  . $file->getExtension();
             $newThumbnailName = $newName . 'jpeg';
             $file->move('galery/content', $newFileName);
 
@@ -205,5 +205,15 @@ class GaleryController extends BaseController
         $galleryModel->delete($id);
         session()->setFlashdata('successMessage', 'Konten berhasil dihapus!');
         return redirect()->to('/admin/galery');
+    }
+    
+    public function sanitizeFileName($nama_file) {
+        // Hilangkan semua karakter selain huruf, angka, dan underscore
+        $nama_file = preg_replace('/[^A-Za-z0-9_-]/', '', $nama_file);
+    
+        // Hilangkan underscore atau dash di akhir nama
+        $nama_file = rtrim($nama_file, '_-');
+    
+        return $nama_file;
     }
 }

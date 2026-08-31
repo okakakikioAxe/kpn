@@ -1,24 +1,29 @@
 <?= $this->extend('./template') ?>
 
+<?= $this->section('preload') ?>
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background.webp" type="image/webp">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" type="image/webp">
+<?= $this->endSection() ?>
+
 <?= $this->section('head') ?>
-<title>PT KPN - Hubungi Kami</title>
+<title>Hubungi Kami</title>
 <meta name="description" content="Hubungi PT Karya Pilar Nusantara (PT KPN) untuk informasi produk dan layanan. Temukan kontak, alamat, telepon, dan email kami di KPN Sidoarjo. Kami siap membantu Anda!" />
-<meta name="keywords" content="hubungi KPN, kontak PT Karya Pilar Nusantara, kontak PT KPN, alamat KPN Sidoarjo, telepon KPN, email KPN, layanan pelanggan KPN" />
+<meta name="keywords" content="hubungi KPN, kontak PT Karya Pilar Nusantara, kontak PT KPN, alamat KPN Sidoarjo, telepon KPN, email KPN, layanan pelanggan KPN, kontak kpn" />
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
-<link rel="stylesheet" href="css/contact_us_style.css">
+<link rel="stylesheet" href="css/contact_us_style.css" async>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 <!-- Hero -->
 <section id="hero-section" class="relative h-[90vh] bg-white">
   <div class="relative h-full lg:h-full w-full object-cover">
-    <img src="/images/hero background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
+    <img src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/hero-background.webp" alt="kantor pt karya pilar nusantara" class="h-full w-full object-cover">
   </div>
   <div class="absolute top-3 sm:top-5 lg:top-7 xl:top-8 2xl:top-[4vh]  left-1/2 -translate-x-1/2 max-w-[1600px] z-8">
     <div class="flex justify-center xl:-translate-y-[20px] ">
-      <img loading="lazy" class="h-[40vh] max-h-[160px] md:max-h-[180px] lg:max-h-[200px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="kpn-logo.png" alt="Logo berwarna PT. Karya Pilar Nusantara">
+      <img loading="lazy" class="h-[40vh] max-h-[180px] md:max-h-[220px] xl:max-h-[220px] 2xl:max-h-[250px] w-auto flex justify-center" src="https://cdn.jsdelivr.net/gh/okakakikioAxe/kpn-storage/kpn-logo.webp" alt="Logo berwarna PT. Karya Pilar Nusantara">
     </div>
   </div>
   <div class="absolute bottom-[20vh] sm:bottom-[180px] md:bottom-[20vh] lg:bottom-[20vh] xl:bottom-[23vh] left-1/2 -translate-x-1/2 w-[80vw] max-w-[1600px] z-20">
@@ -133,23 +138,23 @@
         <div class="w-full md:max-w-[600px]">
           <form id="contactForm">
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="name">NAMA ANDA *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="name">NAMA ANDA *</p>
               <input type="text" name="name" id="name" autocomplete="name" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="Mr Budi">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">EMAIL</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]">EMAIL</p>
               <input type="text" name="email" id="email" autocomplete="email" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="mail@example.com">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="phone">NOMOR TELEPON ANDA *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="phone">NOMOR TELEPON ANDA *</p>
               <input type="tel" name="phone" id="phone" autocomplete="tel" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="+62 8123 4567 891">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="company">NAMA INSTANSI / PERUSAHAAN ANDA *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="company">NAMA INSTANSI / PERUSAHAAN ANDA *</p>
               <input type="text" name="instantion" id="instantion" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 h-[50px] bg-[#F0F0F0] rounded-[5px] mt-[10px] px-[15px] placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider" placeholder="PT ABC">
             </div>
             <div class="mt-[32px]">
-              <h4 class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="message">PESAN *</h4>
+              <p class="text-white text-[14px] font-humanist-normal font-bold tracking-[0.03em]" data-lang-group="contact_us_form" data-lang-key="message">PESAN *</p>
               <textarea rows="3" cols="1" id="message" name="message" class="w-full focus:outline-none focus:ring-2 focus:ring-blue-400 bg-[#F0F0F0] rounded-[5px] mt-[10px] p-[15px] resize-y placeholder:text-gray-500 placeholder:italic placeholder:font-humanist-normal font-humanist-normal tracking-wider text-wrap text-clip" placeholder="Apakah ada harga khusus untuk pesanan banyak?"></textarea>
             </div>
             <div class="flex justify-center mt-[50px] mb-[30px]">
@@ -295,7 +300,6 @@
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="js/contact us/contact_us.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const faqContents = document.querySelectorAll('.faq-content');
@@ -326,5 +330,63 @@
                     </svg>`; // Switch back to plus
     }
   }
+  
+  function smoothScrollTo(targetY, duration = 1000) {
+  const startY = window.scrollY;
+  const difference = targetY - startY;
+  const startTime = performance.now();
+
+  function step(currentTime) {
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
+    const easedProgress =
+      progress < 0.5
+        ? 2 * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+    window.scrollTo(0, startY + difference * easedProgress);
+
+    if (elapsedTime < duration) {
+      requestAnimationFrame(step);
+    }
+  }
+      requestAnimationFrame(step);
+    }
+    
+    document
+      .getElementById("contactUsHeroButton")
+      .addEventListener("click", function () {
+        const target = document.getElementById("contactSection");
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+        const offset = window.innerHeight / 2 - target.clientHeight / 2;
+    
+        smoothScrollTo(targetPosition - offset, 1200);
+      });
+    
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phoneNumber = document.getElementById("phone").value;
+      const instantion = document.getElementById("instantion").value;
+      const message = document.getElementById("message").value;
+      let templateMessage =
+        `Halo, saya ` +
+        name +
+        ` dari ` +
+        instantion +
+        `ingin bertanya tentang ` +
+        message +
+        `. Untuk menghubungi saya melalui nomor telepon ` +
+        phoneNumber;
+    
+      email == ""
+        ? (templateMessage += ". Terima kasih.")
+        : (templateMessage += ` atau email ` + email + `. Terima kasih.`);
+    
+      console.log(templateMessage);
+      const whatsappURL = `https://wa.me/+6282160050005?text=${encodeURIComponent(templateMessage)}`;
+    
+      window.open(whatsappURL, "_blank");
+    });
 </script>
 <?= $this->endSection() ?>
