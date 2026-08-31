@@ -11,7 +11,11 @@
 
 <?= $this->endsection() ?>
 <?= $this->section('header-script') ?>
+<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+=======
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <?= $this->endsection() ?>
 
 <?= $this->section('style') ?>
@@ -22,6 +26,10 @@
     animation: shimmer 1.5s infinite;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 @keyframes shimmer {
     0% {
         background-position: -200% 0;
@@ -104,6 +112,10 @@
     }
 }
 </style>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <?= $this->endsection() ?>
 <?= $this->section('content') ?>
 <section id="hero-section" class="relative flex items-center justify-center w-full bg-[#EFF6FF] z-20">
@@ -111,6 +123,7 @@
 </section>
 <section id="product-section" class="w-full relative z-10 pt-[126px] mb-[200px]">
     <style>
+<<<<<<< HEAD
         .left-icon {
             position: absolute;
             width: 75px;
@@ -341,6 +354,238 @@
         .swiper-slide-active .slide-inner {
             transform: scale(1);
         }
+=======
+    .left-icon {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+
+        transition: height 0.4s ease, width 0.4s ease;
+    }
+
+    .left-icon.shrink {
+        width: 60px;
+        height: 60px;
+    }
+
+    .title-container {
+        position: relative;
+        width: 80%;
+        transform: translateY(0);
+        margin-bottom: 10px;
+        min-height: 28px;
+        left: 87px;
+        transition:
+            min-height 0.15s ease,
+            transform 0.3s ease;
+    }
+
+    .title-container.expand {
+        margin-bottom: 20px;
+        /* left: 72px; */
+        transform: translateX(-14px);
+        min-height: 60px;
+    }
+
+
+    .item-count {
+        margin-left: 8px;
+        left: 241px;
+        position: absolute;
+    }
+
+    .small-boxes {
+        position: relative;
+        left: 87px;
+        width: 146px;
+    }
+
+
+
+    .first-row-items {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        /* jarak antar item */
+    }
+
+    .second-row-items {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        /* jarak antar item */
+    }
+
+    @keyframes expandFull {
+
+        0% {
+            width: 146px;
+            left: 87;
+        }
+
+
+        95% {
+            width: 100%;
+            left: 87;
+        }
+
+        100% {
+            width: 100%;
+            left: 0px;
+        }
+    }
+
+
+    .animate-expand {
+        animation: expandFull 0.5s forwards ease;
+    }
+
+    @keyframes shrinkBack {
+        0% {
+            width: 100%;
+            left: 0px;
+        }
+
+
+        30% {
+            width: 90%;
+            left: 87px;
+        }
+
+        100% {
+            width: 146px;
+            left: 87px;
+        }
+    }
+
+    .animate-shrink {
+        animation: shrinkBack 0.5s forwards ease;
+    }
+
+    /* ITEM BASE */
+    .grid-item {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    .grid-item.animate {
+        animation: growFade 0.3s forwards ease;
+    }
+
+    @keyframes growFade {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .top-grid-animated {
+        overflow: hidden;
+        transition: height 0.5s ease;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+        /* default = 5 kolom */
+    }
+
+    @media (max-width: 1024px) {
+        .top-grid-animated {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .top-grid-animated {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .top-grid-animated {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .grid-animated {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+        /* default = 5 kolom */
+    }
+
+    @media (max-width: 1024px) {
+        .grid-animated {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .grid-animated {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .grid-animated {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+
+
+    .right-product-container {
+        opacity: 1;
+        scale: 1;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    .right-product-container.animate-fade-in {
+        /* membesar */
+        transform: scale(0.98);
+        opacity: 0;
+    }
+
+    .gradient-box {
+        background: linear-gradient(to bottom,
+                transparent 50%,
+                #ffffff 50%,
+                rgba(13, 50, 156, 0.96) 84.5%);
+    }
+
+    .swiper {
+        padding: 40px 0;
+        /* margin-left: 50px;
+            margin-right: 50px; */
+    }
+
+    .swiper-slide {
+        aspect-ratio: 1/1;
+        /* background-color: rgba(13, 50, 156, 0.96); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide-inner {
+        transform: scale(0.80);
+        transition: all 0.8s ease;
+        /* background-color: rgba(13, 50, 156, 0.96); */
+    }
+
+    /* Yang aktif membesar */
+    .swiper-slide-active .slide-inner {
+        transform: scale(1);
+    }
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     </style>
     <div class=" w-full justify-center items-center flex px-5 md:px-15">
 
@@ -574,7 +819,11 @@
     </div>
 
     <div class="flex w-full justify-center mb-[78px] mt-[100px] xl:mt-[200px] px-5 md:px-15">
+<<<<<<< HEAD
         <div class="w-full flex items-center justify-end max-w-[1200px] max-w-3xl-custom">
+=======
+        <div class="w-full flex items-center justify-end max-w-[1200px]">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 
             <div class="w-full max-w-[460px] flex items-center rounded-full border-1 border-[rgba(156,156,156,0.74)]">
                 <input id="search-form" type="text" placeholder="<?= esc($search_placeholder ?? 'Cari Produk') ?>"
@@ -587,11 +836,19 @@
     </div>
     <div class="flex flex-col items-center justify-center w-full px-5 md:px-15 sm:px-8 min-h-[100vh] sm:min-h-[50vh]">
         <div id="product-grid"
+<<<<<<< HEAD
             class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-5 gap-7 w-full max-w-[1200px] max-w-3xl-custom relative">
             <!-- generate product here -->
         </div>
         <div id="mobile-sekeleton"
             class="hidden grid-cols-2 sm:grid-cols-4 xl:grid-cols-5 gap-6 w-full max-w-[1200px] max-w-3xl-custom ">
+=======
+            class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-5 gap-7 w-full max-w-[1200px] relative">
+            <!-- generate product here -->
+        </div>
+        <div id="mobile-sekeleton"
+            class="hidden grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-[1200px] ">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             <?php for ($i = 1; $i <= 10; $i++): ?>
 
             <div class="sekeleton-wrapper ">
@@ -604,7 +861,11 @@
             <?php endfor; ?>
         </div>
         <div id="desktop-sekeleton"
+<<<<<<< HEAD
             class="hidden grid-cols-2 sm:grid-cols-4 xl:grid-cols-5 gap-6 w-full max-w-[1200px] max-w-3xl-custom ">
+=======
+            class="hidden grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-[1200px] ">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             <?php for ($i = 1; $i <= 10; $i++): ?>
 
             <div class="sekeleton-wrapper ">
@@ -671,7 +932,10 @@ const observer = new IntersectionObserver(
 
 observer.observe(hero);
 </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     let currentPage = 1;
@@ -967,6 +1231,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <script>
+<<<<<<< HEAD
     function getSkipCount() {
         const width = document.documentElement.clientWidth;
         // if (width <= 480) return 0;
@@ -1149,11 +1414,122 @@ document.addEventListener("DOMContentLoaded", function() {
             const itemCount = openHeader.querySelector('[data-item-count]');
     
             openHeader.classList.remove('open');
+=======
+function getSkipCount() {
+    const width = document.documentElement.clientWidth;
+    // if (width <= 480) return 0;
+    if (width <= 768) return 0;
+    if (width <= 1024) return 2;
+    return -1;
+}
+
+function filterAllSecondRows() {
+    const skip = getSkipCount();
+    // loop setiap parent container
+    document.querySelectorAll('[data-first-row]').forEach(wrapper => {
+        const items = wrapper.querySelectorAll('.second-row-items');
+        if (items.length > 5) {
+            items.forEach((item, index) => {
+                if (index > skip) {
+                    item.remove(); // hapus hanya dalam parent ini
+                }
+            });
+        }
+    });
+}
+
+function applyGridFilter() {
+    const skip = getSkipCount() + 1;
+
+    document.querySelectorAll('[data-grid]').forEach(wrapper => {
+        const items = wrapper.querySelectorAll('.grid-item');
+        if (items.length > 5) {
+            items.forEach((item, index) => {
+                if (index < skip) {
+                    item.remove(); // hapus hanya dalam parent ini
+                }
+            });
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', applyGridFilter);
+document.addEventListener('DOMContentLoaded', filterAllSecondRows);
+
+document.querySelectorAll('[data-accordion-header]').forEach(header => {
+
+    const accordion = header.closest('[data-accordion-header]');
+    const grid = accordion.querySelector('.grid-animated');
+    const firstRow = header.querySelector('[data-first-row]');
+    const secondRow = header.querySelectorAll('.second-row-items');
+    const itemCount = header.querySelector('[data-item-count]');
+    const arrow = header.querySelector('[data-arrow]');
+    const titleContainer = header.querySelector('[data-title-container]');
+    const leftIcon = header.querySelector('[data-left-icon]');
+    const borderBottom = accordion.querySelector('[data-border-bottom]');
+
+    const leftProductContainer = document.getElementById('left-product-container');
+    const rightProductContainer = document.getElementById('right-product-container');
+    const topProductContainer = document.getElementById('top-product-container');
+
+    firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+        link.setAttribute('aria-disabled', 'true');
+        link.style.pointerEvents = 'none';
+        link.tabIndex = -1;
+    });
+
+    header.addEventListener('click', async () => {
+        await closeAllAccordions(header);
+        const isOpen = header.classList.contains('open');
+
+        if (!isOpen) {
+            firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+                link.removeAttribute('aria-disabled'); // atau set ke 'false'
+                link.style.pointerEvents = 'auto'; // aktifkan kembali klik
+                link.tabIndex = 0; // bisa diakses via keyboard
+            });
+            leftProductContainer.classList.add('z-30');
+            rightProductContainer.classList.add('animate-fade-in');
+
+            window.addEventListener('resize', async () => {
+                if (window.innerWidth >= 1040) {
+                    await delay(300);
+                }
+            });
+            header.classList.add('open');
+            itemCount.classList.add('hidden');
+            arrow.classList.add('rotate-90');
+            titleContainer.classList.add('expand');
+            firstRow.classList.replace('gap-x-[4px]', 'gap-x-[20px]');
+            leftIcon.classList.add('shrink');
+            borderBottom.classList.add('mt-[40px]');
+            secondRow.forEach(el => {
+                el.classList.remove('hidden');
+            });
+            firstRow.querySelectorAll('.detail-card-container').forEach(el => {
+                el.classList.add('lg:hover:opacity-90');
+            });
+
+            firstRow.classList.add('top-grid-animated');
+
+            focusAccordionSmooth(header);
+
+
+        } else {
+            firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+                link.setAttribute('aria-disabled', 'true');
+                link.style.pointerEvents = 'none';
+                link.tabIndex = -1;
+            });
+            leftProductContainer.classList.remove('z-30');
+            header.classList.remove('open');
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             arrow.classList.remove('rotate-90');
             titleContainer.classList.remove('expand');
             firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
             leftIcon.classList.remove('shrink');
             borderBottom.classList.remove('mt-[40px]');
+<<<<<<< HEAD
     
             // Close grid
             if (grid.classList.contains('open')) {
@@ -1266,4 +1642,195 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     });
 </script>
+=======
+            secondRow.forEach(el => {
+                el.classList.add('hidden');
+            });
+            firstRow.classList.remove('top-grid-animated');
+            firstRow.querySelectorAll('.detail-card-container').forEach(el => {
+                el.classList.remove('lg:hover:opacity-90');
+            });
+        }
+
+        // CLOSE GRID
+        if (grid.classList.contains('open')) {
+
+            grid.style.height = grid.scrollHeight + "px";
+            requestAnimationFrame(() => {
+                grid.style.height = 0;
+            });
+            grid.classList.remove('open');
+
+            grid.querySelectorAll('.grid-item').forEach(el => {
+                el.classList.remove('animate');
+            });
+        }
+
+        firstRow.addEventListener('animationend', function(event) {
+            if (event.animationName === "expandFull") {
+                grid.classList.add('open');
+                grid.style.height = grid.scrollHeight + "px";
+                animateGridItems(grid);
+            }
+            if (event.animationName === "shrinkBack") {
+                // setTimeout(() => resolve(), 50);
+                itemCount.classList.remove('hidden');
+                rightProductContainer.classList.remove('animate-fade-in');
+            }
+        }, {
+            once: true
+        });
+
+        toggleWidth(firstRow);
+    });
+});
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function closeAllAccordions(exceptHeader) {
+    const opened = document.querySelectorAll('[data-accordion-header].open');
+
+    if (opened.length === 0) {
+        return Promise.resolve();
+    }
+
+    const waits = [];
+
+    opened.forEach(openHeader => {
+        if (openHeader === exceptHeader) return;
+
+        const accordion = openHeader.closest('[data-accordion-header]');
+        const grid = accordion.querySelector('.grid-animated');
+        const firstRow = openHeader.querySelector('[data-first-row]');
+        const secondRow = openHeader.querySelectorAll('.second-row-items');
+        const arrow = openHeader.querySelector('[data-arrow]');
+        const titleContainer = openHeader.querySelector('[data-title-container]');
+        const leftIcon = openHeader.querySelector('[data-left-icon]');
+        const borderBottom = accordion.querySelector('[data-border-bottom]');
+        const itemCount = openHeader.querySelector('[data-item-count]');
+
+        openHeader.classList.remove('open');
+        arrow.classList.remove('rotate-90');
+        titleContainer.classList.remove('expand');
+        firstRow.classList.replace('gap-x-[20px]', 'gap-x-[4px]');
+        leftIcon.classList.remove('shrink');
+        borderBottom.classList.remove('mt-[40px]');
+
+        // Close grid
+        if (grid.classList.contains('open')) {
+            grid.style.height = 0;
+            grid.classList.remove('open');
+            grid.querySelectorAll('.grid-item').forEach(el => {
+                el.classList.remove('animate');
+            });
+            secondRow.forEach(el => {
+                el.classList.add('hidden');
+            });
+            firstRow.classList.remove('top-grid-animated');
+            firstRow.querySelectorAll('.first-row-product-link').forEach(link => {
+                link.setAttribute('aria-disabled', 'true');
+                link.style.pointerEvents = 'none';
+                link.tabIndex = -1;
+            });
+        }
+
+        firstRow.classList.remove("animate-expand");
+        firstRow.classList.add("animate-shrink");
+
+        firstRow.querySelectorAll('.first-row-items').forEach(el => {
+            el.classList.remove('expand');
+        });
+
+        itemCount.classList.remove('hidden');
+
+        // ✅ ONLY resolve when shrink animation finishes
+        waits.push(new Promise(resolve => {
+            const handler = (e) => {
+                if (e.animationName === 'shrinkBack') {
+                    resolve();
+                }
+            };
+            firstRow.addEventListener('animationend', handler, {
+                once: true
+            });
+        }));
+    });
+
+    return Promise.all(waits);
+}
+
+function focusAccordionSmooth(wrapper) {
+    const OFFSET = 80; // jarak dari atas (sesuaikan)
+
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            const top = wrapper.getBoundingClientRect().top + window.scrollY - OFFSET;
+
+            window.scrollTo({
+                top: top,
+                behavior: "smooth"
+            });
+        }, 200); // tunggu animasi expand mulai
+    });
+}
+
+
+
+
+function getItemsPerRow(wrapper) {
+    const style = window.getComputedStyle(wrapper);
+    return style.getPropertyValue("grid-template-columns").split(" ").length;
+}
+
+function animateGridItems(grid) {
+    const items = grid.querySelectorAll('.grid-item');
+    const itemsPerRow = getItemsPerRow(grid);
+
+    items.forEach((item, index) => {
+        const row = Math.floor(index / itemsPerRow);
+        item.style.animationDelay = `${row * 0.15}s`;
+        item.classList.add('animate');
+    });
+}
+
+function toggleWidth(container) {
+    if (container.classList.contains("animate-expand")) {
+        container.classList.remove("animate-expand");
+        container.classList.add("animate-shrink");
+        container.classList.remove("absolute", "left-0");
+    } else {
+        container.classList.remove("animate-shrink");
+        container.classList.add("animate-expand");
+        container.classList.add("absolute", "left-0");
+    }
+}
+</script>
+<script>
+const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+        delay: 4000,
+    },
+    speed: 800,
+
+    navigation: {
+        nextEl: '.slide-next',
+        prevEl: '.slide-prev',
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+</script>
+
+
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <?= $this->endSection() ?>

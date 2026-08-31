@@ -38,6 +38,10 @@
     'search_placeholder' => '搜索产品',
     'see_detail_button_title' => '查看详情',
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     // footer
     'footer_description' => 'PT. Karya Pilar Nusantara 是一家专注于为机构和企业提供采购服务的值得信赖的公司。我们致力于提供优质产品、专业服务和高效的采购解决方案。我们已准备好通过完善的产品和最佳的服务支持您的业务成功。',
     'footer_company_title' => '公司简介',

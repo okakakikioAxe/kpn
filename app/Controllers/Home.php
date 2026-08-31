@@ -6,6 +6,7 @@ use App\Models\Galery;
 
 class Home extends BaseController
 {
+<<<<<<< HEAD
     public function catalogAndPricelist(): string
     {
         return view('catalog_and_pricelist');
@@ -37,6 +38,29 @@ class Home extends BaseController
         $galleries = $galeryModel->where('status', 1)->findAll();
     
         return view('v2/'.$lang.'/gallery_'.$lang, ['galleries' => $galleries,'categories' => $this->getCategories($lang)]);
+=======
+    public function index_v2($lang = 'id'): string
+    {
+        $supported = ['id', 'en', 'cn'];
+        if (!in_array($lang, $supported)) {
+            return view('v2/id/homepage_id');
+        }
+        return view('v2/' . $lang . '/homepage_' . $lang, ['categories' => $this->getCategories($lang)]);
+        // $this->cachePage(86400);
+    }
+
+    public function galery_v2($lang = 'id'): string
+    {
+        $supported = ['id', 'en', 'cn'];
+        if (!in_array($lang, $supported)) {
+            return view('v2/id/gallery_id');
+        }
+
+        $galeryModel = new Galery();
+        $galleries = $galeryModel->where('status', 1)->findAll();
+
+        return view('v2/' . $lang . '/gallery_' . $lang, ['galleries' => $galleries, 'categories' => $this->getCategories($lang)]);
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     }
 
     public function product_v2($lang = 'id'): string
@@ -58,7 +82,10 @@ class Home extends BaseController
             'p.id as product_id',
             'p.title as product_title',
             'p.slug as product_slug',
+<<<<<<< HEAD
             'p.description as product_description',
+=======
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             'p.thumbnail'
         ];
 
@@ -94,7 +121,11 @@ class Home extends BaseController
                     'title' => $row['title'],
                     'slug' => $row['slug'],
                     'image' => $row['image'],
+<<<<<<< HEAD
                     'description' => mb_substr(strip_tags($row['product_description']), 0, 130, 'UTF-8') . '…',
+=======
+                    'description' => $row['description'],
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                     'products' => [],
                     'first_row_products' => []
                 ];
@@ -106,7 +137,11 @@ class Home extends BaseController
                     'title' => $row['product_title'],
                     'slug' => $row['product_slug'],
                     'thumbnail' => $row['thumbnail'],
+<<<<<<< HEAD
                     'description' => mb_substr(strip_tags($row['product_description']), 0, 130, 'UTF-8') . '…',
+=======
+                    'description' => $row['description']
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                 ];
 
 
@@ -121,6 +156,14 @@ class Home extends BaseController
 
         $categories = array_values($result);
 
+<<<<<<< HEAD
+=======
+        $products = $db->table('products p')
+            ->where('p.status', 1)
+            ->select('p.id, p.slug, p.title, p.thumbnail')
+            ->get()->getResultArray();
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         $productCounts = $db->table('products')
             ->select('category, COUNT(id) as total_products')
             ->groupBy('category')
@@ -149,9 +192,17 @@ class Home extends BaseController
 
             ->getResultArray();
 
+<<<<<<< HEAD
         return view('v2/' . $lang . '/product_' . $lang, ['categories' => $categories, 'top_products' => $topProducts]);
     }
     
+=======
+        // return dd($categories);
+
+        return view('v2/' . $lang . '/product_' . $lang, ['products' => $products, 'categories' => $categories, 'top_products' => $topProducts]);
+    }
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     public function product_category_v2($slug, $lang = 'id'): string
     {
         $supported = ['id', 'en', 'cn'];
@@ -161,6 +212,7 @@ class Home extends BaseController
 
         $db = \Config\Database::connect();
 
+<<<<<<< HEAD
         $selectedCategoryColumn = ['id','image','slug', 'title', 'description'];
         
         if($lang == 'en'){
@@ -172,6 +224,18 @@ class Home extends BaseController
             $selectedCategoryColumn[4] = 'cn_description as description';
         }
         
+=======
+        $selectedCategoryColumn = ['id', 'image', 'slug', 'title', 'description'];
+
+        if ($lang == 'en') {
+            $selectedCategoryColumn[3] = 'en_title as title';
+            $selectedCategoryColumn[4] = 'en_description as description';
+        } else if ($lang == 'cn') {
+            $selectedCategoryColumn[3] = 'cn_title as title';
+            $selectedCategoryColumn[4] = 'cn_description as description';
+        }
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         $category = $db->table('categories c')
             ->where('c.slug', $slug)
             ->select($selectedCategoryColumn)
@@ -182,11 +246,18 @@ class Home extends BaseController
             ->where('p.category', $slug)
             ->select('p.id, p.slug, p.title, p.thumbnail')
             ->get()->getResultArray();
+<<<<<<< HEAD
         
         return view('v2/'.$lang.'/product_category_'.$lang, ['products' => $products, 'category' => $category, 'categories' => $this->getCategories($lang)]);
 
     }
     
+=======
+
+        return view('v2/' . $lang . '/product_category_' . $lang, ['products' => $products, 'category' => $category, 'categories' => $this->getCategories($lang)]);
+    }
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     public function productList()
     {
         $page = $this->request->getGet('page') ?? 1;
@@ -213,11 +284,19 @@ class Home extends BaseController
             ->like('title', $keyword)
             ->where('status', 1)
             ->orderBy('sort_order', 'ASC');
+<<<<<<< HEAD
             
         if (!is_null($category) && $category != '') {
             $builder->where('category', $category);
         }
         
+=======
+
+        if (!is_null($category) && $category != '') {
+            $builder->where('category', $category);
+        }
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         $total = $builder->countAllResults(false); // keep query for later
         $products = $builder->limit($perPage, $offset)->get()->getResultArray();
 
@@ -225,7 +304,11 @@ class Home extends BaseController
             // Hapus HTML tag, Potong sampai 155 karakter, tambahkan "…" jika lebih panjang
             foreach ($products as &$product) {
                 $plain = strip_tags($product['description']);
+<<<<<<< HEAD
                 $product['meta_description'] = mb_substr($plain, 0, 130, 'UTF-8') . '…';   
+=======
+                $product['meta_description'] = mb_substr($plain, 0, 130, 'UTF-8') . '…';
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                 unset($product['description']);
             }
         }
@@ -245,6 +328,7 @@ class Home extends BaseController
         if (!in_array($lang, $supported)) {
             return view('v2/id/product_id');
         }
+<<<<<<< HEAD
         
         $db = \Config\Database::connect();
         $product =  $db->table('products')->where('slug', $slug)->where('status', 1)->get()->getRow();
@@ -253,6 +337,16 @@ class Home extends BaseController
             return redirect()->to('/product');
         }
         
+=======
+
+        $db = \Config\Database::connect();
+        $product =  $db->table('products')->where('slug', $slug)->where('status', 1)->get()->getRow();
+
+        if ($product == null) {
+            return redirect()->to('/product');
+        }
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         $variants = $db->table('product_variants')
             ->where('product_id', $product->id)
             ->orderBy('order', 'ASC')
@@ -323,31 +417,54 @@ class Home extends BaseController
             'in_stock' => true
         ];
 
+<<<<<<< HEAD
         
         return view('v2/'.$lang.'/product_detail_'.$lang, ['product' => $product, 'variants' => $variants, 'images' => $images, 'products' => $products, 'meta_description' => $metaDescription, 'meta_product' => $metaData, 'categories' => $this->getCategories($lang)]);
+=======
+
+        return view('v2/' . $lang . '/product_detail_' . $lang, ['product' => $product, 'variants' => $variants, 'images' => $images, 'products' => $products, 'meta_description' => $metaDescription, 'meta_product' => $metaData, 'categories' => $this->getCategories($lang)]);
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     }
 
     public function aboutUs_v2($lang = 'id'): string
     {
+<<<<<<< HEAD
         $this->cachePage(86400);
+=======
+        // $this->cachePage(86400);
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         $supported = ['id', 'en', 'cn'];
         if (!in_array($lang, $supported)) {
             return view('v2/id/contact_us_id');
         }
+<<<<<<< HEAD
         return view('v2/'.$lang.'/about_us_'.$lang, ['categories' => $this->getCategories($lang)]);
 
+=======
+        return view('v2/' . $lang . '/about_us_' . $lang, ['categories' => $this->getCategories($lang)]);
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     }
 
     public function contactUs_v2($lang = 'id'): string
     {
+<<<<<<< HEAD
         $this->cachePage(86400);
+=======
+        // $this->cachePage(86400);
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         $supported = ['id', 'en', 'cn'];
         if (!in_array($lang, $supported)) {
             return view('v2/id/contact_us_id');
         }
+<<<<<<< HEAD
         return view('v2/'.$lang.'/contact_us_'.$lang, ['categories' => $this->getCategories($lang)]);
     }
     
+=======
+        return view('v2/' . $lang . '/contact_us_' . $lang, ['categories' => $this->getCategories($lang)]);
+    }
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     function excerpt_html($html, $limit = 155)
     {
         // 1. Hapus semua tag HTML
@@ -363,12 +480,20 @@ class Home extends BaseController
     function getCategories($lang = 'id')
     {
         $db = \Config\Database::connect();
+<<<<<<< HEAD
     
         // Select the appropriate title column based on the language
         if($lang == 'id'){
             $titleColumn = 'c.title'; // Dynamically selects c.id_title, c.en_title, or c.cn_title
         }
         else{
+=======
+
+        // Select the appropriate title column based on the language
+        if ($lang == 'id') {
+            $titleColumn = 'c.title'; // Dynamically selects c.id_title, c.en_title, or c.cn_title
+        } else {
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             $titleColumn = 'c.' . $lang . '_title'; // Dynamically selects c.id_title, c.en_title, or c.cn_title
         }
 

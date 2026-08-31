@@ -21,9 +21,15 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('head') ?>
+<<<<<<< HEAD
 <title>PT. Karya Pilar Nusantara - Perusahaan Pengadaan Produk HDPE, EVA, XPE, dan TPE</title>
 <meta name="description" content="PT Karya Pilar Nusantara (KPN) adalah perusahaan yang bergerak dalam pengadaan produk HDPE, XPE, dan EVA yang menghadirkan berbagai produk berkualitas tinggi, inovatif, dan aman untuk kebutuhan mainan anak HDPE, olahraga, serta infrastruktur. Kami menawarkan produk seperti kubus apung HDPE, EVA mat, matras TPE, dan playmat anak dengan teknologi modern dan standar premium." />
 <meta name="keywords" content="toko peralatan terlengkap, karpinus, pengadaan produk, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn, karyapilarnusantara, pt kpn, karya pilar nusantara, pt karya pilar nusantara, penyedia kpn, penyedia kubus apung, penyedia toren, kubus apung HDPE berkualitas" />
+=======
+<title>PT. Karya Pilar Nusantara - Penyedia Produk HDPE, EVA, XPE, dan TPE</title>
+<meta name="description" content="PT Karya Pilar Nusantara (KPN) adalah produsen HDPE tangan pertama yang menghadirkan berbagai produk berkualitas tinggi, inovatif, dan aman untuk kebutuhan mainan anak HDPE, olahraga, serta infrastruktur. Kami menawarkan produk seperti kubus apung HDPE, EVA mat, matras TPE, dan playmat anak dengan teknologi modern dan standar premium." />
+<meta name="keywords" content="toko peralatan terlengkap, toko grosir, produsen HDPE, kubus apung HDPE, EVA mat, matras TPE, mainan anak HDPE, playmat anak, karya pilar, kpn, karyapilarnusantara, pt kpn, karya pilar nusantara, pt karya pilar nusantara, penyedia kpn, penyedia kubus apung, penyedia toren, kubus apung HDPE berkualitas" />
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <?= $this->endSection() ?>
 
 <?= $this->section('style') ?>
@@ -406,7 +412,11 @@
   <div class="mt-[70px] sm:mt-[40px] lg:mt-[60px] xl:mt-[130px]  w-full flex justify-center ">
     <div class="w-full max-w-[1600px] flex justify-center items-center px-[30px] md:mx-[10%]">
       <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver mr-10 rounded-full"></div>
+<<<<<<< HEAD
       <p id="about-us" class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="homepage_about_us" data-lang-key="description">PT Karya Pilar Nusantara adalah perusahaan yang bergerak dalam pengadaan produk berbahan HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+=======
+      <p id="about-us" class="font-humanist-normal text-[#313030] text-[16px] md:text-[18px] xl:text-[22px] text-center  tracking-[0.03em] xl:tracking-[0.035em] leading-7 animate-about-us" data-lang-group="homepage_about_us" data-lang-key="description">PT Karya Pilar Nusantara adalah produsen tangan pertama untuk produk HDPE, EVA, TPE, dan XPE di bidang mainan anak, olahraga, dan infrastruktur. Kami menghadirkan produk berkualitas premium dengan harga terjangkau, mengutamakan daya tahan, keamanan, dan inovasi untuk memenuhi kebutuhan pelanggan dengan solusi terbaik.</p>
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
       <div class="hidden lg:flex h-1 w-[200px] bg-soft-silver ml-10 rounded-full"></div>
     </div>
   </div>

@@ -3,7 +3,11 @@
 
 <?= $this->section('header') ?>
 <html lang="<?= esc($lang ?? 'id') ?>">
+<<<<<<< HEAD
 <title><?= esc($category[0]['title'] == null ? 'Produk '.$category[0]['title'] : 'Produk') ?></title>
+=======
+<title><?= esc($category[0]['title'] == null ? 'Produk ' . $category[0]['title'] : 'Produk') ?></title>
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <meta name="description"
     content="<?= esc($meta_description ?? 'Jelajahi Beragam Pilihan Produk Berkualitas Kami dan Temukan Solusi Terbaik untuk Kebutuhan Bisnis Anda.') ?>" />
 <meta name="keywords"
@@ -106,7 +110,12 @@
 <section id="hero-section"
     class="relative flex flex-col items-center justify-center w-full  bg-[#EFF6FF] z-20 px-5 md:px-15 sm:px-8">
     <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[200px] w-full bg-transparent"></div>
+<<<<<<< HEAD
     <div class="relative w-full max-w-[1200px] max-w-3xl-custom h-auto flex items-center justify-center mt-[100px] mb-[50px]">
+=======
+    <div
+        class="relative w-full max-w-[1200px] max-w-3xl-custom h-auto flex items-center justify-center mt-[100px] mb-[50px]">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         <img src="/images/category/<?= $category[0]['image'] ?>" alt="product category" width="618" height="402"
             class="w-full rounded-[20px] ">
         <h2

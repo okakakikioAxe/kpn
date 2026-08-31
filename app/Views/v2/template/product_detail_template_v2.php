@@ -3,10 +3,17 @@
 
 <?= $this->section('header') ?>
 <html lang="<?= esc($lang ?? 'id') ?>">
+<<<<<<< HEAD
 <title><?= $product->meta_title ?? 'Jual ' . $product->title ?> - Karya Pilar Nusantara</title>
 <meta name="description" content="<?= $product->meta_description ?? $meta_description ?>" />
 <meta name="keywords"
     content="Pabrik kubus apung, PT Karya Pilar Nusantara, KPN, pengadaan barang, mainan playground indoor, matras, kubus apung, kincir air, toren air, palet plastik, produk perairan, perlengkapan playground, peralatan outdoor, perusahaan pengadaan Indonesia, produk berkualitas tinggi">
+=======
+<title>Jual <?= $product->title ?> - Karya Pilar Nusantara</title>
+<meta name="description" content="<?= $meta_description ?>" />
+<meta name="keywords"
+    content="PT Karya Pilar Nusantara, KPN, pengadaan barang, mainan playground indoor, matras, kubus apung, kincir air, toren air, palet plastik, produk perairan, perlengkapan playground, peralatan outdoor, perusahaan pengadaan Indonesia, produk berkualitas tinggi">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 
 <?= $this->endsection() ?>
 
@@ -116,6 +123,7 @@
     .custom-editor p {
         margin: 0 0 0px;
     }
+<<<<<<< HEAD
     
     .custom-editor .ql-indent-1 {
         margin-left: 3em;
@@ -125,11 +133,23 @@
         padding-left: 6em;
     }
     
+=======
+
+    .custom-editor .ql-indent-1 {
+        margin-left: 3em;
+    }
+
+    .custom-editor .ql-indent-2 {
+        padding-left: 6em;
+    }
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     .custom-editor .ql-indent-3 {
         padding-left: 9em;
     }
 </style>
 <?= $this->endsection() ?>
+<<<<<<< HEAD
 
 <?= $this->section('header-script') ?>
     <!-- Event snippet for Kunjungan halaman conversion page
@@ -168,6 +188,8 @@
     </amp-analytics>
 <?= $this->endsection() ?>
 
+=======
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <?= $this->section('content') ?>
 <section id="hero-section"
     class="relative flex flex-col items-center justify-start w-full  z-20 mb-[120px] xl:mb-[200px]">
@@ -205,7 +227,11 @@
 
             <div class="relative w-full h-auto">
                 <img id="image-container" src="<?= '/images/products/' . $product->slug . '/' . $product->image ?>"
+<<<<<<< HEAD
                     alt="<?= $product->title ?> dari Karya Pilar Nusantara" class="w-full md:mb-[20px] lg:mb-[40px] md:rounded-[15px]">
+=======
+                    alt="<?= $product->title ?>" class="w-full md:mb-[20px] lg:mb-[40px] md:rounded-[15px]">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                 <button id="previous-image-button"
                     class="absolute md:hidden left-[20px] top-1/2 -translate-y-1/2 h-[40px] w-[40px] bg-blue-100/30 shadow-sm flex items-center justify-center rounded-full scale-x-[-1]">
                     <?= view('/components/icons/arrow', ['fill' => '#242424', 'class' => 'h-[16px] px:[14px]']) ?>
@@ -233,7 +259,11 @@
                                         class="w-[83px] lg:w-[150px] h-[46px] lg:h-[80px] bg-gray-200 rounded-[10px] flex justify-center items-center overflow-hidden shadow lg:shadow-md cursor-pointer transition-transform hover:scale-102 duration-100">
                                         <img loading="lazy"
                                             src="<?= '/images/products/' . $product->slug . '/' . $image['image'] ?>"
+<<<<<<< HEAD
                                             alt="<?= $product->title ?> dari Karya Pilar Nusantara" class="w-full object-cover">
+=======
+                                            alt="<?= $product->title ?>" class="w-full object-cover">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                                     </div>
                                 </button data-index="<?= $imageIndex++ ?>">
                             <?php endforeach; ?>
@@ -244,7 +274,11 @@
                                         class="w-[83px] lg:w-[150px] h-[46px] lg:h-[80px] bg-gray-200 rounded-[10px] flex justify-center items-center overflow-hidden shadow lg:shadow-md cursor-pointer transition-transform hover:scale-102 duration-100">
                                         <img loading="lazy"
                                             src="<?= '/images/products/' . $product->slug . '/' . $variant['image'] ?>"
+<<<<<<< HEAD
                                             alt="<?= $variant['title'] ?> dari Karya Pilar Nusantara" class="w-full object-cover">
+=======
+                                            alt="<?= $variant['title'] ?>" class="w-full object-cover">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                                     </div>
                                 </button data-index="<?= $imageIndex++ ?>">
                             <?php endforeach; ?>
@@ -332,13 +366,22 @@
 <section id="another-product-section" class="w-full flex flex-col items-center justify-start px-5 md:px-15">
     <?= view('components/texts/title/title_group', ['id' => 'another-title-default', 'class' => 'block mb-[60px] text-center', 'top_title' => ($recomended_product_top_title ?? 'Temukan'), 'bottom_title' => ($recomended_product_bottom_title ?? 'Produk Lainnya')]) ?>
 
+<<<<<<< HEAD
     <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-[20px] w-full 2xl:w-[80vw] max-w-[1400px] xl:px-0">
+=======
+    <div
+        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-[20px] w-full 2xl:w-[80vw] max-w-[1200px] max-w-3xl-custom xl:px-0">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         <?php foreach ($products as $product): ?>
             <a href="<?= ($product_detail_link_prefix ?? '/product/') . $product['slug'] ?>">
                 <div
                     class="bg-[#FCFCFF] rounded-[8px] xl:rounded-t-[12px] h-full drop-shadow-[1px_4px_5px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-150 flex flex-col items-center cursor-pointer">
                     <img src="<?= '/images/products/' . $product['slug'] . '/' . $product['thumbnail'] ?>"
+<<<<<<< HEAD
                         alt="<?= $product['title'] ?> dari Karya Pilar Nusantara" class="w-full h-auto rounded-t-[8px] xl:rounded-t-[12px]">
+=======
+                        alt="<?= $product['title'] ?>" class="w-full h-auto rounded-t-[8px] xl:rounded-t-[12px]">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                     <div class="flex w-full h-full items-center justify-center p-[6px]">
                         <h3 class="open-sans-regular text-[16px] tracking-wide text-[#2563EB]"><?= $product['title'] ?>
                         </h3>
@@ -381,7 +424,11 @@
 
                 if (blur) blur.classList.remove('hidden');
                 isInTop = true;
+<<<<<<< HEAD
 
+=======
+                document.getElementById('desktop-product-dropdown').classList.replace('bg-black/40', 'bg-white');
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 
             } else {
                 // Di luar hero
@@ -398,6 +445,19 @@
 
     observer.observe(hero);
 </script>
+<<<<<<< HEAD
+=======
+<script>
+    document.getElementById('scroll-to-product').addEventListener('click', function() {
+        const target = document.getElementById('product-section');
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+</script>
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 
 <script>
     const imageContainer = document.getElementById('image-container');
@@ -472,6 +532,7 @@
         "name" => $meta_product['name'],
         "image" => [$meta_product['image']],
         "description" => $meta_product['description'],
+<<<<<<< HEAD
         "sku" => "-",
         "brand" => [
             "@type"=> "Brand",
@@ -490,6 +551,24 @@
             "@type" => "AggregateRating",
             "ratingValue" => "4.9",
             "reviewCount" => "216"
+=======
+        "sku" => $meta_product['sku'],
+        "brand" => [
+            "@type" => "Brand",
+            "name" => $meta_product['brand']
+        ],
+        "manufacturer" => [
+            "@type" => "Organization",
+            "name" => $meta_product['manufacturer']
+        ],
+        "offers" => [
+            "@type" => "Offer",
+            "url" => $meta_product['url'],
+            "availability" => $meta_product['in_stock']
+                ? "https://schema.org/InStock"
+                : "https://schema.org/OutOfStock",
+            "itemCondition" => "https://schema.org/NewCondition"
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>
 </script>

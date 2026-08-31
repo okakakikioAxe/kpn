@@ -200,7 +200,11 @@
                     <li class="py-2"><a href="/admin/product"
                             class="block px-4 py-2 hover:bg-gray-700 bg-gray-700 rounded">Produk</a></li>
                     <li class="py-2"><a href="/admin/category"
+<<<<<<< HEAD
                             class="block px-4 py-2 hover:bg-gray-700">Kategori</a></li>
+=======
+                            class="block px-4 py-2 hover:bg-gray-700 rounded">Kategori</a></li>
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                     <li class="py-2"><a href="/admin/change-password" class="block px-4 py-2 hover:bg-gray-700">Ubah
                             Password</a></li>
                     <li class="py-2"><a href="/logout" class="block px-4 py-2 hover:bg-red-700 rounded">

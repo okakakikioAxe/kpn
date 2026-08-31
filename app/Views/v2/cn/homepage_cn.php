@@ -42,7 +42,11 @@
     'service_3_title' => '定制服务与咨询',
     'service_3_description' => '我们提供产品咨询、品牌定制服务，以及部分产品的免费样品。',
     'service_description' => '快速响应、专业协助、可靠支持，致力于户外与基础设施设备的高效采购。',
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     'preparation_top_title' => '从设计出发',
     'preparation_bottom_title' => '直到交付',
     'preparation_1_title' => '规划与设计',

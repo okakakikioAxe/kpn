@@ -74,6 +74,59 @@ $routes->get('/cn/galeri', 'Home::galery_v2/cn');
 
 
 
+<<<<<<< HEAD
+=======
+// $routes->get('/', 'Home::index');
+// $routes->get('/product', 'Home::product');
+// $routes->get('/contact-us', 'Home::contactUs');
+// $routes->get('/about-us', 'Home::aboutUs');
+// $routes->get('/galeri', 'Home::galery');
+
+
+$routes->get('/', 'Home::index_v2');
+// Language-specific
+$routes->get('/en', 'Home::index_v2/en');
+$routes->get('/cn', 'Home::index_v2/cn');
+
+
+$routes->get('/product', 'Home::product_v2');
+// Language-specific
+$routes->get('/en/product', 'Home::product_v2/en');
+$routes->get('/cn/product', 'Home::product_v2/cn');
+
+$routes->get('/product-category/(:segment)', 'Home::product_category_v2/$1');
+$routes->get('/en/product-category/(:segment)', 'Home::product_category_v2/$1/en');
+$routes->get('/cn/product-category/(:segment)', 'Home::product_category_v2/$1/cn');
+
+
+$routes->get('/product/(:segment)', 'Home::product_detail_v2/$1');
+// Language-specific
+$routes->get('/en/product/(:segment)', 'Home::product_detail_v2/$1/en');
+$routes->get('/cn/product/(:segment)', 'Home::product_detail_v2/$1/cn');
+
+
+$routes->get('/products/list', 'Home::productList');
+
+$routes->get('/contact-us', 'Home::contactUs_v2');
+// Language-specific
+$routes->get('/en/contact-us', 'Home::contactUs_v2/en');
+$routes->get('/cn/contact-us', 'Home::contactUs_v2/cn');
+
+
+$routes->get('/about-us', 'Home::aboutUs_v2');
+// Language-specific
+$routes->get('/en/about-us', 'Home::aboutUs_v2/en');
+$routes->get('/cn/about-us', 'Home::aboutUs_v2/cn');
+
+
+$routes->get('/galeri', 'Home::galery_v2');
+// Language-specific
+$routes->get('/en/galeri', 'Home::galery_v2/en');
+$routes->get('/cn/galeri', 'Home::galery_v2/cn');
+
+
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 $routes->get('/admin', 'GaleryController::index', ['filter' => 'authRedirect']);
 $routes->get('/admin/change-password', 'AdminController::changePassword', ['filter' => 'authRedirect']);
 $routes->post('/admin/update-password', 'AuthController::changePassword', ['filter' => 'authRedirect']);

@@ -54,6 +54,7 @@ class ProductController extends BaseController
 
         $successMessage = session()->getFlashdata('successMessage');
         return view('admin/v2/product_v2', ['products' => $products, 'categories' => $categories, 'successMessage' => $successMessage]);
+<<<<<<< HEAD
 
     }
 
@@ -64,12 +65,25 @@ class ProductController extends BaseController
         $productModel = new Product();
         $product = $productModel->find($id);
         
+=======
+    }
+
+
+    public function edit($id): string
+    {
+        $db = \Config\Database::connect();
+
+        $productModel = new Product();
+        $product = $productModel->find($id);
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         // Get variants for this product ordered by 'order'
         $variants = $db->table('product_variants')
             ->where('product_id', $id)
             ->orderBy('order', 'ASC')
             ->get()
             ->getResultArray();
+<<<<<<< HEAD
         
         // Extract colors into a separate list
         $colorList = array_column($variants, 'color');
@@ -78,6 +92,16 @@ class ProductController extends BaseController
         $product['color_list'] = $colorList;
         $product['variant_list'] = $variants;
         
+=======
+
+        // Extract colors into a separate list
+        $colorList = array_column($variants, 'color');
+
+        // Add the formatted data to the product
+        $product['color_list'] = $colorList;
+        $product['variant_list'] = $variants;
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 
         $successMessage = session()->getFlashdata('successMessage');
         return view('admin/edit_product', ['product' => $product, 'successMessage' => $successMessage]);
@@ -92,10 +116,17 @@ class ProductController extends BaseController
 
     public function store()
     {
+<<<<<<< HEAD
         
         date_default_timezone_set('Asia/Jakarta');
         $validation = \Config\Services::validation();
  
+=======
+
+        date_default_timezone_set('Asia/Jakarta');
+        $validation = \Config\Services::validation();
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         $validation->setRules([
             'file-upload' => [
                 'rules' => 'uploaded[file-upload]|mime_in[file-upload,image/jpg,image/jpeg,image/png]|max_size[file-upload,5000]',
@@ -129,7 +160,11 @@ class ProductController extends BaseController
 
             // Convert base64 thumbnail to file and store it
             $this->saveThumbnail($thumbnailFile, $newThumbnailName);
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             $data = [
                 'title' => $this->request->getPost('title'),
                 'description' => $this->request->getPost('description'),
@@ -144,7 +179,11 @@ class ProductController extends BaseController
 
         // Get all uploaded files
         $files = $this->request->getFiles();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
         // Initialize response array
         $uploadedFiles = [];
         $failedFiles = [];
@@ -156,8 +195,13 @@ class ProductController extends BaseController
                 foreach ($files['variants'] as $key => $img) {
                     if ($img->isValid() && !$img->hasMoved()) {
                         // Generate a random file name
+<<<<<<< HEAD
                         $variantName = "var-".$key."-".$fileName. $img->getExtension();
                         
+=======
+                        $variantName = "var-" . $key . "-" . $fileName . $img->getExtension();
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                         // Move the file to the uploads directory
                         if ($img->move('galery/content', $variantName)) {
                             $uploadedFiles[] = [
@@ -172,7 +216,11 @@ class ProductController extends BaseController
                                 'color' => $this->request->getPost('colors')[$key],
                                 'order' => $key,
                             ];
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                             $variantModel = new ProductVariant();
                             $variantModel->insert($data);
                         } else {
@@ -224,25 +272,40 @@ class ProductController extends BaseController
                 // delete product image and thumbnail
                 $filePath = FCPATH . 'galery/content/' . $product['image'];
                 $thumbnailPath = FCPATH . 'galery/thumbnail/' . $product['thumbnail'];
+<<<<<<< HEAD
                 if(file_exists($filePath)){
                     unlink($filePath);
                 }
                 if(file_exists($thumbnailPath)){
+=======
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+                if (file_exists($thumbnailPath)) {
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                     unlink($thumbnailPath);
                 }
 
                 $newFileName = $fileName . $file->getExtension();
                 $newThumbnailName = $fileName . 'jpeg';
                 $file->move('galery/content', $newFileName);
+<<<<<<< HEAD
     
                 // Convert base64 thumbnail to file and store it
                 $this->saveThumbnail($thumbnailFile, $newThumbnailName);
                 
+=======
+
+                // Convert base64 thumbnail to file and store it
+                $this->saveThumbnail($thumbnailFile, $newThumbnailName);
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                 $updatedImage = [
                     'image' => $newFileName,
                     'thumbnail' => $newThumbnailName,
                 ];
             }
+<<<<<<< HEAD
             $updatedData = ['title' => $this->request->getPost('title'), 'description' => $this->request->getPost('description'),'category' => $this->request->getPost('category')];
             $updatedValue = array_merge($updatedData, $updatedImage); 
             $productModel->update($id, $updatedValue);
@@ -253,13 +316,31 @@ class ProductController extends BaseController
             $variantOrder = json_decode($this->request->getPost('variant-order'), true);
 
             $deletedVariants = explode(",",$this->request->getPost('deleted-variants'));
+=======
+            $updatedData = ['title' => $this->request->getPost('title'), 'description' => $this->request->getPost('description'), 'category' => $this->request->getPost('category')];
+            $updatedValue = array_merge($updatedData, $updatedImage);
+            $productModel->update($id, $updatedValue);
+
+
+
+            // update variants order
+            $variantOrder = json_decode($this->request->getPost('variant-order'), true);
+
+            $deletedVariants = explode(",", $this->request->getPost('deleted-variants'));
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             // loop throught variant order and update each variant
             foreach ($deletedVariants as $variantId) {
                 $variantModel = new ProductVariant();
                 $variant = $variantModel->find($variantId);
+<<<<<<< HEAD
                 if($variant ){
                     $filePath = FCPATH . 'galery/content/' . $variant['image'];
                     if(file_exists($filePath)){
+=======
+                if ($variant) {
+                    $filePath = FCPATH . 'galery/content/' . $variant['image'];
+                    if (file_exists($filePath)) {
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                         unlink($filePath);
                     }
                     $variantModel->delete($variantId);
@@ -267,6 +348,7 @@ class ProductController extends BaseController
             }
 
             foreach ($variantOrder as $index => $variant) {
+<<<<<<< HEAD
                 
                 $variantId = $variant['id'];
                 
@@ -276,18 +358,36 @@ class ProductController extends BaseController
                     continue;
                 }
                 else if(Base64ImageHelper::isValidBase64Image($variant['image'])){
+=======
+
+                $variantId = $variant['id'];
+
+                $newImageName = null;
+                $imageType = null;
+                if ($variant['image'] == null) {
+                    continue;
+                } else if (Base64ImageHelper::isValidBase64Image($variant['image'])) {
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                     // If the base64 string contains the data URI scheme (e.g., data:image/jpeg;base64,), extract the base64 part
                     if (preg_match('/^data:image\/(\w+);base64,/', $variant['image'], $matches)) {
                         // Get the image type (jpeg, png, etc.)
                         $imageType = $matches[1];
+<<<<<<< HEAD
                         
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                         // Remove the data URI scheme part
                         $base64Image = substr($variant['image'], strpos($variant['image'], ',') + 1);
                     } else {
                         // Try to determine image type from base64 data
                         $decodedData = base64_decode($variant['image']);
                         $firstBytes = substr($decodedData, 0, 12);
+<<<<<<< HEAD
                         
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                         if (strpos($firstBytes, "\xFF\xD8\xFF") === 0) {
                             $imageType = 'jpeg';
                         } elseif (strpos($firstBytes, "\x89\x50\x4E\x47\x0D\x0A\x1A\x0A") === 0) {
@@ -305,6 +405,7 @@ class ProductController extends BaseController
                     $result = Base64ImageHelper::saveBase64Image(
                         $variant['image'],
                         'galery/content/',
+<<<<<<< HEAD
                         $variantName = "var-".$index."-".$fileNameOnly
                     );
                     $newImageName = "var-".$index."-".$fileNameOnly;
@@ -326,6 +427,24 @@ class ProductController extends BaseController
                         $data = [
                             'product_id' => $id,
                             'image' => $newImageName.'.'.$imageType,
+=======
+                        $variantName = "var-" . $index . "-" . $fileNameOnly
+                    );
+                    $newImageName = "var-" . $index . "-" . $fileNameOnly;
+                } else {
+                    $newImageName = null;
+                }
+
+                if (str_starts_with($variant['id'], 'new')) {
+                    if ($result === false) {
+                        session()->setFlashdata('successMessage', 'Produk gagal diupdate!');
+                        return redirect()->to('/admin/product');
+                    } else {
+                        // store to database
+                        $data = [
+                            'product_id' => $id,
+                            'image' => $newImageName . '.' . $imageType,
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                             'title' => $this->request->getPost('titles')[$index],
                             'color' => $this->request->getPost('colors')[$index],
                             'order' => $index,
@@ -333,6 +452,7 @@ class ProductController extends BaseController
                         $variantModel = new ProductVariant();
                         $variantModel->insert($data);
                     }
+<<<<<<< HEAD
                 }
                 else{
                     $variantModel = new ProductVariant();
@@ -349,15 +469,43 @@ class ProductController extends BaseController
                     $variantModel->update($variantId, ['order' => $index,'title' => $this->request->getPost('titles')[$index],
                             'color' => $this->request->getPost('colors')[$index],]
                             + $newImageData);
+=======
+                } else {
+                    $variantModel = new ProductVariant();
+                    $newImageData = [];
+                    if ($newImageName !== null) {
+                        $dbVariant = $variantModel->find($variantId);
+                        // delete old image from storage
+                        $filePath = FCPATH . 'galery/content/' . $dbVariant['image'];
+                        if (file_exists($filePath)) {
+                            unlink($filePath);
+                        }
+                        $newImageData = ['image' => $newImageName . '.' . $imageType];
+                    }
+                    $variantModel->update($variantId, [
+                        'order' => $index,
+                        'title' => $this->request->getPost('titles')[$index],
+                        'color' => $this->request->getPost('colors')[$index],
+                    ]
+                        + $newImageData);
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                 }
             }
             session()->setFlashdata('successMessage', 'Konten berhasil diupdate!');
             return redirect()->to('/admin/product');
+<<<<<<< HEAD
         } else{
+=======
+        } else {
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             return redirect()->back()->withInput()->with('errors', 'data tidak ditemukan');
         }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     public function saveThumbnail($base64Image, $fileName)
     {
         // Extract base64 data (remove the data URL prefix)
@@ -370,7 +518,11 @@ class ProductController extends BaseController
         // Save the image
         file_put_contents($filePath, $imageData);
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     public function saveProductThumbnail($base64Image, $fileName, $slug)
     {
         // Extract base64 data (remove the data URL prefix)
@@ -432,8 +584,12 @@ class ProductController extends BaseController
         session()->setFlashdata('successMessage', 'Produk berhasil dihapus!');
         return redirect()->to('/admin/product');
     }
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     public function saveProductCover()
     {
         date_default_timezone_set('Asia/Jakarta');
@@ -836,7 +992,11 @@ class ProductController extends BaseController
             'message' => 'Status saved.'
         ]);
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     public function saveProductCategory()
     {
         date_default_timezone_set('Asia/Jakarta');

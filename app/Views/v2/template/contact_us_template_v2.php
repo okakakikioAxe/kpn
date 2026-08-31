@@ -15,7 +15,12 @@
     <div id="nav-observer" class="absolute top-0 left-0 z-50 h-[200px] w-full bg-transparent"></div>
 
     <div class="flex w-full h-full items-center justify-center  px-5 md:px-15">
+<<<<<<< HEAD
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[60px] 2xl:gap-x-[100px] w-full 2xl:w-[80vw] max-w-[1200px] max-w-3xl-custom">
+=======
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-x-[60px] 2xl:gap-x-[100px] w-full 2xl:w-[80vw] max-w-[1200px] max-w-3xl-custom">
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             <div>
                 <div class="flex flex-col h-screen lg:h-full justify-center">
                     <h1
@@ -33,7 +38,11 @@
                             <div class="pl-[14px] md:pl-[20px]">
                                 <p class="ubuntu-regular text-[16px] text-[#242424]"><?= ($phone_title ?? 'Telepon') ?>
                                 </p>
+<<<<<<< HEAD
                                 <p class="open-sans-bold text-[16px] text-[#242424]">+62 821-6005-0005</p>
+=======
+                                <p class="open-sans-bold text-[16px] text-[#242424]">+62 781-7287-8178</p>
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                             </div>
                         </div>
                         <div class="flex items-center">
@@ -217,7 +226,11 @@
     const navbarLanguageIcon = document.getElementById('navbar-language-icon');
     const blur = navbar.querySelector('.blur-3xl');
     const hero = document.getElementById('nav-observer');
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     // Observer untuk ubah background dan teks saat masuk ke overview
     const observer = new IntersectionObserver(
         ([entry]) => {
@@ -231,7 +244,11 @@
             if (entry.isIntersecting) {
                 // Masih di hero
                 navbar.classList.remove('bg-white');
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
                 if (blur) blur.classList.remove('hidden');
                 isInTop = true;
                 document.getElementById('desktop-product-dropdown').classList.replace('bg-black/40', 'bg-white');
@@ -240,14 +257,22 @@
                 navbar.classList.add('bg-white');
                 if (blur) blur.classList.add('hidden');
                 isInTop = false;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
             }
         }, {
             root: null,
             threshold: 0.1,
         }
     );
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
     observer.observe(hero);
 </script>
 
@@ -1345,7 +1370,10 @@
         }]
     }
 </script>
+<<<<<<< HEAD
 <script>
     // Developed by lukmanmuhamadilham@gmail.com 01/06/2025
 </script>
+=======
+>>>>>>> b3e526899119848feddc0ba1691280352cade722
 <?= $this->endSection() ?>
